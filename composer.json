@@ -12,6 +12,7 @@
         "druidfi/omen": "^0.2.0",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0",
+        "drupal/graphql": "4.x-dev@dev",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_platform_config": "^1.0.0",
