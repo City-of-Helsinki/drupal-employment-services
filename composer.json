@@ -12,12 +12,17 @@
         "druidfi/omen": "^0.2.0",
         "drupal/core-composer-scaffold": "^9.0",
         "drupal/core-recommended": "^9.0",
+        "drupal/entity_browser": "^2.5",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/features": "^3.11",
         "drupal/graphql": "4.x-dev@dev",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_platform_config": "^1.0.0",
         "drupal/helfi_tpr": "^1.0",
         "drupal/helfi_tunnistamo": "^1.0",
+        "drupal/paragraphs": "^1.12",
+        "drupal/search_api": "^1.18",
         "drush/drush": "^10.3"
     },
     "require-dev": {
@@ -47,14 +52,35 @@
         },
         "enable-patching": true,
         "installer-paths": {
-            "public/core": ["type:drupal-core"],
-            "public/libraries/{$name}": ["type:drupal-library"],
-            "public/modules/contrib/{$name}": ["type:drupal-module"],
-            "public/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "public/profiles/{$name}": ["type:drupal-profile"],
-            "public/themes/contrib/{$name}": ["type:drupal-theme"],
-            "public/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "drush/{$name}": ["type:drupal-drush"]
+            "public/core": [
+                "type:drupal-core"
+            ],
+            "public/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "public/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "public/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "public/profiles/{$name}": [
+                "type:drupal-profile"
+            ],
+            "public/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "public/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "#2996114": "https://www.drupal.org/files/issues/2020-06-06/2996114-141.patch"
+            }
         }
     },
     "repositories": [
