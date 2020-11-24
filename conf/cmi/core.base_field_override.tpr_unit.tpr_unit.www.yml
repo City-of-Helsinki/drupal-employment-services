@@ -1,0 +1,23 @@
+uuid: bfd71568-3b18-4d5f-87e7-22d8b61b2f73
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+    - link
+id: tpr_unit.tpr_unit.www
+field_name: www
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'Website link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    uri: ''
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

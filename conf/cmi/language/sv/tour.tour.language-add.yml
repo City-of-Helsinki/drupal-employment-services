@@ -1,0 +1,9 @@
+tips:
+  language-add-overview:
+    body: '<p>Den här sidan ger möjligheten att lägga till vanliga språk på din webbplats.</p><p>Om det önskade språket inte är tillgängligt kan du lägga till ett anpassat språk.</p>'
+  language-add-choose:
+    label: 'Välj språk'
+    body: '<p>Välj ett språk från listan, eller välj "Anpassat språk..." i slutet av listan.</p><p>Klicka på knappen "Lägg till språk" när du har valt ditt språk.</p><p>När du lägger till ett anpassat språk får du ytterligare ett formulär där du kan ange namn, kod och riktning för språket.</p>'
+  language-add-continue:
+    label: 'Fortsätter på'
+    body: '<p>Nu när du har en översikt över funktionen "Lägg till språk" kan du fortsätta genom att:<ul><li>Lägga till ett språk</li><li>Lägga till ett anpassat språk</li><li><a href="[site:url]admin/config/regional/language">Visa konfigurerade språk</a></li></ul></p>'

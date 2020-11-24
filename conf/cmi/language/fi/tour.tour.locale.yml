@@ -1,0 +1,10 @@
+label: Käännös
+tips:
+  locale-overview:
+    label: 'Käyttöliittymän kääntäminen'
+  locale-language:
+    label: 'Käännöksen kieli'
+  locale-search:
+    label: Etsi
+  locale-translate:
+    label: Käännä

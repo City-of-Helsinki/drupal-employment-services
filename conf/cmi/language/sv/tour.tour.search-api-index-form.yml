@@ -1,0 +1,7 @@
+tips:
+  search-api-index-form-tracker:
+    label: Spårare
+  search-api-index-form-server:
+    label: Server
+  search-api-index-form-options:
+    label: 'Fler alternativ'

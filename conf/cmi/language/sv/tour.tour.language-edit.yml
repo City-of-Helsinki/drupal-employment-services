@@ -1,0 +1,17 @@
+label: 'Redigerar språk'
+tips:
+  language-edit-overview:
+    label: 'Redigerar språk'
+    body: '<p>Denna sida tillhandahåller möjligheten att redigera språk på din webbplats, inklusive anpassade språk.</p>'
+  language-edit-langcode:
+    label: Språkkod
+    body: '<p>Du kan inte ändra koden för ett språk på webbplatsen eftersom det används av systemet för att hålla reda på språket.</p>'
+  language-edit-label:
+    label: 'Namn på språk'
+    body: '<p>Språknamnet används på hela webbplatsen för alla användare och är skrivet på engelska. Namn på inbyggda språk kan översättas med hjälp av modulen Interface Translation och namnen på både inbyggda och anpassade språk kan översättas med hjälp av modulen Configuration Translation.</p>'
+  language-edit-direction:
+    label: 'Riktning på språk'
+    body: '<p>Välj om språket är ett språk som läses "Vänster till höger" eller "Höger till vänster".</p><p>Observera att inte alla teman stöder layouter för "Höger till vänster" så testa ditt tema om du använder "Höger till vänster".</p>'
+  language-edit-continue:
+    label: 'Fortsätter på'
+    body: '<p>Nu när du har en översikt över funktionen "Redigera språk" kan du fortsätta genom att:<ul><li>Redigera ett språk</li><li><a href="[site:url]admin/config/regional/language">Visa konfigurerade språk</a></li></ul></p>'

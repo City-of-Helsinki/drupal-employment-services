@@ -1,0 +1,20 @@
+uuid: 265bb1f2-94d2-4824-89a1-9741621c1b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entity_browser_test
+  module:
+    - path
+id: node.entity_browser_test.path
+field_name: path
+entity_type: node
+bundle: entity_browser_test
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

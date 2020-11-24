@@ -1,0 +1,20 @@
+label: Redaktionell
+type_settings:
+  states:
+    archived:
+      label: Arkiverad
+    draft:
+      label: Utkast
+    published:
+      label: Publicerad
+  transitions:
+    archive:
+      label: Arkiverad
+    archived_draft:
+      label: 'Återställ till utkast'
+    archived_published:
+      label: Återställ
+    create_new_draft:
+      label: 'Skapa nytt utkast'
+    publish:
+      label: Publicera

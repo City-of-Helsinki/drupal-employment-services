@@ -1,0 +1,27 @@
+label: 'Näkymän muokkaussivu'
+tips:
+  views-main:
+    label: 'Hallinnoi näkymän asetuksia'
+    body: 'Katso tai muokkaa konfiguraatiota.'
+  views-ui-displays:
+    label: 'Tässä näkymässä olevat näytöt'
+    body: 'Näyttö on tapa tulosten näyttämiselle, esimerkiksi sivuna tai lohkona. Näkymä voi sisältää useita näyttöjä, jotka listataan tässä. Aktiivinen näyttö on korostettu.'
+  views-ui-view-admin:
+    label: 'Näkymän ylläpito'
+  views-ui-format:
+    label: Tulostusmuoto
+  views-ui-fields:
+    label: Kentät
+  views-ui-filter:
+    label: 'Suodata näkymääsi'
+  views-ui-filter-operations:
+    label: Suodatustoimenpiteet
+    body: 'Lisää, uudelleenjärjestä tai poista suodattimia.'
+  views-ui-sorts:
+    label: Järjestysehdot
+    body: 'Hallinnoi järjestystä, jossa tulokset näytetään. Klikkaa aktiivista järjestelysääntöä määritelläksesi sen.'
+  views-ui-sorts-operations:
+    label: Lajittelutoiminnot
+    body: 'Lisää, uudelleenjärjestä tai poista järjestelysääntöjä.'
+  views-ui-preview:
+    label: Esikatselu

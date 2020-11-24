@@ -1,0 +1,19 @@
+label: Språk
+tips:
+  language-overview:
+    label: Språk
+    body: '<p>Sidan "Språk" låter dig lägga till, redigera, ta bort och ändra ordningen på språk för webbplatsen.</p>'
+  language-add:
+    body: '<p>Klicka på knappen "Lägg till språk" för att lägga till fler språk på din webbplats.</p><p>Tillagda språk kommer att visas i språklistan och kan sedan redigeras eller tas bort.</p>'
+  language-reorder:
+    label: 'Ändrar ordningen på språk'
+    body: '<p>Använd dragikoner bredvid varje språk för att ändra om ordningen på språken för webbplatsen.</p><p>Ordning som visas här är visningsordningen för språklistor på webbplatsen såsom i de språkbytarblock som tillhandahålls av modulerna Översättning av gränssnitt och Översättning av innehåll.</p><p>Klicka på knappen "Spara konfiguration" för att ändringarna ska träda i kraft när du är klar med att ändra ordningen på språken.</p>'
+  language-default:
+    label: 'Ställ in ett språk som förvalt'
+    body: '<p>Du kan ändra standardspråket på webbplatsen genom att välja ett av dina konfigurerade språk som förvalt. Webbplatsen kommer använda standardspråket i situationer där inget val görs men ett språk bör ställas in, till exempel som språket för det visade gränssnittet.</p>'
+  language-operations:
+    label: 'Ändrar språk'
+    body: '<p>Funktioner tillhandahålls för redigering och borttagning av dina språk.</p><p>Du kan redigera namnet och riktningen av språket.</p><p>Borttagna språk kan läggas tillbaka vid ett senare tillfälle. Borttagning av ett språk kommer att ta bort alla gränssnittsöversättningar i samband med det, och innehåll i detta språk kommer att sättas till att vara språkneutralt. Observera att du inte kan ta bort standardspråket på webbplatsen.</p>'
+  language-continue:
+    label: 'Fortsätter på'
+    body: '<p>Nu när du har en översikt över sidan "Språk" kan du fortsätta genom att:<ul><li><a href="[site:url]admin/config/regional/language/add">Lägga till ett språk</a></li><li>Ändra ordningen på språk</li><li>Redigera ett språk</li><li>Radera ett språk</li></ul></p>'

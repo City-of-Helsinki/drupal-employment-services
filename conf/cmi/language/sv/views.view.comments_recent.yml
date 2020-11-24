@@ -1,0 +1,14 @@
+label: 'Senaste kommentarer'
+description: 'Senaste kommentarer.'
+display:
+  default:
+    display_title: Huvud
+    display_options:
+      title: 'Senaste kommentarer'
+      empty:
+        area_text_custom:
+          content: 'Inga kommentarer tillgängliga.'
+  block_1:
+    display_title: Block
+    display_options:
+      block_description: 'Senaste kommentarer'

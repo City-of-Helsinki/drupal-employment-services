@@ -1,0 +1,29 @@
+uuid: f42bc3ac-90d4-41d3-8ac1-a29550c23e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_koro_style
+    - paragraphs.paragraphs_type.hero
+    - taxonomy.vocabulary.koro_style
+id: paragraph.hero.field_koro_style
+field_name: field_koro_style
+entity_type: paragraph
+bundle: hero
+label: Koro-style
+description: 'Use diagonal, down bottom horizontal or none for Koro style'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      koro_style: koro_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

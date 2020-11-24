@@ -1,0 +1,7 @@
+tips:
+  language-edit-langcode:
+    label: Kielikoodi
+  language-edit-label:
+    label: 'Kielen nimi'
+  language-edit-direction:
+    label: 'Kielen suunta'

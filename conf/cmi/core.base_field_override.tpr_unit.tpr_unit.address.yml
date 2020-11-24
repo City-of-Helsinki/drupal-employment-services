@@ -1,0 +1,23 @@
+uuid: 6fd7dfcb-63dd-483e-a9e8-1ec72bf11e86
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - helfi_tpr
+id: tpr_unit.tpr_unit.address
+field_name: address
+entity_type: tpr_unit
+bundle: tpr_unit
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

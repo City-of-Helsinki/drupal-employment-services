@@ -1,0 +1,18 @@
+uuid: bbed3984-e482-4611-8b89-e413e2574d9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Landing page'
+type: landing_page
+description: 'Home page of the application'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

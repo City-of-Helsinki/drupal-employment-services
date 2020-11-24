@@ -1,0 +1,26 @@
+label: Översättning
+tips:
+  locale-overview:
+    label: 'Översättning av användargränssnitt'
+    body: 'Denna sida låter dig översätta användargränssnittet eller ändra befintliga översättningar. Om du först har installerat din webbplats på engelska måste du först lägga ett annat språk på sidan <a href="[site:url]admin/config/regional/language">Språk</a> för att kunna använda denna sida.'
+  locale-language:
+    label: Översättningsspråk
+    body: 'Välj det språk du vill översätta.'
+  locale-search:
+    label: Sök
+    body: 'Ange specifikt ord eller en mening som du vill översätta. Du kan också skriva bara en del av ett ord.'
+  locale-filter:
+    label: 'Filtrera sökningen'
+    body: 'Du kan söka efter ej översatta strängar om du vill översätta något som inte är översatt ännu. Om du vill ändra en befintlig översättning kanske du enbart vill söka efter översatta strängar.'
+  locale-submit:
+    label: 'Tillämpa dina sökkriterier'
+    body: 'Klicka på knappen <em>Filter</em> för att tillämpa dina sökkriterier.'
+  locale-translate:
+    label: Översätt
+    body: 'Du kan skriva din egen översättning i textfälten i den högra kolumnen. Försök att räkna ut i vilket sammanhang texten kommer att användas för att översätta det på lämpligt sätt.'
+  locale-validate:
+    label: 'Bekräfta översättningen'
+    body: 'Klicka på knappen <em>Spara översättningar</em> när du är klar med dina översättningar. Du måste spara dina översättningar innan du byter sida eller gör en ny sökning.'
+  locale-continue:
+    label: 'Fortsätter på'
+    body: 'Översättningar du har gjort här kommer att användas på användargränssnittet för din webbplats. Om du vill använda dem på en annan webbplats eller ändra dem på en extern översättningsredigerare kan du <a href="[site:url]admin/config/regional/translate/export">exportera dem</a> till en fil av typ .po och <a href="[site:url]admin/config/regional/translate/import">importera dem</a> senare.'

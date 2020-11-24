@@ -1,0 +1,32 @@
+label: 'Visa redigeringssida'
+tips:
+  views-main:
+    label: 'Hantera vyinställningar'
+    body: 'Visa eller redigera konfigurationen.'
+  views-ui-displays:
+    label: 'Visas i denna vy'
+    body: 'En visning är ett sätt att mata ut resultaten, till exempel som en sida eller ett block. En vy kan innehålla flera visningar som visas här. Den aktiva visningen markeras.'
+  views-ui-view-admin:
+    label: 'Visa administration'
+    body: 'Utföra administrativa uppgifter, inklusive att lägga till en beskrivning och skapa en klon. Klicka på listrutan för att se tillgängliga alternativ.'
+  views-ui-format:
+    label: Utmatningsformat
+    body: 'Välj hur du vill mata ut resultaten. Välj exempelvis <em>Innehåll</em> för att mata ut varje punkt helt med hjälp av dina konfigurerade visningsinställningar. Eller välj <em>Fält</em> som gör det möjligt att mata ut enbart särskilda fält för varje resultat. Ytterligare format kan läggas till genom att installera moduler för att <em>utöka</em> Drupals grundfunktionalitet.'
+  views-ui-fields:
+    label: Fält
+    body: 'Om denna vy använder fält visas de här. Du kan klicka på ett fält för att konfigurera det.'
+  views-ui-filter:
+    label: 'Filtrera din vy'
+    body: 'Lägg till filter för att begränsa resultaten i utmatningen. Till exempel för att enbart visa innehåll som är <em>publicerat</em> lägger du till ett filter för <em>Publicerat</em> och välj <em>Ja</em>.'
+  views-ui-filter-operations:
+    label: 'Filtrera åtgärder'
+    body: 'Lägg till, ordna om eller ta bort filter.'
+  views-ui-sorts:
+    label: 'Sortera kriterium'
+    body: 'Styr ordningen för hur resultaten skall matas ut. Klicka på en aktiv sorteringsregel för att konfigurera den.'
+  views-ui-sorts-operations:
+    label: 'Sortera åtgärder'
+    body: 'Lägg till, ordna om eller ta bort sorteringsregler.'
+  views-ui-preview:
+    label: Förhandsgranska
+    body: 'Visa en förhandsgranskning från vyns utmatning.'

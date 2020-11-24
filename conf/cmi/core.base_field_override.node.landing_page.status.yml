@@ -1,0 +1,22 @@
+uuid: 8ef9c3de-33ed-4b20-b342-a235b8a9dd19
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.status
+field_name: status
+entity_type: node
+bundle: landing_page
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

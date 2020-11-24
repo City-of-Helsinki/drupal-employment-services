@@ -1,0 +1,18 @@
+uuid: 33043fa8-463b-4935-a49a-2f2b523559ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.koro_style
+id: taxonomy_term.koro_style.name
+field_name: name
+entity_type: taxonomy_term
+bundle: koro_style
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

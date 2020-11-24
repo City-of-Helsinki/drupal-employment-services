@@ -1,0 +1,52 @@
+uuid: 15158a35-f8ae-4aa3-9c7f-8568c78d9c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page
+label: Content
+description: 'Add paragraphs'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero: hero
+    target_bundles_drag_drop:
+      from_library:
+        weight: 9
+        enabled: false
+      hero:
+        enabled: true
+        weight: 10
+      image_text:
+        weight: 11
+        enabled: false
+      images:
+        weight: 12
+        enabled: false
+      nested_paragraph:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      text_image:
+        weight: 15
+        enabled: false
+      user:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

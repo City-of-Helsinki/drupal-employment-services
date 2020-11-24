@@ -1,0 +1,18 @@
+uuid: bf0a6e7c-79b4-4105-b377-9adf454adb0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.name
+field_name: name
+entity_type: taxonomy_term
+bundle: colors
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
