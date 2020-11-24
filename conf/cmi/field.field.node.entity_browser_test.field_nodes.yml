@@ -1,0 +1,32 @@
+uuid: 2a2de711-b4a3-4d21-9d68-f838bfdcbfd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nodes
+    - node.type.entity_browser_test
+  enforced:
+    module:
+      - entity_browser_example
+_core:
+  default_config_hash: v7UeM1AP2jMpGRvPpkU0ZF1ADoEo8x5IH_RN_Y8x4C4
+id: node.entity_browser_test.field_nodes
+field_name: field_nodes
+entity_type: node
+bundle: entity_browser_test
+label: Nodes
+description: 'Click on the link below and pick related content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      entity_browser_test: entity_browser_test
+      page: page
+    sort:
+      field: _none
+field_type: entity_reference

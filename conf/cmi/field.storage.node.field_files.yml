@@ -1,0 +1,25 @@
+uuid: 36f03b7e-e1cb-4a2f-9e4d-d63bb2e11db3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - entity_browser_example
+  module:
+    - file
+    - node
+_core:
+  default_config_hash: Vnv9Hez9UtElN_2c55idCyyiSfLikRH2S1tZd1NcUV8
+id: node.field_files
+field_name: field_files
+entity_type: node
+type: entity_reference
+settings:
+  target_type: file
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 608d1407-7956-40dc-88c6-990bb4e01e24
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - entity_browser_example
+  module:
+    - node
+_core:
+  default_config_hash: ercpizPs4tiZBhTyuf7lZmp_Okn6L5dns-RVYqIX_2U
+id: node.field_nodes
+field_name: field_nodes
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

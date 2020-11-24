@@ -1,0 +1,25 @@
+uuid: 3eaff192-fe35-4e1e-9bbb-911b8d3b21a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.workspace.deploy
+  module:
+    - field_layout
+    - layout_discovery
+    - workspaces
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: '-7hfoPd1MXgjjw4C2eYcpNlWLUkYcx95VRoi7_OuD4I'
+id: workspace.workspace.deploy
+targetEntityType: workspace
+bundle: workspace
+mode: deploy
+content: {  }
+hidden:
+  parent: true
+  uid: true

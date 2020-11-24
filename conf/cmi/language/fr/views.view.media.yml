@@ -1,0 +1,60 @@
+label: Média
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+      fields:
+        thumbnail__target_id:
+          separator: ', '
+        name:
+          separator: ', '
+        bundle:
+          label: Type
+          separator: ', '
+        uid:
+          separator: ', '
+        status:
+          label: État
+          settings:
+            format_custom_true: Publié
+            format_custom_false: 'Non publié'
+          separator: ', '
+        changed:
+          separator: ', '
+        operations:
+          label: Actions
+      filters:
+        bundle:
+          expose:
+            label: Type
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Publié
+              2:
+                title: 'Non publié'
+        langcode:
+          expose:
+            label: Langue
+      title: Média
+  media_page_list:
+    display_title: Média
+    display_options:
+      menu:
+        title: Média

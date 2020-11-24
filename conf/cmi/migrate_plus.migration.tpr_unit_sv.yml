@@ -1,0 +1,102 @@
+uuid: 5f264dc4-45b1-43b6-b278-f5b95a247ba3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - helfi_tpr
+_core:
+  default_config_hash: 4mR9NWycnM_kHNvK7Yu88_POv8W530OytedYMvcjI64
+id: tpr_unit_sv
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - tpr
+migration_group: tpr
+label: 'TPR unit (sv)'
+source:
+  plugin: url
+  urls: 'https://www.hel.fi/palvelukarttaws/rest/v4/unit/'
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  item_selector: 0
+  fields:
+    -
+      name: id
+      selector: /id
+    -
+      name: name
+      selector: /name_sv
+    -
+      name: call_charge_info
+      selector: /call_charge_info_sv
+    -
+      name: short_desc
+      selector: /short_desc_sv
+    -
+      name: desc
+      selector: /desc_sv
+    -
+      name: street_address
+      selector: /street_address_sv
+    -
+      name: address_city
+      selector: /address_city_sv
+    -
+      name: address_postal_code
+      selector: /address_zip
+    -
+      name: address_postal
+      selector: /address_postal_full_sv
+    -
+      name: www
+      selector: /www_sv
+    -
+      name: changed
+      selector: /modified_time
+  ids:
+    id:
+      type: string
+process:
+  id: id
+  name:
+    plugin: substr
+    source: name
+    start: 0
+    length: 255
+  content_translation_source:
+    plugin: default_value
+    default_value: fi
+  langcode:
+    plugin: default_value
+    default_value: sv
+  address/postal_code: address_postal_code
+  address/locality: address_city
+  address/address_line1: street_address
+  address/country_code:
+    plugin: default_value
+    default_value: FI
+  description/value: desc
+  description/summary: short_desc
+  description/format:
+    plugin: default_value
+    default_value: filtered_html
+  call_charge_info: call_charge_info
+  changed:
+    -
+      plugin: format_date
+      source: changed
+      from_format: 'Y-m-d\TH:i:s'
+      to_format: U
+      from_timezone: Europe/Helsinki
+      to_timezone: UTC
+    -
+      plugin: entity_has_changed
+      entity_type: tpr_unit
+destination:
+  plugin: 'entity:tpr_unit'
+  translations: true
+migration_dependencies:
+  required:
+    - tpr_unit

@@ -1,0 +1,29 @@
+uuid: 1111ae76-f6a2-4706-923f-c09b35c3e3e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files1
+    - node.type.entity_browser_test
+  enforced:
+    module:
+      - entity_browser_example
+_core:
+  default_config_hash: 1iZ-H9MF7xOGsSwkowyWwuX9zenL3YJPCpo6lGEE_pk
+id: node.entity_browser_test.field_files1
+field_name: field_files1
+entity_type: node
+bundle: entity_browser_test
+label: Files
+description: 'Attach files. Click on the link below and upload them.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,32 @@
+uuid: 4612f586-9a51-4997-85e9-4f6e3dcc46e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.paragraphed_content_demo.field_paragraphs_demo
+    - node.type.paragraphed_content_demo
+  module:
+    - user
+_core:
+  default_config_hash: hvhy_kjpRylnmQ4F1VlCpnnZGaqLR6WeNMiUMl_gwAc
+id: node.paragraphed_content_demo.teaser
+targetEntityType: node
+bundle: paragraphed_content_demo
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_paragraphs_demo: true
+  langcode: true
+  search_api_excerpt: true
