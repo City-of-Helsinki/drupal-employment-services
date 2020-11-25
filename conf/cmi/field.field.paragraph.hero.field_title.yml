@@ -12,7 +12,7 @@ bundle: hero
 label: Title
 description: 'Title text represented along with the hero image.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

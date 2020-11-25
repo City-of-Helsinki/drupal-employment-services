@@ -7,7 +7,9 @@ module:
   breakpoint: 0
   comment: 0
   config: 0
+  config_pages: 0
   config_update: 0
+  config_update_ui: 0
   content_moderation: 0
   contextual: 0
   datetime: 0
@@ -30,6 +32,7 @@ module:
   graphql: 0
   graphql_composable: 0
   graphql_examples: 0
+  hal: 0
   helfi_api_base: 0
   helfi_paragraphs: 0
   helfi_platform_config: 0

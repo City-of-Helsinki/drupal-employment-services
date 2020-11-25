@@ -1,0 +1,35 @@
+uuid: 6d726503-31b0-4949-8a98-2f04f6b84cf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.configuration_settings
+    - field.field.config_pages.configuration_settings.field_pre_release
+    - field.field.config_pages.configuration_settings.field_release_ready_for_2021
+id: config_pages.configuration_settings.default
+targetEntityType: config_pages
+bundle: configuration_settings
+mode: default
+content:
+  field_pre_release:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_release_ready_for_2021:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  search_api_excerpt: true

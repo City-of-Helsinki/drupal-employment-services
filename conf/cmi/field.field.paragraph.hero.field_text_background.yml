@@ -15,7 +15,7 @@ bundle: hero
 label: 'Text background'
 description: 'Text background color for the Hero picture'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     target_uuid: 090730ed-d3f0-442e-b441-6b72a5ff6fe6

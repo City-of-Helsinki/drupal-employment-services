@@ -1,17 +1,17 @@
-uuid: 739d93cd-8251-4124-bc6d-7ff4b5b44b92
+uuid: 43475304-1e06-4590-a681-9c7f24ab3948
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.hero
-id: paragraph.hero.status
+    - node.type.article
+id: node.article.status
 field_name: status
-entity_type: paragraph
-bundle: hero
+entity_type: node
+bundle: article
 label: Published
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1

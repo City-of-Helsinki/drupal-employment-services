@@ -1,0 +1,23 @@
+uuid: afbd3638-3886-432a-9309-8fcb8e9f4f06
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.configuration_settings
+    - field.storage.config_pages.field_release_ready_for_2021
+id: config_pages.configuration_settings.field_release_ready_for_2021
+field_name: field_release_ready_for_2021
+entity_type: config_pages
+bundle: configuration_settings
+label: 'Release ready for 2021'
+description: 'Set this true when this application is ready for release.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
