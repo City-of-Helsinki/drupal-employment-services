@@ -1,8 +1,0 @@
-uuid: 4319e5df-fd4d-4725-b987-af5793fc5e22
-langcode: en
-status: true
-dependencies: {  }
-name: Colors
-vid: colors
-description: 'Colors for the app'
-weight: 0

@@ -1,10 +1,10 @@
-label: Medien
 display:
   default:
     display_title: Master
     display_options:
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -15,9 +15,6 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
       fields:
         thumbnail__target_id:
           separator: ', '
@@ -29,7 +26,6 @@ display:
         uid:
           separator: ', '
         status:
-          label: Status
           settings:
             format_custom_true: Veröffentlicht
             format_custom_false: 'Nicht veröffentlicht'
@@ -52,9 +48,3 @@ display:
         langcode:
           expose:
             label: Sprache
-      title: Medien
-  media_page_list:
-    display_title: Medien
-    display_options:
-      menu:
-        title: Medien

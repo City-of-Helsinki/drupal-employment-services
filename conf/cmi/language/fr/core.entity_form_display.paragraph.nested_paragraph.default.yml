@@ -1,0 +1,5 @@
+content:
+  field_paragraphs_demo:
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs

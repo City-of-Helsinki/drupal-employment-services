@@ -1,4 +1,4 @@
-uuid: f31f9e24-459b-49bf-9c60-634987792f24
+uuid: ae99205b-9d4b-4345-9494-e5a17b6b5b65
 langcode: en
 status: true
 dependencies:
@@ -15,8 +15,15 @@ dependencies:
     module:
       - entity_browser_example
   module:
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: vu9Vq8OWfsOVQ6pAVqG1ez3LkA5f_7tsqthB7fJrRoI
 id: node.entity_browser_test.teaser

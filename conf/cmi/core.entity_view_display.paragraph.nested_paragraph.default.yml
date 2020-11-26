@@ -1,4 +1,4 @@
-uuid: 3df05df6-6191-4df0-9338-1d051f1eeec6
+uuid: 34b39752-0449-468a-9f7d-9572c5119510
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.nested_paragraph
   module:
     - entity_reference_revisions
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: VwQ43rfoFoQwqTEQIx9eK41wlMFzh5c7fKze-Rk06SM
 id: paragraph.nested_paragraph.default

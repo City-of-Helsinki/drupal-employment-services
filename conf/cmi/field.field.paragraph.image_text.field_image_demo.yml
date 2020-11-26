@@ -1,4 +1,4 @@
-uuid: 3dfb358c-4fb2-43bc-8862-a721b4ef41b0
+uuid: 9dcf1846-c4a5-47b7-91cd-04a6cca1101d
 langcode: en
 status: true
 dependencies:
@@ -6,14 +6,7 @@ dependencies:
     - field.storage.paragraph.field_image_demo
     - paragraphs.paragraphs_type.image_text
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 _core:
   default_config_hash: l97adFDbCjwYeAjJDpC_lW9hDr2n0sMemYeDFXwgX5g
 id: paragraph.image_text.field_image_demo

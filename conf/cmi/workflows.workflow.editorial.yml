@@ -1,4 +1,4 @@
-uuid: 5e3000b0-dec8-48ed-b316-2c008500e136
+uuid: 5dd37531-df1d-4c38-851c-e31e64191c10
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - content_moderation
 _core:
-  default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
+  default_config_hash: Ln7YAg2WXZ-5wn9ib-v9qOKFxF2YZLnwSKtX-V455hE
 id: editorial
 label: Editorial
 type: content_moderation
@@ -64,3 +64,4 @@ type_settings:
   entity_types:
     node:
       - paragraphed_content_demo
+  default_moderation_state: draft

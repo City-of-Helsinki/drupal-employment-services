@@ -11,11 +11,6 @@ display:
           sort_desc_label: Desc
       pager:
         options:
-          tags:
-            previous: "‹\_précédent"
-            next: "suivant\_›"
-            first: "«\_premier"
-            last: "dernier\_»"
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'

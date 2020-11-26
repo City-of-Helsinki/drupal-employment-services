@@ -1,12 +1,19 @@
-uuid: 429e082d-103c-4cac-805c-91ef78800d2c
+uuid: 181f8a0c-5f3f-4f6e-a93a-8acaca5a7292
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraphs_library_item.summary
   module:
+    - field_layout
+    - layout_discovery
     - paragraphs
     - paragraphs_library
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 298FcPciNgWk7pojyH1AA-0apcAkJulU6N3PO89ZXIk
 id: paragraphs_library_item.paragraphs_library_item.summary

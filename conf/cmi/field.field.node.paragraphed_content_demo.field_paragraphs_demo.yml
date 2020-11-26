@@ -1,4 +1,4 @@
-uuid: 53aa17d2-8df6-4569-97dc-0453920038d8
+uuid: fa875ff0-0006-47e8-8e84-f06b04a964a9
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: paragraphed_content_demo
 label: Paragraphs
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
