@@ -14,6 +14,9 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+          tags:
+            previous: ‹‹
+            next: ››
       filters:
         status:
           group_info:
@@ -23,18 +26,9 @@ display:
                 title: Veröffentlicht
               2:
                 title: 'Nicht veröffentlicht'
-        name:
-          expose:
-            label: Name
-        bundle:
-          expose:
-            label: Medientyp
-          group_info:
-            label: Medientyp
         langcode:
           expose:
             label: Sprache
-      title: Medien
   page:
     display_title: Seite
     display_options:
@@ -47,16 +41,13 @@ display:
           text: Löschen
   widget:
     display_options:
-      filters:
-        name:
-          expose:
-            label: Name
+      arguments:
+        bundle:
+          exception:
+            title: Alle
   widget_table:
     display_options:
-      fields:
-        name:
-          label: Name
-      filters:
-        name:
-          expose:
-            label: Name
+      arguments:
+        bundle:
+          exception:
+            title: Alle

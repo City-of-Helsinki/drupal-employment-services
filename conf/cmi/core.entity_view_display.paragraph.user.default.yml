@@ -1,10 +1,18 @@
-uuid: 926e6f49-3bb7-437e-a439-e35c1973ec9a
+uuid: b2aae424-76c8-4044-abc4-e17367ab6a97
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.user.field_user_demo
     - paragraphs.paragraphs_type.user
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: lnkn109axN_p0s-F9NH4awny0ORtlmBkffTR76pNT6Q
 id: paragraph.user.default

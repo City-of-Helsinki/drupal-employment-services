@@ -1,10 +1,10 @@
-label: Média
 display:
   default:
     display_title: Maître
     display_options:
       exposed_form:
         options:
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -15,9 +15,6 @@ display:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
-          tags:
-            previous: '‹ Précédent'
-            next: 'Suivant ›'
       fields:
         thumbnail__target_id:
           separator: ', '
@@ -29,7 +26,6 @@ display:
         uid:
           separator: ', '
         status:
-          label: État
           settings:
             format_custom_true: Publié
             format_custom_false: 'Non publié'
@@ -52,9 +48,3 @@ display:
         langcode:
           expose:
             label: Langue
-      title: Média
-  media_page_list:
-    display_title: Média
-    display_options:
-      menu:
-        title: Média

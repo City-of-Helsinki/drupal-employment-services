@@ -1,9 +1,9 @@
-uuid: 770a7720-f746-40ee-b091-78ce9e48fa5c
+uuid: 564f7e28-3ab9-4086-8418-429028ab4403
 langcode: en
 status: true
 dependencies: {  }
 id: fi
 label: Finnish
 direction: ltr
-weight: 3
+weight: 1
 locked: false

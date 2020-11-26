@@ -1,4 +1,4 @@
-uuid: def13319-0415-4a07-b3b2-7195a683c50c
+uuid: fff5006b-c9f4-40ef-8cac-6d7d7cb67098
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,14 @@ dependencies:
     - node.type.paragraphed_content_demo
   module:
     - entity_reference_revisions
+    - field_layout
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: wpSUWAu1ONuI7AtzAHuRQr7YFPKet0TdzvgqydDFVU4
 id: node.paragraphed_content_demo.default

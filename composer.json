@@ -17,7 +17,7 @@
         "drupal/entity_browser": "^2.5",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/features": "^3.11",
-        "drupal/graphql": "4.x-dev@dev",
+        "drupal/graphql": "^3.0",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_platform_config": "^1.0.0",
@@ -82,6 +82,9 @@
         "patches": {
             "drupal/core": {
                 "#2996114": "https://www.drupal.org/files/issues/2020-06-06/2996114-141.patch"
+            },
+            "drupal/paragraphs" : {
+                "#3145886": "https://www.drupal.org/files/issues/2020-11-09/paragraphs-3145886-5.patch"
             }
         }
     },

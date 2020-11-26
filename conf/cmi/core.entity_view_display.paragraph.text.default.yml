@@ -1,27 +1,34 @@
-uuid: 242e52a4-f987-4e0a-8db6-2a982b4c5f9e
+uuid: 71f5c848-29c8-4c3d-9780-43d140cfeb7b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text.field_text
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
-  default_config_hash: fj13Z_YNey-Xk4cQvzV8epMGaoflcnmP0u4KX-VXnyU
+  default_config_hash: kyCEhGxyRmMibYB56zAOSPCf0TkEkMEPOHLFsFZmf4c
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_text:
+  field_text_demo:
+    type: text_default
     weight: 0
-    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    label: hidden
     region: content
 hidden:
-  field_text_demo: true
+  created: true
   search_api_excerpt: true
+  uid: true

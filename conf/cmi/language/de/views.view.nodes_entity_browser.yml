@@ -1,4 +1,3 @@
-label: Beitrags-Entity-Browser
 display:
   default:
     display_title: Master
@@ -16,25 +15,13 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
-          tags:
-            previous: '‹ vorherige Seite'
-            next: 'nächste Seite ›'
-            first: '« erste Seite'
-            last: 'letzte Seite »'
       fields:
         title:
           separator: ', '
-        created:
-          label: 'Erstellt am'
         status:
-          label: Status
           separator: ', '
         type:
           label: Typ
-      filters:
-        title:
-          expose:
-            label: Titel
       sorts:
         created:
           expose:

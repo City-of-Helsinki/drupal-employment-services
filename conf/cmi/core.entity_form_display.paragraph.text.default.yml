@@ -1,9 +1,8 @@
-uuid: f762182a-5094-48a5-9190-168c6b39e0c6
+uuid: d27918dd-8f3a-49ce-9348-332a312ad7ec
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text.field_text
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
@@ -16,13 +15,13 @@ third_party_settings:
     settings:
       label: ''
 _core:
-  default_config_hash: VHu9A6hSTzAYHadgMtwBqWRvlcZEPvr1Z_Jn4rx002E
+  default_config_hash: PU6YrnYRag6BEAdQN8pT6DS1F2c2kWe3F0ZwzRhl6K4
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_text:
+  field_text_demo:
     weight: 0
     settings:
       rows: 5
@@ -37,5 +36,5 @@ content:
     region: content
 hidden:
   created: true
-  field_text_demo: true
   status: true
+  uid: true

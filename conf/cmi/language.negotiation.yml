@@ -4,10 +4,14 @@ url:
   source: path_prefix
   prefixes:
     en: ''
+    fi: fi
+    sv: sv
     de: de
     fr: fr
   domains:
     en: ''
+    fi: ''
+    sv: ''
     de: ''
     fr: ''
 selected_langcode: site_default

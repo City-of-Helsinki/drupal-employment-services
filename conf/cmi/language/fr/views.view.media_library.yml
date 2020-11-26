@@ -14,6 +14,9 @@ display:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
+          tags:
+            previous: ‹‹
+            next: ››
       filters:
         status:
           group_info:
@@ -23,18 +26,9 @@ display:
                 title: Publié
               2:
                 title: 'Non publié'
-        name:
-          expose:
-            label: Nom
-        bundle:
-          expose:
-            label: 'Type de média'
-          group_info:
-            label: 'Type de média'
         langcode:
           expose:
             label: Langue
-      title: Média
   page:
     display_title: Page
     display_options:
@@ -47,16 +41,13 @@ display:
           text: Supprimer
   widget:
     display_options:
-      filters:
-        name:
-          expose:
-            label: Nom
+      arguments:
+        bundle:
+          exception:
+            title: Tout
   widget_table:
     display_options:
-      fields:
-        name:
-          label: Nom
-      filters:
-        name:
-          expose:
-            label: Nom
+      arguments:
+        bundle:
+          exception:
+            title: Tout

@@ -1,8 +1,0 @@
-uuid: 101e0e29-4f05-4625-8778-fa767ca5175e
-langcode: en
-status: true
-dependencies: {  }
-name: Koro-style
-vid: koro_style
-description: 'Orientation of the korostyle'
-weight: 0

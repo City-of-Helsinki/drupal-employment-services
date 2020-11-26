@@ -4,22 +4,19 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
       pager:
         options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
         title:
-          label: Titel
           separator: ', '
         type:
           separator: ', '
@@ -32,9 +29,6 @@ display:
         operations:
           label: Aktionen
       filters:
-        title:
-          expose:
-            label: Titel
         langcode:
           expose:
             label: Sprache

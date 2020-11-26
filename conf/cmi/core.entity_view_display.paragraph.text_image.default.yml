@@ -1,4 +1,4 @@
-uuid: 92b7a0e6-b99f-40a8-bf05-de72b9cbab4f
+uuid: 6f63f733-bf20-47de-8ba6-cffc0e4c9312
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,15 @@ dependencies:
     - field.field.paragraph.text_image.field_text_demo
     - paragraphs.paragraphs_type.text_image
   module:
+    - field_layout
     - image
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: GVCU1OMBWMYorodU_tnOIc-IuwX3kWOtK4H7OnjAX94
 id: paragraph.text_image.default

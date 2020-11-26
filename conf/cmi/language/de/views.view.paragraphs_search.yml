@@ -1,3 +1,4 @@
+label: 'Paragraphs search'
 display:
   default:
     display_title: Master
@@ -9,14 +10,25 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
+          text_input_required: 'Fügen Sie Text hinzu und klicken Sie auf Anwenden, um Ergebnisse anzuzeigen.'
       pager:
         options:
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+          tags:
+            previous: ‹‹
+            next: ››
       fields:
         text:
           separator: ', '
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Fulltext-Paragraphs-Demo-Suche
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: Paragraphs_demo
