@@ -1,0 +1,18 @@
+uuid: 28dc05ce-80d6-485d-b97b-b5157d550057
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.changed
+field_name: changed
+entity_type: media
+bundle: video
+label: Muuttunut
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

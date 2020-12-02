@@ -13,7 +13,7 @@ id: paragraph.images.field_images_demo
 field_name: field_images_demo
 entity_type: paragraph
 bundle: images
-label: Images
+label: Kuvat
 description: ''
 required: false
 translatable: false

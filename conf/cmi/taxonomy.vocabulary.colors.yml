@@ -1,0 +1,8 @@
+uuid: 0be87b9c-2924-415f-a9e0-1802f4c03668
+langcode: en
+status: true
+dependencies: {  }
+name: Colors
+vid: colors
+description: Värit
+weight: 0

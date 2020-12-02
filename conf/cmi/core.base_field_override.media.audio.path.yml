@@ -1,0 +1,20 @@
+uuid: c42f25c6-6662-4cc9-b36b-51a19a27e7c4
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.audio
+  module:
+    - path
+id: media.audio.path
+field_name: path
+entity_type: media
+bundle: audio
+label: Osoitealias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

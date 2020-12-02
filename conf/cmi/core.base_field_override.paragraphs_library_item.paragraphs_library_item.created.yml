@@ -1,0 +1,18 @@
+uuid: 29cc760e-01f2-44b8-88a9-7602aa9209da
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.created
+field_name: created
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: Luotu
+description: 'The time that the library item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

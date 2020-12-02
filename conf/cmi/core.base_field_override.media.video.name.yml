@@ -1,0 +1,20 @@
+uuid: ef65e4f2-40dc-46c2-9179-0e70a19502a9
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.name
+field_name: name
+entity_type: media
+bundle: video
+label: Nimi
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: d6323ace-7bc7-4eee-bf86-776a7fdb69aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading_title
+    - paragraphs.paragraphs_type.subheading
+id: paragraph.subheading.field_subheading_title
+field_name: field_subheading_title
+entity_type: paragraph
+bundle: subheading
+label: 'Subheading title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

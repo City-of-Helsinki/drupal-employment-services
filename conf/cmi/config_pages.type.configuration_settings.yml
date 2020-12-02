@@ -1,0 +1,17 @@
+uuid: 0c445979-b152-4910-a7df-ac0107e94b39
+langcode: fi
+status: true
+dependencies: {  }
+id: configuration_settings
+label: 'Configuration Settings'
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /config
+  weight: 0
+  description: ''
+token: true

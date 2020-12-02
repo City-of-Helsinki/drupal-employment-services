@@ -1,0 +1,20 @@
+uuid: 95f6aae4-7300-4078-b3e6-a47521e25b6b
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+  module:
+    - path
+id: taxonomy_term.colors.path
+field_name: path
+entity_type: taxonomy_term
+bundle: colors
+label: Osoitealias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

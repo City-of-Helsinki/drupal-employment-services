@@ -1,0 +1,23 @@
+uuid: 7424f7d3-bc8a-49cb-a7b6-20e9cd57bf43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_external_url
+    - paragraphs.paragraphs_type.link_external
+  module:
+    - link
+id: paragraph.link_external.field_link_external_url
+field_name: field_link_external_url
+entity_type: paragraph
+bundle: link_external
+label: 'Link external url'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

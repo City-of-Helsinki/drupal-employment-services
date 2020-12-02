@@ -1,0 +1,20 @@
+uuid: 6d8b67de-329b-4e18-88b7-f815af085a5e
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.name
+field_name: name
+entity_type: media
+bundle: audio
+label: Nimi
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string
