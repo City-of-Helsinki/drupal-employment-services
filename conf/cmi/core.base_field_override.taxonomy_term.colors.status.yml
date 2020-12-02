@@ -1,0 +1,22 @@
+uuid: 73a3be59-e6d6-4bef-ac8a-34ac173f18c5
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.status
+field_name: status
+entity_type: taxonomy_term
+bundle: colors
+label: Julkaistu
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Käytössä
+  off_label: 'Pois päältä'
+field_type: boolean

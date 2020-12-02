@@ -1,0 +1,18 @@
+uuid: 3b7b4cc8-4c83-417c-941d-33274cce9d79
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.changed
+field_name: changed
+entity_type: media
+bundle: remote_video
+label: Muuttunut
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

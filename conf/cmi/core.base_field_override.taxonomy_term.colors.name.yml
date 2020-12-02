@@ -1,0 +1,18 @@
+uuid: bfda1fb1-160d-47c4-978a-19f0d04cea4e
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.name
+field_name: name
+entity_type: taxonomy_term
+bundle: colors
+label: Nimi
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

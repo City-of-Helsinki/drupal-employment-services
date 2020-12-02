@@ -1,0 +1,20 @@
+uuid: 2ce736ba-ccc1-4bad-b29e-c8e1e1c125f2
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+  module:
+    - text
+id: taxonomy_term.colors.description
+field_name: description
+entity_type: taxonomy_term
+bundle: colors
+label: Kuvaus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

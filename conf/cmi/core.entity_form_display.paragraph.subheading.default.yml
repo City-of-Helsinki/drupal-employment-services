@@ -1,0 +1,31 @@
+uuid: bcb26aa8-10ab-41d7-a22e-1bd7bc063c7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subheading.field_subheading_title
+    - paragraphs.paragraphs_type.subheading
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.subheading.default
+targetEntityType: paragraph
+bundle: subheading
+mode: default
+content:
+  field_subheading_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

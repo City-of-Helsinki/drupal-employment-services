@@ -1,0 +1,20 @@
+uuid: b4a9408a-4c3e-4611-ad23-4f10f2ae3b6f
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.name
+field_name: name
+entity_type: media
+bundle: remote_video
+label: Nimi
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 15a0e3d1-5f17-4deb-96a7-b839060d7d45
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.changed
+field_name: changed
+entity_type: media
+bundle: document
+label: Muuttunut
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,74 @@
+uuid: da7280e1-78dc-41c6-908b-a992d6351190
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_content
+    - node.type.landing
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.info
+    - paragraphs.paragraphs_type.link_external
+    - paragraphs.paragraphs_type.subheading
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.landing.field_landing_content
+field_name: field_landing_content
+entity_type: node
+bundle: landing
+label: landing_content
+description: 'All the fields'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      text: text
+      hero: hero
+      link_external: link_external
+      info: info
+      subheading: subheading
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 12
+      from_library:
+        weight: 8
+        enabled: false
+      hero:
+        enabled: true
+        weight: 14
+      image_text:
+        weight: 10
+        enabled: false
+      images:
+        weight: 9
+        enabled: false
+      info:
+        enabled: true
+        weight: 18
+      link_external:
+        enabled: true
+        weight: 17
+      nested_paragraph:
+        weight: 11
+        enabled: false
+      subheading:
+        enabled: true
+        weight: 19
+      text:
+        enabled: true
+        weight: 12
+      text_image:
+        weight: 13
+        enabled: false
+      user:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,16 @@
+uuid: 77457486-69a0-4c40-bd1f-56a3fc6bd651
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hero_koro_style
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.hero_koro_style
+target_entity_type_id: taxonomy_term
+target_bundle: hero_koro_style
+default_langcode: site_default
+language_alterable: false

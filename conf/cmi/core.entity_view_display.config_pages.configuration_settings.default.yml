@@ -1,0 +1,32 @@
+uuid: 3c606587-6132-4830-a144-4dfe91565259
+langcode: fi
+status: true
+dependencies:
+  config:
+    - config_pages.type.configuration_settings
+    - field.field.config_pages.configuration_settings.field_pre_published_3_12_2020
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: config_pages.configuration_settings.default
+targetEntityType: config_pages
+bundle: configuration_settings
+mode: default
+content:
+  field_pre_published_3_12_2020:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  search_api_excerpt: true

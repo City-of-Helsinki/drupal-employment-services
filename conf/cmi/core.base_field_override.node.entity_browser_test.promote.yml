@@ -1,0 +1,22 @@
+uuid: c0319b98-53e3-4195-bb97-6b8c44d1c9aa
+langcode: fi
+status: true
+dependencies:
+  config:
+    - node.type.entity_browser_test
+id: node.entity_browser_test.promote
+field_name: promote
+entity_type: node
+bundle: entity_browser_test
+label: 'Näytetään etusivulla'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Käytössä
+  off_label: 'Pois päältä'
+field_type: boolean

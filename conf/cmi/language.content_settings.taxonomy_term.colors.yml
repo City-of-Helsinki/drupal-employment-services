@@ -1,0 +1,18 @@
+uuid: c24bc732-6b0e-449e-bbd9-c5ef2087b764
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.colors
+target_entity_type_id: taxonomy_term
+target_bundle: colors
+default_langcode: site_default
+language_alterable: false

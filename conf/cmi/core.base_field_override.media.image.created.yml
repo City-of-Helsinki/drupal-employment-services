@@ -1,0 +1,18 @@
+uuid: 3dd7ec9b-ff68-4c81-ba6d-983c41a865bb
+langcode: fi
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.created
+field_name: created
+entity_type: media
+bundle: image
+label: Luotu
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

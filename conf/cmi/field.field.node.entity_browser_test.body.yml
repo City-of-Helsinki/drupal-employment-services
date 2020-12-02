@@ -16,10 +16,10 @@ id: node.entity_browser_test.body
 field_name: body
 entity_type: node
 bundle: entity_browser_test
-label: Body
+label: Sisältö
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

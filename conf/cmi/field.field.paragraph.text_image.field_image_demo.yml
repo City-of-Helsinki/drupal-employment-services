@@ -20,7 +20,7 @@ id: paragraph.text_image.field_image_demo
 field_name: field_image_demo
 entity_type: paragraph
 bundle: text_image
-label: Image
+label: Kuva
 description: ''
 required: false
 translatable: true
