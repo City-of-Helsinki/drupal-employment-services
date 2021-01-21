@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.info
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
@@ -15,6 +16,46 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8210627c-4da7-4b5c-b7d5-6a2c4c79d320:
+            uuid: 8210627c-4da7-4b5c-b7d5-6a2c4c79d320
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:info:field_info_title'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 0
+          5a59324f-a807-4480-b2fb-8d6bf60383e5:
+            uuid: 5a59324f-a807-4480-b2fb-8d6bf60383e5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:info:field_info_text'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: paragraph.info.default
 targetEntityType: paragraph
 bundle: info

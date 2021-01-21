@@ -1,0 +1,32 @@
+uuid: db7aa719-9e7a-4681-8068-0e85ee57dcea
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.node.prerelease_landing.field_prerelease_
+    - node.type.prerelease_landing
+  module:
+    - entity_reference_revisions
+    - user
+id: node.prerelease_landing.default
+targetEntityType: node
+bundle: prerelease_landing
+mode: default
+content:
+  field_prerelease_:
+    type: entity_reference_revisions_entity_view
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

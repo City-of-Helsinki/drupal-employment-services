@@ -1,0 +1,20 @@
+uuid: 9496476d-ea3c-4dad-9f54-6cb24d8bee22
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_pb_border_color
+field_name: field_pb_border_color
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

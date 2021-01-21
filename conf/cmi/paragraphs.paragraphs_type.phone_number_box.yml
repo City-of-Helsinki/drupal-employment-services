@@ -1,0 +1,15 @@
+uuid: 07001769-afcd-4769-85ef-c972875becf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: phone_number_box
+label: 'Phone number box'
+icon_uuid: null
+icon_default: null
+description: Puhelinnumerolaatikkko
+behavior_plugins: {  }

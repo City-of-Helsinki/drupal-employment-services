@@ -1,0 +1,21 @@
+uuid: cb9ed53d-8e53-4270-a7d7-27da6861c2f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_text
+    - paragraphs.paragraphs_type.phone_number_box
+  module:
+    - text
+id: paragraph.phone_number_box.field_pb_text
+field_name: field_pb_text
+entity_type: paragraph
+bundle: phone_number_box
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

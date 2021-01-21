@@ -15,7 +15,7 @@ bundle: accordion
 label: 'Accordion color'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     target_uuid: 16fdf25a-5be8-4a6e-9876-b15fadd7b9fb

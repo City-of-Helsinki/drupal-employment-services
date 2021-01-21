@@ -1,10 +1,11 @@
+label: Kommentare
 display:
   default:
     display_title: Master
     display_options:
       exposed_form:
         options:
-          submit_button: Anwenden
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -16,11 +17,15 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '
@@ -31,21 +36,36 @@ display:
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache
+      title: Kommentare
+  page_published:
+    display_options:
+      menu:
+        title: Kommentare
   page_unapproved:
     display_options:
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '

@@ -16,6 +16,7 @@ dependencies:
       - entity_browser_example
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -24,6 +25,41 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          fd3fc1ce-88f5-489c-a431-70f7bb908763:
+            uuid: fd3fc1ce-88f5-489c-a431-70f7bb908763
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:entity_browser_test:links'
+            additional: {  }
+            weight: 0
+          639953df-0bc5-4dc4-9db8-b8d0c3075b1a:
+            uuid: 639953df-0bc5-4dc4-9db8-b8d0c3075b1a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: vu9Vq8OWfsOVQ6pAVqG1ez3LkA5f_7tsqthB7fJrRoI
 id: node.entity_browser_test.teaser
@@ -42,6 +78,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_files: true
   field_files1: true

@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_images_demo
     - paragraphs.paragraphs_type.images
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: nXUtNiaKc4L46e0O9q5r8s7f3VAGmMQwKHTCI-CbxLY
 id: paragraph.images.field_images_demo
@@ -16,7 +23,7 @@ bundle: images
 label: Kuvat
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

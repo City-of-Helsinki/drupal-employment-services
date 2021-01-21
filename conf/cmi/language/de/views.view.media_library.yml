@@ -17,6 +17,9 @@ display:
           tags:
             previous: ‹‹
             next: ››
+      fields:
+        media_bulk_form:
+          action_title: Aktion
       filters:
         status:
           group_info:
@@ -26,6 +29,14 @@ display:
                 title: Veröffentlicht
               2:
                 title: 'Nicht veröffentlicht'
+        name:
+          expose:
+            label: Name
+        bundle:
+          expose:
+            label: Medientyp
+          group_info:
+            label: Medientyp
         langcode:
           expose:
             label: Sprache
@@ -33,6 +44,8 @@ display:
     display_title: Seite
     display_options:
       fields:
+        media_bulk_form:
+          action_title: Aktion
         name:
           separator: ', '
         edit_media:
@@ -41,12 +54,25 @@ display:
           text: Löschen
   widget:
     display_options:
+      filters:
+        name:
+          expose:
+            label: Name
       arguments:
         bundle:
           exception:
             title: Alle
   widget_table:
     display_options:
+      fields:
+        name:
+          label: Name
+        uid:
+          label: Autor
+      filters:
+        name:
+          expose:
+            label: Name
       arguments:
         bundle:
           exception:

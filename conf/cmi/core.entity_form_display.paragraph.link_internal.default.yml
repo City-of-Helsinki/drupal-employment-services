@@ -1,0 +1,41 @@
+uuid: 3a794442-ffae-4f2f-9feb-1ac2645ed950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_internal.field_doc_title
+    - field.field.paragraph.link_internal.field_link_media_pdf
+    - paragraphs.paragraphs_type.link_internal
+  module:
+    - field_layout
+    - layout_builder
+    - media_library
+third_party_settings:
+  field_layout:
+    id: layout_twocol_section
+    settings:
+      label: ''
+      column_widths: 50-50
+id: paragraph.link_internal.default
+targetEntityType: paragraph
+bundle: link_internal
+mode: default
+content:
+  field_doc_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: first
+  field_link_media_pdf:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: first
+hidden:
+  created: true
+  status: true

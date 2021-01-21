@@ -7,12 +7,40 @@ dependencies:
     - field.field.config_pages.configuration_settings.field_pre_published_3_12_2020
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          469642e0-924d-47a2-b15e-b7ff94bc09da:
+            uuid: 469642e0-924d-47a2-b15e-b7ff94bc09da
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:config_pages:configuration_settings:field_pre_published_3_12_2020'
+              formatter:
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+                type: boolean
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: config_pages.configuration_settings.default
 targetEntityType: config_pages
 bundle: configuration_settings

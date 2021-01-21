@@ -7,12 +7,38 @@ dependencies:
     - paragraphs.paragraphs_type.subheading
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          becb70a9-36e4-4a93-b9c9-c28e553e845e:
+            uuid: becb70a9-36e4-4a93-b9c9-c28e553e845e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:subheading:field_subheading_title'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: paragraph.subheading.default
 targetEntityType: paragraph
 bundle: subheading

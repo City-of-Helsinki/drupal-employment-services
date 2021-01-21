@@ -1,0 +1,22 @@
+uuid: 6016434a-5720-42f2-8697-8c2a92c2a07b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hero_koro_style
+id: taxonomy_term.hero_koro_style.status
+field_name: status
+entity_type: taxonomy_term
+bundle: hero_koro_style
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

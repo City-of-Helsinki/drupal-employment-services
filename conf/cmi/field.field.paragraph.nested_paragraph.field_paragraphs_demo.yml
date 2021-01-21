@@ -16,7 +16,7 @@ bundle: nested_paragraph
 label: 'Nested Content'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,11 +24,11 @@ settings:
   handler_settings:
     target_bundles: null
     target_bundles_drag_drop:
-      images:
-        weight: -13
-        enabled: false
       image_text:
         weight: -12
+        enabled: false
+      images:
+        weight: -13
         enabled: false
       nested_paragraph:
         weight: -11

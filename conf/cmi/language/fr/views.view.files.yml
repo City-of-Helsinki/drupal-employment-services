@@ -17,7 +17,19 @@ display:
             offset_label: Décalage
       fields:
         filename:
+          label: Nom
           separator: ', '
+        filemime:
+          label: 'Type MIME'
+        status:
+          label: État
+      filters:
+        filemime:
+          expose:
+            label: 'Type MIME'
+        status:
+          expose:
+            label: État
   page_2:
     display_options:
       pager:

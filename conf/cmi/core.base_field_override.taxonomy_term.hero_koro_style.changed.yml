@@ -1,0 +1,18 @@
+uuid: d7a7d9e5-18f7-4bfd-86f1-6e58689e118a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hero_koro_style
+id: taxonomy_term.hero_koro_style.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: hero_koro_style
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -10,16 +10,30 @@ display:
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
       fields:
+        title:
+          label: Titel
         type:
+          label: Inhaltstyp
           separator: ', '
+        name:
+          label: Autor
         status:
+          label: Status
           settings:
             format_custom_true: Veröffentlicht
             format_custom_false: 'Nicht veröffentlicht'
         operations:
           label: Aktionen
       filters:
+        title:
+          expose:
+            label: Titel
+        type:
+          expose:
+            label: Inhaltstyp
         status:
+          expose:
+            label: Status
           group_info:
             group_items:
               1:

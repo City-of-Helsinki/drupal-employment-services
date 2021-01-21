@@ -10,16 +10,30 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       fields:
+        title:
+          label: Titre
         type:
+          label: 'Type de contenu'
           separator: ', '
+        name:
+          label: Auteur
         status:
+          label: État
           settings:
             format_custom_true: Publié
             format_custom_false: 'Non publié'
         operations:
           label: Actions
       filters:
+        title:
+          expose:
+            label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
         status:
+          expose:
+            label: État
           group_info:
             group_items:
               1:

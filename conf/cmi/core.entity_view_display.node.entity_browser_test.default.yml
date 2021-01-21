@@ -16,6 +16,7 @@ dependencies:
   module:
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -24,6 +25,121 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c75b9005-852e-4b73-b6f7-c9430d1176ea:
+            uuid: c75b9005-852e-4b73-b6f7-c9430d1176ea
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:entity_browser_test:links'
+            additional: {  }
+            weight: 0
+          28e0087d-4310-4a06-89a0-4368ef897f74:
+            uuid: 28e0087d-4310-4a06-89a0-4368ef897f74
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          1d9764eb-342c-4e80-86fb-c529e04d224a:
+            uuid: 1d9764eb-342c-4e80-86fb-c529e04d224a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:field_files'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
+          0b7accc7-326d-4caf-9cc7-ea584c4d52d8:
+            uuid: 0b7accc7-326d-4caf-9cc7-ea584c4d52d8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:field_files1'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
+          5e7638bb-2a43-4780-ab09-76d3544747b3:
+            uuid: 5e7638bb-2a43-4780-ab09-76d3544747b3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:field_nodes'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 4
+          144ecfb9-a4de-40ec-a99b-69140d798c20:
+            uuid: 144ecfb9-a4de-40ec-a99b-69140d798c20
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:field_image_browser'
+              formatter:
+                label: above
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+            additional: {  }
+            weight: 5
+          2ccac4ff-feef-46aa-8573-7081914ee04a:
+            uuid: 2ccac4ff-feef-46aa-8573-7081914ee04a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:entity_browser_test:field_files_over_ajax'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 6
+        third_party_settings: {  }
 _core:
   default_config_hash: uEMF6uH3b7T4tdznp4-Yyl5ds3DYvcObjc8NoAGlKD8
 id: node.entity_browser_test.default
@@ -82,6 +198,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   search_api_excerpt: true

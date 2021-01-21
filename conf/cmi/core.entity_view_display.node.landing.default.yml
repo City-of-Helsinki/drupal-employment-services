@@ -9,6 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -17,6 +18,57 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0f9a4e98-0b66-44a3-8403-210271cc7810:
+            uuid: 0f9a4e98-0b66-44a3-8403-210271cc7810
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landing:links'
+            additional: {  }
+            weight: 0
+          0962b8c6-bb9f-436b-af6f-b95f7b9aa8fd:
+            uuid: 0962b8c6-bb9f-436b-af6f-b95f7b9aa8fd
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          73397337-3738-413a-9804-852384bdf1db:
+            uuid: 73397337-3738-413a-9804-852384bdf1db
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing:field_landing_content'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: node.landing.default
 targetEntityType: node
 bundle: landing

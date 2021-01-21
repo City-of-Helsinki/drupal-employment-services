@@ -1,0 +1,22 @@
+uuid: c4c5060c-e497-483f-901d-4cf1b0e227b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.nested_paragraph
+id: paragraph.nested_paragraph.status
+field_name: status
+entity_type: paragraph
+bundle: nested_paragraph
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

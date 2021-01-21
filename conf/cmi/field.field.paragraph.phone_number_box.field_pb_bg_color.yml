@@ -1,0 +1,29 @@
+uuid: 6deec7f7-e64b-43f6-ace1-c91153cb1f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_bg_color
+    - paragraphs.paragraphs_type.phone_number_box
+    - taxonomy.vocabulary.colors
+id: paragraph.phone_number_box.field_pb_bg_color
+field_name: field_pb_bg_color
+entity_type: paragraph
+bundle: phone_number_box
+label: 'Bg color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

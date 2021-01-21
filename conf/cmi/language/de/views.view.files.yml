@@ -17,7 +17,19 @@ display:
             offset_label: Versatz
       fields:
         filename:
+          label: Name
           separator: ', '
+        filemime:
+          label: MIME-Typ
+        status:
+          label: Status
+      filters:
+        filemime:
+          expose:
+            label: MIME-Typ
+        status:
+          expose:
+            label: Status
   page_2:
     display_options:
       pager:

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraphs_library_item.summary
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - paragraphs
     - paragraphs_library
@@ -14,6 +15,46 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          78a95201-4b94-41a9-87f9-a933a18aa1ab:
+            uuid: 78a95201-4b94-41a9-87f9-a933a18aa1ab
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraphs_library_item:paragraphs_library_item:label'
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          7514430c-683f-4452-9efe-736313bfbd85:
+            uuid: 7514430c-683f-4452-9efe-736313bfbd85
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraphs_library_item:paragraphs_library_item:paragraphs'
+              formatter:
+                label: hidden
+                type: paragraph_summary
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: 298FcPciNgWk7pojyH1AA-0apcAkJulU6N3PO89ZXIk
 id: paragraphs_library_item.paragraphs_library_item.summary
