@@ -8,6 +8,7 @@ dependencies:
     - node.type.paragraphed_content_demo
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
@@ -15,6 +16,35 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          02d5975c-18eb-4fde-af33-e9a40411e5f7:
+            uuid: 02d5975c-18eb-4fde-af33-e9a40411e5f7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:paragraphed_content_demo:content_moderation_control'
+            additional: {  }
+            weight: 0
+          694e47ca-dd4a-4c18-90e3-c8ad8a6926ef:
+            uuid: 694e47ca-dd4a-4c18-90e3-c8ad8a6926ef
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:paragraphed_content_demo:links'
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: hvhy_kjpRylnmQ4F1VlCpnnZGaqLR6WeNMiUMl_gwAc
 id: node.paragraphed_content_demo.teaser
@@ -30,9 +60,16 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_paragraphs_demo: true
   langcode: true

@@ -19,9 +19,14 @@ display:
         title:
           separator: ', '
         status:
+          label: Status
           separator: ', '
         type:
           label: Typ
+      filters:
+        title:
+          expose:
+            label: Titel
       sorts:
         created:
           expose:

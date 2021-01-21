@@ -18,5 +18,10 @@ display:
           tags:
             previous: ‹‹
             next: ››
+      fields:
+        title:
+          label: Titre
+        name:
+          label: Auteur
   page_1:
     display_title: Page

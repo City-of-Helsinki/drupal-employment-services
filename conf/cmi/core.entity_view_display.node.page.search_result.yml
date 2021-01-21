@@ -8,6 +8,7 @@ dependencies:
     - node.type.page
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -16,6 +17,41 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5e84a763-dfcd-454f-8708-03ca3f8bcbef:
+            uuid: 5e84a763-dfcd-454f-8708-03ca3f8bcbef
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:body'
+              formatter:
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 0
+          3e3300c7-bf85-498b-9bb1-a8e393547adf:
+            uuid: 3e3300c7-bf85-498b-9bb1-a8e393547adf
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:links'
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: gTB0Aw9yfUPvjMd_Pznb33eEqIGHqNQb5JtR3jZ18TE
 id: node.page.search_result

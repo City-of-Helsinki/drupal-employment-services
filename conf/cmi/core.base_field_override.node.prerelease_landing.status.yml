@@ -1,0 +1,22 @@
+uuid: 8ce4f284-85d2-424a-97ba-feaf038bb7ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.prerelease_landing
+id: node.prerelease_landing.status
+field_name: status
+entity_type: node
+bundle: prerelease_landing
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

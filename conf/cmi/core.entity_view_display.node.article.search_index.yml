@@ -13,6 +13,7 @@ dependencies:
   module:
     - comment
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -21,6 +22,63 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6443bb90-b825-4d26-b568-3a5127fbf380:
+            uuid: 6443bb90-b825-4d26-b568-3a5127fbf380
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:body'
+              formatter:
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 0
+          a1bc8e1d-17fa-488b-96f4-368a7c823b95:
+            uuid: a1bc8e1d-17fa-488b-96f4-368a7c823b95
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:field_tags'
+              formatter:
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 1
+          af21c3d6-fb0a-43af-86cf-263fcd7479c0:
+            uuid: af21c3d6-fb0a-43af-86cf-263fcd7479c0
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:comment'
+              formatter:
+                type: comment_default
+                settings:
+                  pager_id: 0
+                  view_mode: default
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 _core:
   default_config_hash: UyS6h90lp_2z8y-boEip0WxzO-BGPHubSfeQYnjwg_4
 id: node.article.search_index
@@ -40,6 +98,7 @@ content:
     weight: 2
     settings:
       pager_id: 0
+      view_mode: default
     third_party_settings: {  }
     label: hidden
     region: content

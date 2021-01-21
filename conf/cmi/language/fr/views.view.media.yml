@@ -16,6 +16,8 @@ display:
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
       fields:
+        media_bulk_form:
+          action_title: Action
         thumbnail__target_id:
           separator: ', '
         name:
@@ -24,8 +26,10 @@ display:
           label: Type
           separator: ', '
         uid:
+          label: Auteur
           separator: ', '
         status:
+          label: État
           settings:
             format_custom_true: Publié
             format_custom_false: 'Non publié'

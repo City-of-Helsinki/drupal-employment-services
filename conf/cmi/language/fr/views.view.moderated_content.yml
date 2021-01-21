@@ -17,10 +17,13 @@ display:
             offset_label: Décalage
       fields:
         title:
+          label: Titre
           separator: ', '
         type:
+          label: 'Type de contenu'
           separator: ', '
         name:
+          label: Auteur
           separator: ', '
         moderation_state:
           separator: ', '
@@ -29,6 +32,12 @@ display:
         operations:
           label: Actions
       filters:
+        title:
+          expose:
+            label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
         langcode:
           expose:
             label: Langue

@@ -1,0 +1,19 @@
+uuid: 4f9bde30-9c0f-4642-8d4a-cf2599ce194b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_title
+    - paragraphs.paragraphs_type.phone_number_box
+id: paragraph.phone_number_box.field_pb_title
+field_name: field_pb_title
+entity_type: paragraph
+bundle: phone_number_box
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -17,10 +17,13 @@ display:
             offset_label: Versatz
       fields:
         title:
+          label: Titel
           separator: ', '
         type:
+          label: Inhaltstyp
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         moderation_state:
           separator: ', '
@@ -29,6 +32,12 @@ display:
         operations:
           label: Aktionen
       filters:
+        title:
+          expose:
+            label: Titel
+        type:
+          expose:
+            label: Inhaltstyp
         langcode:
           expose:
             label: Sprache

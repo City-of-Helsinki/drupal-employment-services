@@ -16,10 +16,20 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        name:
+          label: Benutzername
+        status:
+          label: Status
+        roles_target_id:
+          label: Rollen
         operations:
           label: Aktionen
         mail:
           separator: ', '
+      filters:
+        status:
+          group_info:
+            label: Status
   page_1:
     display_title: Seite
     display_options:

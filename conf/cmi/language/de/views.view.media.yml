@@ -16,6 +16,8 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        media_bulk_form:
+          action_title: Aktion
         thumbnail__target_id:
           separator: ', '
         name:
@@ -24,8 +26,10 @@ display:
           label: Typ
           separator: ', '
         uid:
+          label: Autor
           separator: ', '
         status:
+          label: Status
           settings:
             format_custom_true: Veröffentlicht
             format_custom_false: 'Nicht veröffentlicht'

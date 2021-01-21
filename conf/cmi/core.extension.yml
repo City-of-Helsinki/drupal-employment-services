@@ -22,10 +22,14 @@ module:
   content_moderation: 0
   contextual: 0
   crop: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  decoupled_router: 0
   default_content: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
@@ -50,7 +54,10 @@ module:
   image: 0
   inline_form_errors: 0
   jsonapi: 0
+  jsonapi_defaults: 0
+  jsonapi_extras: 0
   language: 0
+  layout_builder: 0
   layout_discovery: 0
   link: 0
   locale: 0
@@ -65,6 +72,7 @@ module:
   migrate_plus: 0
   migrate_tools: 0
   node: 0
+  openid_connect: 0
   options: 0
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
@@ -83,17 +91,20 @@ module:
   search_api_db_defaults: 0
   serialization: 0
   shortcut: 0
+  subrequests: 0
   syslog: 0
   system: 0
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_ui: 0
   workflows: 0
+  pathauto: 1
   content_translation: 10
   views: 10
   paragraphs: 11

@@ -1,0 +1,22 @@
+uuid: 12837619-1455-4b67-9e3a-5af60ea74a73
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.prerelease_landing
+id: node.prerelease_landing.promote
+field_name: promote
+entity_type: node
+bundle: prerelease_landing
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

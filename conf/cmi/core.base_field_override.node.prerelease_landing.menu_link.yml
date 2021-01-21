@@ -1,0 +1,20 @@
+uuid: 420b5538-dadb-469f-b5ed-18caff0d1b5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.prerelease_landing
+id: node.prerelease_landing.menu_link
+field_name: menu_link
+entity_type: node
+bundle: prerelease_landing
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

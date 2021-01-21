@@ -1,10 +1,11 @@
+label: Commentaires
 display:
   default:
     display_title: Maître
     display_options:
       exposed_form:
         options:
-          submit_button: Appliquer
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -16,11 +17,15 @@ display:
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
       fields:
+        comment_bulk_form:
+          action_title: Action
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Auteur
           separator: ', '
         entity_id:
           separator: ', '
@@ -31,21 +36,36 @@ display:
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue
+      title: Commentaires
+  page_published:
+    display_options:
+      menu:
+        title: Commentaires
   page_unapproved:
     display_options:
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue
       fields:
+        comment_bulk_form:
+          action_title: Action
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Auteur
           separator: ', '
         entity_id:
           separator: ', '
