@@ -1,10 +1,10 @@
-uuid: bc6eeb25-9b48-49b4-a17a-ac53f99aec40
+uuid: 287ae7b8-fe5d-4c2a-ba36-022bd275f926
 langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
-label: 'Main navigation'
-description: 'Site section links'
+label: 'Päämenu - OLD'
+description: ''
 locked: true

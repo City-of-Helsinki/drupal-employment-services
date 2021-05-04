@@ -1,5 +1,5 @@
-uuid: 88037928-3455-4dad-aaab-382fa6906a03
-langcode: fi
+uuid: 3dba5365-b727-45c4-9f03-b73c248b6257
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.document.path
 field_name: path
 entity_type: media
 bundle: document
-label: Osoitealias
+label: 'URL alias'
 description: ''
 required: false
 translatable: false

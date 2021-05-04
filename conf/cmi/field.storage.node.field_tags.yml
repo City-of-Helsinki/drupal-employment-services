@@ -1,21 +1,35 @@
-uuid: b7e95eb4-5eb7-4c45-927f-e10c1f3b8d0c
+uuid: 872eff5e-7f2c-45ef-811a-9d1e3029dbc7
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-_core:
-  default_config_hash: WpOE_bs8Bs_HY2ns7n2r__de-xno0-Bxkqep5-MsHAs
+    - options
 id: node.field_tags
 field_name: field_tags
 entity_type: node
-type: entity_reference
+type: list_string
 settings:
-  target_type: taxonomy_term
-module: core
+  allowed_values:
+    -
+      value: Rekry
+      label: Rekry
+    -
+      value: Työhönohjaus
+      label: Työhönohjaus
+    -
+      value: Maahanmuuttajat
+      label: Maahanmuuttajat
+    -
+      value: etäosallistuminen
+      label: etäosallistuminen
+    -
+      value: työnhakijat
+      label: työnhakijat
+  allowed_values_function: ''
+module: options
 locked: false
-cardinality: -1
+cardinality: 10
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

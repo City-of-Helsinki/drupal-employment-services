@@ -1,4 +1,4 @@
-uuid: d6323ace-7bc7-4eee-bf86-776a7fdb69aa
+uuid: c8ac2849-c86b-4e85-bc17-bb6d5592e3ff
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: paragraph.subheading.field_subheading_title
 field_name: field_subheading_title
 entity_type: paragraph
 bundle: subheading
-label: 'Subheading title'
-description: ''
+label: Title
+description: 'Heading text'
 required: false
 translatable: true
 default_value: {  }

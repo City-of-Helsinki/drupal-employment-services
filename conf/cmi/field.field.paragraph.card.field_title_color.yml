@@ -1,0 +1,33 @@
+uuid: 42893f86-41d1-420f-899d-edbfb165caa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_color
+    - paragraphs.paragraphs_type.card
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:e8d51200-59e3-45a2-a893-f563958a0534'
+id: paragraph.card.field_title_color
+field_name: field_title_color
+entity_type: paragraph
+bundle: card
+label: 'Title color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e8d51200-59e3-45a2-a893-f563958a0534
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

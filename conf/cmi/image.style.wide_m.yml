@@ -1,0 +1,15 @@
+uuid: 55fa1d30-3f5f-4571-b606-377f15cf143e
+langcode: fi
+status: true
+dependencies: {  }
+name: wide_m
+label: 'Wide M'
+effects:
+  83909f84-947b-4223-9885-0eecb3f9ea90:
+    uuid: 83909f84-947b-4223-9885-0eecb3f9ea90
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 700
+      anchor: center-center

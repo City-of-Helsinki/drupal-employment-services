@@ -1,5 +1,5 @@
-uuid: ef65e4f2-40dc-46c2-9179-0e70a19502a9
-langcode: fi
+uuid: c9afecc1-b230-480f-9b24-593f104efc1a
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.video.name
 field_name: name
 entity_type: media
 bundle: video
-label: Nimi
+label: Name
 description: ''
 required: true
 translatable: false

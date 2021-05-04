@@ -1,0 +1,10 @@
+uuid: bc5c144b-41c5-43d8-8fcc-ad792e3ea49b
+langcode: en
+status: true
+dependencies: {  }
+id: events_list
+label: 'Events list'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

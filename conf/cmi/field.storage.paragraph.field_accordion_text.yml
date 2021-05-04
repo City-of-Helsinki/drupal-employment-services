@@ -1,4 +1,4 @@
-uuid: 04dd41e1-1b5f-49b6-8e0d-16ad17ae1da6
+uuid: e698c633-ae6b-4465-8bbf-1937e0a577aa
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
 id: paragraph.field_accordion_text
 field_name: field_accordion_text
 entity_type: paragraph
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false

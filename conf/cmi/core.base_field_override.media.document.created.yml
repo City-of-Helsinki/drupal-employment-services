@@ -1,5 +1,5 @@
-uuid: 7ff83e41-f09b-4bff-b6cd-1d0758dfaaaa
-langcode: fi
+uuid: 3546dee1-b5bf-42a9-8211-326d53ecc8f0
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.document.created
 field_name: created
 entity_type: media
 bundle: document
-label: Luotu
+label: 'Authored on'
 description: 'The time the media item was created.'
 required: false
 translatable: false

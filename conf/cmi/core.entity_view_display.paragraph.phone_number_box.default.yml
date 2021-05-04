@@ -1,10 +1,8 @@
-uuid: 407318dd-69bb-4934-8d4e-998c7d108acd
+uuid: 6e2b46d7-c97d-4901-9083-4666ab627977
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.phone_number_box.field_pb_bg_color
-    - field.field.paragraph.phone_number_box.field_pb_border_color
     - field.field.paragraph.phone_number_box.field_pb_text
     - field.field.paragraph.phone_number_box.field_pb_title
     - paragraphs.paragraphs_type.phone_number_box
@@ -15,36 +13,19 @@ targetEntityType: paragraph
 bundle: phone_number_box
 mode: default
 content:
-  field_pb_bg_color:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_pb_border_color:
-    weight: 4
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_pb_text:
-    weight: 7
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_pb_title:
-    weight: 6
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

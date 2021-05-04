@@ -1,4 +1,4 @@
-uuid: 9a4d42b5-87c1-42a9-9218-fb7cc082f939
+uuid: 6e1bf88e-87fe-430e-9125-2c5bcfb97535
 langcode: en
 status: true
 dependencies: {  }
@@ -6,5 +6,5 @@ id: subheading
 label: Subheading
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Heading block'
 behavior_plugins: {  }

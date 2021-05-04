@@ -1,4 +1,4 @@
-uuid: d27918dd-8f3a-49ce-9348-332a312ad7ec
+uuid: 00d67862-c87e-43c1-997e-74d04515fec9
 langcode: en
 status: true
 dependencies:
@@ -6,16 +6,7 @@ dependencies:
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
-_core:
-  default_config_hash: PU6YrnYRag6BEAdQN8pT6DS1F2c2kWe3F0ZwzRhl6K4
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
@@ -37,4 +28,3 @@ content:
 hidden:
   created: true
   status: true
-  uid: true

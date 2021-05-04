@@ -1,0 +1,8 @@
+uuid: 8d405398-f4b2-4a15-ba75-727a4cccbf9d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Paragraph width'
+vid: paragraph_width
+description: 'Paragraph width'
+weight: 0

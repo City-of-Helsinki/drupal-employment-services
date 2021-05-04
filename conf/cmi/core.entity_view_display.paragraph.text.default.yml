@@ -1,4 +1,4 @@
-uuid: 71f5c848-29c8-4c3d-9780-43d140cfeb7b
+uuid: 41ddadbd-f4fc-4eb5-bc05-154521df2a49
 langcode: en
 status: true
 dependencies:
@@ -6,54 +6,17 @@ dependencies:
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
-    - field_layout
-    - layout_builder
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          af168ed9-ba4f-474d-b12e-9c4566fb3513:
-            uuid: af168ed9-ba4f-474d-b12e-9c4566fb3513
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:text:field_text_demo'
-              formatter:
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-                label: hidden
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-_core:
-  default_config_hash: kyCEhGxyRmMibYB56zAOSPCf0TkEkMEPOHLFsFZmf4c
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
   field_text_demo:
-    type: text_default
     weight: 0
+    label: above
     settings: {  }
     third_party_settings: {  }
-    label: hidden
+    type: text_default
     region: content
-hidden:
-  created: true
-  search_api_excerpt: true
-  uid: true
+hidden: {  }

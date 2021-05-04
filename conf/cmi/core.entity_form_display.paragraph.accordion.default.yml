@@ -1,45 +1,25 @@
-uuid: 037efc4d-6bc4-4b54-9643-5ef4b7ac7a85
+uuid: a8193a02-86bb-412a-96fc-6c3ace5e11aa
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.accordion.field_accordion_color
     - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
     - paragraphs.paragraphs_type.accordion
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
-  field_accordion_color:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_accordion_text:
     weight: 1
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: text_textarea
     region: content
   field_accordion_title:
     weight: 0
@@ -48,6 +28,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

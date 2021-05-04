@@ -1,5 +1,5 @@
-uuid: 15a0e3d1-5f17-4deb-96a7-b839060d7d45
-langcode: fi
+uuid: ea68ee93-4053-4a93-97d2-291175509808
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.document.changed
 field_name: changed
 entity_type: media
 bundle: document
-label: Muuttunut
+label: Changed
 description: 'The time the media item was last edited.'
 required: false
 translatable: false

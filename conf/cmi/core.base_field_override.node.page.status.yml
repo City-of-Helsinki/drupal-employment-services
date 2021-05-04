@@ -1,4 +1,4 @@
-uuid: 06c36016-b5f7-4205-bab9-bb3441c10c07
+uuid: e26b8419-37ce-4ee2-83a5-d6327780d215
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: page
 label: Published
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1

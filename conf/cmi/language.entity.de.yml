@@ -1,11 +1,9 @@
-uuid: 7314c408-bbf5-41c4-914b-3acca4471293
-langcode: en
+uuid: 5584a67a-e7b1-46d9-be81-5889e514fada
+langcode: sv
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: tZHMPSDA5PkRP7XIrFWaxJwM2W9wkp5cLlcy9WYpS2s
 id: de
 label: German
 direction: ltr
-weight: 1
+weight: 3
 locked: false

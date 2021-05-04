@@ -1,5 +1,5 @@
-uuid: 3a4a1bf1-eb79-44ed-a5d7-7a1b7429aafb
-langcode: fi
+uuid: be658281-13af-40f6-b0d9-ef27375460fb
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.remote_video.uid
 field_name: uid
 entity_type: media
 bundle: remote_video
-label: Kirjoittanut
+label: 'Authored by'
 description: 'The user ID of the author.'
 required: false
 translatable: false

@@ -1,0 +1,8 @@
+uuid: 04b810f3-b1ab-4ade-abf9-a8d4dddc4e81
+langcode: en
+status: true
+dependencies: {  }
+name: Icons
+vid: icons
+description: Icon
+weight: 0

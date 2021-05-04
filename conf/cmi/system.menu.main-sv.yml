@@ -1,0 +1,8 @@
+uuid: e6fbf690-b8b8-45c8-9cc3-8189c5834867
+langcode: en
+status: true
+dependencies: {  }
+id: main-sv
+label: 'Main menu (Swedish)'
+description: ''
+locked: false

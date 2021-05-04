@@ -1,0 +1,19 @@
+uuid: 2afed84a-21ac-4cce-b119-2fe0bf76e2fa
+langcode: fi
+status: true
+dependencies:
+  module:
+    - layout_builder
+    - paragraphs
+id: paragraph.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: paragraph
+type: layout_section
+settings: {  }
+module: layout_builder
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

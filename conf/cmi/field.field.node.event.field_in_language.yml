@@ -1,0 +1,19 @@
+uuid: 66526392-fdd1-4a17-b393-0925200d7b0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_language
+    - node.type.event
+id: node.event.field_in_language
+field_name: field_in_language
+entity_type: node
+bundle: event
+label: 'in language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

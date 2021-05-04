@@ -1,0 +1,25 @@
+uuid: 862a3564-e997-450d-bd42-8b4c7f04eb3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_heigth
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_image_heigth
+field_name: field_image_heigth
+entity_type: paragraph
+bundle: image
+label: 'Height of the image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 400
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,5 +1,5 @@
-uuid: b4a9408a-4c3e-4611-ad23-4f10f2ae3b6f
-langcode: fi
+uuid: 7071ccc6-0df2-4f7d-9a38-29cd8a16a299
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.remote_video.name
 field_name: name
 entity_type: media
 bundle: remote_video
-label: Nimi
+label: Name
 description: ''
 required: true
 translatable: false

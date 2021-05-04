@@ -1,5 +1,5 @@
-uuid: eb852187-5724-40b8-bf4b-2fb39532cd92
-langcode: fi
+uuid: 19c7e6ec-f71b-4eb8-8797-558868f6c848
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.video.created
 field_name: created
 entity_type: media
 bundle: video
-label: Luotu
+label: 'Authored on'
 description: 'The time the media item was created.'
 required: false
 translatable: false

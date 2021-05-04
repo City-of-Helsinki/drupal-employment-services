@@ -1,0 +1,33 @@
+uuid: e8576051-11dc-4bd5-bc2b-ce22a1bf6335
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_color
+    - paragraphs.paragraphs_type.card
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:e8d51200-59e3-45a2-a893-f563958a0534'
+id: paragraph.card.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+bundle: card
+label: 'Button color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e8d51200-59e3-45a2-a893-f563958a0534
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

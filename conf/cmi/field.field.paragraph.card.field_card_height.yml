@@ -1,0 +1,25 @@
+uuid: 6ffd4aa6-94fc-479f-b15c-b771a21fcb81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_height
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.field_card_height
+field_name: field_card_height
+entity_type: paragraph
+bundle: card
+label: 'Card height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 270
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

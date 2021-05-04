@@ -1,4 +1,4 @@
-uuid: 5cae9b74-30a5-4429-bc25-b43a4a45555d
+uuid: 1065bdf1-1896-4a0b-9746-0c4360744fed
 langcode: en
 status: true
 dependencies:
@@ -6,91 +6,10 @@ dependencies:
     - field.field.paragraph.hero.field_hero_image
     - field.field.paragraph.hero.field_hero_text
     - field.field.paragraph.hero.field_hero_title
-    - field.field.paragraph.hero.field_koro_style
+    - field.field.paragraph.hero.field_shallow
     - paragraphs.paragraphs_type.hero
   module:
-    - field_layout
-    - layout_builder
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          e99fd34d-8e5c-4428-bf7c-9117e4ddeebd:
-            uuid: e99fd34d-8e5c-4428-bf7c-9117e4ddeebd
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:hero:field_hero_title'
-              formatter:
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-            additional: {  }
-            weight: 0
-          b62b0e52-3f3c-4a64-b8f2-c99e2d9b0b89:
-            uuid: b62b0e52-3f3c-4a64-b8f2-c99e2d9b0b89
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:hero:field_hero_text'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 1
-          d2c2dbc2-a6cc-4acd-9288-ae17c36ed474:
-            uuid: d2c2dbc2-a6cc-4acd-9288-ae17c36ed474
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:hero:field_hero_image'
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: false
-                third_party_settings: {  }
-            additional: {  }
-            weight: 2
-          80ff8911-c06c-49ca-8ac4-8c3c643a354d:
-            uuid: 80ff8911-c06c-49ca-8ac4-8c3c643a354d
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:hero:field_koro_style'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 3
-        third_party_settings: {  }
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -98,7 +17,7 @@ mode: default
 content:
   field_hero_image:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 3
     label: above
     settings:
       view_mode: default
@@ -106,27 +25,28 @@ content:
     third_party_settings: {  }
     region: content
   field_hero_text:
-    weight: 1
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_hero_title:
-    weight: 0
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_koro_style:
-    weight: 3
+  field_shallow:
+    weight: 4
     label: above
     settings:
-      link: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: boolean
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

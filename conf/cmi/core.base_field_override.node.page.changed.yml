@@ -1,4 +1,4 @@
-uuid: 108d0bc9-527d-4f2c-96a2-a9a90e0e5c28
+uuid: 3a10c41e-c9e9-4ca7-93b3-c067e6a79823
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: page
 label: Changed
 description: 'The time that the node was last edited.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

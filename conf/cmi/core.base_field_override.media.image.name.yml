@@ -1,5 +1,5 @@
-uuid: ce940533-6dfd-4feb-b27e-611d14e20f1d
-langcode: fi
+uuid: 76969539-3644-430b-9a22-eec4ab9a0a15
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.image.name
 field_name: name
 entity_type: media
 bundle: image
-label: Nimi
+label: Name
 description: ''
 required: true
 translatable: false

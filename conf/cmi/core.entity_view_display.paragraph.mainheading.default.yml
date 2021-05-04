@@ -1,0 +1,41 @@
+uuid: 01e806d6-c5b7-4842-8519-27084b1dff13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mainheading.field_show_date
+    - field.field.paragraph.mainheading.field_title
+    - field.field.paragraph.mainheading.field_title_color
+    - paragraphs.paragraphs_type.mainheading
+id: paragraph.mainheading.default
+targetEntityType: paragraph
+bundle: mainheading
+mode: default
+content:
+  field_show_date:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_color:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

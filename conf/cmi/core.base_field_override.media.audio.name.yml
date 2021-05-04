@@ -1,5 +1,5 @@
-uuid: 6d8b67de-329b-4e18-88b7-f815af085a5e
-langcode: fi
+uuid: 1c165a71-0f72-47e9-8bb9-ab4720d62654
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.audio.name
 field_name: name
 entity_type: media
 bundle: audio
-label: Nimi
+label: Name
 description: ''
 required: true
 translatable: false

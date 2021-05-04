@@ -1,0 +1,53 @@
+uuid: 271b8e6a-c20a-445f-bf92-378abcb205a1
+langcode: fi
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_id
+    - field.field.node.event.field_image_name
+    - field.field.node.event.field_image_url
+    - field.field.node.event.field_in_language
+    - field.field.node.event.field_info_url
+    - field.field.node.event.field_last_modified_time
+    - field.field.node.event.field_location
+    - field.field.node.event.field_page_content
+    - field.field.node.event.field_page_width
+    - field.field.node.event.field_publisher
+    - field.field.node.event.field_short_description
+    - field.field.node.event.field_start_time
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_text
+    - field.field.node.event.field_title
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_end_time: true
+  field_id: true
+  field_image_name: true
+  field_image_url: true
+  field_in_language: true
+  field_info_url: true
+  field_last_modified_time: true
+  field_location: true
+  field_page_content: true
+  field_page_width: true
+  field_publisher: true
+  field_short_description: true
+  field_start_time: true
+  field_tags: true
+  field_text: true
+  field_title: true
+  langcode: true

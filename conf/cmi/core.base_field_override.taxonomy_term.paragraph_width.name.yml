@@ -1,0 +1,18 @@
+uuid: 77567bd9-3f40-4c48-8c15-ee691c3f5ce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paragraph_width
+id: taxonomy_term.paragraph_width.name
+field_name: name
+entity_type: taxonomy_term
+bundle: paragraph_width
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

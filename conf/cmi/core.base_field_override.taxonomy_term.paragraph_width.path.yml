@@ -1,0 +1,20 @@
+uuid: abe816db-9e6f-42fa-9dd8-40180c5700aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paragraph_width
+  module:
+    - path
+id: taxonomy_term.paragraph_width.path
+field_name: path
+entity_type: taxonomy_term
+bundle: paragraph_width
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

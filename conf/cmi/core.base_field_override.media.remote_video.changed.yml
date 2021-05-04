@@ -1,5 +1,5 @@
-uuid: 3b7b4cc8-4c83-417c-941d-33274cce9d79
-langcode: fi
+uuid: a8d3bc5a-4a47-482c-9e48-906d5d42e42f
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.remote_video.changed
 field_name: changed
 entity_type: media
 bundle: remote_video
-label: Muuttunut
+label: Changed
 description: 'The time the media item was last edited.'
 required: false
 translatable: false

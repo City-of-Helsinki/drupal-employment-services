@@ -1,4 +1,4 @@
-uuid: 15ff65da-4b60-4c15-92a9-784aa1bfb8db
+uuid: c07bd0ea-8a81-460f-bcb0-a0634b3ea691
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ bundle: page
 label: 'Authored by'
 description: 'The username of the content author.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
 settings:

@@ -1,4 +1,4 @@
-uuid: fbcf1260-a977-49c5-9051-ecba25954fa9
+uuid: 6c1b086c-7a58-4827-8629-3705c0e490fe
 langcode: en
 status: true
 dependencies:
@@ -6,18 +6,11 @@ dependencies:
     - field.field.paragraph.hero.field_hero_image
     - field.field.paragraph.hero.field_hero_text
     - field.field.paragraph.hero.field_hero_title
-    - field.field.paragraph.hero.field_koro_style
+    - field.field.paragraph.hero.field_shallow
     - paragraphs.paragraphs_type.hero
   module:
-    - field_layout
-    - layout_discovery
     - media_library
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -25,37 +18,36 @@ mode: default
 content:
   field_hero_image:
     type: media_library_widget
-    weight: 2
+    weight: 0
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_hero_text:
-    weight: 1
+    weight: 3
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: text_textarea
     region: content
   field_hero_title:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_koro_style:
-    weight: 11
-    settings: {  }
+  field_shallow:
+    weight: 1
+    settings:
+      display_label: true
     third_party_settings: {  }
-    type: options_select
+    type: boolean_checkbox
     region: content
   translation:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

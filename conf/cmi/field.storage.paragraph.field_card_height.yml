@@ -1,0 +1,20 @@
+uuid: d831a700-e732-4538-8654-e0545b4b0f36
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_card_height
+field_name: field_card_height
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

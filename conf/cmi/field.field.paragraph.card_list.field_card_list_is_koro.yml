@@ -1,0 +1,23 @@
+uuid: 4d778363-2644-496b-ab82-85c369f0b967
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_list_is_koro
+    - paragraphs.paragraphs_type.card_list
+id: paragraph.card_list.field_card_list_is_koro
+field_name: field_card_list_is_koro
+entity_type: paragraph
+bundle: card_list
+label: 'Is koro present'
+description: 'Add koro waves at the beginning'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

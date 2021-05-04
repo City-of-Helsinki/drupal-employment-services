@@ -1,0 +1,76 @@
+uuid: f5f722d2-a612-4928-a78d-eca1ec6c6d8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ic_card
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.image_and_card
+  module:
+    - entity_reference_revisions
+id: paragraph.image_and_card.field_ic_card
+field_name: field_ic_card
+entity_type: paragraph
+bundle: image_and_card
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      card:
+        enabled: true
+        weight: 12
+      card_list:
+        weight: 15
+        enabled: false
+      events_list:
+        weight: 20
+        enabled: false
+      hero:
+        weight: 13
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      image_and_card:
+        weight: 10
+        enabled: false
+      info:
+        weight: 14
+        enabled: false
+      link:
+        weight: 25
+        enabled: false
+      link_internal:
+        weight: 15
+        enabled: false
+      mainheading:
+        weight: 27
+        enabled: false
+      phone_number_box:
+        weight: 16
+        enabled: false
+      search:
+        weight: 29
+        enabled: false
+      subheading:
+        weight: 17
+        enabled: false
+      test:
+        weight: 23
+        enabled: false
+      text:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

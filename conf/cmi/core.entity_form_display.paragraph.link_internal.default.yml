@@ -1,21 +1,13 @@
-uuid: 3a794442-ffae-4f2f-9feb-1ac2645ed950
+uuid: 332cdb3f-acbb-43ac-878f-6186da7ed7bf
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.link_internal.field_doc_title
-    - field.field.paragraph.link_internal.field_link_media_pdf
+    - field.field.paragraph.link_internal.field_media_document
     - paragraphs.paragraphs_type.link_internal
   module:
-    - field_layout
-    - layout_builder
     - media_library
-third_party_settings:
-  field_layout:
-    id: layout_twocol_section
-    settings:
-      label: ''
-      column_widths: 50-50
 id: paragraph.link_internal.default
 targetEntityType: paragraph
 bundle: link_internal
@@ -28,14 +20,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: first
-  field_link_media_pdf:
+    region: content
+  field_media_document:
     type: media_library_widget
     weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: first
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

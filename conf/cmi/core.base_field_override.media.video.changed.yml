@@ -1,5 +1,5 @@
-uuid: 28dc05ce-80d6-485d-b97b-b5157d550057
-langcode: fi
+uuid: 3aea00a3-8715-4dca-9700-550274f056f3
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.video.changed
 field_name: changed
 entity_type: media
 bundle: video
-label: Muuttunut
+label: Changed
 description: 'The time the media item was last edited.'
 required: false
 translatable: false
