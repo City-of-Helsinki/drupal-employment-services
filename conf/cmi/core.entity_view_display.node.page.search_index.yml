@@ -1,61 +1,46 @@
-uuid: ce77334d-5284-4473-8d9a-29225187da56
+uuid: 4d3919fc-8e11-4871-a2af-de98f0cf0847
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
-    - field.field.node.page.body
+    - field.field.node.page.field_page_content
+    - field.field.node.page.field_page_width
     - node.type.page
   module:
-    - field_layout
+    - entity_reference_revisions
     - layout_builder
-    - layout_discovery
-    - text
     - user
 third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
   layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          57a3fb6d-3988-492a-8a3b-bcc13e010b9e:
-            uuid: 57a3fb6d-3988-492a-8a3b-bcc13e010b9e
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:body'
-              formatter:
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-                label: hidden
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-_core:
-  default_config_hash: xBTs8g0qAlUrHQcyKIdGpebgUBgF-FOb_c0Lyu71hVc
+    allow_custom: false
+    enabled: false
 id: node.page.search_index
 targetEntityType: node
 bundle: page
 mode: search_index
 content:
-  body:
-    type: text_default
-    weight: 0
+  field_page_content:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_page_width:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
     settings: {  }
     third_party_settings: {  }
-    label: hidden
     region: content
 hidden:
   langcode: true
-  links: true
-  search_api_excerpt: true

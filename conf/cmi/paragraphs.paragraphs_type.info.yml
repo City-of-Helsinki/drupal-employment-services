@@ -1,4 +1,4 @@
-uuid: 049f2f4a-ba0f-40bb-bc8f-e96d86e7b382
+uuid: 7e909847-23e2-4db4-b3b1-2dd8ab9e3aed
 langcode: en
 status: true
 dependencies: {  }
@@ -6,5 +6,5 @@ id: info
 label: Info
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Information box'
 behavior_plugins: {  }

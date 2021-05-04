@@ -1,4 +1,4 @@
-uuid: 94b28eab-b834-4905-906a-3d7350fcb63d
+uuid: d4dc121b-2dce-4005-b1dc-b87e4bf8b93b
 langcode: en
 status: true
 dependencies:
@@ -7,14 +7,7 @@ dependencies:
     - field.field.paragraph.info.field_info_title
     - paragraphs.paragraphs_type.info
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.info.default
 targetEntityType: paragraph
 bundle: info
@@ -23,12 +16,10 @@ content:
   field_info_text:
     weight: 1
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: text_textarea
     region: content
   field_info_title:
     weight: 0
@@ -37,6 +28,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

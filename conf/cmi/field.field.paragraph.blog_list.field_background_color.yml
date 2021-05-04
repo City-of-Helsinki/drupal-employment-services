@@ -1,0 +1,33 @@
+uuid: 1df85112-d484-4709-b762-d779b859c7fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.blog_list
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:e8d51200-59e3-45a2-a893-f563958a0534'
+id: paragraph.blog_list.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: blog_list
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: e8d51200-59e3-45a2-a893-f563958a0534
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

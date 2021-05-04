@@ -1,0 +1,10 @@
+uuid: 73383029-42be-45a6-ae11-8805895016a8
+langcode: en
+status: true
+dependencies: {  }
+id: sujo_embedded
+label: 'Sujo embedded'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

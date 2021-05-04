@@ -1,44 +1,9 @@
+label: Dateien
 display:
   default:
-    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filter
-          reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
-          sort_asc_label: Aufsteigend
-          sort_desc_label: Absteigend
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
-      fields:
-        filename:
-          label: Name
-          separator: ', '
-        filemime:
-          label: MIME-Typ
-        status:
-          label: Status
-      filters:
-        filemime:
-          expose:
-            label: MIME-Typ
-        status:
-          expose:
-            label: Status
-  page_2:
+      title: Dateien
+  page_1:
     display_options:
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
-      arguments:
-        fid:
-          exception:
-            title: Alle
+      menu:
+        title: Dateien

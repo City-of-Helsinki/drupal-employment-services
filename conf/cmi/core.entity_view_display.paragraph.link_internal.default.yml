@@ -1,10 +1,10 @@
-uuid: 22eaf97d-dd44-475c-9a6d-a6a9f9569e5a
+uuid: b0f16b80-3055-4b2d-a37c-a711b1eb2cb2
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.link_internal.field_doc_title
-    - field.field.paragraph.link_internal.field_link_media_pdf
+    - field.field.paragraph.link_internal.field_media_document
     - paragraphs.paragraphs_type.link_internal
 id: paragraph.link_internal.default
 targetEntityType: paragraph
@@ -12,21 +12,20 @@ bundle: link_internal
 mode: default
 content:
   field_doc_title:
-    weight: 1
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_link_media_pdf:
+  field_media_document:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

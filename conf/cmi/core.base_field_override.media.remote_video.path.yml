@@ -1,5 +1,5 @@
-uuid: 4ec254a5-fd94-4e9c-9078-de6d6f48774d
-langcode: fi
+uuid: 577d9d87-a38a-4b21-8a88-341653d3eb30
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.remote_video.path
 field_name: path
 entity_type: media
 bundle: remote_video
-label: Osoitealias
+label: 'URL alias'
 description: ''
 required: false
 translatable: false

@@ -1,77 +1,25 @@
-uuid: fe1fa926-4c88-4e9b-b9e4-2d876f6f6434
+uuid: d0f0fcbb-ab7b-4be5-99d0-4aaf8d50e784
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing.body
-    - field.field.node.landing.field_landing_content
+    - field.field.node.landing.field_page_content
+    - field.field.node.landing.field_page_width
     - node.type.landing
   module:
-    - field_layout
-    - layout_builder
-    - layout_discovery
-    - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          7bbddb13-3d89-4797-98c5-1421ba7a0fc4:
-            uuid: 7bbddb13-3d89-4797-98c5-1421ba7a0fc4
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:landing:links'
-            additional: {  }
-            weight: 0
-          edbb68c5-8237-49ca-a533-7ebd2f66b40d:
-            uuid: edbb68c5-8237-49ca-a533-7ebd2f66b40d
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:landing:body'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
 id: node.landing.teaser
 targetEntityType: node
 bundle: landing
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  field_landing_content: true
+  field_page_content: true
+  field_page_width: true
   langcode: true
-  search_api_excerpt: true

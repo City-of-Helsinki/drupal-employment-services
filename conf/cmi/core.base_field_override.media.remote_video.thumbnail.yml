@@ -1,5 +1,5 @@
-uuid: 70b21bef-3977-4b34-979c-2f892d20ebf0
-langcode: fi
+uuid: b7528217-a933-443d-b26b-1c076123695b
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.remote_video.thumbnail
 field_name: thumbnail
 entity_type: media
 bundle: remote_video
-label: Pienoiskuva
+label: Thumbnail
 description: 'The thumbnail of the media item.'
 required: false
 translatable: false

@@ -1,5 +1,5 @@
-uuid: c42f25c6-6662-4cc9-b36b-51a19a27e7c4
-langcode: fi
+uuid: 4f265c19-ad31-444a-81ae-9fb8b4409724
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.audio.path
 field_name: path
 entity_type: media
 bundle: audio
-label: Osoitealias
+label: 'URL alias'
 description: ''
 required: false
 translatable: false

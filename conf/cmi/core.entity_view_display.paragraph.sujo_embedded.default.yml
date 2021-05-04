@@ -1,0 +1,23 @@
+uuid: dd03be3b-7a68-4837-8a78-8f0ff8664ef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sujo_embedded.field_training
+    - paragraphs.paragraphs_type.sujo_embedded
+id: paragraph.sujo_embedded.default
+targetEntityType: paragraph
+bundle: sujo_embedded
+mode: default
+content:
+  field_training:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

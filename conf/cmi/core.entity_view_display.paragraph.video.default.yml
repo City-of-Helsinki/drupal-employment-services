@@ -1,0 +1,21 @@
+uuid: 5e97d24b-44fa-4663-80eb-ea4f0d9d8782
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_video_url
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_video_url:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

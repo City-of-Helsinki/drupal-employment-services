@@ -1,62 +1,38 @@
-uuid: 24429465-c139-4cc2-b69a-26dfa1ec3c51
+uuid: 05abf60e-e7fb-4527-83c0-77e7ed71ac44
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.phone_number_box.field_pb_bg_color
-    - field.field.paragraph.phone_number_box.field_pb_border_color
     - field.field.paragraph.phone_number_box.field_pb_text
     - field.field.paragraph.phone_number_box.field_pb_title
     - paragraphs.paragraphs_type.phone_number_box
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.phone_number_box.default
 targetEntityType: paragraph
 bundle: phone_number_box
 mode: default
 content:
-  field_pb_bg_color:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_pb_border_color:
-    weight: 4
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_pb_text:
-    weight: 7
+    weight: 1
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
   field_pb_title:
-    weight: 6
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

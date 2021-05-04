@@ -1,0 +1,82 @@
+uuid: fdfed632-6e28-4cd8-9b8d-3de76b7c73cb
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content
+    - node.type.event
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_and_card
+    - paragraphs.paragraphs_type.info
+    - paragraphs.paragraphs_type.link_internal
+    - paragraphs.paragraphs_type.phone_number_box
+    - paragraphs.paragraphs_type.subheading
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.event.field_page_content
+field_name: field_page_content
+entity_type: node
+bundle: event
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      card_list: card_list
+      hero: hero
+      image: image
+      image_and_card: image_and_card
+      info: info
+      link_internal: link_internal
+      phone_number_box: phone_number_box
+      subheading: subheading
+      text: text
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 13
+      card:
+        weight: 14
+        enabled: false
+      card_list:
+        enabled: true
+        weight: 15
+      hero:
+        enabled: true
+        weight: 16
+      image:
+        enabled: true
+        weight: 17
+      image_and_card:
+        enabled: true
+        weight: 18
+      info:
+        enabled: true
+        weight: 19
+      link_internal:
+        enabled: true
+        weight: 20
+      phone_number_box:
+        enabled: true
+        weight: 21
+      subheading:
+        enabled: true
+        weight: 22
+      test:
+        weight: 23
+        enabled: false
+      text:
+        enabled: true
+        weight: 24
+field_type: entity_reference_revisions

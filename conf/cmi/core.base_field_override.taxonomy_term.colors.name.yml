@@ -1,5 +1,5 @@
-uuid: bfda1fb1-160d-47c4-978a-19f0d04cea4e
-langcode: fi
+uuid: a69dbcfe-0ebf-48f9-8a26-82b5de734918
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: taxonomy_term.colors.name
 field_name: name
 entity_type: taxonomy_term
 bundle: colors
-label: Nimi
+label: Name
 description: ''
 required: true
 translatable: false

@@ -1,5 +1,5 @@
-uuid: cd3ca7a4-73b4-481b-a5a1-88768cc5858c
-langcode: fi
+uuid: f9126ce4-54a2-4f95-aefc-f14bbad54baa
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.document.thumbnail
 field_name: thumbnail
 entity_type: media
 bundle: document
-label: Pienoiskuva
+label: Thumbnail
 description: 'The thumbnail of the media item.'
 required: false
 translatable: false

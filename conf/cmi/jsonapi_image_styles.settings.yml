@@ -1,0 +1,16 @@
+image_styles:
+  hero: hero
+  hero_shallow: hero_shallow
+  regular_m: regular_m
+  regular_s: regular_s
+  wide_m: wide_m
+  wide_s: wide_s
+  large: 0
+  max_1300x1300: 0
+  max_2600x2600: 0
+  max_325x325: 0
+  max_650x650: 0
+  media_library: 0
+  medium: 0
+  thumbnail: 0
+  wide_l: 0

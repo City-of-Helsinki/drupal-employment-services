@@ -1,0 +1,15 @@
+uuid: 11b5fb98-e65e-473f-aa0c-7ec19eef1814
+langcode: en
+status: true
+dependencies: {  }
+name: regular_m
+label: 'Regular M'
+effects:
+  131a4feb-c63c-46e6-85ef-02c9d601d9fb:
+    uuid: 131a4feb-c63c-46e6-85ef-02c9d601d9fb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 840
+      anchor: center-center

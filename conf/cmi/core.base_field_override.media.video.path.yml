@@ -1,5 +1,5 @@
-uuid: f4ee0f0d-ef06-49db-9e4f-b3b6caf0cd1b
-langcode: fi
+uuid: c9d82904-1314-41ef-be77-21edd501783e
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.video.path
 field_name: path
 entity_type: media
 bundle: video
-label: Osoitealias
+label: 'URL alias'
 description: ''
 required: false
 translatable: false

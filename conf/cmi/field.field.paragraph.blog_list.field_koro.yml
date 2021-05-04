@@ -1,0 +1,23 @@
+uuid: 7e101709-2dec-48a2-ac0b-09c470ec9f95
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_koro
+    - paragraphs.paragraphs_type.blog_list
+id: paragraph.blog_list.field_koro
+field_name: field_koro
+entity_type: paragraph
+bundle: blog_list
+label: Koro
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

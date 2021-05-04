@@ -1,0 +1,18 @@
+uuid: b9cfacee-ce5e-41c4-be74-09a3f2eeecaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paragraph_width
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.paragraph_width
+target_entity_type_id: taxonomy_term
+target_bundle: paragraph_width
+default_langcode: site_default
+language_alterable: false

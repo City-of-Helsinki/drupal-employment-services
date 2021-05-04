@@ -1,5 +1,5 @@
-uuid: 0e869ef0-e4a4-45d6-95de-855607552d71
-langcode: fi
+uuid: b9d7611a-8341-46b3-a6c4-16eace61c73f
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.video.status
 field_name: status
 entity_type: media
 bundle: video
-label: Julkaistu
+label: Published
 description: ''
 required: false
 translatable: false
@@ -17,6 +17,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: Käytössä
-  off_label: 'Pois päältä'
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

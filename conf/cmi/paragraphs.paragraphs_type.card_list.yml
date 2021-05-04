@@ -1,0 +1,10 @@
+uuid: 888b0e82-ca1b-4073-974f-ec028c49343a
+langcode: fi
+status: true
+dependencies: {  }
+id: card_list
+label: Card-List
+icon_uuid: null
+icon_default: null
+description: 'List of cards in a row'
+behavior_plugins: {  }

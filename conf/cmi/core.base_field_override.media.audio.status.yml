@@ -1,5 +1,5 @@
-uuid: f57d24b8-2173-4924-b05e-f92427128b75
-langcode: fi
+uuid: d5624e56-2992-4cbb-b20e-74656f5ce0de
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.audio.status
 field_name: status
 entity_type: media
 bundle: audio
-label: Julkaistu
+label: Published
 description: ''
 required: false
 translatable: false
@@ -17,6 +17,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: Käytössä
-  off_label: 'Pois päältä'
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

@@ -1,0 +1,25 @@
+uuid: 88356d30-91c6-40bc-9c36-8a44453389f0
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_width
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.field_card_width
+field_name: field_card_width
+entity_type: paragraph
+bundle: card
+label: 'Card width'
+description: 'Card max width'
+required: false
+translatable: false
+default_value:
+  -
+    value: 300
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: c27ee7bf-0982-4cd5-8010-2a59f8c59809
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_list
+    - paragraphs.paragraphs_type.news_list
+id: paragraph.news_list.field_short_list
+field_name: field_short_list
+entity_type: paragraph
+bundle: news_list
+label: 'Short list'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

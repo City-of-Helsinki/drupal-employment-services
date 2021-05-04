@@ -1,8 +1,0 @@
-uuid: d8ee134d-6d8b-4988-a08c-57fb06ce4608
-langcode: en
-status: true
-dependencies: {  }
-id: tyollisyysmenu
-label: Tyollisyysmenu
-description: 'Release menu'
-locked: false

@@ -1,4 +1,4 @@
-uuid: 3fcd9dab-9844-42a9-981a-6f3ef6a477e5
+uuid: 4dc24809-e2fe-4da0-83d1-6d2775cb0917
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ bundle: hero
 label: 'Hero image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

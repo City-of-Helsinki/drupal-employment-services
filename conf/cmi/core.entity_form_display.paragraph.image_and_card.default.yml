@@ -1,0 +1,43 @@
+uuid: f74a5e88-9358-40da-9314-18e010057964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_and_card.field_ic_card
+    - field.field.paragraph.image_and_card.field_ic_image
+    - paragraphs.paragraphs_type.image_and_card
+  module:
+    - media_library
+    - paragraphs
+id: paragraph.image_and_card.default
+targetEntityType: paragraph
+bundle: image_and_card
+mode: default
+content:
+  field_ic_card:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_ic_image:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

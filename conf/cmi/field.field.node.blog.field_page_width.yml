@@ -1,0 +1,33 @@
+uuid: 4e4431ff-a83f-4edf-b865-126cd9bcff3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_width
+    - node.type.blog
+    - taxonomy.vocabulary.paragraph_width
+  content:
+    - 'taxonomy_term:paragraph_width:97d9a1a2-691c-49d1-a4ff-852549e845e0'
+id: node.blog.field_page_width
+field_name: field_page_width
+entity_type: node
+bundle: blog
+label: 'Paragraph width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 97d9a1a2-691c-49d1-a4ff-852549e845e0
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      paragraph_width: paragraph_width
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

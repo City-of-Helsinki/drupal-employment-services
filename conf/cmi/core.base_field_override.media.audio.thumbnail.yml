@@ -1,5 +1,5 @@
-uuid: fbcb45ae-f92f-4309-b8d6-80640e75c197
-langcode: fi
+uuid: 1af0d812-5197-4810-be07-1827cac1927d
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.audio.thumbnail
 field_name: thumbnail
 entity_type: media
 bundle: audio
-label: Pienoiskuva
+label: Thumbnail
 description: 'The thumbnail of the media item.'
 required: false
 translatable: false

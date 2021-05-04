@@ -1,0 +1,19 @@
+uuid: afb088f6-9582-49c2-a198-42ef816ae6e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_modified_time
+    - node.type.event
+id: node.event.field_last_modified_time
+field_name: field_last_modified_time
+entity_type: node
+bundle: event
+label: last_modified_time
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

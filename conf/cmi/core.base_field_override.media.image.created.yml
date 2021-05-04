@@ -1,5 +1,5 @@
-uuid: 3dd7ec9b-ff68-4c81-ba6d-983c41a865bb
-langcode: fi
+uuid: c522a2b9-f954-42b8-a51d-2b1a83b7f464
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.image.created
 field_name: created
 entity_type: media
 bundle: image
-label: Luotu
+label: 'Authored on'
 description: 'The time the media item was created.'
 required: false
 translatable: false

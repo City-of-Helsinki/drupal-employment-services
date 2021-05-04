@@ -1,5 +1,5 @@
-uuid: 84c51caa-27ba-43b3-b1af-217da360a1fa
-langcode: fi
+uuid: 0604bf5d-c69d-4506-b30e-f98c642ac49a
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,8 +8,8 @@ id: taxonomy_term.colors.changed
 field_name: changed
 entity_type: taxonomy_term
 bundle: colors
-label: Muuttunut
-description: 'Kellonaika jolloin termiä viimeksi päivitettiin.'
+label: Changed
+description: 'The time that the term was last edited.'
 required: false
 translatable: false
 default_value: {  }

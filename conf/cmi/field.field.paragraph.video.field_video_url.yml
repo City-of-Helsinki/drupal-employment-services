@@ -1,0 +1,19 @@
+uuid: 8e7574b1-d633-4955-96aa-ae78705ff678
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_url
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_video_url
+field_name: field_video_url
+entity_type: paragraph
+bundle: video
+label: 'Video URL'
+description: 'Add link in this format: https://www.helsinkikanava.fi/web/helsinkikanava/player/embed/vod?assetId=66368125'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

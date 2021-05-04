@@ -1,4 +1,4 @@
-uuid: 4f9bde30-9c0f-4642-8d4a-cf2599ce194b
+uuid: 540364d0-68ea-4fb6-a08f-b5f9329537c5
 langcode: en
 status: true
 dependencies:
@@ -10,9 +10,9 @@ field_name: field_pb_title
 entity_type: paragraph
 bundle: phone_number_box
 label: Title
-description: ''
+description: 'Phone number name'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

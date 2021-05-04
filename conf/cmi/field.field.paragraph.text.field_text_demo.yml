@@ -1,4 +1,4 @@
-uuid: 06be9c79-81bf-4b72-bf62-9f6d71489ef3
+uuid: 8b6be008-ef05-452c-8c9b-17f781b71574
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - text
-_core:
-  default_config_hash: '-YuSCzPgaKNjAqF6WWx-CpmSUIxH-Gg10jDK0d94IbQ'
 id: paragraph.text.field_text_demo
 field_name: field_text_demo
 entity_type: paragraph
 bundle: text
 label: Text
-description: ''
-required: true
+description: 'Html text block'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

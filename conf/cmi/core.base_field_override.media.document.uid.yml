@@ -1,5 +1,5 @@
-uuid: 3f2791a9-f652-4095-b6d3-654908892925
-langcode: fi
+uuid: 04ab35f3-4f80-4aad-8462-35472578bf93
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.document.uid
 field_name: uid
 entity_type: media
 bundle: document
-label: Kirjoittanut
+label: 'Authored by'
 description: 'The user ID of the author.'
 required: false
 translatable: false

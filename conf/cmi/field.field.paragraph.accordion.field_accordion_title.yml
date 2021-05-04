@@ -1,4 +1,4 @@
-uuid: 0843dfc1-ba87-4542-b2fb-5b9916e788b1
+uuid: 174bbcf9-3e98-416d-abcc-f0c7abac419f
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: paragraph.accordion.field_accordion_title
 field_name: field_accordion_title
 entity_type: paragraph
 bundle: accordion
-label: 'Accordion title'
-description: ''
+label: Title
+description: 'Accordion title'
 required: false
 translatable: true
 default_value: {  }

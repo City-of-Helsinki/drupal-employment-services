@@ -1,18 +1,11 @@
-uuid: bcb26aa8-10ab-41d7-a22e-1bd7bc063c7c
+uuid: c75a3ec2-7ccb-4e2e-8c84-b1378932b213
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.subheading.field_subheading_title
+    - field.field.paragraph.subheading.field_title_color
     - paragraphs.paragraphs_type.subheading
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.subheading.default
 targetEntityType: paragraph
 bundle: subheading
@@ -26,6 +19,17 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_title_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

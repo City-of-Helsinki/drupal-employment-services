@@ -1,5 +1,5 @@
-uuid: a72b8b08-9a2d-410a-8ef5-2f5c0410a825
-langcode: fi
+uuid: 5a189360-f118-4b3f-b6ad-21dcc9fbcfd7
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.remote_video.created
 field_name: created
 entity_type: media
 bundle: remote_video
-label: Luotu
+label: 'Authored on'
 description: 'The time the media item was created.'
 required: false
 translatable: false

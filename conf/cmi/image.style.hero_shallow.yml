@@ -1,0 +1,15 @@
+uuid: b1520816-3f14-475f-9cab-eb27572b798e
+langcode: fi
+status: true
+dependencies: {  }
+name: hero_shallow
+label: 'Hero shallow'
+effects:
+  130c8128-c51a-4d4b-a12d-bf41fc5fc176:
+    uuid: 130c8128-c51a-4d4b-a12d-bf41fc5fc176
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 360
+      anchor: center-center

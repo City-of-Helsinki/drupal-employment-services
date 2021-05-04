@@ -10,33 +10,27 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.7",
         "druidfi/omen": "^0.2.0",
-        "drupal/adminimal_theme": "^1.6",
-        "drupal/config_pages": "^2.8",
-        "drupal/core-composer-scaffold": "^9.1.3",
-        "drupal/core-recommended": "^9.1.3",
-        "drupal/decoupled_router": "^2.0",
-        "drupal/devel": "^4.0",
-        "drupal/entity_browser": "^2.5",
-        "drupal/entity_reference_revisions": "^1.8",
-        "drupal/entity_usage": "^2.0@beta",
-        "drupal/features": "^3.11",
-        "drupal/graphql": "^3.1",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core-recommended": "^9.1",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
-        "drupal/helfi_platform_config": "^1.0.0",
+        "drupal/helfi_ahjo": "^1.0",
+        "drupal/helfi_hauki": "^1.0",
+        "drupal/helfi_linkedevents": "^1.0",
+        "drupal/helfi_platform_config": "^1.1",
         "drupal/helfi_tpr": "^1.0",
         "drupal/helfi_tunnistamo": "^1.0",
-        "drupal/jsonapi_extras": "^3.16",
-        "drupal/paragraphs": "^1.12",
-        "drupal/pathauto": "^1.8",
-        "drupal/search_api": "^1.18",
-        "drupal/subrequests": "^3.0",
-        "drush/drush": "^10.3"
+        "drupal/jsonapi_extras": "^3.17",
+        "drupal/jsonapi_image_styles": "^2.0@beta",
+        "drupal/paragraphs_features": "^1.11",
+        "drush/drush": "^10.4"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "^9.1.3"
+        "drupal/core-dev": "^9.1",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpunit/phpunit": "~9.4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -84,14 +78,6 @@
             "drush/{$name}": [
                 "type:drupal-drush"
             ]
-        },
-        "patches": {
-            "drupal/core": {
-                "#2863785": "https://www.drupal.org/files/issues/config_import_creates-2863785-3.patch"
-            },
-            "drupal/paragraphs" : {
-                "#3145886": "https://www.drupal.org/files/issues/2020-11-09/paragraphs-3145886-5.patch"
-            }
         }
     },
     "repositories": [
@@ -107,10 +93,10 @@
     "scripts": {
         "copy-commit-message-script": "make copy-commit-message-script",
         "post-install-cmd": [
-          "@copy-commit-message-script"
+            "@copy-commit-message-script"
         ],
         "post-update-cmd": [
-          "@copy-commit-message-script"
+            "@copy-commit-message-script"
         ]
     }
 }

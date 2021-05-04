@@ -1,0 +1,19 @@
+uuid: b9bd9467-78b6-4a67-805d-40f80d09d9da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_name
+    - node.type.event
+id: node.event.field_image_name
+field_name: field_image_name
+entity_type: node
+bundle: event
+label: image_name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

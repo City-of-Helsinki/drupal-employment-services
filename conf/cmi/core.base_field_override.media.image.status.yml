@@ -1,5 +1,5 @@
-uuid: 18aa79b1-d1bf-465b-be17-0e5fbc1599b6
-langcode: fi
+uuid: ff9e22eb-96a2-4db7-b96f-6def18cff992
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.image.status
 field_name: status
 entity_type: media
 bundle: image
-label: Julkaistu
+label: Published
 description: ''
 required: false
 translatable: false
@@ -17,6 +17,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: Käytössä
-  off_label: 'Pois päältä'
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

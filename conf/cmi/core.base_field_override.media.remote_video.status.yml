@@ -1,5 +1,5 @@
-uuid: 289d0324-e7bc-4efb-9d02-5cea45c15c06
-langcode: fi
+uuid: dc24637b-af0f-4f07-8fbe-9d1396c7a249
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: media.remote_video.status
 field_name: status
 entity_type: media
 bundle: remote_video
-label: Julkaistu
+label: Published
 description: ''
 required: false
 translatable: false
@@ -17,6 +17,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: Käytössä
-  off_label: 'Pois päältä'
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

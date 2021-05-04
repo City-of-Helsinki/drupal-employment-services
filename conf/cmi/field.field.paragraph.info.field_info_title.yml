@@ -1,4 +1,4 @@
-uuid: 922ac5dd-ad2d-40f0-9192-0d7c997b7940
+uuid: 187ffd6d-3ab4-497f-88db-be8206f09cbf
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: paragraph.info.field_info_title
 field_name: field_info_title
 entity_type: paragraph
 bundle: info
-label: 'Info title'
-description: ''
+label: Title
+description: 'Title of the info'
 required: false
 translatable: true
 default_value: {  }

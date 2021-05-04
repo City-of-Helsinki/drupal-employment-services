@@ -1,0 +1,22 @@
+uuid: 254d3774-d3ca-4a81-bf18-7984106d5a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paragraph_width
+id: taxonomy_term.paragraph_width.status
+field_name: status
+entity_type: taxonomy_term
+bundle: paragraph_width
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

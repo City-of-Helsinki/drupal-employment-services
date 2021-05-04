@@ -1,0 +1,19 @@
+uuid: a50d0939-e3a6-4a4b-bf00-1cc81c7b966d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_time
+    - node.type.event
+id: node.event.field_end_time
+field_name: field_end_time
+entity_type: node
+bundle: event
+label: end_time
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

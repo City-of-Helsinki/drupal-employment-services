@@ -1,4 +1,4 @@
-uuid: 3d1643b0-62d8-45d6-9374-b03dc5e4b2cb
+uuid: 594ec133-3379-41d9-944f-b83231380984
 langcode: en
 status: true
 dependencies: {  }
@@ -6,5 +6,5 @@ id: accordion
 label: Accordion
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Accordion '
 behavior_plugins: {  }
