@@ -22,6 +22,7 @@
         "drupal/helfi_tunnistamo": "^1.0",
         "drupal/jsonapi_extras": "^3.17",
         "drupal/jsonapi_image_styles": "^2.0@beta",
+        "drupal/migrate_plus": "^5.1",
         "drupal/paragraphs_features": "^1.11",
         "drush/drush": "^10.4"
     },
