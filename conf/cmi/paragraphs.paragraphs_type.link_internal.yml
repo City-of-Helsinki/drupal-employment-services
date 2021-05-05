@@ -1,0 +1,10 @@
+uuid: c381435b-2c3b-4f30-9858-e0bd21607bac
+langcode: en
+status: true
+dependencies: {  }
+id: link_internal
+label: 'Link internal'
+icon_uuid: null
+icon_default: null
+description: 'File link, PDF link'
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: c22a480a-ba84-4c9c-9231-45cbacf90b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_list.field_background_color
+    - field.field.paragraph.events_list.field_title
+    - paragraphs.paragraphs_type.events_list
+id: paragraph.events_list.default
+targetEntityType: paragraph
+bundle: events_list
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

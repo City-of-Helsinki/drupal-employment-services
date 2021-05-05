@@ -1,0 +1,10 @@
+uuid: 6e1bf88e-87fe-430e-9125-2c5bcfb97535
+langcode: en
+status: true
+dependencies: {  }
+id: subheading
+label: Subheading
+icon_uuid: null
+icon_default: null
+description: 'Heading block'
+behavior_plugins: {  }

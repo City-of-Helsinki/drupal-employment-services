@@ -1,0 +1,10 @@
+label: Medien
+display:
+  default:
+    display_options:
+      title: Medien
+  media_page_list:
+    display_title: Medien
+    display_options:
+      menu:
+        title: Medien

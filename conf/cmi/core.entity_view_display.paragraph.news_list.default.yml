@@ -1,0 +1,52 @@
+uuid: 2d28d051-2e76-4582-9190-eb75f18824b4
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_list.field_background_color
+    - field.field.paragraph.news_list.field_koro
+    - field.field.paragraph.news_list.field_short_list
+    - field.field.paragraph.news_list.field_title
+    - paragraphs.paragraphs_type.news_list
+id: paragraph.news_list.default
+targetEntityType: paragraph
+bundle: news_list
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_koro:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_short_list:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

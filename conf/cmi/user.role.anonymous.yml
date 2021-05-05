@@ -1,0 +1,57 @@
+uuid: 8043fa37-7e54-4ebb-a24d-63cbc300acbd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access config_pages overview'
+  - 'access content'
+  - 'access files overview'
+  - 'access site-wide contact form'
+  - 'access taxonomy overview'
+  - 'administer menu'
+  - 'administer search'
+  - 'administer taxonomy_term display'
+  - 'administer url aliases'
+  - 'search content'
+  - 'translate any entity'
+  - 'translate paragraph'
+  - 'translate prerelease_landing node'
+  - 'use advanced search'
+  - 'use text format restricted_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view config_pages entity'
+  - 'view event revisions'
+  - 'view landing revisions'
+  - 'view media'
+  - 'view news revisions'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view paragraph content accordion'
+  - 'view paragraph content blog_list'
+  - 'view paragraph content card'
+  - 'view paragraph content card_list'
+  - 'view paragraph content events_list'
+  - 'view paragraph content hero'
+  - 'view paragraph content image'
+  - 'view paragraph content image_and_card'
+  - 'view paragraph content info'
+  - 'view paragraph content link'
+  - 'view paragraph content link_internal'
+  - 'view paragraph content mainheading'
+  - 'view paragraph content news_list'
+  - 'view paragraph content phone_number_box'
+  - 'view paragraph content search'
+  - 'view paragraph content subheading'
+  - 'view paragraph content sujo_embedded'
+  - 'view paragraph content text'
+  - 'view paragraph content video'
+  - 'view prerelease_landing revisions'
+  - 'view release_settings config page entity'

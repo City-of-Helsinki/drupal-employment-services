@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: Media
+  page:
+    display_options:
+      fields:
+        edit_media:
+          text: Redigera
+        delete_media:
+          text: Radera

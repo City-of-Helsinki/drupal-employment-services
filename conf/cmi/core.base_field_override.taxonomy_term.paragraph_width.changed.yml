@@ -1,0 +1,18 @@
+uuid: 9268a03c-91c9-4c74-8e9a-b0d836a58412
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paragraph_width
+id: taxonomy_term.paragraph_width.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: paragraph_width
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

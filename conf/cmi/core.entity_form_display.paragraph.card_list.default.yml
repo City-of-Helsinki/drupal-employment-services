@@ -1,0 +1,58 @@
+uuid: 8e2ea48b-02b2-4c30-bb99-b592406eafc0
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_list.field_card_list_bg_color
+    - field.field.paragraph.card_list.field_card_list_is_koro
+    - field.field.paragraph.card_list.field_card_list_title
+    - field.field.paragraph.card_list.field_cards
+    - paragraphs.paragraphs_type.card_list
+  module:
+    - paragraphs
+id: paragraph.card_list.default
+targetEntityType: paragraph
+bundle: card_list
+mode: default
+content:
+  field_card_list_bg_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_card_list_is_koro:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_card_list_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cards:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,10 @@
+uuid: ac32be0e-8619-4e10-a371-c375cfb3095f
+langcode: en
+status: true
+dependencies: {  }
+id: phone_number_box
+label: 'Phone number box'
+icon_uuid: null
+icon_default: null
+description: 'Phone number box'
+behavior_plugins: {  }

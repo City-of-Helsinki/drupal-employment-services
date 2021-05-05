@@ -1,0 +1,30 @@
+uuid: e127d743-f389-406f-99d0-73b6f257c4d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subheading.field_subheading_title
+    - field.field.paragraph.subheading.field_title_color
+    - paragraphs.paragraphs_type.subheading
+id: paragraph.subheading.default
+targetEntityType: paragraph
+bundle: subheading
+mode: default
+content:
+  field_subheading_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_color:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

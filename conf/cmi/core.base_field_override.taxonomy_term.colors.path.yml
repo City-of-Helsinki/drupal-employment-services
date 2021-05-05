@@ -1,0 +1,20 @@
+uuid: 88b0467e-2f1a-463a-a47a-0506c44989ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.colors
+  module:
+    - path
+id: taxonomy_term.colors.path
+field_name: path
+entity_type: taxonomy_term
+bundle: colors
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

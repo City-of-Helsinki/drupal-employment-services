@@ -1,0 +1,15 @@
+uuid: ef16ff97-30ea-43ab-8977-b27b6311cb2b
+langcode: en
+status: true
+dependencies: {  }
+name: regular_s
+label: 'Regular S'
+effects:
+  f3c9d986-6291-46b0-b536-b46a430e4c3a:
+    uuid: f3c9d986-6291-46b0-b536-b46a430e4c3a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 560
+      anchor: center-center

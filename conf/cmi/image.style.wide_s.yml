@@ -1,0 +1,15 @@
+uuid: 92db0554-bf4c-4ee0-a091-9fbf87e377e0
+langcode: fi
+status: true
+dependencies: {  }
+name: wide_s
+label: 'Wide S'
+effects:
+  b6d12546-eec3-46d3-8118-50bca51010c9:
+    uuid: b6d12546-eec3-46d3-8118-50bca51010c9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 896
+      height: 448
+      anchor: center-center

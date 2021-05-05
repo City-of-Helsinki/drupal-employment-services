@@ -1,0 +1,14 @@
+uuid: 50291dfd-50ef-4cb7-a2d4-4c2f1615cc38
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.jsonapi
+  module:
+    - user
+id: user_remove_role_action.jsonapi
+label: 'Remove the jsonapi role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: jsonapi

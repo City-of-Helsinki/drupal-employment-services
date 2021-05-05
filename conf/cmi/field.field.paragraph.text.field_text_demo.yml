@@ -1,0 +1,21 @@
+uuid: 8b6be008-ef05-452c-8c9b-17f781b71574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_demo
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.field_text_demo
+field_name: field_text_demo
+entity_type: paragraph
+bundle: text
+label: Text
+description: 'Html text block'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: 7efc9bf6-0f20-4226-8516-8bd46da0e3f6
+langcode: en
+status: true
+dependencies: {  }
+id: main-fi
+label: 'Main menu (Finnish)'
+description: ''
+locked: false

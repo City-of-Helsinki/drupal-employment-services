@@ -1,0 +1,8 @@
+uuid: 546efa6b-e924-4e38-8af4-3dce07d8d0b7
+langcode: en
+status: true
+dependencies: {  }
+name: Colors
+vid: colors
+description: 'Color choices'
+weight: 0

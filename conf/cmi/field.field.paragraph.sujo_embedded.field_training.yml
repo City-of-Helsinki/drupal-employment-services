@@ -1,0 +1,23 @@
+uuid: 7661cc8a-3d79-4f39-92f5-cf858064befc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_training
+    - paragraphs.paragraphs_type.sujo_embedded
+id: paragraph.sujo_embedded.field_training
+field_name: field_training
+entity_type: paragraph
+bundle: sujo_embedded
+label: Training
+description: 'Valitse jos näytetään: https://www.sujo.fi/pls/sujo/tyoko.training. Muutoin näytetään: https://www.sujo.fi/pls/sujo/tyoko.salary'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

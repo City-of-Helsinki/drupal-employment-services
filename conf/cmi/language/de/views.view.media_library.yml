@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: Medien
+  page:
+    display_options:
+      fields:
+        edit_media:
+          text: Bearbeiten
+        delete_media:
+          text: Löschen

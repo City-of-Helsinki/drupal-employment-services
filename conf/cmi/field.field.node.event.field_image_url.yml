@@ -1,0 +1,19 @@
+uuid: dc988242-00a6-4299-a3af-879e20d31588
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_url
+    - node.type.event
+id: node.event.field_image_url
+field_name: field_image_url
+entity_type: node
+bundle: event
+label: image_url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

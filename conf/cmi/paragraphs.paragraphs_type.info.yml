@@ -1,0 +1,10 @@
+uuid: 7e909847-23e2-4db4-b3b1-2dd8ab9e3aed
+langcode: en
+status: true
+dependencies: {  }
+id: info
+label: Info
+icon_uuid: null
+icon_default: null
+description: 'Information box'
+behavior_plugins: {  }

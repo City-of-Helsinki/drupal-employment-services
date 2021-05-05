@@ -1,0 +1,112 @@
+uuid: 9d97263f-dd67-4c50-808d-827bc3a91041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content
+    - node.type.news
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_and_card
+    - paragraphs.paragraphs_type.info
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.link_internal
+    - paragraphs.paragraphs_type.mainheading
+    - paragraphs.paragraphs_type.phone_number_box
+    - paragraphs.paragraphs_type.subheading
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.news.field_page_content
+field_name: field_page_content
+entity_type: node
+bundle: news
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      hero: hero
+      image: image
+      card_list: card_list
+      image_and_card: image_and_card
+      info: info
+      link_internal: link_internal
+      link: link
+      mainheading: mainheading
+      phone_number_box: phone_number_box
+      subheading: subheading
+      text: text
+      video: video
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: -37
+      blog_list:
+        weight: 22
+        enabled: false
+      card:
+        weight: -36
+        enabled: false
+      card_list:
+        enabled: true
+        weight: -33
+      events_list:
+        weight: -29
+        enabled: false
+      hero:
+        enabled: true
+        weight: -35
+      image:
+        enabled: true
+        weight: -34
+      image_and_card:
+        enabled: true
+        weight: -32
+      info:
+        enabled: true
+        weight: -31
+      link:
+        enabled: true
+        weight: -27
+      link_internal:
+        enabled: true
+        weight: -30
+      mainheading:
+        enabled: true
+        weight: -26
+      news_list:
+        weight: -25
+        enabled: false
+      phone_number_box:
+        enabled: true
+        weight: -24
+      search:
+        weight: -21
+        enabled: false
+      subheading:
+        enabled: true
+        weight: -23
+      sujo_embedded:
+        weight: -20
+        enabled: false
+      test:
+        weight: -28
+        enabled: false
+      text:
+        enabled: true
+        weight: -22
+      video:
+        enabled: true
+        weight: 40
+field_type: entity_reference_revisions

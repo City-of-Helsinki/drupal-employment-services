@@ -1,0 +1,9 @@
+label: Dateien
+display:
+  default:
+    display_options:
+      title: Dateien
+  page_1:
+    display_options:
+      menu:
+        title: Dateien

@@ -1,0 +1,22 @@
+uuid: 9cf91561-1283-42b7-ba44-54a4699d5b1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sujo_embedded.field_training
+    - paragraphs.paragraphs_type.sujo_embedded
+id: paragraph.sujo_embedded.default
+targetEntityType: paragraph
+bundle: sujo_embedded
+mode: default
+content:
+  field_training:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true

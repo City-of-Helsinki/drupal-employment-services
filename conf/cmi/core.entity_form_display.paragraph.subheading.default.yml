@@ -1,0 +1,35 @@
+uuid: c75a3ec2-7ccb-4e2e-8c84-b1378932b213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subheading.field_subheading_title
+    - field.field.paragraph.subheading.field_title_color
+    - paragraphs.paragraphs_type.subheading
+id: paragraph.subheading.default
+targetEntityType: paragraph
+bundle: subheading
+mode: default
+content:
+  field_subheading_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

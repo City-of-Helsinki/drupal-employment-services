@@ -1,0 +1,23 @@
+uuid: 5834b443-2f47-4bf2-aabe-c820f6e7486e
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_date
+    - paragraphs.paragraphs_type.mainheading
+id: paragraph.mainheading.field_show_date
+field_name: field_show_date
+entity_type: paragraph
+bundle: mainheading
+label: 'Show date'
+description: 'Use this for News and Blogs.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

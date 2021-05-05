@@ -1,0 +1,21 @@
+uuid: 58d766b0-8c13-4189-affd-5fe8ca260e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - node.type.event
+  module:
+    - text
+id: node.event.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: event
+label: 'short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

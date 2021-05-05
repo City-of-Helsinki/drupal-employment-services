@@ -1,0 +1,9 @@
+label: Filer
+display:
+  default:
+    display_options:
+      title: Filer
+  page_1:
+    display_options:
+      menu:
+        title: Filer

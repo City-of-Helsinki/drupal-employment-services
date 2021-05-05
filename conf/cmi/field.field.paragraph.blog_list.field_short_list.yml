@@ -1,0 +1,23 @@
+uuid: d8b17044-445d-447f-9d0e-aadcc7d6cf9d
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_list
+    - paragraphs.paragraphs_type.blog_list
+id: paragraph.blog_list.field_short_list
+field_name: field_short_list
+entity_type: paragraph
+bundle: blog_list
+label: 'Short list'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

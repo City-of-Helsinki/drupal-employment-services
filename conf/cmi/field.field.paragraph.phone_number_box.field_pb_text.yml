@@ -1,0 +1,21 @@
+uuid: 6a13964e-772c-4411-b83b-0a747c5818f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_text
+    - paragraphs.paragraphs_type.phone_number_box
+  module:
+    - text
+id: paragraph.phone_number_box.field_pb_text
+field_name: field_pb_text
+entity_type: paragraph
+bundle: phone_number_box
+label: Text
+description: 'Informative text field'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

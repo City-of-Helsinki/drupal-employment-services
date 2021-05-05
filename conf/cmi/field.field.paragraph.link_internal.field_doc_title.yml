@@ -1,0 +1,19 @@
+uuid: abb759ce-3041-421d-808e-12aad3168319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_doc_title
+    - paragraphs.paragraphs_type.link_internal
+id: paragraph.link_internal.field_doc_title
+field_name: field_doc_title
+entity_type: paragraph
+bundle: link_internal
+label: Title
+description: 'Name of document'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

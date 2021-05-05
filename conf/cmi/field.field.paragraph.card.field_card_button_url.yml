@@ -1,0 +1,19 @@
+uuid: f42ecf73-5430-4b0c-9b5e-2ad8d2911c1b
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_button_url
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.field_card_button_url
+field_name: field_card_button_url
+entity_type: paragraph
+bundle: card
+label: Path/url
+description: 'Give path/url where button will go'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

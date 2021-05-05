@@ -1,0 +1,33 @@
+uuid: 32ab173b-37bf-4c8a-9f10-1b0c383f4c82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.card
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:c6c53968-9382-4ab0-9b1d-b457bfe140ef'
+id: paragraph.card.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: card
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c6c53968-9382-4ab0-9b1d-b457bfe140ef
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
