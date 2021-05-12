@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.image_and_card
     - paragraphs.paragraphs_type.info
+    - paragraphs.paragraphs_type.lead
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
     - paragraphs.paragraphs_type.mainheading
@@ -41,6 +42,7 @@ settings:
       card_list: card_list
       image_and_card: image_and_card
       info: info
+      lead: lead
       link_internal: link_internal
       link: link
       mainheading: mainheading
@@ -51,62 +53,62 @@ settings:
     target_bundles_drag_drop:
       accordion:
         enabled: true
-        weight: -37
+        weight: -41
       blog_list:
-        weight: 22
+        weight: -23
         enabled: false
       card:
-        weight: -36
+        weight: -40
         enabled: false
       card_list:
         enabled: true
-        weight: -33
+        weight: -37
       events_list:
-        weight: -29
+        weight: -32
         enabled: false
       hero:
         enabled: true
-        weight: -35
+        weight: -39
       image:
         enabled: true
-        weight: -34
+        weight: -38
       image_and_card:
         enabled: true
-        weight: -32
+        weight: -36
       info:
         enabled: true
-        weight: -31
+        weight: -35
+      lead:
+        enabled: true
+        weight: -34
       link:
         enabled: true
-        weight: -27
+        weight: -31
       link_internal:
         enabled: true
-        weight: -30
+        weight: -33
       mainheading:
         enabled: true
-        weight: -26
+        weight: -30
       news_list:
-        weight: -25
+        weight: -29
         enabled: false
       phone_number_box:
         enabled: true
-        weight: -24
+        weight: -28
       search:
-        weight: -21
+        weight: -25
         enabled: false
       subheading:
         enabled: true
-        weight: -23
+        weight: -27
       sujo_embedded:
-        weight: -20
-        enabled: false
-      test:
-        weight: -28
+        weight: -24
         enabled: false
       text:
         enabled: true
-        weight: -22
+        weight: -26
       video:
         enabled: true
-        weight: 40
+        weight: -22
 field_type: entity_reference_revisions

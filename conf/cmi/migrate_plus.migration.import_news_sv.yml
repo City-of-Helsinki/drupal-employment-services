@@ -1,0 +1,141 @@
+uuid: e96dc49a-ed18-4b40-8b41-253fb82c8104
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+_core:
+  default_config_hash: js1TD31dEDf2G9xDfcSWFLhyybmkqf_ddL45_pzT7WQ
+id: import_news_sv
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: tyollisyyspalvelut
+label: 'Import news sv'
+source:
+  translations: true
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  track_changes: true
+  urls: 'https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/node/news?filter[langcode]=sv'
+  item_selector: data/
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: nid
+      label: nid
+      selector: /attributes/drupal_internal__nid
+    -
+      name: title
+      label: Title
+      selector: /attributes/title
+    -
+      name: created
+      label: Created
+      selector: /attributes/created
+    -
+      name: changed
+      label: Changed
+      selector: /attributes/changed
+    -
+      name: status
+      label: Status
+      selector: /attributes/status
+    -
+      name: sticky
+      label: Sticky
+      selector: /attributes/sticky
+    -
+      name: promote
+      label: Promote
+      selector: /attributes/promote
+    -
+      name: langcode
+      label: Langcode
+      selector: /attributes/langcode
+    -
+      name: path
+      label: Path
+      selector: /attributes/path
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
+      name: field_summary
+      label: 'Field summary'
+      selector: /attributes/field_summary
+    -
+      name: uid
+      label: uid
+      selector: /relationships/uid
+    -
+      name: field_page_width
+      label: 'Paragraph width'
+      selector: /relationships/field_page_width
+    -
+      name: field_page_content
+      label: Content
+      selector: /relationships/field_page_content
+  ids:
+    nid:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: news
+  nid:
+    plugin: migration_lookup
+    source: nid
+    migration: import_news_fi
+  uuid: id
+  title: title
+  created:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: created
+  changed:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: changed
+  status: status
+  sticky: sticky
+  promote: promote
+  langcode: langcode
+  path/alias: path/alias
+  path/pid: path/pid
+  path/langcode: path/langcode
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_summary: field_summary
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_page_width/target_id:
+    plugin: entity_lookup
+    source: field_page_width/data/id
+    value_key: uuid
+    bundle: paragraph_width
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
+destination:
+  plugin: 'entity:node'
+  translations: true
+migration_dependencies:
+  required:
+    - import_news_fi

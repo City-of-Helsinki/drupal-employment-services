@@ -1,0 +1,77 @@
+id: import_tax_paragraph_width
+label: Import Paragraph width taxonomy terms
+migration_group: tyollisyyspalvelut
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: paragraph_width
+
+source:
+  # We use the JSON source plugin.
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: true
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  track_changes: true
+  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/taxonomy_term/paragraph_width
+  item_selector: data/
+  fields:
+    -
+      name: id
+      label: 'Id'
+      selector: id
+    -
+      name: tid
+      label: 'Tid'
+      selector: /attributes/drupal_internal__tid
+    -
+      name: name
+      label: 'Name'
+      selector: /attributes/name
+    -
+      name: weight
+      label: 'Weight'
+      selector: /attributes/weight
+    -
+      name: description
+      label: 'Description'
+      selector: /attributes/description
+    -
+      name: langcode
+      label: 'Langcode'
+      selector: /attributes/langcode
+    -
+      name: default_langcode
+      label: 'Default_langcode'
+      selector: /attributes/default_langcode
+    -
+      name: status
+      label: 'Status'
+      selector: /attributes/status
+  ids:
+    tid:
+      type: integer
+process:
+  tid: tid
+  name: name
+  uuid: id
+  weight: weight
+  description: description
+  langcode: langcode
+  default_langcode: default_langcode
+  status: status
+  uid:
+    plugin: default_value
+    default_value: 1

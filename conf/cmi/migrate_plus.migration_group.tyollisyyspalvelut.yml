@@ -1,0 +1,10 @@
+uuid: e35dc5e9-f2dd-444e-a63a-e623253bbf9e
+langcode: en
+status: true
+dependencies: {  }
+id: tyollisyyspalvelut
+label: tyollisyyspalvelut
+description: ''
+source_type: null
+module: null
+shared_configuration: null
