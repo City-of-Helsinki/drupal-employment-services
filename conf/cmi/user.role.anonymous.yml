@@ -43,6 +43,7 @@ permissions:
   - 'view paragraph content image'
   - 'view paragraph content image_and_card'
   - 'view paragraph content info'
+  - 'view paragraph content lead'
   - 'view paragraph content link'
   - 'view paragraph content link_internal'
   - 'view paragraph content mainheading'

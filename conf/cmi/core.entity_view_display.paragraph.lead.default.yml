@@ -1,0 +1,20 @@
+uuid: 2283ed18-82b1-465a-a5f2-05c68a4ecf1a
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lead.field_lead_text
+    - paragraphs.paragraphs_type.lead
+id: paragraph.lead.default
+targetEntityType: paragraph
+bundle: lead
+mode: default
+content:
+  field_lead_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

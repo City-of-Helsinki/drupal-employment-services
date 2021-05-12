@@ -1,0 +1,10 @@
+name: Tyollisyyspalvelut Migrate
+description: 'Entity imports using core Migration module.'
+package: 'Custom'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools
