@@ -1,5 +1,5 @@
-id: import_paragraph_image_and_card
-label: Import Image and card paragraph
+id: import_paragraph_link
+label: Import Link paragraph
 migration_group: tyollisyyspalvelut
 migration_dependencies: {}
 dependencies:
@@ -25,7 +25,7 @@ source:
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
   urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/image_and_card
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/link
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -83,20 +83,20 @@ source:
       label: 'uid'
       selector: /relationships/uid
     -
-      name: field_ic_card
-      label: 'Card'
-      selector: /relationships/field_ic_card
+      name: field_url
+      label: 'Url'
+      selector: /attributes/field_url
     -
-      name: field_ic_image
-      label: 'Image'
-      selector: /relationships/field_ic_image
+      name: field_url_text
+      label: 'Url Text'
+      selector: /attributes/field_url_text
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: image_and_card
+    default_value: link
   id: id
   uuid: uuid
   revision_id: revision_id
@@ -116,25 +116,5 @@ process:
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_ic_card:
-    plugin: sub_process
-    source: field_ic_card/data
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: id
-        value_key: uuid
-        bundle: card
-        bundle_key: type
-        entity_type: paragraph
-        ignore_case: true
-      target_revision_id: meta/target_revision_id
-  field_ic_image:
-    target_id:
-      plugin: entity_lookup
-      source: field_ic_image/data/id
-      value_key: uuid
-      bundle: image
-      bundle_key: bundle
-      entity_type: media
-      ignore_case: true
+  field_url: field_url
+  field_url_text: field_url_text
