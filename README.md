@@ -6,7 +6,7 @@ Drupal 9 website for the Työllisyyspalvelut Helsinki project.
 
 Env | Branch | Drush alias | URL | Notes
 --- | ------ | ----------- | --- | -----
-development | * | - | https://drupal-tyollisyyspalvelut-helfi.docker.sh/ | Local development environment
+development | * | - | https://drupal-tyollisyyspalvelut-helfi.docker.so/ | Local development environment
 production | main | @main | TBD | Not implemented yet
 
 ## Requirements
