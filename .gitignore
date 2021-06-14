@@ -27,3 +27,5 @@ public/modules/custom/helfi_*
 
 !*.gitkeep
 !*.keepme
+
+dump.sql
