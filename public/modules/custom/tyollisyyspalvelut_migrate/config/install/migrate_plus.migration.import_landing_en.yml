@@ -1,15 +1,19 @@
-id: import_blogs
-label: Import blogs
+id: import_landing_en
+label: Import landing en
 migration_group: tyollisyyspalvelut
-migration_dependencies: {}
+migration_dependencies:
+  required:
+    - import_landing_fi
 dependencies:
   enforced:
     module:
       - tyollisyyspalvelut_migrate
 destination:
   plugin: 'entity:node'
+  translations: true
 
 source:
+  translations: true
   # We use the JSON source plugin.
   plugin: url
   data_fetcher_plugin: http
@@ -24,7 +28,7 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/node/blog
+  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/node/landing?filter[langcode]=en
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -70,10 +74,6 @@ source:
       label: 'Langcode'
       selector: /attributes/langcode
     -
-      name: default_langcode
-      label: 'Default Langcode'
-      selector: /attributes/default_langcode
-    -
       name: path
       label: 'Path'
       selector: /attributes/path
@@ -85,10 +85,6 @@ source:
       name: content_translation_outdated
       label: 'Content translation outdated'
       selector: /attributes/content_translation_outdated
-    -
-      name: field_summary
-      label: 'Field summary'
-      selector: /attributes/field_summary
     -
       name: uid
       label: 'uid'
@@ -107,8 +103,12 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: blog
-  nid: nid
+    default_value: landing
+  nid:
+    plugin: migration_lookup
+    source: nid
+    migration: import_landing_fi
+    no_stub: true
   uuid: id
   title: title
   created:
@@ -127,28 +127,32 @@ process:
   sticky: sticky
   promote: promote
   langcode: langcode
-  default_langcode: default_langcode
   path/alias: path/alias
   path/pid: path/pid
   path/langcode: path/langcode
   content_translation_source: content_translation_source
   content_translation_outdated: content_translation_outdated
-  field_summary: field_summary
   uid:
     plugin: default_value
     default_value: 1
   field_page_width/target_id:
-      plugin: entity_lookup
-      source: field_page_width/data/id
-      value_key: uuid
-      bundle: paragraph_width
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_page_width/data/id
+    value_key: uuid
+    bundle: paragraph_width
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_page_content:
     plugin: sub_process
     source: field_page_content/data
     process:
       target_id:
-        plugin: path_mapping
+        plugin: entity_lookup
         source: id
+        value_key: uuid
+        bundle: en
+        bundle_key: langcode
+        entity_type: paragraph
+        ignore_case: true
+      target_revision_id: meta/target_revision_id

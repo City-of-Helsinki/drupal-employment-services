@@ -141,13 +141,13 @@ process:
     plugin: default_value
     default_value: 1
   field_page_width/target_id:
-      plugin: entity_lookup
-      source: field_page_width/data/id
-      value_key: uuid
-      bundle: paragraph_width
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_page_width/data/id
+    value_key: uuid
+    bundle: paragraph_width
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_page_content:
     plugin: sub_process
     source: field_page_content/data
@@ -156,7 +156,8 @@ process:
         plugin: entity_lookup
         source: id
         value_key: uuid
-        bundle: 0
-        bundle_key: delta
+        bundle: en
+        bundle_key: langcode
         entity_type: paragraph
         ignore_case: true
+      target_revision_id: meta/target_revision_id

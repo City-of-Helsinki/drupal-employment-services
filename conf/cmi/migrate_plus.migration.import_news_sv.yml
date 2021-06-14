@@ -1,4 +1,4 @@
-uuid: e96dc49a-ed18-4b40-8b41-253fb82c8104
+uuid: 8bd94ec7-3e7e-4e7d-be2d-aa605c882019
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: js1TD31dEDf2G9xDfcSWFLhyybmkqf_ddL45_pzT7WQ
+  default_config_hash: 1NShGbrkyOwxoLXPyx3yPEuBld1ngTX0Qasbva9c0u4
 id: import_news_sv
 class: null
 field_plugin_method: null
@@ -98,6 +98,7 @@ process:
     plugin: migration_lookup
     source: nid
     migration: import_news_fi
+    no_stub: true
   uuid: id
   title: title
   created:
@@ -133,6 +134,19 @@ process:
     bundle_key: vid
     entity_type: taxonomy_term
     ignore_case: true
+  field_page_content:
+    plugin: sub_process
+    source: field_page_content/data
+    process:
+      target_id:
+        plugin: entity_lookup
+        source: id
+        value_key: uuid
+        bundle: sv
+        bundle_key: langcode
+        entity_type: paragraph
+        ignore_case: true
+      target_revision_id: meta/target_revision_id
 destination:
   plugin: 'entity:node'
   translations: true

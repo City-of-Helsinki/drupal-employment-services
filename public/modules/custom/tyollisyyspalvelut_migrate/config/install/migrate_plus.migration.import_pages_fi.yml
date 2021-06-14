@@ -1,5 +1,5 @@
-id: import_paragraph_image_and_card
-label: Import Image and card paragraph
+id: import_pages_fi
+label: Import pages fi
 migration_group: tyollisyyspalvelut
 migration_dependencies: {}
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 destination:
-  plugin: 'entity_reference_revisions:paragraph'
+  plugin: 'entity:node'
 
 source:
   # We use the JSON source plugin.
@@ -24,8 +24,7 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/image_and_card
+  urls: https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/node/page?filter[langcode]=fi
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -35,17 +34,13 @@ source:
   # is relative to the elements retrieved by item_selector.
   fields:
     -
-      name: uuid
-      label: 'uuid'
-      selector: id
-    -
       name: id
       label: 'id'
-      selector: /attributes/drupal_internal__id
+      selector: id
     -
-      name: revision_id
-      label: 'Revision id'
-      selector: /attributes/drupal_internal__revision_id
+      name: nid
+      label: 'nid'
+      selector: /attributes/drupal_internal__nid
     -
       name: title
       label: 'Title'
@@ -55,51 +50,58 @@ source:
       label: 'Created'
       selector: /attributes/created
     -
+      name: changed
+      label: 'Changed'
+      selector: /attributes/changed
+    -
       name: status
       label: 'Status'
       selector: /attributes/status
+    -
+      name: sticky
+      label: 'Sticky'
+      selector: /attributes/sticky
+    -
+      name: promote
+      label: 'Promote'
+      selector: /attributes/promote
     -
       name: langcode
       label: 'Langcode'
       selector: /attributes/langcode
     -
-      name: default_langcode
-      label: 'Default Langcode'
-      selector: /attributes/default_langcode
+      name: path
+      label: 'Path'
+      selector: /attributes/path
     -
-      name: parent_id
-      label: 'Parent id'
-      selector: /attributes/parent_id
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
     -
-      name: parent_type
-      label: 'Parent type'
-      selector: /attributes/parent_type
-    -
-      name: parent_field_name
-      label: 'Parent field name'
-      selector: /attributes/parent_field_name
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
     -
       name: uid
       label: 'uid'
       selector: /relationships/uid
     -
-      name: field_ic_card
-      label: 'Card'
-      selector: /relationships/field_ic_card
+      name: field_page_width
+      label: 'Paragraph width'
+      selector: /relationships/field_page_width
     -
-      name: field_ic_image
-      label: 'Image'
-      selector: /relationships/field_ic_image
+      name: field_page_content
+      label: 'Content'
+      selector: /relationships/field_page_content
   ids:
-    id:
+    nid:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: image_and_card
-  id: id
-  uuid: uuid
-  revision_id: revision_id
+    default_value: page
+  nid: nid
+  uuid: id
   title: title
   created:
     -
@@ -107,34 +109,45 @@ process:
       from_format: 'Y-m-d\TH:i:sP'
       to_format: 'U'
       source: created
+  changed:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: 'U'
+      source: changed
   status: status
+  sticky: sticky
+  promote: promote
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
+  path/alias: path/alias
+  path/pid: path/pid
+  path/langcode: path/langcode
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
   uid:
     plugin: default_value
     default_value: 1
-  parent_id: parent_id
-  parent_type: parent_type
-  parent_field_name: parent_field_name
-  field_ic_card:
+  field_page_width/target_id:
+    plugin: entity_lookup
+    source: field_page_width/data/id
+    value_key: uuid
+    bundle: paragraph_width
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_page_content:
     plugin: sub_process
-    source: field_ic_card/data
+    source: field_page_content/data
     process:
       target_id:
         plugin: entity_lookup
         source: id
         value_key: uuid
-        bundle: card
-        bundle_key: type
+        bundle: fi
+        bundle_key: langcode
         entity_type: paragraph
         ignore_case: true
       target_revision_id: meta/target_revision_id
-  field_ic_image:
-    target_id:
-      plugin: entity_lookup
-      source: field_ic_image/data/id
-      value_key: uuid
-      bundle: image
-      bundle_key: bundle
-      entity_type: media
-      ignore_case: true
