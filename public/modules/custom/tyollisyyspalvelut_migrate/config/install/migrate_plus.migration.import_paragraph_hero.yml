@@ -24,8 +24,7 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/hero
+  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/hero
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -46,10 +45,6 @@ source:
       name: revision_id
       label: 'Revision id'
       selector: /attributes/drupal_internal__revision_id
-    -
-      name: title
-      label: 'Title'
-      selector: /attributes/title
     -
       name: created
       label: 'Created'
@@ -108,7 +103,6 @@ process:
   id: id
   uuid: uuid
   revision_id: revision_id
-  title: title
   created:
     -
       plugin: format_date

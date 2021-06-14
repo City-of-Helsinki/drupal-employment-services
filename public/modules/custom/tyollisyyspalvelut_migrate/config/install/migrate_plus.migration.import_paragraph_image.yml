@@ -47,10 +47,6 @@ source:
       label: 'Revision id'
       selector: /attributes/drupal_internal__revision_id
     -
-      name: title
-      label: 'Title'
-      selector: /attributes/title
-    -
       name: created
       label: 'Created'
       selector: /attributes/created
@@ -104,7 +100,6 @@ process:
   id: id
   uuid: uuid
   revision_id: revision_id
-  title: title
   created:
     -
       plugin: format_date

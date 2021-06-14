@@ -156,8 +156,9 @@ process:
         plugin: entity_lookup
         source: id
         value_key: uuid
-        bundle: 0
-        bundle_key: delta
+        bundle: sv
+        bundle_key: langcode
         entity_type: paragraph
         ignore_case: true
+      target_revision_id: meta/target_revision_id
 
