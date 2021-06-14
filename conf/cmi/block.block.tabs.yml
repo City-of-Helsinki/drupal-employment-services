@@ -1,0 +1,20 @@
+uuid: b492cf02-8e74-4f3c-89d3-7a46f66af790
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hdbt_admin
+id: tabs
+theme: hdbt_admin
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

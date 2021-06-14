@@ -36,7 +36,6 @@ module:
   jsonapi_extras: 0
   jsonapi_image_styles: 0
   language: 0
-  layout_builder: 0
   layout_discovery: 0
   link: 0
   locale: 0
@@ -47,6 +46,7 @@ module:
   menu_ui: 0
   migrate: 0
   migrate_plus: 0
+  migrate_tools: 0
   node: 0
   options: 0
   page_cache: 0

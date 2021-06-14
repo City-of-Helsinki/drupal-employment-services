@@ -1,0 +1,18 @@
+uuid: 903fc0b5-155b-446f-87aa-138e0a4065cf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hdbt_admin
+id: primaryadminactions
+theme: hdbt_admin
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

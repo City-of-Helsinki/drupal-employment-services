@@ -1,0 +1,10 @@
+uuid: 124c486f-c7b3-4e3d-b614-31d5df38b599
+langcode: fi
+status: true
+dependencies: {  }
+id: highlighted_text
+label: 'Highlighted text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

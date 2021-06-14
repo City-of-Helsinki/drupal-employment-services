@@ -1,0 +1,20 @@
+uuid: 67c6b378-8d24-4df4-8291-64fa0109e377
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlighted_text.field_highlighted_text
+    - paragraphs.paragraphs_type.highlighted_text
+id: paragraph.highlighted_text.default
+targetEntityType: paragraph
+bundle: highlighted_text
+mode: default
+content:
+  field_highlighted_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

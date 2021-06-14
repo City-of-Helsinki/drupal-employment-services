@@ -1,0 +1,9 @@
+label: Kommentit
+display:
+  default:
+    display_options:
+      title: Kommentit
+  page_published:
+    display_options:
+      menu:
+        title: Kommentit

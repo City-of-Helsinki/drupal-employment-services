@@ -1,6 +1,0 @@
-display:
-  default:
-    display_options:
-      fields:
-        roles_target_id:
-          label: Rollen

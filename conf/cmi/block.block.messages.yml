@@ -1,0 +1,20 @@
+uuid: ca2776c9-be50-466f-ad5d-eba350c4a951
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hdbt_admin
+id: messages
+theme: hdbt_admin
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

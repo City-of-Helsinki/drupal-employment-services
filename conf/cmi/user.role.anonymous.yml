@@ -40,6 +40,7 @@ permissions:
   - 'view paragraph content card_list'
   - 'view paragraph content events_list'
   - 'view paragraph content hero'
+  - 'view paragraph content highlighted_text'
   - 'view paragraph content image'
   - 'view paragraph content image_and_card'
   - 'view paragraph content info'
