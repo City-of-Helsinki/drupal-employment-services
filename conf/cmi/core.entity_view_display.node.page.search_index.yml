@@ -9,12 +9,7 @@ dependencies:
     - node.type.page
   module:
     - entity_reference_revisions
-    - layout_builder
     - user
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
 id: node.page.search_index
 targetEntityType: node
 bundle: page

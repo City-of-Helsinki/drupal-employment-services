@@ -1,0 +1,23 @@
+uuid: 99179d73-c79e-44ba-9a0a-598316a28ae5
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlighted_text.field_highlighted_text
+    - paragraphs.paragraphs_type.highlighted_text
+id: paragraph.highlighted_text.default
+targetEntityType: paragraph
+bundle: highlighted_text
+mode: default
+content:
+  field_highlighted_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,8 +1,0 @@
-uuid: 9c8a1df3-fa41-46c7-999c-87f53b887400
-langcode: en
-status: true
-dependencies: {  }
-id: kouluttautuminen
-label: 'Kouluttautuminen - OLD'
-description: ''
-locked: false
