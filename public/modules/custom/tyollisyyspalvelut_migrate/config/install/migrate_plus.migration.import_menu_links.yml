@@ -1,0 +1,123 @@
+id: import_menu_links
+label: Import Menu links
+migration_group: tyollisyyspalvelut
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+destination:
+  plugin: 'entity:menu_link_content'
+  no_stub: true
+
+source:
+  # We use the JSON source plugin.
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: true
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  track_changes: true
+  urls:
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/menu_link_content/menu_link_content
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/menu_link_content/menu_link_content?page[limit]=50&page[offset]=50
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/menu_link_content/menu_link_content?page[limit]=50&page[offset]=100
+  item_selector: data/
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an xpath for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  fields:
+    -
+      name: id
+      label: 'id'
+      selector: id
+    -
+      name: nid
+      label: 'drupal_internal__id'
+      selector: /attributes/drupal_internal__id
+    -
+      name: langcode
+      label: 'Langcode'
+      selector: /attributes/langcode
+    -
+      name: enabled
+      label: 'Enabled'
+      selector: /attributes/enabled
+    -
+      name: title
+      label: 'Title'
+      selector: /attributes/title
+    -
+      name: description
+      label: 'Description'
+      selector: /attributes/description
+    -
+      name: menu_name
+      label: 'Menu name'
+      selector: /attributes/menu_name
+    -
+      name: link
+      label: 'Link'
+      selector: /attributes/link
+    -
+      name: external
+      label: 'External'
+      selector: /attributes/external
+    -
+      name: rediscover
+      label: 'Rediscover'
+      selector: /attributes/rediscover
+    -
+      name: weight
+      label: 'Weight'
+      selector: /attributes/weight
+    -
+      name: expanded
+      label: 'Expanded'
+      selector: /attributes/expanded
+    -
+      name: parent
+      label: 'Parent'
+      selector: /attributes/parent
+    -
+      name: changed
+      label: 'Changed'
+      selector: /attributes/changed
+    -
+      name: default_langcode
+      label: 'Default Langcode'
+      selector: /attributes/default_langcode
+  ids:
+    nid:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: menu_link_content
+  uuid: id
+  langcode: langcode
+  enabled: enabled
+  title: title
+  description: description
+  menu_name: menu_name
+  link/uri: link/uri
+  link/title: link/title
+  link/options: link/options
+  external: external
+  rediscover: rediscover
+  weight: weight
+  expanded: expanded
+  parent: parent
+  changed: changed
+  default_langcode: default_langcode
+

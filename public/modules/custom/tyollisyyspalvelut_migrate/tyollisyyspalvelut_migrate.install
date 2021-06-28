@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Contains installation settings for the module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function tyollisyyspalvelut_migrate_uninstall() {
+  \Drupal::configFactory()->getEditable('migrate.migration.tyollisyyspalvelut_migration')->delete();
+  drupal_flush_all_caches();
+}

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: link_internal
-label: 'Link internal'
+label: 'Internal document link'
 icon_uuid: null
 icon_default: null
 description: 'File link, PDF link'

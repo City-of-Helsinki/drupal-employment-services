@@ -1,0 +1,158 @@
+id: import_pages_en
+label: Import pages en
+migration_group: tyollisyyspalvelut
+migration_dependencies:
+  required:
+    - import_pages_fi
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+destination:
+  plugin: 'entity:node'
+  translations: true
+
+source:
+  translations: true
+  # We use the JSON source plugin.
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: true
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  track_changes: true
+  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/node/page?filter[langcode]=en
+  item_selector: data/
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an xpath for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  fields:
+    -
+      name: id
+      label: 'id'
+      selector: id
+    -
+      name: nid
+      label: 'nid'
+      selector: /attributes/drupal_internal__nid
+    -
+      name: title
+      label: 'Title'
+      selector: /attributes/title
+    -
+      name: created
+      label: 'Created'
+      selector: /attributes/created
+    -
+      name: changed
+      label: 'Changed'
+      selector: /attributes/changed
+    -
+      name: status
+      label: 'Status'
+      selector: /attributes/status
+    -
+      name: sticky
+      label: 'Sticky'
+      selector: /attributes/sticky
+    -
+      name: promote
+      label: 'Promote'
+      selector: /attributes/promote
+    -
+      name: langcode
+      label: 'Langcode'
+      selector: /attributes/langcode
+    -
+      name: path
+      label: 'Path'
+      selector: /attributes/path
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
+      name: uid
+      label: 'uid'
+      selector: /relationships/uid
+    -
+      name: field_page_width
+      label: 'Paragraph width'
+      selector: /relationships/field_page_width
+    -
+      name: field_page_content
+      label: 'Content'
+      selector: /relationships/field_page_content
+  ids:
+    nid:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: page
+  nid:
+    plugin: migration_lookup
+    source: nid
+    migration: import_pages_fi
+    no_stub: true
+  uuid: id
+  title: title
+  created:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: 'U'
+      source: created
+  changed:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: 'U'
+      source: changed
+  status: status
+  sticky: sticky
+  promote: promote
+  langcode: langcode
+  path/alias: path/alias
+  path/pid: path/pid
+  path/langcode: path/langcode
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_page_width/target_id:
+    plugin: entity_lookup
+    source: field_page_width/data/id
+    value_key: uuid
+    bundle: paragraph_width
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_page_content:
+    plugin: sub_process
+    source: field_page_content/data
+    process:
+      target_id:
+        plugin: entity_lookup
+        source: id
+        value_key: uuid
+        bundle: en
+        bundle_key: langcode
+        entity_type: paragraph
+        ignore_case: true
+      target_revision_id: meta/target_revision_id

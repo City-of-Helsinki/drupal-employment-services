@@ -1,0 +1,133 @@
+id: import_paragraph_events_list
+label: Import Events list paragraph
+migration_group: tyollisyyspalvelut
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+
+source:
+  # We use the JSON source plugin.
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: true
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  track_changes: true
+  urls:
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/events_list
+  item_selector: data/
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an xpath for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  fields:
+    -
+      name: uuid
+      label: 'uuid'
+      selector: id
+    -
+      name: id
+      label: 'id'
+      selector: /attributes/drupal_internal__id
+    -
+      name: revision_id
+      label: 'Revision id'
+      selector: /attributes/drupal_internal__revision_id
+    -
+      name: created
+      label: 'Created'
+      selector: /attributes/created
+    -
+      name: status
+      label: 'Status'
+      selector: /attributes/status
+    -
+      name: langcode
+      label: 'Langcode'
+      selector: /attributes/langcode
+    -
+      name: default_langcode
+      label: 'Default Langcode'
+      selector: /attributes/default_langcode
+    -
+      name: parent_id
+      label: 'Parent id'
+      selector: /attributes/parent_id
+    -
+      name: parent_type
+      label: 'Parent type'
+      selector: /attributes/parent_type
+    -
+      name: parent_field_name
+      label: 'Parent field name'
+      selector: /attributes/parent_field_name
+    -
+      name: uid
+      label: 'uid'
+      selector: /relationships/uid
+    -
+      name: field_koro
+      label: 'Koro'
+      selector: /attributes/field_koro
+    -
+      name: field_short_list
+      label: 'Short list'
+      selector: /attributes/field_short_list
+    -
+      name: field_title
+      label: 'Title'
+      selector: /attributes/field_title
+    -
+      name: field_background_color
+      label: 'Background color'
+      selector: /relationships/field_background_color
+  ids:
+    id:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: events_list
+  id: id
+  uuid: uuid
+  revision_id: revision_id
+  created:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: 'U'
+      source: created
+  status: status
+  langcode: langcode
+  default_langcode: default_langcode
+  uid:
+    plugin: default_value
+    default_value: 1
+  parent_id: parent_id
+  parent_type: parent_type
+  parent_field_name: parent_field_name
+  field_koro: field_koro
+  field_short_list: field_short_list
+  field_title: field_title
+  field_background_color:
+    target_id:
+      plugin: entity_lookup
+      source: id
+      value_key: uuid
+      bundle: colors
+      bundle_key: vid
+      entity_type: taxonomy_term
+      ignore_case: true
