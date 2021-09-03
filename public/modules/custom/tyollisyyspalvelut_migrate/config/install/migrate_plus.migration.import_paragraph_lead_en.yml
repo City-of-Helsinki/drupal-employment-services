@@ -1,15 +1,19 @@
-id: import_paragraph_blog_list
-label: Import Blog list paragraph
+id: import_paragraph_lead_en
+label: Import Lead en paragraph
 migration_group: tyollisyyspalvelut
-migration_dependencies: {}
+migration_dependencies:
+  required:
+    - import_paragraph_lead_fi
 dependencies:
   enforced:
     module:
       - tyollisyyspalvelut_migrate
 destination:
   plugin: 'entity_reference_revisions:paragraph'
+  translations: true
 
 source:
+  translations: true
   # We use the JSON source plugin.
   plugin: url
   data_fetcher_plugin: http
@@ -25,7 +29,7 @@ source:
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
   urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/blog_list
+    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/lead?filter[langcode]=en
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -75,35 +79,47 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: 'uid'
       selector: /relationships/uid
     -
-      name: field_koro
-      label: 'Koro'
-      selector: /attributes/field_koro
-    -
-      name: field_short_list
-      label: 'Short list'
-      selector: /attributes/field_short_list
-    -
-      name: field_title
-      label: 'Title'
-      selector: /attributes/field_title
-    -
-      name: field_background_color
-      label: 'Background color'
-      selector: /relationships/field_background_color
+      name: field_lead_text
+      label: 'Text'
+      selector: /attributes/field_lead_text
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: blog_list
-  id: id
+    default_value: lead
+  pseudo_paragraph_field:
+    plugin: migration_lookup
+    migration: import_paragraph_lead_fi
+    source: id
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
+  revision_id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
   uuid: uuid
-  revision_id: revision_id
   created:
     -
       plugin: format_date
@@ -112,22 +128,13 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_koro: field_koro
-  field_short_list: field_short_list
-  field_title: field_title
-  field_background_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_lead_text: field_lead_text

@@ -1,9 +1,9 @@
-id: import_paragraph_mainheading_sv
-label: Import Mainheading sv paragraph
+id: import_paragraph_lead_sv
+label: Import Lead sv paragraph
 migration_group: tyollisyyspalvelut
 migration_dependencies:
   required:
-    - import_paragraph_mainheading_fi
+    - import_paragraph_lead_fi
 dependencies:
   enforced:
     module:
@@ -28,7 +28,8 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls: https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/paragraph/mainheading?filter[langcode]=sv
+  urls:
+    - https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/paragraph/lead?filter[langcode]=sv
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -39,7 +40,7 @@ source:
   fields:
     -
       name: uuid
-      label: 'uid'
+      label: 'uuid'
       selector: id
     -
       name: id
@@ -94,27 +95,19 @@ source:
       label: 'uid'
       selector: /relationships/uid
     -
-      name: field_show_date
-      label: 'Show date'
-      selector: /attributes/field_show_date
-    -
-      name: field_title
-      label: 'Field title'
-      selector: /attributes/field_title
-    -
-      name: field_title_color
-      label: 'Field title color'
-      selector: /attributes/field_title_color
+      name: field_lead_text
+      label: 'Text'
+      selector: /attributes/field_lead_text
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: mainheading
+    default_value: lead
   pseudo_paragraph_field:
     plugin: migration_lookup
-    migration: import_paragraph_mainheading_fi
+    migration: import_paragraph_lead_fi
     source: id
   id:
     plugin: extract
@@ -126,16 +119,6 @@ process:
     source: '@pseudo_paragraph_field'
     index:
       - '1'
-  # id:
-  #   plugin: migration_lookup
-  #   source: id
-  #   migration: import_paragraph_mainheading_fi
-  #   no_stub: true
-  # revision_id:
-  #   plugin: migration_lookup
-  #   source: revision_id
-  #   migration: import_paragraph_mainheading_fi
-  #   no_stub: true
   uuid: uuid
   created:
     -
@@ -154,17 +137,4 @@ process:
   revision_translation_affected: revision_translation_affected
   content_translation_source: content_translation_source
   content_translation_outdated: content_translation_outdated
-  field_show_date: field_show_date
-  field_title: field_title
-  field_title_color:
-    plugin: sub_process
-    source: field_title_color/data
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: id
-        value_key: uuid
-        bundle: colors
-        bundle_key: vid
-        entity_type: taxonomy_term
-        ignore_case: true
+  field_lead_text: field_lead_text

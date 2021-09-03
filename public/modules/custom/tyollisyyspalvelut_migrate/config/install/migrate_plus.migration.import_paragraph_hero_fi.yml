@@ -1,5 +1,5 @@
-id: import_paragraph_card
-label: Import Card paragraph
+id: import_paragraph_hero_fi
+label: Import Hero fi paragraph
 migration_group: tyollisyyspalvelut
 migration_dependencies: {}
 dependencies:
@@ -24,8 +24,7 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/card
+  urls: https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/hero?filter[langcode]=fi
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -75,60 +74,44 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: 'uid'
       selector: /relationships/uid
     -
-      name: field_background_color
-      label: 'Background color'
-      selector: /relationships/field_background_color
-    -
-      name: field_button_color
-      label: 'Button color'
-      selector: /relationships/field_button_color
-    -
-      name: field_card_button_text
-      label: 'Card button text'
-      selector: /attributes/field_card_button_text
-    -
-      name: field_card_height
-      label: 'Card height'
-      selector: /attributes/field_card_height
-    -
-      name: field_card_width
-      label: 'Card width'
-      selector: /attributes/field_card_width
-    -
-      name: field_ic_image
+      name: field_hero_image
       label: 'Image'
-      selector: /attributes/field_ic_image
+      selector: /relationships/field_hero_image
     -
-      name: field_card_button_url
-      label: 'Card button url'
-      selector: /attributes/field_card_button_url
+      name: field_hero_text
+      label: 'Test'
+      selector: /attributes/field_hero_text
     -
-      name: field_card_text
-      label: 'Card text'
-      selector: /attributes/field_card_text
+      name: field_hero_title
+      label: 'Title'
+      selector: /attributes/field_hero_title
     -
-      name: field_text_color
-      label: 'Text color'
-      selector: /relationships/field_text_color
-    -
-      name: field_card_title
-      label: 'Card title'
-      selector: /attributes/field_card_title
-    -
-      name: field_title_color
-      label: 'Title color'
-      selector: /relationships/field_title_color
+      name: field_shallow
+      label: 'Shallow'
+      selector: /attributes/field_shallow
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: card
+    default_value: hero
   id: id
   uuid: uuid
   revision_id: revision_id
@@ -140,63 +123,29 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_background_color:
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_hero_image:
     target_id:
       plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
-  field_button_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
-  field_card_button_text: field_card_button_text
-  field_card_height: field_card_height
-  field_card_width: field_card_width
-  field_card_button_url: field_card_button_url
-  field_ic_image:
-    target_id:
-      plugin: entity_lookup
-      source: field_ic_image/data/id
+      source: field_hero_image/data/id
       value_key: uuid
       bundle: image
       bundle_key: bundle
       entity_type: media
       ignore_case: true
-  field_card_text/value: field_card_text/value
-  field_card_text/format: field_card_text/format
-  field_card_text/prosessed: field_card_text/prosessed
-  field_text_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
-  field_card_title: field_card_title
-  field_title_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+  field_hero_text/value: field_hero_text/value
+  field_hero_text/format: field_hero_text/format
+  field_hero_text/prosessed: field_hero_text/prosessed
+  field_hero_title: field_hero_title
+  field_shallow: field_shallow

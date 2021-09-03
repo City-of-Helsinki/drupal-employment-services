@@ -1,19 +1,15 @@
-id: import_paragraph_mainheading_sv
-label: Import Mainheading sv paragraph
+id: import_paragraph_mainheading
+label: Import Mainheading paragraph
 migration_group: tyollisyyspalvelut
-migration_dependencies:
-  required:
-    - import_paragraph_mainheading_fi
+migration_dependencies: {}
 dependencies:
   enforced:
     module:
       - tyollisyyspalvelut_migrate
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  translations: true
 
 source:
-  translations: true
   # We use the JSON source plugin.
   plugin: url
   data_fetcher_plugin: http
@@ -28,7 +24,9 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls: https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/paragraph/mainheading?filter[langcode]=sv
+  urls:
+    - https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/mainheading?page%5Boffset%5D=0&page%5Blimit%5D=50
+    - https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/mainheading?page%5Boffset%5D=50&page%5Blimit%5D=50
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -61,10 +59,6 @@ source:
       name: langcode
       label: 'Langcode'
       selector: /attributes/langcode
-    -
-      name: default_langcode
-      label: 'Default Langcode'
-      selector: /attributes/default_langcode
     -
       name: parent_id
       label: 'Parent id'
@@ -112,31 +106,9 @@ process:
   type:
     plugin: default_value
     default_value: mainheading
-  pseudo_paragraph_field:
-    plugin: migration_lookup
-    migration: import_paragraph_mainheading_fi
-    source: id
-  id:
-    plugin: extract
-    source: '@pseudo_paragraph_field'
-    index:
-      - '0'
-  revision_id:
-    plugin: extract
-    source: '@pseudo_paragraph_field'
-    index:
-      - '1'
-  # id:
-  #   plugin: migration_lookup
-  #   source: id
-  #   migration: import_paragraph_mainheading_fi
-  #   no_stub: true
-  # revision_id:
-  #   plugin: migration_lookup
-  #   source: revision_id
-  #   migration: import_paragraph_mainheading_fi
-  #   no_stub: true
+  id: id
   uuid: uuid
+  revision_id: revision_id
   created:
     -
       plugin: format_date
@@ -145,6 +117,10 @@ process:
       source: created
   status: status
   langcode: langcode
+  default_langcode: default_langcode
+  # default_langcode:
+  #   plugin: default_value
+  #   default_value: true
   uid:
     plugin: default_value
     default_value: 1

@@ -1,5 +1,5 @@
-id: import_paragraph_sujo_embedded
-label: Import Sujo embedded paragraph
+id: import_paragraph_sujo_embedded_fi
+label: Import Sujo embedded fi paragraph
 migration_group: tyollisyyspalvelut
 migration_dependencies: {}
 dependencies:
@@ -25,7 +25,7 @@ source:
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
   urls:
-    - https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/sujo_embedded
+    - https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/sujo_embedded?filter[langcode]=fi
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -75,6 +75,18 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: 'uid'
       selector: /relationships/uid
@@ -88,7 +100,7 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: sujo_embedded.
+    default_value: sujo_embedded
   id: id
   uuid: uuid
   revision_id: revision_id
@@ -100,11 +112,16 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
   field_training: field_training
