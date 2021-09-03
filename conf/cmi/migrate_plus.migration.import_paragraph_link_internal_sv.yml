@@ -1,4 +1,4 @@
-uuid: ce4ed7a0-baff-40ef-a283-4d67012b92fd
+uuid: b9ce413c-6358-403a-a6bf-d9f71837ef85
 langcode: en
 status: true
 dependencies:
@@ -6,21 +6,22 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: x4vWs9Dj6v6TQmoqy6IFGJi7DgLoEiAlF8bddS0cFdg
-id: import_paragraph_card_list
+  default_config_hash: oY1vb8sipCMv_e3ADsFS7YibsN49hXUezu_tXRVXhZA
+id: import_paragraph_link_internal_sv
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
 migration_group: tyollisyyspalvelut
-label: 'Import Card list paragraph'
+label: 'Import Link internal sv paragraph'
 source:
+  translations: true
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
   track_changes: true
   urls:
-    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/card_list'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/paragraph/link_internal?filter[langcode]=sv'
   item_selector: data/
   fields:
     -
@@ -64,35 +65,51 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: uid
       selector: /relationships/uid
     -
-      name: field_card_list_bg_color
-      label: 'Background color'
-      selector: /relationships/field_card_list_bg_color
+      name: field_media_document
+      label: Document
+      selector: /attributes/field_media_document
     -
-      name: field_cards
-      label: Cards
-      selector: /relationships/field_cards
-    -
-      name: field_card_list_is_koro
-      label: 'Is koro'
-      selector: /attributes/field_card_list_is_koro
-    -
-      name: field_card_list_title
+      name: field_doc_title
       label: Title
-      selector: /attributes/field_card_list_title
+      selector: /attributes/field_doc_title
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: card_list
-  id: id
+    default_value: link_internal
+  pseudo_paragraph_field:
+    plugin: migration_lookup
+    migration: import_paragraph_link_internal_fi
+    source: id
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
+  revision_id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
   uuid: uuid
-  revision_id: revision_id
   created:
     -
       plugin: format_date
@@ -101,37 +118,28 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_background_color:
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_media_document:
     target_id:
       plugin: entity_lookup
-      source: id
+      source: field_media_document/data/id
       value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
+      bundle: document
+      bundle_key: bundle
+      entity_type: media
       ignore_case: true
-  field_cards:
-    plugin: sub_process
-    source: field_cards/data
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: id
-        value_key: uuid
-        bundle: card
-        bundle_key: type
-        entity_type: paragraph
-        ignore_case: true
-      target_revision_id: meta/target_revision_id
-  field_card_list_is_koro: field_card_list_is_koro
-  field_card_list_title: field_card_list_title
+  field_doc_title: field_doc_title
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-migration_dependencies: {  }
+  translations: true
+migration_dependencies:
+  required:
+    - import_paragraph_link_internal_fi

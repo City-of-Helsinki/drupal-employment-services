@@ -1,4 +1,4 @@
-uuid: 0c8acd1c-3fcd-4dbd-b936-8833abddf4cf
+uuid: a461de62-7ec8-487b-9c24-94d84f0ac384
 langcode: en
 status: true
 dependencies:
@@ -6,21 +6,22 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: SSemr3tXGQ4AWc7ic7XHor8ekS_xRiuagowxW-E9Kms
-id: import_paragraph_card
+  default_config_hash: xtIi63oiNyqr5V_jqRstqZot2eB69y-TsTrmDUBBF6Q
+id: import_paragraph_card_sv
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
 migration_group: tyollisyyspalvelut
-label: 'Import Card paragraph'
+label: 'Import Card sv paragraph'
 source:
+  translations: true
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
   track_changes: true
   urls:
-    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/card'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/sv/apijson/paragraph/card?filter[langcode]=sv'
   item_selector: data/
   fields:
     -
@@ -63,6 +64,18 @@ source:
       name: parent_field_name
       label: 'Parent field name'
       selector: /attributes/parent_field_name
+    -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
     -
       name: uid
       label: uid
@@ -118,9 +131,21 @@ process:
   type:
     plugin: default_value
     default_value: card
-  id: id
+  pseudo_paragraph_field:
+    plugin: migration_lookup
+    migration: import_paragraph_card_fi
+    source: id
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
+  revision_id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
   uuid: uuid
-  revision_id: revision_id
   created:
     -
       plugin: format_date
@@ -129,13 +154,15 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
   field_background_color:
     target_id:
       plugin: entity_lookup
@@ -191,4 +218,7 @@ process:
       ignore_case: true
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-migration_dependencies: {  }
+  translations: true
+migration_dependencies:
+  required:
+    - import_paragraph_card_fi

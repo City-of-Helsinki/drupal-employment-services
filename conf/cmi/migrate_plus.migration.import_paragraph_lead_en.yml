@@ -1,4 +1,4 @@
-uuid: fd6c9790-20e7-40a4-9bea-4febe08042ef
+uuid: 56caa8f5-43db-4736-8dc2-f91b5c8df9c4
 langcode: en
 status: true
 dependencies:
@@ -6,21 +6,22 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: lmSBI6cMembclsWxnIAo7wZCAO_zBZzZfz3I6Ow0Nm0
-id: import_paragraph_phone_number_box
+  default_config_hash: 3Y48XiC4lPSvvnWgEWL7YMY2oznZvbHm-A-skYthqbE
+id: import_paragraph_lead_en
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
 migration_group: tyollisyyspalvelut
-label: 'Import Phone number box paragraph'
+label: 'Import Lead en paragraph'
 source:
+  translations: true
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
   track_changes: true
   urls:
-    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/phone_number_box'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/lead?filter[langcode]=en'
   item_selector: data/
   fields:
     -
@@ -64,27 +65,47 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: uid
       selector: /relationships/uid
     -
-      name: field_pb_text
+      name: field_lead_text
       label: Text
-      selector: /attributes/field_pb_text
-    -
-      name: field_pb_title
-      label: Title
-      selector: /attributes/field_pb_title
+      selector: /attributes/field_lead_text
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: phone_number_box
-  id: id
+    default_value: lead
+  pseudo_paragraph_field:
+    plugin: migration_lookup
+    migration: import_paragraph_lead_fi
+    source: id
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
+  revision_id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
   uuid: uuid
-  revision_id: revision_id
   created:
     -
       plugin: format_date
@@ -93,17 +114,19 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_pb_text/value: field_pb_text/value
-  field_pb_text/format: field_pb_text/format
-  field_pb_text/prosessed: field_pb_text/prosessed
-  field_pb_title: field_pb_title
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_lead_text: field_lead_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-migration_dependencies: {  }
+  translations: true
+migration_dependencies:
+  required:
+    - import_paragraph_lead_fi

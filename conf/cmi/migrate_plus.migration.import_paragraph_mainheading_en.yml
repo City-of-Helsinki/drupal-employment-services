@@ -1,4 +1,4 @@
-uuid: 246b4e83-ac79-4784-a009-7f72c859d988
+uuid: 0838936a-a8de-401c-b08b-204a23842e49
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: 8GtvdMvsa_vNZSM2F1g10SttcpnIyXhvTOBFqlC3wXo
+  default_config_hash: udXWfmIRmJfMGe0m44HEvkg8S4dPnBZWNUMIDMQld_g
 id: import_paragraph_mainheading_en
 class: null
 field_plugin_method: null
@@ -98,17 +98,21 @@ process:
   type:
     plugin: default_value
     default_value: mainheading
-  id:
+  pseudo_paragraph_field:
     plugin: migration_lookup
+    migration: import_paragraph_mainheading_fi
     source: id
-    migration: import_paragraph_mainheading_fi
-    no_stub: true
-  uuid: uuid
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
   revision_id:
-    plugin: migration_lookup
-    source: revision_id
-    migration: import_paragraph_mainheading_fi
-    no_stub: true
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
+  uuid: uuid
   created:
     -
       plugin: format_date

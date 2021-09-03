@@ -1,4 +1,4 @@
-uuid: c2e85ebe-619a-4642-b6c7-095ce6e088bd
+uuid: 26f5f7e7-3ffa-4336-bfe2-9c6817eef2c9
 langcode: en
 status: true
 dependencies:
@@ -6,26 +6,25 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: dA-5AJ50xkZBR5M0OGRFW3EDdrn9bkVVyB13JDmh0kU
-id: import_paragraph_blog_list
+  default_config_hash: HGyu951o9Wwg4bLSlUL6qBQ0Bru8Z2_W9Ak1kCan6B0
+id: import_paragraph_accordion_fi
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
 migration_group: tyollisyyspalvelut
-label: 'Import Blog list paragraph'
+label: 'Import Accordion fi paragraph'
 source:
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
   track_changes: true
-  urls:
-    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/blog_list'
+  urls: 'https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/accordion?filter[langcode]=fi'
   item_selector: data/
   fields:
     -
       name: uuid
-      label: uuid
+      label: uid
       selector: id
     -
       name: id
@@ -64,32 +63,36 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: uid
       selector: /relationships/uid
     -
-      name: field_koro
-      label: Koro
-      selector: /attributes/field_koro
+      name: field_accordion_title
+      label: 'Field accordion title'
+      selector: /attributes/field_accordion_title
     -
-      name: field_short_list
-      label: 'Short list'
-      selector: /attributes/field_short_list
-    -
-      name: field_title
-      label: Title
-      selector: /attributes/field_title
-    -
-      name: field_background_color
-      label: 'Background color'
-      selector: /relationships/field_background_color
+      name: field_accordion_text
+      label: 'Field accordion text'
+      selector: /attributes/field_accordion_text
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: blog_list
+    default_value: accordion
   id: id
   uuid: uuid
   revision_id: revision_id
@@ -101,25 +104,22 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_koro: field_koro
-  field_short_list: field_short_list
-  field_title: field_title
-  field_background_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_accordion_title: field_accordion_title
+  field_accordion_text/value: field_accordion_text/value
+  field_accordion_text/format: field_accordion_text/format
+  field_accordion_text/prosessed: field_accordion_text/prosessed
 destination:
   plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies: {  }

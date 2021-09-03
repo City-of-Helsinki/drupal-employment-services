@@ -1,4 +1,4 @@
-uuid: 7cc9f605-8966-4320-85a6-8c7e26e6a2f7
+uuid: 34173bf2-8a5a-401e-84d3-2dd28ef60a53
 langcode: en
 status: true
 dependencies:
@@ -6,21 +6,21 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: 2espmGb2MyjXwBt-q3tVp2q5dwFCC5oznwYHyYjhjN0
-id: import_paragraph_image
+  default_config_hash: nFd-5UVZyzYCK2yik0IwdnT4zzKeE-qRMRAGUQlE2eY
+id: import_paragraph_sujo_embedded_fi
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
 migration_group: tyollisyyspalvelut
-label: 'Import Image paragraph'
+label: 'Import Sujo embedded fi paragraph'
 source:
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
   track_changes: true
   urls:
-    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/image'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/sujo_embedded?filter[langcode]=fi'
   item_selector: data/
   fields:
     -
@@ -64,28 +64,32 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: uid
       selector: /relationships/uid
     -
-      name: field_caption
-      label: Caption
-      selector: /attributes/field_caption
-    -
-      name: field_image_height
-      label: Height
-      selector: /attributes/field_image_height
-    -
-      name: field_image_image
-      label: Image
-      selector: /relationships/field_image_image
+      name: field_training
+      label: Training
+      selector: /attributes/field_training
   ids:
     id:
       type: integer
 process:
   type:
     plugin: default_value
-    default_value: image
+    default_value: sujo_embedded
   id: id
   uuid: uuid
   revision_id: revision_id
@@ -97,24 +101,19 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
-  field_image_image:
-    target_id:
-      plugin: entity_lookup
-      source: field_image_image/data/id
-      value_key: uuid
-      bundle: image
-      bundle_key: bundle
-      entity_type: media
-      ignore_case: true
-  field_caption: field_caption
-  field_image_height: field_image_height
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
+  field_training: field_training
 destination:
   plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies: {  }
