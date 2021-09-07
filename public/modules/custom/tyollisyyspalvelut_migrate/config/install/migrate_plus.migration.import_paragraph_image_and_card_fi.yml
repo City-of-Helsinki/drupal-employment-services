@@ -1,5 +1,5 @@
-id: import_paragraph_image_and_card
-label: Import Image and card paragraph
+id: import_paragraph_image_and_card_fi
+label: Import Image and card fi paragraph
 migration_group: tyollisyyspalvelut
 migration_dependencies: {}
 dependencies:
@@ -24,7 +24,7 @@ source:
   # Flags whether to track changes to incoming data. If TRUE, we will maintain
   # hashed source rows to determine whether incoming data has changed.
   track_changes: true
-  urls: https://edit.tyollisyyspalvelut.hel.fi/apijson/paragraph/image_and_card
+  urls: https://edit.tyollisyyspalvelut.hel.fi/fi/apijson/paragraph/image_and_card?filter[langcode]=fi
   item_selector: data/
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
@@ -74,6 +74,18 @@ source:
       label: 'Parent field name'
       selector: /attributes/parent_field_name
     -
+      name: revision_translation_affected
+      label: 'Revision translation affected'
+      selector: /attributes/revision_translation_affected
+    -
+      name: content_translation_source
+      label: 'Content translation source'
+      selector: /attributes/content_translation_source
+    -
+      name: content_translation_outdated
+      label: 'Content translation outdated'
+      selector: /attributes/content_translation_outdated
+    -
       name: uid
       label: 'uid'
       selector: /relationships/uid
@@ -103,13 +115,18 @@ process:
       source: created
   status: status
   langcode: langcode
-  default_langcode: default_langcode
+  default_langcode:
+    plugin: default_value
+    default_value: true
   uid:
     plugin: default_value
     default_value: 1
   parent_id: parent_id
   parent_type: parent_type
   parent_field_name: parent_field_name
+  revision_translation_affected: revision_translation_affected
+  content_translation_source: content_translation_source
+  content_translation_outdated: content_translation_outdated
   field_ic_card:
     plugin: sub_process
     source: field_ic_card/data

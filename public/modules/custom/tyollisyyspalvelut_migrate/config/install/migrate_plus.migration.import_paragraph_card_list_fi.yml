@@ -136,15 +136,14 @@ process:
   revision_translation_affected: revision_translation_affected
   content_translation_source: content_translation_source
   content_translation_outdated: content_translation_outdated
-  field_background_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+  field_card_list_bg_color:
+    plugin: entity_lookup
+    source: field_card_list_bg_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_cards:
     plugin: sub_process
     source: field_cards/data

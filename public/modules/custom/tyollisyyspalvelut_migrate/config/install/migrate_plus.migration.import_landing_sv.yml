@@ -128,14 +128,13 @@ process:
   promote: promote
   langcode: langcode
   path/alias: path/alias
-  path/pid: path/pid
   path/langcode: path/langcode
   content_translation_source: content_translation_source
   content_translation_outdated: content_translation_outdated
   uid:
     plugin: default_value
     default_value: 1
-  field_page_width/target_id:
+  field_page_width:
     plugin: entity_lookup
     source: field_page_width/data/id
     value_key: uuid
