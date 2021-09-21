@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Hooks for Työllisyyspalvelut Common module.
+ */
+
+use Drupal\editor\Entity\Editor;
+
+/**
+ * @param array $css
+ * @param Editor $editor
+ */
+function tyollisyyspalvelut_common_ckeditor_css_alter(array &$css, Editor $editor) {
+  $css[] = drupal_get_path('module', 'tyollisyyspalvelut_common') . '/ckeditor.css';
+}
