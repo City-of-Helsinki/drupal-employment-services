@@ -2,6 +2,10 @@
 
 Drupal 9 website for the Työllisyyspalvelut Helsinki project.
 
+## Related repositories
+- [Employment services content sync](https://github.com/City-of-Helsinki/employment-services-content-sync)
+- [React UI](https://github.com/City-of-Helsinki/employment-services-ui)
+
 ## Environments
 
 Env | Branch | Drush alias | URL | Notes

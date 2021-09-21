@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.field_end_time
     - field.field.node.event.field_id
+    - field.field.node.event.field_image_alt
     - field.field.node.event.field_image_name
     - field.field.node.event.field_image_url
     - field.field.node.event.field_in_language
@@ -29,6 +30,14 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  field_image_alt:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_page_content:
     weight: 2
     label: above

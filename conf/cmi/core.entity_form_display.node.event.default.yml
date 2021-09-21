@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.field_end_time
     - field.field.node.event.field_id
+    - field.field.node.event.field_image_alt
     - field.field.node.event.field_image_name
     - field.field.node.event.field_image_url
     - field.field.node.event.field_in_language
@@ -45,6 +46,14 @@ content:
     region: content
   field_id:
     weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_alt:
+    weight: 137
     settings:
       size: 60
       placeholder: ''

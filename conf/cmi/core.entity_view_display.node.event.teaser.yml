@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_end_time
     - field.field.node.event.field_id
+    - field.field.node.event.field_image_alt
     - field.field.node.event.field_image_name
     - field.field.node.event.field_image_url
     - field.field.node.event.field_in_language
@@ -36,6 +37,7 @@ content:
 hidden:
   field_end_time: true
   field_id: true
+  field_image_alt: true
   field_image_name: true
   field_image_url: true
   field_in_language: true

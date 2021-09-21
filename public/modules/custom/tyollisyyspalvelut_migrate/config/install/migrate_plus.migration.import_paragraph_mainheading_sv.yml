@@ -112,17 +112,31 @@ process:
   type:
     plugin: default_value
     default_value: mainheading
-  id:
+  pseudo_paragraph_field:
     plugin: migration_lookup
+    migration: import_paragraph_mainheading_fi
     source: id
-    migration: import_paragraph_mainheading_fi
-    no_stub: true
-  uuid: uuid
+  id:
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '0'
   revision_id:
-    plugin: migration_lookup
-    source: revision_id
-    migration: import_paragraph_mainheading_fi
-    no_stub: true
+    plugin: extract
+    source: '@pseudo_paragraph_field'
+    index:
+      - '1'
+  # id:
+  #   plugin: migration_lookup
+  #   source: id
+  #   migration: import_paragraph_mainheading_fi
+  #   no_stub: true
+  # revision_id:
+  #   plugin: migration_lookup
+  #   source: revision_id
+  #   migration: import_paragraph_mainheading_fi
+  #   no_stub: true
+  uuid: uuid
   created:
     -
       plugin: format_date
@@ -143,14 +157,10 @@ process:
   field_show_date: field_show_date
   field_title: field_title
   field_title_color:
-    plugin: sub_process
-    source: field_title_color/data
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: id
-        value_key: uuid
-        bundle: colors
-        bundle_key: vid
-        entity_type: taxonomy_term
-        ignore_case: true
+    plugin: entity_lookup
+    source: field_title_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
