@@ -1,4 +1,4 @@
-uuid: 7693b543-f322-40a0-85c1-69d7ede6b34a
+uuid: cd1ea21f-eb0c-400a-9cc8-17ce55b581ca
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: kMyR5W6fSIDPib2UjNHjfk_BHm6lZ2Qi9rT-30ZjtDI
+  default_config_hash: qfVOH6sC3RfdbQaOJwSwVJ7g7Irdmw2Sx9Pw4JO2PiY
 id: import_paragraph_blog_list_sv
 class: null
 field_plugin_method: null
@@ -139,14 +139,13 @@ process:
   field_short_list: field_short_list
   field_title: field_title
   field_background_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_background_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   translations: true

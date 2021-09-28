@@ -1,4 +1,4 @@
-uuid: b183d6a7-8f28-4efe-b7d2-6b58bf9814d2
+uuid: 57ae68ca-0ce2-4cbc-bdc7-5274f20db151
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: A4sF4dStdOy43WaBbTYcNqBRiRNO3jmYO1goMTg_NGQ
+  default_config_hash: OU3ILtZeCr-_HAIuXJ8dQ8CO4ePpzbXDxsTGDqVshMo
 id: import_paragraph_card_en
 class: null
 field_plugin_method: null
@@ -164,23 +164,21 @@ process:
   content_translation_source: content_translation_source
   content_translation_outdated: content_translation_outdated
   field_background_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_background_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_button_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_button_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_card_button_text: field_card_button_text
   field_card_height: field_card_height
   field_card_width: field_card_width
@@ -198,24 +196,22 @@ process:
   field_card_text/format: field_card_text/format
   field_card_text/prosessed: field_card_text/prosessed
   field_text_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_text_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
   field_card_title: field_card_title
   field_title_color:
-    target_id:
-      plugin: entity_lookup
-      source: id
-      value_key: uuid
-      bundle: colors
-      bundle_key: vid
-      entity_type: taxonomy_term
-      ignore_case: true
+    plugin: entity_lookup
+    source: field_title_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   translations: true
