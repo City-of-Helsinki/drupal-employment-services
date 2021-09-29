@@ -1,4 +1,4 @@
-uuid: 7e46ff61-c5e6-4799-b7ae-dff0b26da564
+uuid: cb1e220e-446a-4388-86bd-89b33a4ab7ea
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - tyollisyyspalvelut_migrate
 _core:
-  default_config_hash: A88bOChL9z5amHm6l8gyvKSiIg1YL-PxBPXtV48gDlY
+  default_config_hash: gydqSADbCzCe-6USJ0qOS8twaF726Y0ydlyRiBVqv4I
 id: import_paragraph_subheading_fi
 class: null
 field_plugin_method: null
@@ -120,17 +120,13 @@ process:
   content_translation_outdated: content_translation_outdated
   field_subheading_title: field_subheading_title
   field_title_color:
-    plugin: sub_process
-    source: field_title_color/data
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: id
-        value_key: uuid
-        bundle: colors
-        bundle_key: vid
-        entity_type: taxonomy_term
-        ignore_case: true
+    plugin: entity_lookup
+    source: field_title_color/data/id
+    value_key: uuid
+    bundle: colors
+    bundle_key: vid
+    entity_type: taxonomy_term
+    ignore_case: true
 destination:
   plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies: {  }

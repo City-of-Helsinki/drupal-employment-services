@@ -145,10 +145,5 @@ process:
   content_translation_outdated: content_translation_outdated
   field_subheading_title: field_subheading_title
   field_title_color:
-    plugin: entity_lookup
-    source: field_title_color/data/id
-    value_key: uuid
-    bundle: colors
-    bundle_key: vid
-    entity_type: taxonomy_term
-    ignore_case: true
+    plugin: default_value
+    default_value: 65
