@@ -22,56 +22,15 @@ dependencies:
     - field.field.node.event.field_title
     - node.type.event
   module:
-    - entity_reference_revisions
-    - text
     - user
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
-  field_image_alt:
-    weight: 6
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_page_content:
-    weight: 2
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_page_width:
-    weight: 1
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_short_description:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_text:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_title:
-    weight: 4
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -85,13 +44,18 @@ content:
 hidden:
   field_end_time: true
   field_id: true
+  field_image_alt: true
   field_image_name: true
   field_image_url: true
   field_in_language: true
   field_info_url: true
   field_last_modified_time: true
   field_location: true
+  field_page_content: true
+  field_page_width: true
   field_publisher: true
+  field_short_description: true
   field_start_time: true
   field_tags: true
+  field_text: true
   langcode: true
