@@ -13,13 +13,9 @@ id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
-content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
   field_page_content: true
   field_page_width: true
   langcode: true
+  links: true

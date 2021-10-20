@@ -1,0 +1,18 @@
+uuid: a50f4897-9340-4a43-a477-3dd058f26191
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hdbt_subtheme
+id: hdbt_subtheme_pagetitle_2
+theme: hdbt_subtheme
+region: header_top
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
