@@ -10,8 +10,8 @@ Drupal 9 website for the Työllisyyspalvelut Helsinki project.
 
 Env | Branch | Drush alias | URL | Notes
 --- | ------ | ----------- | --- | -----
-development | develop | - | https://drupal-tyollisyyspalvelut-helfi.docker.so/ | Local development environment
-production | main | @main | https://edit.tyollisyyspalvelut.hel.fi/ | Production site
+development | develop | - | https://drupal-tyollisyyspalvelut-helfi.docker.so | Local development environment
+production | main | - | https://edit.tyollisyyspalvelut.hel.fi | Production site
 
 ## Requirements
 
@@ -35,7 +35,13 @@ Stop project:
 $ make stop
 ``
 
-Stop project and remove app container:
+Start project after stopping it:
+
+``
+$ make up
+``
+
+Stop project and remove containers:
 
 ``
 $ make down
@@ -53,14 +59,19 @@ Install fresh Drupal site from existing configuration:
 $ make build; make drush-si; make post-install
 ``
 
-Start project, update all packages and sync db from production:
+Start project, update all packages and sync db from local sql dump:
 
 ``
 $ make fresh
 ``
 
-**Note:** Will not work at this point, since the production environment has not been set up.
 ## Update Drupal and composer modules
+
+Install all modules and composer packages:
+
+``
+$ make build
+``
 
 Update all modules and composer packages:
 
@@ -111,6 +122,12 @@ $ make shell
 
 # Login with Drush
 $ make drush-uli
+
+# Create sql dump from local site
+$ make drush-create-dump
+
+# Run database updates, config import, clear caches.
+$ make drush-deploy
 
 # Check Drupal coding style
 $ make lint-drupal
