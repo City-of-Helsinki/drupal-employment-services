@@ -59,7 +59,8 @@
             "drupal/core": {
                 "2949103 - taxonomies can fail on import during migration if date isn't formatted properly": "https://www.drupal.org/files/issues/2019-07-24/2949103-13.patch",
                 "3210926 - Call to a member function getAlias on null in PathItem->postSave()": "https://www.drupal.org/files/issues/2021-04-27/path_alias_null-3210926-3.patch",
-                "13875747 - Improve migrate messages from the extract plugin": "https://www.drupal.org/files/issues/2020-10-20/3148959-38.patch"
+                "13875747 - Improve migrate messages from the extract plugin": "https://www.drupal.org/files/issues/2020-10-20/3148959-38.patch",
+                "3099026 - Claro's preprocessing of field multiple value form's table header cell removes potential changes by others": "https://www.drupal.org/files/issues/2020-08-13/3099026-17.patch"
             }
         },
         "installer-paths": {
