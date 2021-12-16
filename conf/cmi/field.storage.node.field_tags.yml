@@ -12,20 +12,26 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: Rekry
+      value: rekry
       label: Rekry
     -
-      value: Työhönohjaus
+      value: työhönohjaus
       label: Työhönohjaus
     -
-      value: Maahanmuuttajat
+      value: maahanmuuttajat
       label: Maahanmuuttajat
     -
       value: etäosallistuminen
-      label: etäosallistuminen
+      label: Etäosallistuminen
     -
       value: työnhakijat
-      label: työnhakijat
+      label: Työnhakijat
+    -
+      value: kurssit
+      label: Kurssit
+    -
+      value: työpajat
+      label: Työpajat
   allowed_values_function: ''
 module: options
 locked: false

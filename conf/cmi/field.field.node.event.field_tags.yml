@@ -12,7 +12,7 @@ field_name: field_tags
 entity_type: node
 bundle: event
 label: tags
-description: "Rekry|Rekry\r\nTyöhönohjaus|Työhönohjaus\r\nMaahanmuuttajat|Maahanmuuttajat\r\netäosallistuminen|etäosallistuminen\r\ntyönhakijat|työnhakijat"
+description: ''
 required: false
 translatable: false
 default_value: {  }
