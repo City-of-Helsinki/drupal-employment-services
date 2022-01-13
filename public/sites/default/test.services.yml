@@ -10,7 +10,7 @@ parameters:
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ['GET']
     # Configure requests allowed from specific origins.
-    allowedOrigins: ['https://tyollisyyskokeilu-ui-hki-kanslia-tyollisyyskokeilu-dev.apps.arodevtest.hel.fi', 'https://tyollisyyskokeilu-ui-hki-kanslia-tyollisyyskokeilu-dev.agw.arodevtest.hel.fi']
+    allowedOrigins: ['https://tyollisyyskokeilu-ui-hki-kanslia-tyollisyyskokeilu-test.apps.arodevtest.hel.fi/', 'https://tyollisyyskokeilu-ui-hki-kanslia-tyollisyyskokeilu-test.agw.arodevtest.hel.fi']
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.
