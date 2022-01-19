@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_end_time
+    - field.field.node.event.field_external_links
     - field.field.node.event.field_id
     - field.field.node.event.field_image_alt
     - field.field.node.event.field_image_name
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.event.field_info_url
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
+    - field.field.node.event.field_location_extra_info
     - field.field.node.event.field_page_content
     - field.field.node.event.field_page_width
     - field.field.node.event.field_publisher
@@ -36,6 +38,7 @@ content:
     region: content
 hidden:
   field_end_time: true
+  field_external_links: true
   field_id: true
   field_image_alt: true
   field_image_name: true
@@ -44,6 +47,7 @@ hidden:
   field_info_url: true
   field_last_modified_time: true
   field_location: true
+  field_location_extra_info: true
   field_page_content: true
   field_page_width: true
   field_publisher: true

@@ -9,7 +9,7 @@ id: node.event.field_last_modified_time
 field_name: field_last_modified_time
 entity_type: node
 bundle: event
-label: last_modified_time
+label: 'Last modified time'
 description: ''
 required: false
 translatable: false

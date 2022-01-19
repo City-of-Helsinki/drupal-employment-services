@@ -9,7 +9,7 @@ id: node.event.field_image_url
 field_name: field_image_url
 entity_type: node
 bundle: event
-label: image_url
+label: 'Image url'
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,21 @@
+uuid: 7418f723-4d96-4051-868a-a1276a869de4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_location_extra_info
+field_name: field_location_extra_info
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

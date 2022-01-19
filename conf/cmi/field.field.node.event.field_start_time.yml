@@ -9,7 +9,7 @@ id: node.event.field_start_time
 field_name: field_start_time
 entity_type: node
 bundle: event
-label: start_time
+label: 'start time'
 description: ''
 required: false
 translatable: false
