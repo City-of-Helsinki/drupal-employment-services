@@ -9,7 +9,7 @@ id: node.event.field_end_time
 field_name: field_end_time
 entity_type: node
 bundle: event
-label: end_time
+label: 'End time'
 description: ''
 required: false
 translatable: false

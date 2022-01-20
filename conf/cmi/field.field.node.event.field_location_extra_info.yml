@@ -1,15 +1,15 @@
-uuid: b9bd9467-78b6-4a67-805d-40f80d09d9da
+uuid: e229dfed-90a8-4601-989c-3bbad35ddfa2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image_name
+    - field.storage.node.field_location_extra_info
     - node.type.event
-id: node.event.field_image_name
-field_name: field_image_name
+id: node.event.field_location_extra_info
+field_name: field_location_extra_info
 entity_type: node
 bundle: event
-label: 'Image name'
+label: 'Location extra info'
 description: ''
 required: false
 translatable: false
