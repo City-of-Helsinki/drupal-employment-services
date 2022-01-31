@@ -14,10 +14,10 @@ bundle: page
 mode: default
 content:
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_page_content: true
   field_page_width: true

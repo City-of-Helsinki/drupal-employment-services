@@ -22,7 +22,9 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_page_content:
+    type: paragraphs
     weight: 122
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -39,18 +41,16 @@ content:
         duplicate: duplicate
     third_party_settings:
       paragraphs_features:
-        show_drag_and_drop: true
-        delete_confirmation: false
         add_in_between: false
+        delete_confirmation: false
         split_text: false
-    type: paragraphs
-    region: content
+        show_drag_and_drop: true
   field_page_width:
+    type: options_buttons
     weight: 121
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -66,24 +66,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 120
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -101,11 +101,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }

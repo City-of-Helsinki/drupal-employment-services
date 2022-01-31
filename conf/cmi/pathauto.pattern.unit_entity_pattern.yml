@@ -1,0 +1,14 @@
+uuid: 22f97182-aced-4dc1-9073-2bd16dc0fe05
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DPZ_wdOLQJ4O4q72Iz6ka0yQgBgBrGW0rpFHCx5rGuM
+id: unit_entity_pattern
+label: 'Unit entity pattern'
+type: 'canonical_entities:tpr_unit'
+pattern: '[tpr_unit:label]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -11,10 +11,10 @@ bundle: highlighted_text
 mode: default
 content:
   field_highlighted_text:
-    weight: 0
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 0
     region: content
 hidden: {  }
