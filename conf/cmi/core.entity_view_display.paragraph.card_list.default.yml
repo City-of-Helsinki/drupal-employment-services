@@ -16,38 +16,38 @@ bundle: card_list
 mode: default
 content:
   field_card_list_bg_color:
-    weight: 1
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   field_card_list_is_koro:
-    weight: 2
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 2
     region: content
   field_card_list_title:
-    weight: 0
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_cards:
     type: entity_reference_revisions_entity_view
-    weight: 3
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 3
     region: content
 hidden: {  }

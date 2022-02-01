@@ -18,116 +18,116 @@ path: paragraph/image_and_card
 resourceType: paragraph--image_and_card
 resourceFields:
   id:
+    disabled: false
     fieldName: id
     publicName: id
     enhancer:
       id: ''
-    disabled: false
   uuid:
+    disabled: false
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-    disabled: false
   revision_id:
+    disabled: false
     fieldName: revision_id
     publicName: revision_id
     enhancer:
       id: ''
-    disabled: false
   langcode:
+    disabled: false
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    disabled: false
   type:
+    disabled: false
     fieldName: type
     publicName: type
     enhancer:
       id: ''
-    disabled: false
   status:
+    disabled: false
     fieldName: status
     publicName: status
     enhancer:
       id: ''
-    disabled: false
   created:
+    disabled: false
     fieldName: created
     publicName: created
     enhancer:
       id: ''
-    disabled: false
   parent_id:
+    disabled: false
     fieldName: parent_id
     publicName: parent_id
     enhancer:
       id: ''
-    disabled: false
   parent_type:
+    disabled: false
     fieldName: parent_type
     publicName: parent_type
     enhancer:
       id: ''
-    disabled: false
   parent_field_name:
+    disabled: false
     fieldName: parent_field_name
     publicName: parent_field_name
     enhancer:
       id: ''
-    disabled: false
   behavior_settings:
+    disabled: false
     fieldName: behavior_settings
     publicName: behavior_settings
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
+    disabled: false
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    disabled: false
   revision_default:
+    disabled: false
     fieldName: revision_default
     publicName: revision_default
     enhancer:
       id: ''
-    disabled: false
   revision_translation_affected:
+    disabled: false
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
     enhancer:
       id: ''
-    disabled: false
   content_translation_source:
+    disabled: false
     fieldName: content_translation_source
     publicName: content_translation_source
     enhancer:
       id: ''
-    disabled: false
   content_translation_outdated:
+    disabled: false
     fieldName: content_translation_outdated
     publicName: content_translation_outdated
     enhancer:
       id: ''
-    disabled: false
   content_translation_changed:
+    disabled: false
     fieldName: content_translation_changed
     publicName: content_translation_changed
     enhancer:
       id: ''
-    disabled: false
   field_ic_card:
+    disabled: false
     fieldName: field_ic_card
     publicName: field_ic_card
     enhancer:
       id: ''
-    disabled: false
   field_ic_image:
+    disabled: false
     fieldName: field_ic_image
     publicName: field_ic_image
     enhancer:
       id: ''
-    disabled: false
