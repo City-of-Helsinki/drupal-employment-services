@@ -11,8 +11,8 @@ id: node.event.field_tags
 field_name: field_tags
 entity_type: node
 bundle: event
-label: tags
-description: "Rekry|Rekry\r\nTyöhönohjaus|Työhönohjaus\r\nMaahanmuuttajat|Maahanmuuttajat\r\netäosallistuminen|etäosallistuminen\r\ntyönhakijat|työnhakijat"
+label: Tags
+description: "\r\n\r\n\r\n\r\n"
 required: false
 translatable: false
 default_value: {  }

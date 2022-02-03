@@ -12,24 +12,45 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: Rekry
-      label: Rekry
+      value: digitaidot
+      label: Digitaidot
     -
-      value: Työhönohjaus
-      label: Työhönohjaus
+      value: etätapahtuma
+      label: Etätapahtuma
     -
-      value: Maahanmuuttajat
+      value: info
+      label: Info
+    -
+      value: koulutus
+      label: Koulutus
+    -
+      value: maahanmuuttajat
       label: Maahanmuuttajat
     -
-      value: etäosallistuminen
-      label: etäosallistuminen
+      value: messut
+      label: Messut
     -
-      value: työnhakijat
-      label: työnhakijat
+      value: neuvonta
+      label: Neuvonta
+    -
+      value: nuoret
+      label: Nuoret
+    -
+      value: palkkatuki
+      label: Palkkatuki
+    -
+      value: rekrytointi
+      label: Rekrytointi
+    -
+      value: työnhaku
+      label: Työnhaku
+    -
+      value: työpajat
+      label: Työpajat
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 10
+cardinality: 15
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
