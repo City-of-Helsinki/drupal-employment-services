@@ -1,0 +1,17 @@
+uuid: 555a0a52-a038-4257-93fd-ce2ef6b35ca3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: yLsRpgwe6vpWN8KXT927fq9GfVzAbLiI6RLF2PLNCTI
+id: liftup_with_image
+label: 'Liftup with image'
+icon_uuid: null
+icon_default: null
+description: 'Liftup with image is a fairly large element that you can use to promote content with large image next to the text.'
+behavior_plugins: {  }

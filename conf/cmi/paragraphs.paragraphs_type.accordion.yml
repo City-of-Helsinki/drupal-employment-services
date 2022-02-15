@@ -1,10 +1,17 @@
-uuid: 594ec133-3379-41d9-944f-b83231380984
+uuid: 7b845017-2c2b-4193-872e-da4094b005ea
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: d9QHZSNb78KFueRqSVFC7_maG4KBNgjsPmLJIb2TN10
 id: accordion
 label: Accordion
 icon_uuid: null
 icon_default: null
-description: 'Accordion '
+description: 'Accordion paragraph is used to store information that is perhaps not so relevant to all website users in a compact element that collapses the additional information behind a title.'
 behavior_plugins: {  }

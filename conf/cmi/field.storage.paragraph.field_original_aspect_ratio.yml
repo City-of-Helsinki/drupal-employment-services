@@ -1,0 +1,20 @@
+uuid: d163be0d-39da-4b63-a239-ed0b2c882852
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: z0hQ7or4c4fxhd2s376NL06XFKMUWvkZr2t8oN2xwP8
+id: paragraph.field_original_aspect_ratio
+field_name: field_original_aspect_ratio
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,18 +1,34 @@
-uuid: 5b2442fc-4120-42d8-800d-2ecd878f7de3
+uuid: 338dd7cf-1fb2-4a89-83d6-f4a132465ee5
 langcode: en
 status: true
 dependencies:
   module:
     - menu_ui
+    - scheduler
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
-name: Page
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: 2wtLJzGRPIAAdAGbl6hOGq0wG3zumh1dayzTQvnwU94
+name: 'Basic page'
 type: page
-description: 'Basic page type'
+description: 'Content type for pages that include information that doesn''t age as quickly as for example article or news content.'
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

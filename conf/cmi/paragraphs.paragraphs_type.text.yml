@@ -1,10 +1,17 @@
-uuid: d8d5887b-b639-40ec-9f61-78e5fc4f98c4
+uuid: c38f5b1f-1ece-4e3a-ba79-5a3d8dd3cad7
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: quCqNy8X3E6ITit4b7BJnq9E6Ai6Tx3xYpBz1pByy0E
 id: text
 label: Text
 icon_uuid: null
 icon_default: null
-description: 'Simple text block'
+description: ''
 behavior_plugins: {  }

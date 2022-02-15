@@ -1,39 +1,56 @@
-uuid: 89c4293a-ee71-490a-a463-f039617f59d4
+uuid: e1063c03-9e7d-447a-886b-f1a06e4aa2cd
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.image.field_media_image
-    - image.style.thumbnail
+    - field.field.media.image.field_photographer
+    - image.style.media_library
     - media.type.image
   module:
-    - image
+    - focal_point
 _core:
-  default_config_hash: BMLrK4zKp8-FFnMseBdT_6h6YipUsKRfbDf_3WUB5HA
+  default_config_hash: _WTCyWUZlB2FyBSgpuey9Y9okHz6R8gcAWQ3DUiyNuA
 id: media.image.media_library
 targetEntityType: media
 bundle: image
 mode: media_library
 content:
   field_media_image:
-    type: image_image
     weight: 1
-    region: content
     settings:
+      preview_image_style: media_library
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-  langcode:
-    type: language_select
+    type: image_focal_point
+    region: content
+  field_photographer:
+    type: string_textfield
     weight: 2
     region: content
     settings:
-      include_locked: true
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
-  name: true
+  langcode: true
   path: true
   status: true
   uid: true

@@ -1,0 +1,50 @@
+uuid: 762dd9d9-9ad4-4c93-94e8-2340d3bac548
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service_list.field_service_list_description
+    - field.field.paragraph.service_list.field_service_list_meta_load_mor
+    - field.field.paragraph.service_list.field_service_list_services
+    - field.field.paragraph.service_list.field_service_list_title
+    - paragraphs.paragraphs_type.service_list
+  module:
+    - text
+_core:
+  default_config_hash: Q24cyt4J0px0IBaVGbxc3kVX35PurWDU32OyT9a2fCs
+id: paragraph.service_list.default
+targetEntityType: paragraph
+bundle: service_list
+mode: default
+content:
+  field_service_list_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_service_list_meta_load_mor:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_service_list_services:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: content
+  field_service_list_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

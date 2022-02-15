@@ -32,7 +32,7 @@ bundle: event
 mode: default
 content:
   field_external_links:
-    type: link
+    weight: 3
     label: above
     settings:
       trim_length: 80
@@ -41,29 +41,29 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    type: link
     region: content
   field_location_extra_info:
-    type: string
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    type: string
     region: content
   field_title:
-    type: string
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    type: string
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_end_time: true
   field_id: true

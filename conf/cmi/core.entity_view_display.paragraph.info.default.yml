@@ -14,18 +14,18 @@ bundle: info
 mode: default
 content:
   field_info_text:
-    type: text_default
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    type: text_default
     region: content
   field_info_title:
-    type: string
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    type: string
     region: content
 hidden: {  }

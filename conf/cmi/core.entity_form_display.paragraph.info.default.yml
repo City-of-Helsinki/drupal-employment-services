@@ -14,26 +14,26 @@ bundle: info
 mode: default
 content:
   field_info_text:
-    type: text_textarea
     weight: 1
-    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_info_title:
-    type: string_textfield
-    weight: 0
+    type: text_textarea
     region: content
+  field_info_title:
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   translation:
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

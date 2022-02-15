@@ -11,10 +11,10 @@ bundle: lead
 mode: default
 content:
   field_lead_text:
-    type: basic_string
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    type: basic_string
     region: content
 hidden: {  }

@@ -19,152 +19,152 @@ path: node/blog
 resourceType: node--blog
 resourceFields:
   nid:
-    disabled: false
     fieldName: nid
     publicName: nid
     enhancer:
       id: ''
-  uuid:
     disabled: false
+  uuid:
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-  vid:
     disabled: false
+  vid:
     fieldName: vid
     publicName: vid
     enhancer:
       id: ''
-  langcode:
     disabled: false
+  langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-  type:
     disabled: false
+  type:
     fieldName: type
     publicName: type
     enhancer:
       id: ''
-  revision_timestamp:
     disabled: false
+  revision_timestamp:
     fieldName: revision_timestamp
     publicName: revision_timestamp
     enhancer:
       id: ''
-  revision_uid:
     disabled: false
+  revision_uid:
     fieldName: revision_uid
     publicName: revision_uid
     enhancer:
       id: ''
-  revision_log:
     disabled: false
+  revision_log:
     fieldName: revision_log
     publicName: revision_log
     enhancer:
       id: ''
-  status:
     disabled: false
+  status:
     fieldName: status
     publicName: status
     enhancer:
       id: ''
-  uid:
     disabled: false
+  uid:
     fieldName: uid
     publicName: uid
     enhancer:
       id: ''
-  title:
     disabled: false
+  title:
     fieldName: title
     publicName: title
     enhancer:
       id: ''
-  created:
     disabled: false
+  created:
     fieldName: created
     publicName: created
     enhancer:
       id: ''
-  changed:
     disabled: false
+  changed:
     fieldName: changed
     publicName: changed
     enhancer:
       id: ''
-  promote:
     disabled: false
+  promote:
     fieldName: promote
     publicName: promote
     enhancer:
       id: ''
-  sticky:
     disabled: false
+  sticky:
     fieldName: sticky
     publicName: sticky
     enhancer:
       id: ''
-  default_langcode:
     disabled: false
+  default_langcode:
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-  revision_default:
     disabled: false
+  revision_default:
     fieldName: revision_default
     publicName: revision_default
     enhancer:
       id: ''
-  revision_translation_affected:
     disabled: false
+  revision_translation_affected:
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
     enhancer:
       id: ''
-  path:
     disabled: false
+  path:
     fieldName: path
     publicName: path
     enhancer:
       id: ''
-  menu_link:
     disabled: false
+  menu_link:
     fieldName: menu_link
     publicName: menu_link
     enhancer:
       id: ''
-  content_translation_source:
     disabled: false
+  content_translation_source:
     fieldName: content_translation_source
     publicName: content_translation_source
     enhancer:
       id: ''
-  content_translation_outdated:
     disabled: false
+  content_translation_outdated:
     fieldName: content_translation_outdated
     publicName: content_translation_outdated
     enhancer:
       id: ''
-  field_page_content:
     disabled: false
+  field_page_content:
     fieldName: field_page_content
     publicName: field_page_content
     enhancer:
       id: ''
-  field_page_width:
     disabled: false
+  field_page_width:
     fieldName: field_page_width
     publicName: field_page_width
     enhancer:
       id: ''
-  field_summary:
     disabled: false
+  field_summary:
     fieldName: field_summary
     publicName: field_summary
     enhancer:
       id: ''
+    disabled: false

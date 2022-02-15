@@ -1,0 +1,100 @@
+uuid: 5c9fbf64-2b91-413c-a88d-4e276b87b326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.remote_video
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: D7s90vFMq6Tjc-ThXp4s3q8tO6lTN1lBPY3e63U8chU
+id: node.landing_page.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page
+label: 'Content region'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      columns: columns
+      banner: banner
+      list_of_links: list_of_links
+      liftup_with_image: liftup_with_image
+      content_cards: content_cards
+      content_liftup: content_liftup
+      from_library: from_library
+      remote_video: remote_video
+      service_list: service_list
+      unit_search: unit_search
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -22
+        enabled: false
+      accordion_item:
+        weight: -21
+        enabled: false
+      banner:
+        weight: -26
+        enabled: true
+      columns:
+        weight: -27
+        enabled: true
+      content_cards:
+        weight: -33
+        enabled: true
+      content_liftup:
+        weight: -32
+        enabled: true
+      from_library:
+        weight: 21
+        enabled: true
+      gallery:
+        weight: -20
+        enabled: false
+      gallery_slide:
+        weight: -19
+        enabled: false
+      hero:
+        weight: -18
+        enabled: false
+      image:
+        weight: -17
+        enabled: false
+      liftup_with_image:
+        weight: -24
+        enabled: true
+      list_of_links:
+        weight: -25
+        enabled: true
+      list_of_links_item:
+        weight: -16
+        enabled: false
+      remote_video:
+        weight: 27
+        enabled: true
+      service_list:
+        weight: 36
+        enabled: true
+      text:
+        weight: -15
+        enabled: false
+      unit_search:
+        weight: 28
+        enabled: true
+field_type: entity_reference_revisions

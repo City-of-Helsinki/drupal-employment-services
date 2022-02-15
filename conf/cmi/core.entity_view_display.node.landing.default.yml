@@ -14,10 +14,10 @@ bundle: landing
 mode: default
 content:
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_page_content: true
   field_page_width: true

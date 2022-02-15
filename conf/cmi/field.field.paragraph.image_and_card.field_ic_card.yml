@@ -21,16 +21,16 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       card: card
-    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 11
         enabled: false
       card:
-        weight: 12
         enabled: true
+        weight: 12
       card_list:
         weight: 15
         enabled: false

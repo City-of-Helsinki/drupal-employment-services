@@ -1,30 +1,34 @@
-uuid: 00d67862-c87e-43c1-997e-74d04515fec9
+uuid: 3c6dba41-519b-4e7c-a8ee-ffda6540b062
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_text
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
     - text
+_core:
+  default_config_hash: VHu9A6hSTzAYHadgMtwBqWRvlcZEPvr1Z_Jn4rx002E
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_text_demo:
-    type: text_textarea
+  field_text:
     weight: 0
-    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
+    region: content
   translation:
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
+  field_text_demo: true
   status: true

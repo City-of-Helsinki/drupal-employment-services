@@ -1,40 +1,7 @@
 uuid: 633319e1-d56c-487a-9e2d-1191fb2e9955
 langcode: en
 status: true
-dependencies:
-  config:
-    - filter.format.basic_html
-    - filter.format.full_html
-    - media.type.audio
-    - media.type.document
-    - media.type.image
-    - media.type.remote_video
-    - media.type.video
-    - node.type.blog
-    - node.type.event
-    - node.type.landing
-    - node.type.news
-    - node.type.page
-  module:
-    - comment
-    - content_translation
-    - field_ui
-    - file
-    - filter
-    - language
-    - media
-    - node
-    - paragraphs
-    - paragraphs_type_permissions
-    - path
-    - pathauto
-    - quick_node_clone
-    - search
-    - shortcut
-    - system
-    - taxonomy
-    - toolbar
-    - views_ui
+dependencies: {  }
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
@@ -44,15 +11,18 @@ is_admin: false
 permissions:
   - 'access administration pages'
   - 'access comments'
+  - 'access config_pages overview'
   - 'access content'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
   - 'access shortcuts'
   - 'access site in maintenance mode'
+  - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'administer config_pages fields'
   - 'administer content translation'
   - 'administer display modes'
   - 'administer languages'
@@ -104,6 +74,7 @@ permissions:
   - 'create paragraph content sujo_embedded'
   - 'create paragraph content text'
   - 'create paragraph content video'
+  - 'create prerelease_landing content'
   - 'create remote_video media'
   - 'create url aliases'
   - 'create video media'
@@ -117,6 +88,7 @@ permissions:
   - 'delete any media'
   - 'delete any news content'
   - 'delete any page content'
+  - 'delete any prerelease_landing content'
   - 'delete any remote_video media'
   - 'delete any video media'
   - 'delete blog revisions'
@@ -132,6 +104,7 @@ permissions:
   - 'delete own landing content'
   - 'delete own news content'
   - 'delete own page content'
+  - 'delete own prerelease_landing content'
   - 'delete own remote_video media'
   - 'delete own video media'
   - 'delete page revisions'
@@ -156,6 +129,7 @@ permissions:
   - 'delete paragraph content sujo_embedded'
   - 'delete paragraph content text'
   - 'delete paragraph content video'
+  - 'delete prerelease_landing revisions'
   - 'edit any audio media'
   - 'edit any blog content'
   - 'edit any document media'
@@ -164,6 +138,7 @@ permissions:
   - 'edit any landing content'
   - 'edit any news content'
   - 'edit any page content'
+  - 'edit any prerelease_landing content'
   - 'edit any remote_video media'
   - 'edit any video media'
   - 'edit own audio media'
@@ -174,6 +149,7 @@ permissions:
   - 'edit own landing content'
   - 'edit own news content'
   - 'edit own page content'
+  - 'edit own prerelease_landing content'
   - 'edit own remote_video media'
   - 'edit own video media'
   - 'link to any page'
@@ -185,6 +161,7 @@ permissions:
   - 'revert landing revisions'
   - 'revert news revisions'
   - 'revert page revisions'
+  - 'revert prerelease_landing revisions'
   - 'search content'
   - 'skip comment approval'
   - 'translate any entity'
@@ -193,6 +170,7 @@ permissions:
   - 'translate news node'
   - 'translate page node'
   - 'translate paragraph'
+  - 'translate prerelease_landing node'
   - 'update any media'
   - 'update content translations'
   - 'update media'
@@ -223,6 +201,7 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view blog revisions'
+  - 'view config_pages entity'
   - 'view event revisions'
   - 'view landing revisions'
   - 'view media'
@@ -251,5 +230,10 @@ permissions:
   - 'view paragraph content sujo_embedded'
   - 'view paragraph content text'
   - 'view paragraph content video'
+  - 'view prerelease_landing revisions'
+  - 'view release_settings config page entity'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
+  - 'view media'
+  - 'view tpr_service'
+  - 'view tpr_unit'

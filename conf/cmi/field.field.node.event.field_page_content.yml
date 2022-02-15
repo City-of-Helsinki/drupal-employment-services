@@ -30,6 +30,7 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       accordion: accordion
       card_list: card_list
@@ -41,42 +42,41 @@ settings:
       phone_number_box: phone_number_box
       subheading: subheading
       text: text
-    negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: 13
         enabled: true
+        weight: 13
       card:
         weight: 14
         enabled: false
       card_list:
+        enabled: true
         weight: 15
-        enabled: true
       hero:
+        enabled: true
         weight: 16
-        enabled: true
       image:
+        enabled: true
         weight: 17
-        enabled: true
       image_and_card:
+        enabled: true
         weight: 18
-        enabled: true
       info:
+        enabled: true
         weight: 19
-        enabled: true
       link_internal:
+        enabled: true
         weight: 20
-        enabled: true
       phone_number_box:
+        enabled: true
         weight: 21
-        enabled: true
       subheading:
-        weight: 22
         enabled: true
+        weight: 22
       test:
         weight: 23
         enabled: false
       text:
-        weight: 24
         enabled: true
+        weight: 24
 field_type: entity_reference_revisions

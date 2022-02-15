@@ -1,9 +1,11 @@
-uuid: 0b494657-a653-4c31-8e8c-c0b12a931f67
+uuid: 64e74d45-d78f-4d37-a61d-e8b039bb5ba6
 langcode: en
 status: true
 dependencies:
   module:
     - menu_link_content
+_core:
+  default_config_hash: z7ZMS8WT4ri7lBI1n6b6TD__0CpNGbXxBLIBFc2MOa8
 id: menu_link_content.menu_link_content.title
 field_name: title
 entity_type: menu_link_content
@@ -11,7 +13,7 @@ bundle: menu_link_content
 label: 'Menu link title'
 description: 'The text to be used for this link in the menu.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

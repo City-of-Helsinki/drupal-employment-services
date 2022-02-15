@@ -1,31 +1,71 @@
-uuid: 8df39b28-57b3-4e40-b382-22c256596795
+uuid: d08b08c1-478a-4dc1-8d34-95a5772bb048
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.field_accordion_description
+    - field.field.paragraph.accordion.field_accordion_design
+    - field.field.paragraph.accordion.field_accordion_heading_level
+    - field.field.paragraph.accordion.field_accordion_items
     - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
+    - field.field.paragraph.accordion.field_accordion_title_level
     - paragraphs.paragraphs_type.accordion
   module:
+    - entity_reference_revisions
+    - options
     - text
+_core:
+  default_config_hash: HWdmIhepMk1UHQ1iK7mD_eMSQVDvXDUJJoB04cne0kg
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
-  field_accordion_text:
-    type: text_default
-    label: above
+  field_accordion_description:
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    type: text_default
+    region: content
+  field_accordion_design:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_accordion_heading_level:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_accordion_items:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_accordion_title:
-    type: string
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    type: string
     region: content
-hidden: {  }
+  field_accordion_title_level:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_accordion_text: true

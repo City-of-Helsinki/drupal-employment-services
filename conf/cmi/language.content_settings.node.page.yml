@@ -1,4 +1,4 @@
-uuid: 5eb8af8c-37f9-4b30-9178-cc14115514b3
+uuid: 1ae423a5-e149-4580-9e5e-1b81d059e833
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: gmtmgLpPQOcKE9BA_eKfrCXtoWVO63kmcfythbJiz5Q
 id: node.page
 target_entity_type_id: node
 target_bundle: page
-default_langcode: site_default
+default_langcode: fi
 language_alterable: true
