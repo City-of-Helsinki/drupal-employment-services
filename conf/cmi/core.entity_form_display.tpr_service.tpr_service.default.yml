@@ -21,8 +21,8 @@ mode: default
 content:
   description:
     type: readonly_field_widget
-    region: content
     weight: 6
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -31,8 +31,8 @@ content:
     third_party_settings: {  }
   errand_services:
     type: readonly_field_widget
-    region: content
     weight: 7
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -42,6 +42,7 @@ content:
   field_content:
     type: paragraphs
     weight: 9
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -57,10 +58,10 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_lower_content:
     type: paragraphs
     weight: 11
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -76,17 +77,17 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_metatags:
+    type: metatag_firehose
     weight: 8
+    region: content
     settings:
       sidebar: false
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_sidebar_content:
     type: paragraphs
     weight: 10
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -102,7 +103,6 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 0
@@ -112,8 +112,8 @@ content:
     third_party_settings: {  }
   links:
     type: readonly_field_widget
-    region: content
     weight: 6
+    region: content
     settings:
       label: above
       formatter_type: null
@@ -121,8 +121,8 @@ content:
       show_description: false
     third_party_settings: {  }
   name:
-    weight: 1
     type: readonly_field_widget
+    weight: 1
     region: content
     settings:
       label: above
@@ -131,13 +131,13 @@ content:
       show_description: false
     third_party_settings: {  }
   name_override:
+    type: string_textfield
     weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
   path:
     type: path
     weight: 7
@@ -145,20 +145,20 @@ content:
     settings: {  }
     third_party_settings: {  }
   toc_enabled:
+    type: boolean_checkbox
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    weight: 3
   toc_title:
-    region: content
-    settings:
-      placeholder: ''
-      size: 60
-    third_party_settings: {  }
     type: string_textfield
     weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   translation:
     weight: 5
     region: content

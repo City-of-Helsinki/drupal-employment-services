@@ -33,7 +33,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       accordion: accordion
       blog_list: blog_list
@@ -48,55 +47,56 @@ settings:
       phone_number_box: phone_number_box
       subheading: subheading
       text: text
+    negate: 0
     target_bundles_drag_drop:
       accordion:
-        enabled: true
         weight: -39
-      blog_list:
         enabled: true
+      blog_list:
         weight: -37
+        enabled: true
       card:
         weight: -38
         enabled: false
       card_list:
-        enabled: true
         weight: -36
+        enabled: true
       events_list:
-        enabled: true
         weight: -35
+        enabled: true
       hero:
-        enabled: true
         weight: -34
+        enabled: true
       image:
-        enabled: true
         weight: -33
+        enabled: true
       image_and_card:
-        enabled: true
         weight: -32
-      info:
         enabled: true
+      info:
         weight: -31
+        enabled: true
       link:
         weight: -24
         enabled: false
       link_internal:
-        enabled: true
         weight: -30
+        enabled: true
       mainheading:
         weight: -23
         enabled: false
       news_list:
-        enabled: true
         weight: -29
-      phone_number_box:
         enabled: true
+      phone_number_box:
         weight: -28
+        enabled: true
       search:
         weight: -22
         enabled: false
       subheading:
-        enabled: true
         weight: -27
+        enabled: true
       sujo_embedded:
         weight: -21
         enabled: false
@@ -104,6 +104,6 @@ settings:
         weight: -26
         enabled: false
       text:
-        enabled: true
         weight: -25
+        enabled: true
 field_type: entity_reference_revisions

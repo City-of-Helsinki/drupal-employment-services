@@ -1,7 +1,27 @@
 uuid: 8043fa37-7e54-4ebb-a24d-63cbc300acbd
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.event
+    - node.type.landing
+    - node.type.news
+    - node.type.page
+  module:
+    - comment
+    - content_translation
+    - field_ui
+    - file
+    - filter
+    - helfi_tpr
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - path
+    - system
+    - taxonomy
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
 id: anonymous
@@ -10,23 +30,20 @@ weight: 0
 is_admin: false
 permissions:
   - 'access comments'
-  - 'access config_pages overview'
   - 'access content'
   - 'access files overview'
-  - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'administer menu'
   - 'administer taxonomy_term display'
   - 'administer url aliases'
   - 'translate any entity'
   - 'translate paragraph'
-  - 'translate prerelease_landing node'
   - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
-  - 'view config_pages entity'
   - 'view event revisions'
   - 'view landing revisions'
+  - 'view media'
   - 'view media'
   - 'view news revisions'
   - 'view own unpublished media'
@@ -52,8 +69,5 @@ permissions:
   - 'view paragraph content sujo_embedded'
   - 'view paragraph content text'
   - 'view paragraph content video'
-  - 'view prerelease_landing revisions'
-  - 'view release_settings config page entity'
-  - 'view media'
   - 'view tpr_service'
   - 'view tpr_unit'

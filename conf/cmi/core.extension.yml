@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   address: 0
   admin_toolbar: 0
@@ -43,12 +45,10 @@ module:
   hdbt_content: 0
   hdbt_hyphenopoly: 0
   helfi_api_base: 0
-  helfi_content: 0
   helfi_media: 0
   helfi_platform_config: 0
   helfi_toc: 0
   helfi_tpr: 0
-  helfi_tpr_config: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -83,7 +83,6 @@ module:
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
   paragraphs_features: 0
-  paragraphs_library: 0
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
@@ -131,5 +130,3 @@ theme:
   hdbt_admin: 0
   hdbt_subtheme: 0
 profile: minimal
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

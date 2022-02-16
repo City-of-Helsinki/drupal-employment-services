@@ -1,15 +1,14 @@
 uuid: f75cd998-1bb8-450e-9aa3-3c9907057db5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - node
 id: jsonapi
 label: jsonapi
 weight: 3
 is_admin: null
 permissions:
-  - 'create paragraph content test'
   - 'delete event revisions'
-  - 'delete paragraph content test'
-  - 'edit release_settings config page entity'
-  - 'update paragraph content test'
-  - 'view paragraph content test'

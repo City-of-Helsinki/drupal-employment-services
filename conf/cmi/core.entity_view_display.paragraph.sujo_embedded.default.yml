@@ -11,13 +11,13 @@ bundle: sujo_embedded
 mode: default
 content:
   field_training:
-    weight: 0
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 0
     region: content
 hidden: {  }
