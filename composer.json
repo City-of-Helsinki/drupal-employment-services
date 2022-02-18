@@ -12,18 +12,21 @@
         "druidfi/omen": "^0.2.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/easy_install": "^10.5",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_linkedevents": "^1.0",
         "drupal/helfi_platform_config": "2.4.0",
-        "drupal/helfi_tpr": "^1.0",
+        "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^1.0",
         "drupal/jsonapi_extras": "^3.17",
         "drupal/jsonapi_image_styles": "^2.0@beta",
+        "drupal/jsonapi_menu_items": "^1.2",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
+        "drupal/next": "^1.0",
         "drupal/paragraphs_features": "^1.11",
         "drupal/quick_node_clone": "^1.14",
         "drush/drush": "^10.4"
@@ -58,9 +61,13 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "2949103 - taxonomies can fail on import during migration if date isn't formatted properly": "https://www.drupal.org/files/issues/2019-07-24/2949103-13.patch",
-                "3210926 - Call to a member function getAlias on null in PathItem->postSave()": "https://www.drupal.org/files/issues/2021-04-27/path_alias_null-3210926-3.patch",
                 "3099026 - Claro's preprocessing of field multiple value form's table header cell removes potential changes by others": "https://www.drupal.org/files/issues/2020-08-13/3099026-17.patch"
+            },
+            "drupal/subrequests": {
+                "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
+            },
+            "drupal/decoupled_router": {
+                "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
             }
         },
         "installer-paths": {

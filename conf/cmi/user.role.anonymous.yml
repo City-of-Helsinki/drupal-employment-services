@@ -14,6 +14,7 @@ dependencies:
     - field_ui
     - file
     - filter
+    - helfi_tpr
     - media
     - node
     - paragraphs
@@ -43,6 +44,7 @@ permissions:
   - 'view event revisions'
   - 'view landing revisions'
   - 'view media'
+  - 'view media'
   - 'view news revisions'
   - 'view own unpublished media'
   - 'view page revisions'
@@ -67,3 +69,5 @@ permissions:
   - 'view paragraph content sujo_embedded'
   - 'view paragraph content text'
   - 'view paragraph content video'
+  - 'view tpr_service'
+  - 'view tpr_unit'

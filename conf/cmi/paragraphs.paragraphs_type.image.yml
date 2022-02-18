@@ -1,10 +1,12 @@
-uuid: 38d7eaab-6fc7-4b6a-a749-3ec9df9f5f26
-langcode: sv
+uuid: 9dcda41e-39fc-4f3f-92c7-ad9db93f613b
+langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: M-cucF_MywQRWs1GedbjUzT6HAIH-QUhLICxcZgEPFg
 id: image
 label: Image
 icon_uuid: null
 icon_default: null
-description: 'Plain image field'
+description: 'Image with a caption'
 behavior_plugins: {  }

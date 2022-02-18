@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - filter.format.full_html
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -21,6 +20,7 @@ dependencies:
     - field_ui
     - file
     - filter
+    - helfi_tpr
     - language
     - media
     - node
@@ -219,12 +219,12 @@ permissions:
   - 'update paragraph content video'
   - 'use advanced search'
   - 'use text format basic_html'
-  - 'use text format full_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view blog revisions'
   - 'view event revisions'
   - 'view landing revisions'
+  - 'view media'
   - 'view media'
   - 'view news revisions'
   - 'view own unpublished content'
@@ -252,4 +252,6 @@ permissions:
   - 'view paragraph content text'
   - 'view paragraph content video'
   - 'view the administration theme'
+  - 'view tpr_service'
+  - 'view tpr_unit'
   - 'view unpublished paragraphs'

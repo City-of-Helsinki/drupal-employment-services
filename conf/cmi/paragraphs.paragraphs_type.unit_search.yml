@@ -1,0 +1,12 @@
+uuid: 11c85a5a-dccf-4c2d-b6e2-598832c97bef
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ORRlASbCXewTftLW-r158X1hz6O9rmwXly3uqDLI2o8
+id: unit_search
+label: 'Unit search'
+icon_uuid: null
+icon_default: null
+description: 'With unit search paragraph content producer can create unit search forms for the end user.'
+behavior_plugins: {  }
