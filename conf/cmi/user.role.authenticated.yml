@@ -68,7 +68,6 @@ permissions:
   - 'administer taxonomy_term form display'
   - 'administer url aliases'
   - 'administer views'
-  - 'bypass node access'
   - 'cancel account'
   - 'clone blog content'
   - 'clone news content'

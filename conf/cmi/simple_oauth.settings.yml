@@ -4,8 +4,8 @@ access_token_expiration: 300
 authorization_code_expiration: 300
 refresh_token_expiration: 1209600
 token_cron_batch_size: 0
-public_key: /var/www/html/keys/public.key
-private_key: /var/www/html/keys/private.key
+public_key: /app/keys/public.key
+private_key: /app/keys/private.key
 remember_clients: true
 use_implicit: false
 disable_openid_connect: false
