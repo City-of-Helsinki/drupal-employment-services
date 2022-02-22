@@ -6,4 +6,4 @@ id: tyollisyyspalvelut_ui
 label: 'Tyollisyyspalvelut UI'
 base_url: 'localhost:3000'
 preview_url: 'localhost:3000/api/preview'
-preview_secret: 'x5mR*$!OX7I2l!Zj3Xa4zjgF6@9hN7oY'
+preview_secret: 'Fk*RTBs6Pnk6nk*keft2zWEVrkWw_Yrm'

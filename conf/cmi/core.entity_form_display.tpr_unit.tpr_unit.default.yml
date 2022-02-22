@@ -280,3 +280,4 @@ content:
 hidden:
   created: true
   hide_description: true
+  show_www: true
