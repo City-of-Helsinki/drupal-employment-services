@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: tyollisyyspalvelut_ui
 label: 'Tyollisyyspalvelut UI'
-base_url: 'localhost:3000'
-preview_url: 'localhost:3000/api/preview'
+base_url: 'http://localhost:3000'
+preview_url: 'http://localhost:3000/api/preview'
 preview_secret: 'Fk*RTBs6Pnk6nk*keft2zWEVrkWw_Yrm'

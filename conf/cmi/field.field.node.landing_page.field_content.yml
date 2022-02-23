@@ -13,6 +13,8 @@ dependencies:
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
 _core:
@@ -24,7 +26,7 @@ bundle: landing_page
 label: 'Content region'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -14,7 +14,7 @@ bundle: list_of_links_item
 label: Description
 description: 'You can add very short description for the link.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

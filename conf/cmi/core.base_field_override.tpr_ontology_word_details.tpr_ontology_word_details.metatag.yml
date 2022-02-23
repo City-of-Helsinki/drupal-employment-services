@@ -1,0 +1,18 @@
+uuid: e8148fcb-adc7-4357-bdf6-406a0077d7bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_ontology_word_details.tpr_ontology_word_details.metatag
+field_name: metatag
+entity_type: tpr_ontology_word_details
+bundle: tpr_ontology_word_details
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

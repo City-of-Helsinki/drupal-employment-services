@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
 _core:
@@ -24,7 +25,7 @@ bundle: article
 label: 'Content region'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

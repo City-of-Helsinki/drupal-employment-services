@@ -1,0 +1,22 @@
+uuid: f64b9691-0160-476b-bd85-794e511d215b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.lead
+id: paragraph.lead.status
+field_name: status
+entity_type: paragraph
+bundle: lead
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

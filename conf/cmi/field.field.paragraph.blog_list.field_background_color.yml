@@ -15,7 +15,7 @@ bundle: blog_list
 label: 'Background color'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     target_uuid: e8d51200-59e3-45a2-a893-f563958a0534

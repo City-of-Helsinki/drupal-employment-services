@@ -1,0 +1,27 @@
+uuid: e1a1c102-fce8-480e-ae20-bf6d940592bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - hdbt_subtheme
+id: userlogin
+theme: hdbt_subtheme
+region: footer_bottom
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

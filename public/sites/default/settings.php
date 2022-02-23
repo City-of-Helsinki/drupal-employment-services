@@ -23,7 +23,7 @@ $databases['default']['default'] = [
   'driver' => 'mysql',
 ];
 
-$settings['hash_salt'] = getenv('DRUPAL_HASH_SALT') ?: '000';
+$settings['hash_salt'] = getenv('DRUPAL_HASH_SALT') ?: 'CHANGE-ME-IN-ENVIRONMENT-SETTINGS';
 
 if ($ssl_ca_path = getenv('AZURE_SQL_SSL_CA_PATH')) {
   $databases['default']['default']['pdo'] = [

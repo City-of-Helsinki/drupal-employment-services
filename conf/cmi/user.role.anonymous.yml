@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.restricted_html
     - node.type.event
-    - node.type.landing
     - node.type.news
     - node.type.page
   module:
@@ -42,7 +41,6 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view event revisions'
-  - 'view landing revisions'
   - 'view media'
   - 'view media'
   - 'view news revisions'

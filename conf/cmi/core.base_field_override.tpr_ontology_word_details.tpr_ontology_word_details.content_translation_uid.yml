@@ -1,0 +1,20 @@
+uuid: e2958edc-ff42-42ca-abd3-f61a13587304
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_ontology_word_details.tpr_ontology_word_details.content_translation_uid
+field_name: content_translation_uid
+entity_type: tpr_ontology_word_details
+bundle: tpr_ontology_word_details
+label: 'User ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\helfi_tpr\Entity\OntologyWordDetails::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

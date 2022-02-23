@@ -13,7 +13,7 @@ bundle: menu_link_content
 label: Description
 description: 'Shown when hovering over the menu link.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

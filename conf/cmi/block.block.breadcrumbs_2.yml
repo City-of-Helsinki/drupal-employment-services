@@ -1,0 +1,28 @@
+uuid: 084a629e-890e-489a-b24a-41d4c205ad47
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - hdbt_subtheme
+id: breadcrumbs_2
+theme: hdbt_subtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: visible
+  provider: system
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

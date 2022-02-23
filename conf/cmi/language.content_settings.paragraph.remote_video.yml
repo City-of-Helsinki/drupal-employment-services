@@ -1,0 +1,18 @@
+uuid: 4e2e6f7a-c11f-4b8e-844e-fd5e7f57a9bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.remote_video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.remote_video
+target_entity_type_id: paragraph
+target_bundle: remote_video
+default_langcode: site_default
+language_alterable: false

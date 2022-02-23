@@ -1,0 +1,27 @@
+uuid: cd997c43-71c4-4109-a2df-956ddd31395b
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - hdbt_subtheme
+id: primaryadminactions_2
+theme: hdbt_subtheme
+region: tools
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

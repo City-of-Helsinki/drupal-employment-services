@@ -1,0 +1,18 @@
+uuid: a8bd004c-eb0f-4790-9eb4-5c04d475b872
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sujo_embedded
+id: paragraph.sujo_embedded.created
+field_name: created
+entity_type: paragraph
+bundle: sujo_embedded
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

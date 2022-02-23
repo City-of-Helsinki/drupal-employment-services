@@ -1,0 +1,22 @@
+uuid: b8900cb9-339b-40d5-b170-0d1012114a18
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: node.event.toc_enabled
+field_name: toc_enabled
+entity_type: node
+bundle: event
+label: 'Table of contents'
+description: 'Enable checkbox to create automatic table of contents for the page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
