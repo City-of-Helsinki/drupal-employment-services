@@ -16,7 +16,7 @@ bundle: list_of_links_item
 label: Link
 description: 'Internal or external link to the desired location. Link text is displayed for the site user.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

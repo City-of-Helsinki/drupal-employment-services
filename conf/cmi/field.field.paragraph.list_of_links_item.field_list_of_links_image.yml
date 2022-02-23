@@ -15,7 +15,7 @@ bundle: list_of_links_item
 label: Image
 description: 'Image to be used as thumbnail of the link.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

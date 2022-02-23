@@ -15,7 +15,7 @@ bundle: events_list
 label: 'Background color'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     target_uuid: 5e897c72-e176-4f56-8ce0-c24eda8b310b

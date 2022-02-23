@@ -11,7 +11,6 @@ dependencies:
     - media.type.video
     - node.type.blog
     - node.type.event
-    - node.type.landing
     - node.type.news
     - node.type.page
   module:
@@ -78,7 +77,6 @@ permissions:
   - 'create document media'
   - 'create event content'
   - 'create image media'
-  - 'create landing content'
   - 'create media'
   - 'create news content'
   - 'create page content'
@@ -112,7 +110,6 @@ permissions:
   - 'delete any document media'
   - 'delete any event content'
   - 'delete any image media'
-  - 'delete any landing content'
   - 'delete any media'
   - 'delete any news content'
   - 'delete any page content'
@@ -120,7 +117,6 @@ permissions:
   - 'delete any video media'
   - 'delete blog revisions'
   - 'delete content translations'
-  - 'delete landing revisions'
   - 'delete media'
   - 'delete news revisions'
   - 'delete own audio media'
@@ -128,7 +124,6 @@ permissions:
   - 'delete own document media'
   - 'delete own event content'
   - 'delete own image media'
-  - 'delete own landing content'
   - 'delete own news content'
   - 'delete own page content'
   - 'delete own remote_video media'
@@ -160,7 +155,6 @@ permissions:
   - 'edit any document media'
   - 'edit any event content'
   - 'edit any image media'
-  - 'edit any landing content'
   - 'edit any news content'
   - 'edit any page content'
   - 'edit any remote_video media'
@@ -170,7 +164,6 @@ permissions:
   - 'edit own document media'
   - 'edit own event content'
   - 'edit own image media'
-  - 'edit own landing content'
   - 'edit own news content'
   - 'edit own page content'
   - 'edit own remote_video media'
@@ -181,14 +174,12 @@ permissions:
   - 'revert all revisions'
   - 'revert blog revisions'
   - 'revert event revisions'
-  - 'revert landing revisions'
   - 'revert news revisions'
   - 'revert page revisions'
   - 'search content'
   - 'skip comment approval'
   - 'translate any entity'
   - 'translate blog node'
-  - 'translate landing node'
   - 'translate news node'
   - 'translate page node'
   - 'translate paragraph'
@@ -222,7 +213,6 @@ permissions:
   - 'view all revisions'
   - 'view blog revisions'
   - 'view event revisions'
-  - 'view landing revisions'
   - 'view media'
   - 'view media'
   - 'view news revisions'

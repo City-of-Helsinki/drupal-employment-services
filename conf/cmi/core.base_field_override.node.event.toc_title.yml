@@ -1,0 +1,20 @@
+uuid: d58c6d47-1d95-4130-9d47-0d55bca23200
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: node.event.toc_title
+field_name: toc_title
+entity_type: node
+bundle: event
+label: 'Table of contents title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Table of contents'
+default_value_callback: ''
+settings: {  }
+field_type: string
