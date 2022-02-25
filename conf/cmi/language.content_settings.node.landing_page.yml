@@ -17,4 +17,4 @@ id: node.landing_page
 target_entity_type_id: node
 target_bundle: landing_page
 default_langcode: fi
-language_alterable: true
+language_alterable: false
