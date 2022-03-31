@@ -10,8 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    full_html: full_html
-    minimal: '0'
+    basic_html: basic_html
+    restricted_html: '0'
     plain_text: '0'
 _core:
   default_config_hash: 33OQFWbmHwOEoPJF6AnEACV3ZeulNSU3VpQABNvXEEs

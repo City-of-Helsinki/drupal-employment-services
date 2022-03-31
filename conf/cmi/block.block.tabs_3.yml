@@ -9,7 +9,7 @@ dependencies:
 id: tabs_3
 theme: hdbt_subtheme
 region: tools
-weight: 0
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

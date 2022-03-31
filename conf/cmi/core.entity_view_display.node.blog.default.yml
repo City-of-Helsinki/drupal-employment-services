@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.field_page_content
-    - field.field.node.blog.field_page_width
     - field.field.node.blog.field_summary
     - node.type.blog
   module:
@@ -21,6 +20,6 @@ content:
     region: content
 hidden:
   field_page_content: true
-  field_page_width: true
   field_summary: true
   langcode: true
+  toc_enabled: true

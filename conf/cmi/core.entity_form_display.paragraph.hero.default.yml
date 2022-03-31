@@ -1,0 +1,60 @@
+uuid: de03097d-ed28-4754-b8ac-21907f484e9f
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero_bg_color
+    - field.field.paragraph.hero.field_hero_desc
+    - field.field.paragraph.hero.field_hero_design
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_link
+    - field.field.paragraph.hero.field_hero_link_design
+    - field.field.paragraph.hero.field_hero_text
+    - field.field.paragraph.hero.field_hero_title
+    - field.field.paragraph.hero.field_shallow
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero_bg_color:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hero_image:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_hero_desc: true
+  field_hero_design: true
+  field_hero_link: true
+  field_hero_link_design: true
+  field_hero_title: true
+  field_shallow: true
+  status: true

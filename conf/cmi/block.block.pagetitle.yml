@@ -6,7 +6,7 @@ dependencies:
     - hdbt_admin
 id: pagetitle
 theme: hdbt_admin
-region: header
+region: content
 weight: -3
 provider: null
 plugin: page_title_block

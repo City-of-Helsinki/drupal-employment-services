@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.field_page_content
-    - field.field.node.blog.field_page_width
     - field.field.node.blog.field_summary
     - node.type.blog
   module:
     - paragraphs
     - paragraphs_features
     - path
+    - scheduler
 id: node.blog.default
 targetEntityType: node
 bundle: blog
@@ -46,12 +46,6 @@ content:
         delete_confirmation: false
         split_text: false
         show_drag_and_drop: true
-  field_page_width:
-    type: options_select
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_summary:
     type: string_textarea
     weight: 10
@@ -79,6 +73,12 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -116,5 +116,16 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

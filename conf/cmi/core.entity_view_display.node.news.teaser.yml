@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.field_page_content
-    - field.field.node.news.field_page_width
     - field.field.node.news.field_summary
     - node.type.news
   module:
@@ -22,6 +21,6 @@ content:
     region: content
 hidden:
   field_page_content: true
-  field_page_width: true
   field_summary: true
   langcode: true
+  toc_enabled: true
