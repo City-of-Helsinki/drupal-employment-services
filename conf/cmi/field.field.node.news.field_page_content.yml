@@ -15,7 +15,6 @@ dependencies:
     - paragraphs.paragraphs_type.lead
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
-    - paragraphs.paragraphs_type.mainheading
     - paragraphs.paragraphs_type.phone_number_box
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
@@ -46,7 +45,6 @@ settings:
       lead: lead
       link_internal: link_internal
       link: link
-      mainheading: mainheading
       phone_number_box: phone_number_box
       subheading: subheading
       text: text

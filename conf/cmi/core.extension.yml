@@ -49,7 +49,6 @@ module:
   helfi_api_base: 0
   helfi_media: 0
   helfi_platform_config: 0
-  helfi_toc: 0
   helfi_tpr: 0
   image: 0
   image_style_quality: 0
