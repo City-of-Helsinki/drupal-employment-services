@@ -19,6 +19,9 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
+            - Strike
+            - RemoveFormat
         -
           name: Linking
           items:
@@ -33,7 +36,6 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
         -
           name: 'Block Formatting'
           items:
@@ -42,12 +44,20 @@ settings:
         -
           name: Tools
           items:
+            - Undo
+            - Redo
+            - PasteFromWord
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: helfi
     language:
       language_list: un
     stylescombo:
       styles: "a.link-internal|Link internal\r\na.link-external|Link external"
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public

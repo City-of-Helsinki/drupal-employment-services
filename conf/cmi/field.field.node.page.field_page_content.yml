@@ -17,7 +17,6 @@ dependencies:
     - paragraphs.paragraphs_type.lead
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
-    - paragraphs.paragraphs_type.mainheading
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.phone_number_box
     - paragraphs.paragraphs_type.search
@@ -53,7 +52,6 @@ settings:
       lead: lead
       link_internal: link_internal
       link: link
-      mainheading: mainheading
       news_list: news_list
       phone_number_box: phone_number_box
       search: search

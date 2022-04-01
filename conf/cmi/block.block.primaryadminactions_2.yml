@@ -9,7 +9,7 @@ dependencies:
 id: primaryadminactions_2
 theme: hdbt_subtheme
 region: tools
-weight: 0
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:
