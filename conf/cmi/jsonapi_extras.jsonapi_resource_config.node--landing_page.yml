@@ -1,23 +1,21 @@
-uuid: 3c041f7b-41a2-4afb-80c8-cced3a6108bf
-langcode: sv
+uuid: 2cba16ec-7a55-4824-baa9-2be76421bcff
+langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
+    - node.type.landing_page
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
     default_include:
+      - field_hero
       - field_content
-      - field_page_content
-      - field_sidebar_content
-      - field_page_width
     page_limit: 50
-id: node--page
+id: node--landing_page
 disabled: false
-path: node/page
-resourceType: node--page
+path: node/landing_page
+resourceType: node--landing_page
 resourceFields:
   nid:
     disabled: false
@@ -205,45 +203,15 @@ resourceFields:
     publicName: field_hero
     enhancer:
       id: ''
-  field_lead_in:
-    disabled: false
-    fieldName: field_lead_in
-    publicName: field_lead_in
-    enhancer:
-      id: ''
   field_liftup_image:
     disabled: false
     fieldName: field_liftup_image
     publicName: field_liftup_image
     enhancer:
       id: ''
-  field_lower_content:
-    disabled: false
-    fieldName: field_lower_content
-    publicName: field_lower_content
-    enhancer:
-      id: ''
   field_metatags:
     disabled: false
     fieldName: field_metatags
     publicName: field_metatags
-    enhancer:
-      id: ''
-  field_page_content:
-    disabled: false
-    fieldName: field_page_content
-    publicName: field_page_content
-    enhancer:
-      id: ''
-  field_page_width:
-    disabled: false
-    fieldName: field_page_width
-    publicName: field_page_width
-    enhancer:
-      id: ''
-  field_sidebar_content:
-    disabled: false
-    fieldName: field_sidebar_content
-    publicName: field_sidebar_content
     enhancer:
       id: ''
