@@ -6,7 +6,12 @@ dependencies:
     - field.storage.paragraph.field_accordion_text
     - paragraphs.paragraphs_type.accordion
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
 id: paragraph.accordion.field_accordion_text
 field_name: field_accordion_text
 entity_type: paragraph
