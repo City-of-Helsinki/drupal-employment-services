@@ -1,13 +1,13 @@
-uuid: f1a15b49-81de-4425-80d4-476e9cafd483
+uuid: e6814a9e-9a6f-4967-b836-afd7a751b1e0
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.card_list
-id: paragraph.card_list.created
+    - paragraphs.paragraphs_type.link
+id: paragraph.link.created
 field_name: created
 entity_type: paragraph
-bundle: card_list
+bundle: link
 label: 'Authored on'
 description: 'The time that the Paragraph was created.'
 required: false

@@ -6,7 +6,12 @@ dependencies:
     - field.storage.paragraph.field_pb_text
     - paragraphs.paragraphs_type.phone_number_box
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
 id: paragraph.phone_number_box.field_pb_text
 field_name: field_pb_text
 entity_type: paragraph

@@ -14,7 +14,7 @@ bundle: liftup_with_image
 label: Title
 description: 'Title for the liftup with image block.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

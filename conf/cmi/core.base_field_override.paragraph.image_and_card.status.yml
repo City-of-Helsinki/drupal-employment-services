@@ -1,17 +1,17 @@
-uuid: d082e497-c160-45f9-a40c-39ed5421b8b8
+uuid: a40c724a-32fd-4fcd-a4a9-fb3f3afdfbca
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.news
-id: node.news.status
+    - paragraphs.paragraphs_type.image_and_card
+id: paragraph.image_and_card.status
 field_name: status
-entity_type: node
-bundle: news
+entity_type: paragraph
+bundle: image_and_card
 label: Published
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1
