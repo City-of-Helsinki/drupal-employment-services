@@ -13,7 +13,7 @@ bundle: card_list
 label: 'Background color'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     target_uuid: 85a3bee7-b43a-4fda-9055-984fe0427696
