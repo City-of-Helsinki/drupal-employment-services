@@ -10,7 +10,7 @@ field_name: field_training
 entity_type: paragraph
 bundle: sujo_embedded
 label: Training
-description: 'Valitse jos näytetään: https://www.sujo.fi/pls/sujo/tyoko.training. Muutoin näytetään: https://www.sujo.fi/pls/sujo/tyoko.salary'
+description: 'Valitse jos näytetään: https://tyopa.sujo.fi/pls/sujo/tyoko.training. Muutoin näytetään: https://tyopa.sujo.fi/pls/sujo/tyoko.salary'
 required: false
 translatable: false
 default_value:
