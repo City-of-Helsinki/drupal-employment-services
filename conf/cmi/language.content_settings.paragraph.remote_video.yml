@@ -15,4 +15,4 @@ id: paragraph.remote_video
 target_entity_type_id: paragraph
 target_bundle: remote_video
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

@@ -12,7 +12,7 @@ bundle: highlighted_text
 label: 'Highlighted text'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

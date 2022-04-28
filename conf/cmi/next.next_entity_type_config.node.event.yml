@@ -1,0 +1,9 @@
+uuid: 5f0e8710-724b-4e97-b135-838c8da409ac
+langcode: fi
+status: true
+dependencies: {  }
+id: node.event
+site_resolver: site_selector
+configuration:
+  sites:
+    tyollisyyspalvelut_ui: tyollisyyspalvelut_ui

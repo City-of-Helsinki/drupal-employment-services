@@ -1,0 +1,9 @@
+uuid: e28d2fd4-ddb2-4ee3-b10b-4573f1342e6e
+langcode: fi
+status: true
+dependencies: {  }
+id: node.landing_page
+site_resolver: site_selector
+configuration:
+  sites:
+    tyollisyyspalvelut_ui: tyollisyyspalvelut_ui

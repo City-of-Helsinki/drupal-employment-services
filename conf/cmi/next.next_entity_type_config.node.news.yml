@@ -1,0 +1,9 @@
+uuid: 3426043b-e65a-4396-9802-c566c76777a9
+langcode: fi
+status: true
+dependencies: {  }
+id: node.news
+site_resolver: site_selector
+configuration:
+  sites:
+    tyollisyyspalvelut_ui: tyollisyyspalvelut_ui
