@@ -6,6 +6,7 @@
  */
 
 use Drupal\editor\Entity\Editor;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * @param array $css
@@ -13,4 +14,12 @@ use Drupal\editor\Entity\Editor;
  */
 function tyollisyyspalvelut_common_ckeditor_css_alter(array &$css, Editor $editor) {
   $css[] = drupal_get_path('module', 'tyollisyyspalvelut_common') . '/ckeditor.css';
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function tyollisyyspalvelut_common_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // Hide field from HDBT theme we don't want to use.
+  $form['color_palette']['#access'] = FALSE;
 }

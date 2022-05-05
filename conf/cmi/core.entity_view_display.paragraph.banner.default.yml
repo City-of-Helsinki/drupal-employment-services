@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner.field_background_color
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
     - field.field.paragraph.banner.field_banner_link
@@ -22,6 +23,14 @@ targetEntityType: paragraph
 bundle: banner
 mode: default
 content:
+  field_background_color:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_banner_desc:
     type: text_default
     label: hidden

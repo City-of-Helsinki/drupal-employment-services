@@ -1,0 +1,39 @@
+uuid: 12973ef9-e26b-48e4-8e41-45d2e8993ed8
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colors.field_css_name
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.default
+targetEntityType: taxonomy_term
+bundle: colors
+mode: default
+content:
+  field_css_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

@@ -1,0 +1,19 @@
+uuid: e55c31df-b5a0-4786-84a3-b75e6f81742a
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_css_name
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.field_css_name
+field_name: field_css_name
+entity_type: taxonomy_term
+bundle: colors
+label: 'CSS name'
+description: 'CSS var name used after "--color-" e.g. var(--color-{field_css_name}) in frontend'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
