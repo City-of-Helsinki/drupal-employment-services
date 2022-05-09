@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
     - field.field.paragraph.accordion.field_accordion_title_level
+    - field.field.paragraph.accordion.field_accordion_type
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
@@ -66,6 +67,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_accordion_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
   field_accordion_text: true
