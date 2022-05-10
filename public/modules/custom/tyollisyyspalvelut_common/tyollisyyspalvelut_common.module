@@ -22,4 +22,7 @@ function tyollisyyspalvelut_common_ckeditor_css_alter(array &$css, Editor $edito
 function tyollisyyspalvelut_common_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
   // Hide field from HDBT theme we don't want to use.
   $form['color_palette']['#access'] = FALSE;
+
+  // Hide preview button for now.
+  $form['actions']['preview']['#access'] = FALSE;
 }
