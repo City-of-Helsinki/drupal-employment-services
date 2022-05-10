@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: accordion
 label: 'Accordion title level'
 description: 'Select the title level of the accordion so that they are semantically correct with the rest of the content.'
-required: true
+required: false
 translatable: false
 default_value:
   -
