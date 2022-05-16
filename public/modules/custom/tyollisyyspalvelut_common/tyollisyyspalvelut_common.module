@@ -19,16 +19,16 @@ function tyollisyyspalvelut_common_ckeditor_css_alter(array &$css, Editor $edito
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function tyollisyyspalvelut_common_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+function tyollisyyspalvelut_common_form_node_form_alter(&$form, &$form_state) {
   // Hide field from HDBT theme we don't want to use.
   $form['color_palette']['#access'] = FALSE;
 
   // Hide preview button for now.
   $form['actions']['preview']['#access'] = FALSE;
 
-  // Custom redirect after save.
+  // Custom redirect after node save.
   $form['actions']['submit']['#submit'][] = 'redirectFunction';
 }
 
@@ -39,12 +39,9 @@ function redirectFunction(array &$form, FormStateInterface $form_state) {
   /** @var \Drupal\Core\Entity\EntityForm $form_object */
   $form_object = $form_state->getFormObject();
   if ($form_object instanceof EntityForm) {
-    $entity = $form_object->getEntity();
 
     // Remove destination query string from request.
     \Drupal::request()->query->remove('destination');
-    $url = Url::fromRoute('entity.node.canonical', ['node' => $entity->id()]);
-    $form_state->setRedirectUrl($url);
     return;
   }
 }
