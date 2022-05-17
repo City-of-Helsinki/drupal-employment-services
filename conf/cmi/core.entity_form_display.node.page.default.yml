@@ -10,10 +10,10 @@ dependencies:
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
-    - field.field.node.page.field_page_content
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - hdbt_admin_editorial
     - metatag
     - paragraphs
     - path
@@ -211,4 +211,3 @@ content:
     third_party_settings: {  }
 hidden:
   field_liftup_image: true
-  field_page_content: true
