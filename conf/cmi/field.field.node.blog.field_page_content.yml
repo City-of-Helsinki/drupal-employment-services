@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.image_and_card
     - paragraphs.paragraphs_type.info
-    - paragraphs.paragraphs_type.lead
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
     - paragraphs.paragraphs_type.news_list
@@ -43,7 +42,6 @@ settings:
       image: image
       image_and_card: image_and_card
       info: info
-      lead: lead
       link: link
       link_internal: link_internal
       news_list: news_list
