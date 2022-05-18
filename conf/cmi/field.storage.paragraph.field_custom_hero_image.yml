@@ -1,14 +1,16 @@
-uuid: f75bda41-bcdc-4319-ad4e-1758030ef630
-langcode: fi
+uuid: 82d4e1b4-c2bc-4610-8ce8-869db0fcf448
+langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-id: paragraph.field_shallow
-field_name: field_shallow
+id: paragraph.field_custom_hero_image
+field_name: field_custom_hero_image
 entity_type: paragraph
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1
