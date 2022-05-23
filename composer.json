@@ -27,7 +27,7 @@
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
-        "drupal/next": "^1.1",
+        "drupal/next": "^1.2",
         "drupal/paragraphs_features": "^1.11",
         "drupal/quick_node_clone": "^1.14",
         "drush/drush": "^10.4"

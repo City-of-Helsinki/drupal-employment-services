@@ -1,4 +1,5 @@
 image_styles:
+  hero: hero
   1_1_s: 1_1_s
   1_1_l: '0'
   1_1_l_2x: '0'
@@ -35,8 +36,6 @@ image_styles:
   3_2_xs_2x: '0'
   3_2_xxs: '0'
   3_2_xxs_2x: '0'
-  hero: '0'
-  hero_shallow: '0'
   large: '0'
   linkit_result_thumbnail: '0'
   max_1300x1300: '0'

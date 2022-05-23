@@ -3,15 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_custom_hero_image
     - field.field.paragraph.hero.field_hero_bg_color
     - field.field.paragraph.hero.field_hero_desc
     - field.field.paragraph.hero.field_hero_design
     - field.field.paragraph.hero.field_hero_image
     - field.field.paragraph.hero.field_hero_link
     - field.field.paragraph.hero.field_hero_link_design
-    - field.field.paragraph.hero.field_hero_text
     - field.field.paragraph.hero.field_hero_title
-    - field.field.paragraph.hero.field_shallow
     - paragraphs.paragraphs_type.hero
   module:
     - link
@@ -24,6 +23,15 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
+  field_custom_hero_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_hero_bg_color:
     type: list_key
     label: inline
@@ -81,6 +89,4 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden:
-  field_hero_text: true
-  field_shallow: true
+hidden: {  }

@@ -9,7 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
   module:
@@ -35,7 +34,6 @@ settings:
       image: image
       list_of_links: list_of_links
       banner: banner
-      remote_video: remote_video
       subheading: subheading
     negate: 0
     target_bundles_drag_drop:
@@ -116,7 +114,7 @@ settings:
         enabled: false
       remote_video:
         weight: 27
-        enabled: true
+        enabled: false
       search:
         weight: 65
         enabled: false
