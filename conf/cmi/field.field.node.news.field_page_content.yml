@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.highlighted_text
     - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.image_and_card
     - paragraphs.paragraphs_type.info
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
@@ -39,7 +38,6 @@ settings:
       highlighted_text: highlighted_text
       image: image
       card_list: card_list
-      image_and_card: image_and_card
       info: info
       link_internal: link_internal
       link: link
