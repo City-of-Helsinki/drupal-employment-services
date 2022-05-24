@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
@@ -34,6 +35,7 @@ settings:
       image: image
       list_of_links: list_of_links
       banner: banner
+      liftup_with_image: liftup_with_image
       subheading: subheading
     negate: 0
     target_bundles_drag_drop:
@@ -93,7 +95,7 @@ settings:
         enabled: false
       liftup_with_image:
         weight: -15
-        enabled: false
+        enabled: true
       link:
         weight: 57
         enabled: false
