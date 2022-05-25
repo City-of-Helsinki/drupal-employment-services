@@ -1,9 +1,8 @@
-uuid: 4d3919fc-8e11-4871-a2af-de98f0cf0847
+uuid: 3bbf1547-472c-48bc-bb64-cd8ce3e1374a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_index
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
@@ -15,12 +14,22 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - entity_reference_revisions
     - user
-id: node.page.search_index
+id: node.page.default
 targetEntityType: node
 bundle: page
-mode: search_index
+mode: default
 content:
+  field_notification:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -34,7 +43,5 @@ hidden:
   field_liftup_image: true
   field_lower_content: true
   field_metatags: true
-  field_notification: true
   field_sidebar_content: true
   langcode: true
-  toc_enabled: true

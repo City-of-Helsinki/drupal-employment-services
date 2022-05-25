@@ -72,6 +72,7 @@ permissions:
   - 'view paragraph content list_of_links_item'
   - 'view paragraph content mainheading'
   - 'view paragraph content news_list'
+  - 'view paragraph content notification'
   - 'view paragraph content phone_number_box'
   - 'view paragraph content remote_video'
   - 'view paragraph content search'
