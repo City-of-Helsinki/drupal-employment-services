@@ -1,0 +1,19 @@
+uuid: fe9d629a-ac53-4317-9c0c-cbf9aac5bbf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_notification_description
+field_name: field_notification_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

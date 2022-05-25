@@ -1,0 +1,31 @@
+uuid: fa536e75-1d86-4a35-886b-0a250990f033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.notification.field_notification_description
+    - field.field.paragraph.notification.field_notification_title
+    - paragraphs.paragraphs_type.notification
+  module:
+    - text
+id: paragraph.notification.default
+targetEntityType: paragraph
+bundle: notification
+mode: default
+content:
+  field_notification_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_notification_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
