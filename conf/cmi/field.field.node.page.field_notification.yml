@@ -1,27 +1,18 @@
-uuid: 8725c877-8b1b-4094-8c21-5ebd1a7173a5
+uuid: bbb7c924-9121-4219-92f8-73bf44ed4edf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
+    - field.storage.node.field_notification
     - node.type.page
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.liftup_with_image
-    - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.subheading
-    - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.notification
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: QzPUvR7cSwVLlIv2Wkmjn6T9gEZ-WD6hRta4Y-AShcE
-id: node.page.field_content
-field_name: field_content
+id: node.page.field_notification
+field_name: field_notification
 entity_type: node
 bundle: page
-label: 'Upper content region'
+label: Notification
 description: ''
 required: false
 translatable: false
@@ -31,119 +22,112 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      text: text
-      accordion: accordion
-      image: image
-      list_of_links: list_of_links
-      banner: banner
-      liftup_with_image: liftup_with_image
       notification: notification
-      subheading: subheading
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -25
-        enabled: true
+        weight: 36
+        enabled: false
       accordion_item:
-        weight: -20
+        weight: 37
         enabled: false
       banner:
-        weight: -16
-        enabled: true
+        weight: 38
+        enabled: false
       blog_list:
-        weight: 40
+        weight: 39
         enabled: false
       card:
-        weight: 41
+        weight: 40
         enabled: false
       card_list:
-        weight: 42
+        weight: 41
         enabled: false
       columns:
-        weight: -26
+        weight: 42
         enabled: false
       content_cards:
-        weight: -21
+        weight: 43
         enabled: false
       content_liftup:
-        weight: -22
+        weight: 44
         enabled: false
       events_list:
-        weight: 46
+        weight: 45
         enabled: false
       from_library:
-        weight: 21
+        weight: 46
         enabled: false
       gallery:
-        weight: -23
+        weight: 47
         enabled: false
       gallery_slide:
-        weight: -19
+        weight: 48
         enabled: false
       hero:
-        weight: -18
+        weight: 49
         enabled: false
       highlighted_text:
-        weight: 51
+        weight: 50
         enabled: false
       image:
-        weight: -24
-        enabled: true
+        weight: 51
+        enabled: false
       image_and_card:
-        weight: 53
+        weight: 52
         enabled: false
       info:
-        weight: 54
+        weight: 53
         enabled: false
       liftup_with_image:
-        weight: -15
-        enabled: true
+        weight: 54
+        enabled: false
       link:
-        weight: 57
+        weight: 55
         enabled: false
       link_internal:
-        weight: 58
+        weight: 56
         enabled: false
       list_of_links:
-        weight: -22
-        enabled: true
+        weight: 57
+        enabled: false
       list_of_links_item:
-        weight: -17
+        weight: 58
         enabled: false
       news_list:
-        weight: 62
+        weight: 59
         enabled: false
       notification:
         weight: 60
         enabled: true
       phone_number_box:
-        weight: 63
+        weight: 61
         enabled: false
       remote_video:
-        weight: 27
+        weight: 62
         enabled: false
       search:
-        weight: 65
+        weight: 63
         enabled: false
       service_list:
-        weight: 66
+        weight: 64
         enabled: false
       sidebar_text:
-        weight: 67
+        weight: 65
         enabled: false
       subheading:
-        weight: 68
-        enabled: true
+        weight: 66
+        enabled: false
       sujo_embedded:
-        weight: 69
+        weight: 67
         enabled: false
       text:
-        weight: -27
-        enabled: true
+        weight: 68
+        enabled: false
       unit_search:
-        weight: 28
+        weight: 69
         enabled: false
       video:
-        weight: 72
+        weight: 70
         enabled: false
 field_type: entity_reference_revisions
