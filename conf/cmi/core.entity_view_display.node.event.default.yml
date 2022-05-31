@@ -14,8 +14,6 @@ dependencies:
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
-    - field.field.node.event.field_page_content
-    - field.field.node.event.field_page_width
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
@@ -74,8 +72,6 @@ hidden:
   field_info_url: true
   field_last_modified_time: true
   field_location: true
-  field_page_content: true
-  field_page_width: true
   field_publisher: true
   field_short_description: true
   field_start_time: true

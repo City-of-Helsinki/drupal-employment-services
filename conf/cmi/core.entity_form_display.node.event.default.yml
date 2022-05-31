@@ -14,8 +14,6 @@ dependencies:
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
-    - field.field.node.event.field_page_content
-    - field.field.node.event.field_page_width
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
@@ -24,8 +22,10 @@ dependencies:
     - field.field.node.event.field_title
     - node.type.event
   module:
+    - hdbt_admin_editorial
     - link
     - path
+    - scheduler
     - text
 id: node.event.default
 targetEntityType: node
@@ -126,16 +126,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_page_width:
-    type: entity_reference_autocomplete
-    weight: 8
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_publisher:
     type: string_textfield
     weight: 22
@@ -202,6 +192,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 7
@@ -234,5 +230,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_page_content: true
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
