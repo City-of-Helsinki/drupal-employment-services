@@ -14,7 +14,7 @@ bundle: hero
 label: Title
 description: 'Title for the hero block. This will be used as the level 1 heading for the page instead of the regular page title if hero is added on the page.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
