@@ -1,23 +1,33 @@
 version: '3.7'
 
 services:
-
   app:
     hostname: "${DRUPAL_HOSTNAME}"
     container_name: "${COMPOSE_PROJECT_NAME}-app"
     image: "${DRUPAL_IMAGE}"
     volumes:
       - .:/app:delegated
-      - ssh:/tmp/druid_ssh-agent:ro
-    build:
-      context: ./docker/local
+    depends_on:
+      - db
     environment:
+      STAGE_FILE_PROXY_ORIGIN: "${STAGE_FILE_PROXY_ORIGIN}"
+      STAGE_FILE_PROXY_ORIGIN_DIR: "${STAGE_FILE_PROXY_ORIGIN_DIR}"
       APP_ENV: "${APP_ENV:-dev}"
-      DRUPAL_ROUTES: "https://varnish-${DRUPAL_HOSTNAME}"
+      DRUPAL_ROUTES: "https://varnish-${DRUPAL_HOSTNAME},https://helfi-proxy.docker.so,http://${COMPOSE_PROJECT_NAME}-varnish"
+      DRUPAL_REVERSE_PROXY_ADDRESS: helfi-proxy.docker.so
       DRUSH_OPTIONS_URI: "https://${DRUPAL_HOSTNAME}"
-      #XDEBUG_ENABLE: "true"
-      SIMPLETEST_BASE_URL: "http://app:8080"
+      # XDEBUG_ENABLE: "true"
+      # DOCKERHOST: host.docker.internal
+      # Use drush server to run functional tests so we don't have to care about
+      # permission issues.
+      SIMPLETEST_BASE_URL: "http://127.0.0.1:8888"
       SIMPLETEST_DB: "mysql://drupal:drupal@db:3306/drupal"
+      DRUPAL_VARNISH_HOST: "${COMPOSE_PROJECT_NAME}-varnish"
+      DRUPAL_VARNISH_PORT: 6081
+      REDIS_HOST: redis
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+      - "${DRUPAL_HOSTNAME}:host-gateway"
     networks:
       - internal
       - stonehenge-network
@@ -28,17 +38,20 @@ services:
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-app.tls=true"
       - "traefik.http.services.${COMPOSE_PROJECT_NAME}-app.loadbalancer.server.port=8080"
       - "traefik.docker.network=stonehenge-network"
-
+  redis:
+    container_name: "${COMPOSE_PROJECT_NAME}-redis"
+    image: redis:6-alpine
+    networks:
+      - internal
   db:
     container_name: "${COMPOSE_PROJECT_NAME}-db"
-    image: druidfi/db:mysql5.7-drupal
+    image: druidfi/mariadb:10.5-drupal
     volumes:
       - db_data:/var/lib/mysql
     ports:
       - 3306
     networks:
       - internal
-
   varnish:
     container_name: "${COMPOSE_PROJECT_NAME}-varnish"
     image: druidfi/varnish:6-drupal
@@ -56,7 +69,22 @@ services:
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-varnish.tls=true"
       - "traefik.http.services.${COMPOSE_PROJECT_NAME}-varnish.loadbalancer.server.port=6081"
       - "traefik.docker.network=stonehenge-network"
-
+  # robo:
+  #   image: ghcr.io/city-of-helsinki/drupal-robo:alpine
+  #   shm_size: '2gb'
+  #   tty: true
+  #   volumes:
+  #     - .:/app:delegated
+  #   networks:
+  #     - internal
+  #     - stonehenge-network
+  #   depends_on:
+  #     - app
+  #   profiles:
+  #     - testing
+  #   extra_hosts:
+  #     - "${DRUPAL_HOSTNAME}:host-gateway"
+  #     - "varnish-${DRUPAL_HOSTNAME}:host-gateway"
 networks:
   internal:
     external: false
