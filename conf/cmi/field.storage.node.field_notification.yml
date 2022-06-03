@@ -1,13 +1,14 @@
-uuid: be657f6c-e91e-448b-ac15-72b99bb802dd
+uuid: 96e92462-8f91-4da9-9bc3-27d4c1eb0169
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
+    - node
     - paragraphs
-id: paragraph.field_ic_card
-field_name: field_ic_card
-entity_type: paragraph
+id: node.field_notification
+field_name: field_notification
+entity_type: node
 type: entity_reference_revisions
 settings:
   target_type: paragraph

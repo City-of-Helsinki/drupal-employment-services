@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.landing_page
+    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.subheading
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 _core:
@@ -29,120 +30,115 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      content_cards: content_cards
-      columns: columns
-      banner: banner
+      text: text
+      accordion: accordion
       list_of_links: list_of_links
       liftup_with_image: liftup_with_image
-      remote_video: remote_video
+      banner: banner
+      image: image
+      subheading: subheading
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -22
-        enabled: false
+        weight: -65
+        enabled: true
       accordion_item:
-        weight: -21
+        weight: -61
         enabled: false
       banner:
-        weight: -26
+        weight: -62
         enabled: true
       blog_list:
-        weight: 40
+        weight: -51
         enabled: false
       card:
-        weight: 41
+        weight: -50
         enabled: false
       card_list:
-        weight: 42
+        weight: -49
         enabled: false
       columns:
-        weight: -27
-        enabled: true
+        weight: -67
+        enabled: false
       content_cards:
-        weight: -33
-        enabled: true
+        weight: -69
+        enabled: false
       content_liftup:
-        weight: -32
+        weight: -68
         enabled: false
       events_list:
-        weight: 46
+        weight: -48
         enabled: false
       from_library:
-        weight: 21
+        weight: -55
         enabled: false
       gallery:
-        weight: -20
+        weight: -60
         enabled: false
       gallery_slide:
-        weight: -19
+        weight: -59
         enabled: false
       hero:
-        weight: -18
+        weight: -58
         enabled: false
       highlighted_text:
-        weight: 51
+        weight: -47
         enabled: false
       image:
-        weight: -17
-        enabled: false
+        weight: -57
+        enabled: true
       image_and_card:
-        weight: 53
+        weight: -46
         enabled: false
       info:
-        weight: 54
-        enabled: false
-      lead:
-        weight: 55
+        weight: -45
         enabled: false
       liftup_with_image:
-        weight: -24
+        weight: -63
         enabled: true
       link:
-        weight: 57
+        weight: -44
         enabled: false
       link_internal:
-        weight: 58
+        weight: -43
         enabled: false
       list_of_links:
-        weight: -25
+        weight: -64
         enabled: true
       list_of_links_item:
-        weight: -16
-        enabled: false
-      mainheading:
-        weight: 61
+        weight: -56
         enabled: false
       news_list:
-        weight: 62
+        weight: -42
         enabled: false
       phone_number_box:
-        weight: 63
+        weight: -41
         enabled: false
       remote_video:
-        weight: 27
-        enabled: true
+        weight: -54
+        enabled: false
       search:
-        weight: 65
+        weight: -40
         enabled: false
       service_list:
-        weight: 36
+        weight: -52
         enabled: false
       sidebar_text:
-        weight: 67
+        weight: -39
         enabled: false
       subheading:
-        weight: 68
-        enabled: false
+        weight: -38
+        enabled: true
       sujo_embedded:
-        weight: 69
+        weight: -37
         enabled: false
       text:
-        weight: -15
-        enabled: false
+        weight: -66
+        enabled: true
       unit_search:
-        weight: 28
+        weight: -53
         enabled: false
       video:
-        weight: 72
+        weight: -36
         enabled: false
 field_type: entity_reference_revisions

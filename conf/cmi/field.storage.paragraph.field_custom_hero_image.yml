@@ -1,16 +1,17 @@
-uuid: 836e498c-cdf0-4194-86f8-e585cc01e8c1
+uuid: 82d4e1b4-c2bc-4610-8ce8-869db0fcf448
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-    - text
-id: paragraph.field_hero_text
-field_name: field_hero_text
+id: paragraph.field_custom_hero_image
+field_name: field_custom_hero_image
 entity_type: paragraph
-type: text_long
-settings: {  }
-module: text
+type: entity_reference
+settings:
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: hero
 label: 'Background color'
 description: 'Choose the background color for the hero element.'
-required: true
+required: false
 translatable: false
 default_value:
   -

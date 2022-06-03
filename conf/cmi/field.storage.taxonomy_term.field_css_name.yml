@@ -1,15 +1,17 @@
-uuid: d0159882-14b4-4330-8503-63d001485775
+uuid: ede944ce-055a-4142-8103-33acdf8588c5
 langcode: fi
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_lead_text
-field_name: field_lead_text
-entity_type: paragraph
-type: string_long
+    - taxonomy
+id: taxonomy_term.field_css_name
+field_name: field_css_name
+entity_type: taxonomy_term
+type: string
 settings:
+  max_length: 100
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

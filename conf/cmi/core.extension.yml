@@ -47,6 +47,7 @@ module:
   hdbt_content: 0
   hdbt_hyphenopoly: 0
   helfi_api_base: 0
+  helfi_azure_fs: 0
   helfi_media: 0
   helfi_platform_config: 0
   helfi_tpr: 0

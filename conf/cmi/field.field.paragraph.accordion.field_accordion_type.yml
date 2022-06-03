@@ -1,0 +1,23 @@
+uuid: 5582b71a-8f9c-4e6b-a26e-816fbdf0a81c
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_type
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - options
+id: paragraph.accordion.field_accordion_type
+field_name: field_accordion_type
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: basic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,18 +1,18 @@
-uuid: 478e2219-783c-49df-b445-346196c4005d
+uuid: 340a7c65-c9c8-48a8-ae50-99296ff25f4b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_ic_image
+    - field.storage.paragraph.field_custom_hero_image
     - media.type.image
-    - paragraphs.paragraphs_type.image_and_card
-id: paragraph.image_and_card.field_ic_image
-field_name: field_ic_image
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_custom_hero_image
+field_name: field_custom_hero_image
 entity_type: paragraph
-bundle: image_and_card
+bundle: hero
 label: Image
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -23,6 +23,7 @@ settings:
       image: image
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

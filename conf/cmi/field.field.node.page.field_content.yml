@@ -7,13 +7,12 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.notification
   module:
     - entity_reference_revisions
 _core:
@@ -33,13 +32,12 @@ settings:
   handler_settings:
     target_bundles:
       text: text
-      columns: columns
       accordion: accordion
       image: image
       list_of_links: list_of_links
-      content_cards: content_cards
       banner: banner
-      remote_video: remote_video
+      liftup_with_image: liftup_with_image
+      notification: notification
       subheading: subheading
     negate: 0
     target_bundles_drag_drop:
@@ -63,10 +61,10 @@ settings:
         enabled: false
       columns:
         weight: -26
-        enabled: true
+        enabled: false
       content_cards:
         weight: -21
-        enabled: true
+        enabled: false
       content_liftup:
         weight: -22
         enabled: false
@@ -97,12 +95,9 @@ settings:
       info:
         weight: 54
         enabled: false
-      lead:
-        weight: 55
-        enabled: false
       liftup_with_image:
         weight: -15
-        enabled: false
+        enabled: true
       link:
         weight: 57
         enabled: false
@@ -118,12 +113,15 @@ settings:
       news_list:
         weight: 62
         enabled: false
+      notification:
+        weight: 60
+        enabled: true
       phone_number_box:
         weight: 63
         enabled: false
       remote_video:
         weight: 27
-        enabled: true
+        enabled: false
       search:
         weight: 65
         enabled: false

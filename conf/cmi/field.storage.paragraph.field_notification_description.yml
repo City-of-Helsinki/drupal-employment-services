@@ -1,15 +1,16 @@
-uuid: f75bda41-bcdc-4319-ad4e-1758030ef630
-langcode: fi
+uuid: fe9d629a-ac53-4317-9c0c-cbf9aac5bbf8
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_shallow
-field_name: field_shallow
+    - text
+id: paragraph.field_notification_description
+field_name: field_notification_description
 entity_type: paragraph
-type: boolean
+type: text_long
 settings: {  }
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

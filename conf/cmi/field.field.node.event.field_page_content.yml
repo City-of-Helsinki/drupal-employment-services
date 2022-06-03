@@ -9,7 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.card_list
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.image_and_card
     - paragraphs.paragraphs_type.info
     - paragraphs.paragraphs_type.link_internal
     - paragraphs.paragraphs_type.phone_number_box
@@ -35,7 +34,6 @@ settings:
       card_list: card_list
       hero: hero
       image: image
-      image_and_card: image_and_card
       info: info
       link_internal: link_internal
       phone_number_box: phone_number_box

@@ -10,10 +10,11 @@ dependencies:
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
-    - field.field.node.page.field_page_content
+    - field.field.node.page.field_notification
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - hdbt_admin_editorial
     - metatag
     - paragraphs
     - path
@@ -27,13 +28,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 13
+    weight: 11
     region: content
     settings:
       title: Paragraph
@@ -50,35 +51,9 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_has_hero:
-    type: boolean_checkbox
-    weight: 2
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_hero:
-    type: paragraphs
-    weight: 3
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed_expand_nested
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        add_above: '0'
-        collapse_edit_all: '0'
-        duplicate: '0'
-    third_party_settings: {  }
   field_lead_in:
     type: string_textarea
-    weight: 12
+    weight: 10
     region: content
     settings:
       rows: 3
@@ -86,7 +61,7 @@ content:
     third_party_settings: {  }
   field_lower_content:
     type: paragraphs
-    weight: 19
+    weight: 17
     region: content
     settings:
       title: Paragraph
@@ -105,15 +80,33 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 4
+    weight: 2
     region: content
     settings:
       sidebar: false
       use_details: true
     third_party_settings: {  }
+  field_notification:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
   field_sidebar_content:
     type: paragraphs
-    weight: 14
+    weight: 12
     region: content
     settings:
       title: Paragraph
@@ -139,38 +132,38 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 9
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -184,13 +177,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -200,15 +193,16 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_has_hero: true
+  field_hero: true
   field_liftup_image: true
-  field_page_content: true

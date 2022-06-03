@@ -10,9 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.highlighted_text
     - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.image_and_card
     - paragraphs.paragraphs_type.info
-    - paragraphs.paragraphs_type.lead
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.link_internal
     - paragraphs.paragraphs_type.phone_number_box
@@ -40,9 +38,7 @@ settings:
       highlighted_text: highlighted_text
       image: image
       card_list: card_list
-      image_and_card: image_and_card
       info: info
-      lead: lead
       link_internal: link_internal
       link: link
       phone_number_box: phone_number_box
