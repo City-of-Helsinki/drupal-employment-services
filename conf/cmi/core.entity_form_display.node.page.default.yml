@@ -14,11 +14,30 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - field_group
     - hdbt_admin_editorial
     - metatag
     - paragraphs
     - path
     - scheduler
+third_party_settings:
+  field_group:
+    group_notification:
+      children:
+        - field_notification
+      label: Notification
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: 'For notifications'
+        required_fields: true
+        weight: 0
 _core:
   default_config_hash: ovxh0W5mFYp8gQbwRzU26jMLwUerrg8oJT-enNnUxe4
 id: node.page.default

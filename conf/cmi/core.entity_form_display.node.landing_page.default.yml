@@ -11,11 +11,30 @@ dependencies:
     - field.field.node.landing_page.field_notification
     - node.type.landing_page
   module:
+    - field_group
     - hdbt_admin_editorial
     - metatag
     - paragraphs
     - path
     - scheduler
+third_party_settings:
+  field_group:
+    group_notification:
+      children:
+        - field_notification
+      label: Notification
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: true
+        description: 'For notifications'
+        required_fields: true
+        weight: 0
 _core:
   default_config_hash: 2UzmhcoLdP813geh94iPT1sXBgLAMVxYuUQcmTqnl5M
 id: node.landing_page.default
@@ -92,7 +111,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: notification
     third_party_settings: {  }
   langcode:
     type: language_select
