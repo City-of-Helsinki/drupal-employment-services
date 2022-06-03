@@ -1,0 +1,25 @@
+uuid: 96d5a888-ee0a-4497-8988-71b0a513a58d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_list_desc
+    - paragraphs.paragraphs_type.events_list
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.events_list.field_events_list_desc
+field_name: field_events_list_desc
+entity_type: paragraph
+bundle: events_list
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

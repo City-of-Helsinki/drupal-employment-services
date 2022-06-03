@@ -44,3 +44,16 @@ function redirectFunction(array &$form, FormStateInterface $form_state) {
     return;
   }
 }
+
+/**
+ * Implements hook_elasticsearch_connector_load_library_options_alter().
+ */
+function tyollisyyspalvelut_common_elasticsearch_connector_load_library_options_alter(&$options, &$context) {
+  /**
+   * Set cURL options to trust self-signed certificate.
+   *
+   * @fixme rather than disabling verification, should set CURLOPT_SSLCERT to correct value.
+   */
+    $options['curl'][CURLOPT_SSL_VERIFYPEER] = FALSE;
+    $options['curl'][CURLOPT_SSL_VERIFYHOST] = FALSE;
+}

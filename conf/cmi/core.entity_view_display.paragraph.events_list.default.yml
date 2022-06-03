@@ -4,27 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.events_list.field_background_color
+    - field.field.paragraph.events_list.field_event_tag_filter
+    - field.field.paragraph.events_list.field_events_list_desc
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
 id: paragraph.events_list.default
 targetEntityType: paragraph
 bundle: events_list
 mode: default
-content:
-  field_background_color:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  field_background_color: true
+  field_event_tag_filter: true
+  field_events_list_desc: true
+  field_title: true
+  search_api_excerpt: true

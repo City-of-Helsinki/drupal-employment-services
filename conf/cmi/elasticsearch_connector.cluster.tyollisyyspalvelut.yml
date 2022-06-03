@@ -1,0 +1,19 @@
+uuid: ba3b506c-1274-4cbc-b892-56113027cc1f
+langcode: en
+status: '1'
+dependencies: {  }
+cluster_id: tyollisyyspalvelut
+name: Tyollisyyspalvelut
+url: 'http://host.docker.internal:9200'
+options:
+  multiple_nodes_connection: true
+  use_authentication: 1
+  authentication_type: Basic
+  username: elastic
+  password: changeme
+  timeout: '3'
+  rewrite:
+    rewrite_index: 1
+    index:
+      prefix: ''
+      suffix: ''

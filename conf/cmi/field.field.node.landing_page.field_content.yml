@@ -7,6 +7,7 @@ dependencies:
     - node.type.landing_page
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.events_list
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
@@ -36,6 +37,7 @@ settings:
       liftup_with_image: liftup_with_image
       banner: banner
       image: image
+      events_list: events_list
       subheading: subheading
     negate: 0
     target_bundles_drag_drop:
@@ -68,7 +70,7 @@ settings:
         enabled: false
       events_list:
         weight: -48
-        enabled: false
+        enabled: true
       from_library:
         weight: -55
         enabled: false
@@ -87,9 +89,6 @@ settings:
       image:
         weight: -57
         enabled: true
-      image_and_card:
-        weight: -46
-        enabled: false
       info:
         weight: -45
         enabled: false
@@ -110,6 +109,9 @@ settings:
         enabled: false
       news_list:
         weight: -42
+        enabled: false
+      notification:
+        weight: 58
         enabled: false
       phone_number_box:
         weight: -41

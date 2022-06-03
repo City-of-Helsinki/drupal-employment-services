@@ -1,0 +1,57 @@
+uuid: c9d813cb-8821-47c7-a5e5-c6a5a200d923
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_event_tag_filter
+field_name: field_event_tag_filter
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: digitaidot
+      label: Digitaidot
+    -
+      value: etätapahtuma
+      label: Etätapahtuma
+    -
+      value: info
+      label: Info
+    -
+      value: koulutus
+      label: Koulutus
+    -
+      value: maahanmuuttajat
+      label: Maahanmuuttajat
+    -
+      value: messut
+      label: Messut
+    -
+      value: neuvonta
+      label: Neuvonta
+    -
+      value: nuoret
+      label: Nuoret
+    -
+      value: palkkatuki
+      label: Palkkatuki
+    -
+      value: rekrytointi
+      label: Rekrytointi
+    -
+      value: työnhaku
+      label: Työnhaku
+    -
+      value: työpajat
+      label: Työpajat
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
