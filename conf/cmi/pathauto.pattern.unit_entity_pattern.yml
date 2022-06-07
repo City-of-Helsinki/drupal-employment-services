@@ -1,7 +1,9 @@
 uuid: 7a54b854-4870-4af8-a56f-21347b7e077b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - helfi_tpr
 _core:
   default_config_hash: DPZ_wdOLQJ4O4q72Iz6ka0yQgBgBrGW0rpFHCx5rGuM
 id: unit_entity_pattern
@@ -10,5 +12,5 @@ type: 'canonical_entities:tpr_unit'
 pattern: '[tpr_unit:menu-link-parents]/[tpr_unit:label]'
 selection_criteria: {  }
 selection_logic: and
-weight: 0
+weight: -3
 relationships: {  }

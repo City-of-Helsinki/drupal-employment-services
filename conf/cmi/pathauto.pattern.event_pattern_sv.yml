@@ -1,33 +1,33 @@
-uuid: 2cb4ae37-4332-46ad-a78d-80eeabb1a232
+uuid: 4cd967de-6ebd-47d0-a4e9-cafafe4c1176
 langcode: fi
 status: true
 dependencies:
   module:
     - language
     - node
-id: event_pattern
-label: 'Event pattern fi'
+id: event_pattern_sv
+label: 'Event pattern sv'
 type: 'canonical_entities:node'
-pattern: 'tapahtumat/[node:title]'
+pattern: 'evenemang/[node:title]'
 selection_criteria:
-  6631ea7b-056d-4f20-b408-50ccd8ebd9eb:
+  f094ff8b-1d1c-49a5-b504-4244374b7f1b:
     id: node_type
     negate: false
-    uuid: 6631ea7b-056d-4f20-b408-50ccd8ebd9eb
+    uuid: f094ff8b-1d1c-49a5-b504-4244374b7f1b
     context_mapping:
       node: node
     bundles:
       event: event
-  49b7763b-6b20-46cd-b0cb-0e2de461f2b7:
+  a7646b03-ab82-4c08-ab42-d91d4fd6d9ec:
     id: language
     negate: false
-    uuid: 49b7763b-6b20-46cd-b0cb-0e2de461f2b7
+    uuid: a7646b03-ab82-4c08-ab42-d91d4fd6d9ec
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
-      fi: fi
+      sv: sv
 selection_logic: and
-weight: -7
+weight: -5
 relationships:
   'node:langcode:language':
     label: Language
