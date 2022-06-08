@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.restricted_html
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -269,6 +270,7 @@ permissions:
   - 'update paragraph content video'
   - 'use advanced search'
   - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view blog revisions'

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.restricted_html
     - node.type.event
     - node.type.news
     - node.type.page
@@ -12,13 +11,11 @@ dependencies:
     - content_translation
     - field_ui
     - file
-    - filter
     - helfi_tpr
     - media
     - node
     - paragraphs
     - paragraphs_type_permissions
-    - path
     - system
     - taxonomy
 _core:
@@ -34,10 +31,8 @@ permissions:
   - 'access taxonomy overview'
   - 'administer menu'
   - 'administer taxonomy_term display'
-  - 'administer url aliases'
   - 'translate any entity'
   - 'translate paragraph'
-  - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view event revisions'

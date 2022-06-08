@@ -8,6 +8,7 @@
 use Drupal\editor\Entity\Editor;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * @param array $css
@@ -43,4 +44,42 @@ function redirectFunction(array &$form, FormStateInterface $form_state) {
     \Drupal::request()->query->remove('destination');
     return;
   }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Create translations for Event when it's created through JSON:API
+ * because JSON:API POST method doesn't allow creating additional translations atm.
+ * https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/translations
+ */
+function tyollisyyspalvelut_common_node_insert(EntityInterface $entity) {
+  if ($entity->getType() !== 'event') {
+    return;
+  }
+
+  $site_languages = \Drupal::languageManager()->getLanguages();
+  $langcodes = array_keys($site_languages);
+
+  foreach ($langcodes as $lang) {
+    if ($lang === 'fi') {
+      continue;
+    }
+
+    $translated_entity = $entity->addTranslation($lang, $entity->toArray());
+    $translated_entity->save();
+  }
+}
+
+/**
+ * Implements hook_elasticsearch_connector_load_library_options_alter().
+ */
+function tyollisyyspalvelut_common_elasticsearch_connector_load_library_options_alter(&$options, &$context) {
+  /**
+   * Set cURL options to trust self-signed certificate.
+   *
+   * @fixme rather than disabling verification, should set CURLOPT_SSLCERT to correct value.
+   */
+    $options['curl'][CURLOPT_SSL_VERIFYPEER] = FALSE;
+    $options['curl'][CURLOPT_SSL_VERIFYHOST] = FALSE;
 }
