@@ -8,6 +8,7 @@
 use Drupal\editor\Entity\Editor;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * @param array $css
@@ -42,6 +43,31 @@ function redirectFunction(array &$form, FormStateInterface $form_state) {
     // Remove destination query string from request.
     \Drupal::request()->query->remove('destination');
     return;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Create translations for Event when it's created through JSON:API
+ * because JSON:API POST method doesn't allow creating additional translations atm.
+ * https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/translations
+ */
+function tyollisyyspalvelut_common_node_insert(EntityInterface $entity) {
+  if ($entity->getType() !== 'event') {
+    return;
+  }
+
+  $site_languages = \Drupal::languageManager()->getLanguages();
+  $langcodes = array_keys($site_languages);
+
+  foreach ($langcodes as $lang) {
+    if ($lang === 'fi') {
+      continue;
+    }
+
+    $translated_entity = $entity->addTranslation($lang, $entity->toArray());
+    $translated_entity->save();
   }
 }
 
