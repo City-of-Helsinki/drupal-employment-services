@@ -15,13 +15,14 @@ use Drupal\Core\Entity\EntityInterface;
  * @param Editor $editor
  */
 function tyollisyyspalvelut_common_ckeditor_css_alter(array &$css, Editor $editor) {
-  $css[] = drupal_get_path('module', 'tyollisyyspalvelut_common') . '/ckeditor.css';
+  $css[] = drupal_get_path('module', 'tyollisyyspalvelut_common') . '/css/ckeditor.css';
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function tyollisyyspalvelut_common_form_node_form_alter(&$form, &$form_state) {
+  $form['#attached']['library'][] = 'tyollisyyspalvelut_common/tyollisyyspalvelut_common';
   // Hide field from HDBT theme we don't want to use.
   $form['color_palette']['#access'] = FALSE;
 
