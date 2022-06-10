@@ -68,6 +68,9 @@ settings:
       content_liftup:
         weight: -68
         enabled: false
+      event_list:
+        weight: 30
+        enabled: false
       events_list:
         weight: -48
         enabled: true
