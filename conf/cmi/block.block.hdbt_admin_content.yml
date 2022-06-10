@@ -1,4 +1,4 @@
-uuid: 4e24c7d8-1725-43d8-ab5f-fe5520c9c57a
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - system
   theme:
     - hdbt_admin
-id: breadcrumbs
+id: hdbt_admin_content
 theme: hdbt_admin
-region: breadcrumb
-weight: -5
+region: content
+weight: 0
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_main_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_main_block
+  label: 'Main page content'
   label_display: '0'
   provider: system
 visibility: {  }
