@@ -10,9 +10,9 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.notification
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
-    - paragraphs.paragraphs_type.notification
   module:
     - entity_reference_revisions
 _core:
@@ -68,6 +68,9 @@ settings:
       content_liftup:
         weight: -22
         enabled: false
+      event_list:
+        weight: 30
+        enabled: false
       events_list:
         weight: 46
         enabled: false
@@ -89,9 +92,6 @@ settings:
       image:
         weight: -24
         enabled: true
-      image_and_card:
-        weight: 53
-        enabled: false
       info:
         weight: 54
         enabled: false

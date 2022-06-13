@@ -7,7 +7,7 @@ dependencies:
 id: pagetitle
 theme: hdbt_admin
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
