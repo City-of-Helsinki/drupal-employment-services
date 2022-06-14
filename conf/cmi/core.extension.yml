@@ -1,5 +1,6 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
+langcode: fi
 module:
   address: 0
   admin_toolbar: 0
@@ -98,6 +99,7 @@ module:
   rdf: 0
   readonly_field_widget: 0
   redirect: 0
+  redis: 0
   responsive_image: 0
   role_delegation: 0
   scheduler: 0
