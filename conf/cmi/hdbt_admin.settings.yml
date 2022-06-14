@@ -19,3 +19,4 @@ logo:
   use_default: 1
 secondary_toolbar_frontend: 0
 show_description_toggle: 0
+langcode: fi
