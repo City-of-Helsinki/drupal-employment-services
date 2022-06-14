@@ -1,5 +1,6 @@
 _core:
   default_config_hash: 60p3lFvf9Aj7NVOIYt5IX3q8O1xv3JDx-7ikmaOEgnY
+langcode: fi
 allow_date_only: false
 date_format: 'Y-m-d H:i:s'
 date_letters: djmnFMyY
