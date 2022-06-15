@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.events_list.field_background_color
     - field.field.paragraph.events_list.field_event_tag_filter
     - field.field.paragraph.events_list.field_events_list_desc
+    - field.field.paragraph.events_list.field_events_list_short
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
   module:
@@ -15,29 +16,26 @@ targetEntityType: paragraph
 bundle: events_list
 mode: default
 content:
-  field_background_color:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_event_tag_filter:
     type: options_select
-    weight: 1
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_events_list_desc:
     type: text_textarea
-    weight: 2
+    weight: 4
     region: content
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_events_list_short:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_title:
     type: string_textfield
@@ -49,4 +47,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_background_color: true
   status: true

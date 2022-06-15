@@ -12,7 +12,7 @@ field_name: field_event_tag_filter
 entity_type: paragraph
 bundle: events_list
 label: 'Event tag filter'
-description: ''
+description: 'Tag filter works only with short event listing.'
 required: false
 translatable: false
 default_value: {  }

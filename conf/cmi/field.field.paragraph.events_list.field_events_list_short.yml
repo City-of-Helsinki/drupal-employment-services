@@ -1,0 +1,23 @@
+uuid: a239f23a-1abb-4177-b149-a5a6b073f964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_list_short
+    - paragraphs.paragraphs_type.events_list
+id: paragraph.events_list.field_events_list_short
+field_name: field_events_list_short
+entity_type: paragraph
+bundle: events_list
+label: 'Short list'
+description: 'If selected, shows max. 3 events'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -6,13 +6,24 @@ dependencies:
     - field.field.paragraph.events_list.field_background_color
     - field.field.paragraph.events_list.field_event_tag_filter
     - field.field.paragraph.events_list.field_events_list_desc
+    - field.field.paragraph.events_list.field_events_list_short
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
 id: paragraph.events_list.default
 targetEntityType: paragraph
 bundle: events_list
 mode: default
-content: {  }
+content:
+  field_events_list_short:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_background_color: true
   field_event_tag_filter: true
