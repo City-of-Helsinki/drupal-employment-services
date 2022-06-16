@@ -24,8 +24,8 @@ settings:
       value: koulutus
       label: Koulutus
     -
-      value: maahanmuuttajat
-      label: Maahanmuuttajat
+      value: maahan_muuttaneet
+      label: 'Maahan muuttaneet'
     -
       value: messut
       label: Messut
