@@ -69,6 +69,7 @@ permissions:
   - 'view paragraph content news_list'
   - 'view paragraph content notification'
   - 'view paragraph content phone_number_box'
+  - 'view paragraph content quote'
   - 'view paragraph content remote_video'
   - 'view paragraph content search'
   - 'view paragraph content service_list'
