@@ -67,7 +67,8 @@
             "drupal/core": {
                 "3099026 - Claro's preprocessing of field multiple value form's table header cell removes potential changes by others": "https://www.drupal.org/files/issues/2020-08-13/3099026-17.patch",
                 "2706241 - AccessAwareRouter does not respect HTTP method": "https://www.drupal.org/files/issues/2022-02-01/2706241-67.patch",
-                "3274419 - Make BaseFieldOverride inherit internal property from the base field": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch"
+                "3274419 - Make BaseFieldOverride inherit internal property from the base field": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch",
+                "3066751 - `link` fields in REST, JSON:API and GraphQL cannot be rendered by client": "https://www.drupal.org/files/issues/2022-03-04/3066751-68.patch"
             },
             "drupal/subrequests": {
                 "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"

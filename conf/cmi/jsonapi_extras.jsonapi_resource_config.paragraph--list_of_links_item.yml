@@ -133,6 +133,4 @@ resourceFields:
     fieldName: field_list_of_links_link
     publicName: field_list_of_links_link
     enhancer:
-      id: url_link
-      settings:
-        absolute_url: 0
+      id: ''
