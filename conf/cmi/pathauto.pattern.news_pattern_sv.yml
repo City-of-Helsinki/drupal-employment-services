@@ -1,0 +1,35 @@
+uuid: c2503ec9-e91a-41fd-9678-80fba4b524d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+_core:
+  default_config_hash: IP6tY_oyAgqf78ul9Ny5OjEzmcww8TspHzCjhdKEFYM
+id: news_pattern_sv
+label: 'News pattern sv'
+type: 'canonical_entities:node'
+pattern: 'nyheter/[node:title]'
+selection_criteria:
+  a51902dd-11fe-47b1-b78f-26db85be33fa:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a51902dd-11fe-47b1-b78f-26db85be33fa
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+  9941ee16-690b-4d12-a62b-3ea088bbb695:
+    id: language
+    negate: false
+    uuid: 9941ee16-690b-4d12-a62b-3ea088bbb695
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      sv: sv
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,35 @@
+uuid: b5daff5e-9ec3-4d49-814c-a01eb4da0ec3
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+_core:
+  default_config_hash: IP6tY_oyAgqf78ul9Ny5OjEzmcww8TspHzCjhdKEFYM
+id: news_pattern_fi
+label: 'News pattern fi'
+type: 'canonical_entities:node'
+pattern: 'uutiset/[node:title]'
+selection_criteria:
+  2c9853f6-0c27-4d50-8079-fb04fa3e07f2:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2c9853f6-0c27-4d50-8079-fb04fa3e07f2
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+  095ba453-e733-4251-8272-ebe120a0382b:
+    id: language
+    negate: false
+    uuid: 095ba453-e733-4251-8272-ebe120a0382b
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language
