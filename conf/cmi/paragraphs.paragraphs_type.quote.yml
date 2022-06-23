@@ -1,0 +1,10 @@
+uuid: 6224ee1c-6e91-426c-a06e-801d79cf76d7
+langcode: en
+status: true
+dependencies: {  }
+id: quote
+label: Quote
+icon_uuid: null
+icon_default: null
+description: 'For writing quotes with quote''s author information.'
+behavior_plugins: {  }
