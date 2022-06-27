@@ -16,6 +16,7 @@ dependencies:
     - node
     - paragraphs
     - paragraphs_type_permissions
+    - subrequests
     - system
     - taxonomy
 _core:
@@ -31,6 +32,7 @@ permissions:
   - 'access taxonomy overview'
   - 'administer menu'
   - 'administer taxonomy_term display'
+  - 'issue subrequests'
   - 'translate any entity'
   - 'translate paragraph'
   - 'view all media revisions'
