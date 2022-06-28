@@ -31,8 +31,10 @@
         "drupal/migrate_tools": "^5.0",
         "drupal/next": "^1.2",
         "drupal/paragraphs_features": "^1.11",
+        "drupal/purge_drush": "^3.2",
         "drupal/quick_node_clone": "^1.14",
         "drupal/redis": "^1.5",
+        "drupal/varnish_purger": "^2.1",
         "drush/drush": "^10.4"
     },
     "require-dev": {
