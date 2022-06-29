@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.news_list.field_background_color
     - field.field.paragraph.news_list.field_koro
+    - field.field.paragraph.news_list.field_news_list_desc
     - field.field.paragraph.news_list.field_short_list
     - field.field.paragraph.news_list.field_title
     - paragraphs.paragraphs_type.news_list
+  module:
+    - text
 id: paragraph.news_list.default
 targetEntityType: paragraph
 bundle: news_list
@@ -31,6 +34,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_news_list_desc:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_short_list:
     type: boolean
     label: above
@@ -49,4 +59,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
   module:
@@ -38,6 +39,7 @@ settings:
       banner: banner
       image: image
       events_list: events_list
+      news_list: news_list
       subheading: subheading
     negate: 0
     target_bundles_drag_drop:
@@ -112,12 +114,15 @@ settings:
         enabled: false
       news_list:
         weight: -42
-        enabled: false
+        enabled: true
       notification:
         weight: 58
         enabled: false
       phone_number_box:
         weight: -41
+        enabled: false
+      quote:
+        weight: 63
         enabled: false
       remote_video:
         weight: -54
