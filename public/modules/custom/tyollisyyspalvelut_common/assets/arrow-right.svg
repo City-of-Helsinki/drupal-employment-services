@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI/Arrows and operators/arrow-right</title>
+    <g id="UI/Arrows-and-operators/arrow-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Bounding-box" x="0" y="0" width="24" height="24"></rect>
+        <polygon id="Color" fill="#000000" transform="translate(12.250000, 12.000000) scale(-1, 1) translate(-12.250000, -12.000000) " points="10.5 5.5 12 7 8 11 20.5 11 20.5 13 8 13 12 17 10.5 18.5 4 12"></polygon>
+    </g>
+</svg>
