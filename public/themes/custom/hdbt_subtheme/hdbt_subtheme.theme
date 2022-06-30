@@ -15,7 +15,7 @@ function hdbt_subtheme_get_icons_path() {
   static $icon_path;
   if (!isset($icon_path)) {
     $theme_handler = \Drupal::service('theme_handler');
-    $icon_path = '/' . $theme_handler->getTheme('hdbt_subtheme')->getPath() . '/dist/icons/sprite.svg';
+    $icon_path = '/' . $theme_handler->getTheme('hdbt')->getPath() . '/dist/icons/sprite.svg';
 
     // Add icons path as a global variable.
     if (!empty($icon_path)) {
