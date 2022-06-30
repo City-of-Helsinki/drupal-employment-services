@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e0a253c999f508c22363ed397b76e39",
+    "content-hash": "1fb5c45ceddc6fc86309fecbf625c4ed",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4245,16 +4245,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "1.4.4",
+            "version": "2.3.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "cf57cf69d115ede127017d07f02d8f14b05d5143"
+                "reference": "e3585bfe8ca11ddc9d6ffbb7abf436da4360c063"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/cf57cf69d115ede127017d07f02d8f14b05d5143",
-                "reference": "cf57cf69d115ede127017d07f02d8f14b05d5143",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/e3585bfe8ca11ddc9d6ffbb7abf436da4360c063",
+                "reference": "e3585bfe8ca11ddc9d6ffbb7abf436da4360c063",
                 "shasum": ""
             },
             "require": {
@@ -4269,10 +4269,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/1.4.4",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/2.3.23",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2021-11-02T16:27:26+00:00"
+            "time": "2022-05-17T05:38:14+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -17591,5 +17591,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
