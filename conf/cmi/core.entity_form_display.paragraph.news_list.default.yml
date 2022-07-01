@@ -5,34 +5,28 @@ dependencies:
   config:
     - field.field.paragraph.news_list.field_background_color
     - field.field.paragraph.news_list.field_koro
+    - field.field.paragraph.news_list.field_news_list_desc
     - field.field.paragraph.news_list.field_short_list
     - field.field.paragraph.news_list.field_title
     - paragraphs.paragraphs_type.news_list
+  module:
+    - text
 id: paragraph.news_list.default
 targetEntityType: paragraph
 bundle: news_list
 mode: default
 content:
-  field_background_color:
-    type: entity_reference_autocomplete
-    weight: 1
+  field_news_list_desc:
+    type: text_textarea
+    weight: 2
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  field_koro:
-    type: boolean_checkbox
-    weight: 3
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_short_list:
     type: boolean_checkbox
-    weight: 2
+    weight: 1
     region: content
     settings:
       display_label: true
@@ -47,4 +41,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_background_color: true
+  field_koro: true
   status: true
