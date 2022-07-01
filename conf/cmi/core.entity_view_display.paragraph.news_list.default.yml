@@ -16,30 +16,12 @@ targetEntityType: paragraph
 bundle: news_list
 mode: default
 content:
-  field_background_color:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_koro:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_news_list_desc:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   field_short_list:
     type: boolean
@@ -49,7 +31,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_title:
     type: string
@@ -57,7 +39,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
+  field_background_color: true
+  field_koro: true
   search_api_excerpt: true
