@@ -47,7 +47,13 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true
+        }
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
