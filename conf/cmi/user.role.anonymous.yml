@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.event
-    - node.type.news
     - node.type.page
   module:
     - comment
@@ -40,7 +39,6 @@ permissions:
   - 'view event revisions'
   - 'view media'
   - 'view media'
-  - 'view news revisions'
   - 'view own unpublished media'
   - 'view page revisions'
   - 'view paragraph content accordion'
