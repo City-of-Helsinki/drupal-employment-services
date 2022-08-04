@@ -41,6 +41,8 @@ services:
   redis:
     container_name: "${COMPOSE_PROJECT_NAME}-redis"
     image: redis:6-alpine
+    ports:
+      - 6379:6379
     networks:
       - internal
   db:
