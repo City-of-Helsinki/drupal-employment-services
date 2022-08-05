@@ -1,5 +1,5 @@
-langcode: fi
 uuid: 16aa5dcc-9064-4161-9ab4-73af03782401
+langcode: fi
 status: true
 dependencies: {  }
 id: node.event

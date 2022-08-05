@@ -1,0 +1,33 @@
+uuid: 4cd967de-6ebd-47d0-a4e9-cafafe4c1176
+langcode: fi
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: event_pattern_sv
+label: 'Event pattern sv'
+type: 'canonical_entities:node'
+pattern: 'evenemang/[node:title]'
+selection_criteria:
+  f094ff8b-1d1c-49a5-b504-4244374b7f1b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f094ff8b-1d1c-49a5-b504-4244374b7f1b
+    context_mapping:
+      node: node
+    bundles:
+      event: event
+  a7646b03-ab82-4c08-ab42-d91d4fd6d9ec:
+    id: language
+    negate: false
+    uuid: a7646b03-ab82-4c08-ab42-d91d4fd6d9ec
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      sv: sv
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

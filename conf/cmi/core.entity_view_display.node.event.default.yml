@@ -14,14 +14,11 @@ dependencies:
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
-    - field.field.node.event.field_page_content
-    - field.field.node.event.field_page_width
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
-    - field.field.node.event.field_title
     - node.type.event
   module:
     - link
@@ -51,14 +48,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -74,11 +63,10 @@ hidden:
   field_info_url: true
   field_last_modified_time: true
   field_location: true
-  field_page_content: true
-  field_page_width: true
   field_publisher: true
   field_short_description: true
   field_start_time: true
   field_tags: true
   field_text: true
   langcode: true
+  search_api_excerpt: true

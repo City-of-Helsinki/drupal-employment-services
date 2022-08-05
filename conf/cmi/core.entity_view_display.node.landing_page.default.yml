@@ -39,3 +39,5 @@ hidden:
   field_liftup_image: true
   field_metatags: true
   langcode: true
+  search_api_excerpt: true
+  toc_enabled: true

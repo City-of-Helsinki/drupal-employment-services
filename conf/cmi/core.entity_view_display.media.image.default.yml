@@ -1,5 +1,5 @@
 uuid: 515e6bbe-e18e-4145-b18e-6dbd2719f4f5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -30,5 +30,6 @@ hidden:
   field_photographer: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

@@ -10,12 +10,12 @@ field_name: field_short_list
 entity_type: paragraph
 bundle: news_list
 label: 'Short list'
-description: ''
+description: 'If selected, shows max. 4 news'
 required: false
 translatable: false
 default_value:
   -
-    value: 1
+    value: 0
 default_value_callback: ''
 settings:
   on_label: 'On'

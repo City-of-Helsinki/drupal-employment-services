@@ -1,6 +1,6 @@
 _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
-langcode: en
+langcode: fi
 uuid: c2665751-d3dc-4347-a4fd-2cdfc790e798
 name: Työllisyyspalvelut
 mail: jussi.leskinen@siili.com
@@ -8,7 +8,7 @@ slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1479
+  front: /node/1481
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: fi

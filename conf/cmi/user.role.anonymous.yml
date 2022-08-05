@@ -1,24 +1,21 @@
 uuid: 8043fa37-7e54-4ebb-a24d-63cbc300acbd
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
-    - filter.format.restricted_html
     - node.type.event
-    - node.type.news
     - node.type.page
   module:
     - comment
     - content_translation
     - field_ui
     - file
-    - filter
     - helfi_tpr
     - media
     - node
     - paragraphs
     - paragraphs_type_permissions
-    - path
+    - subrequests
     - system
     - taxonomy
 _core:
@@ -34,16 +31,14 @@ permissions:
   - 'access taxonomy overview'
   - 'administer menu'
   - 'administer taxonomy_term display'
-  - 'administer url aliases'
+  - 'issue subrequests'
   - 'translate any entity'
   - 'translate paragraph'
-  - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view event revisions'
   - 'view media'
   - 'view media'
-  - 'view news revisions'
   - 'view own unpublished media'
   - 'view page revisions'
   - 'view paragraph content accordion'
@@ -74,6 +69,7 @@ permissions:
   - 'view paragraph content news_list'
   - 'view paragraph content notification'
   - 'view paragraph content phone_number_box'
+  - 'view paragraph content quote'
   - 'view paragraph content remote_video'
   - 'view paragraph content search'
   - 'view paragraph content service_list'

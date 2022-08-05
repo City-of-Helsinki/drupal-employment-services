@@ -14,11 +14,30 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
+    - field_group
     - hdbt_admin_editorial
     - metatag
     - paragraphs
     - path
     - scheduler
+third_party_settings:
+  field_group:
+    group_notification:
+      children:
+        - field_notification
+      label: Notification
+      region: content
+      parent_name: ''
+      weight: -99
+      format_type: details_sidebar
+      format_settings:
+        classes: formDsiplay_sidebar_notification
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: 'For notifications'
+        required_fields: false
+        weight: 0
 _core:
   default_config_hash: ovxh0W5mFYp8gQbwRzU26jMLwUerrg8oJT-enNnUxe4
 id: node.page.default
@@ -88,7 +107,7 @@ content:
     third_party_settings: {  }
   field_notification:
     type: paragraphs
-    weight: 2
+    weight: 0
     region: content
     settings:
       title: Paragraph
@@ -99,11 +118,18 @@ content:
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
       features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
+        add_above: '0'
+        collapse_edit_all: '0'
+        duplicate: '0'
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        split_text: false
+        show_drag_and_drop: false
   field_sidebar_content:
     type: paragraphs
     weight: 12

@@ -1,5 +1,6 @@
 _core:
   default_config_hash: KsPFWSp6mgXIQgjBJEShfKUGn6VLRlbpIJ2EysXvXWM
+langcode: fi
 access_token_expiration: 300
 authorization_code_expiration: 300
 refresh_token_expiration: 1209600

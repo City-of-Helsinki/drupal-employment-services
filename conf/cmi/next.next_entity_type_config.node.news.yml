@@ -1,5 +1,5 @@
-langcode: fi
 uuid: 24261a88-4b09-45a2-bde9-41c1c8e95df5
+langcode: fi
 status: true
 dependencies: {  }
 id: node.news

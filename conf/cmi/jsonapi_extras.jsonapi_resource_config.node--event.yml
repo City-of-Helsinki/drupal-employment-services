@@ -1,0 +1,279 @@
+uuid: 02994300-eada-46e0-8a27-ca5fc680b0ff
+langcode: fi
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - jsonapi_defaults
+third_party_settings:
+  jsonapi_defaults:
+    default_include:
+      - field_content
+      - field_page_content
+      - field_sidebar_content
+      - field_page_width
+    page_limit: 50
+id: node--event
+disabled: false
+path: node/event
+resourceType: node--event
+resourceFields:
+  nid:
+    disabled: false
+    fieldName: nid
+    publicName: nid
+    enhancer:
+      id: ''
+  uuid:
+    disabled: false
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  vid:
+    disabled: false
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+  langcode:
+    disabled: false
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  type:
+    disabled: false
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+  revision_timestamp:
+    disabled: false
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+  revision_uid:
+    disabled: false
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+  revision_log:
+    disabled: false
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
+  status:
+    disabled: false
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+  uid:
+    disabled: false
+    fieldName: uid
+    publicName: uid
+    enhancer:
+      id: ''
+  title:
+    disabled: false
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+  created:
+    disabled: false
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+  changed:
+    disabled: false
+    fieldName: changed
+    publicName: changed
+    enhancer:
+      id: ''
+  promote:
+    disabled: false
+    fieldName: promote
+    publicName: promote
+    enhancer:
+      id: ''
+  sticky:
+    disabled: false
+    fieldName: sticky
+    publicName: sticky
+    enhancer:
+      id: ''
+  default_langcode:
+    disabled: false
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  revision_default:
+    disabled: false
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+  revision_translation_affected:
+    disabled: false
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+  color_palette:
+    disabled: false
+    fieldName: color_palette
+    publicName: color_palette
+    enhancer:
+      id: ''
+  metatag:
+    disabled: false
+    fieldName: metatag
+    publicName: metatag
+    enhancer:
+      id: ''
+  path:
+    disabled: false
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: ''
+  publish_on:
+    disabled: false
+    fieldName: publish_on
+    publicName: publish_on
+    enhancer:
+      id: ''
+  unpublish_on:
+    disabled: false
+    fieldName: unpublish_on
+    publicName: unpublish_on
+    enhancer:
+      id: ''
+  menu_link:
+    disabled: false
+    fieldName: menu_link
+    publicName: menu_link
+    enhancer:
+      id: ''
+  content_translation_source:
+    disabled: false
+    fieldName: content_translation_source
+    publicName: content_translation_source
+    enhancer:
+      id: ''
+  content_translation_outdated:
+    disabled: false
+    fieldName: content_translation_outdated
+    publicName: content_translation_outdated
+    enhancer:
+      id: ''
+  field_end_time:
+    disabled: false
+    fieldName: field_end_time
+    publicName: field_end_time
+    enhancer:
+      id: ''
+  field_external_links:
+    disabled: false
+    fieldName: field_external_links
+    publicName: field_external_links
+    enhancer:
+      id: ''
+  field_id:
+    disabled: false
+    fieldName: field_id
+    publicName: field_id
+    enhancer:
+      id: ''
+  field_image_alt:
+    disabled: false
+    fieldName: field_image_alt
+    publicName: field_image_alt
+    enhancer:
+      id: ''
+  field_image_name:
+    disabled: false
+    fieldName: field_image_name
+    publicName: field_image_name
+    enhancer:
+      id: ''
+  field_image_url:
+    disabled: false
+    fieldName: field_image_url
+    publicName: field_image_url
+    enhancer:
+      id: ''
+  field_in_language:
+    disabled: false
+    fieldName: field_in_language
+    publicName: field_in_language
+    enhancer:
+      id: ''
+  field_info_url:
+    disabled: false
+    fieldName: field_info_url
+    publicName: field_info_url
+    enhancer:
+      id: ''
+  field_last_modified_time:
+    disabled: false
+    fieldName: field_last_modified_time
+    publicName: field_last_modified_time
+    enhancer:
+      id: ''
+  field_location:
+    disabled: false
+    fieldName: field_location
+    publicName: field_location
+    enhancer:
+      id: ''
+  field_location_extra_info:
+    disabled: false
+    fieldName: field_location_extra_info
+    publicName: field_location_extra_info
+    enhancer:
+      id: ''
+  field_publisher:
+    disabled: false
+    fieldName: field_publisher
+    publicName: field_publisher
+    enhancer:
+      id: ''
+  field_short_description:
+    disabled: false
+    fieldName: field_short_description
+    publicName: field_short_description
+    enhancer:
+      id: ''
+  field_start_time:
+    disabled: false
+    fieldName: field_start_time
+    publicName: field_start_time
+    enhancer:
+      id: ''
+  field_tags:
+    disabled: false
+    fieldName: field_tags
+    publicName: field_tags
+    enhancer:
+      id: ''
+  field_text:
+    disabled: false
+    fieldName: field_text
+    publicName: field_text
+    enhancer:
+      id: ''
+  field_title:
+    disabled: false
+    fieldName: field_title
+    publicName: field_title
+    enhancer:
+      id: ''

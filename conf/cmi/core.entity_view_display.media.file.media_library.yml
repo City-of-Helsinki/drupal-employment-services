@@ -1,5 +1,5 @@
 uuid: 186fec6d-212a-4f85-a78a-f21e100a0f70
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -30,4 +30,5 @@ hidden:
   field_media_file: true
   langcode: true
   name: true
+  search_api_excerpt: true
   uid: true

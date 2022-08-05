@@ -1,5 +1,5 @@
 uuid: 4e24c7d8-1725-43d8-ab5f-fe5520c9c57a
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -9,7 +9,7 @@ dependencies:
 id: breadcrumbs
 theme: hdbt_admin
 region: breadcrumb
-weight: 0
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
