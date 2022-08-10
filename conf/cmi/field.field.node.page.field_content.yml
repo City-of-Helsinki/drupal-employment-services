@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.events_list
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
@@ -37,6 +38,7 @@ settings:
       list_of_links: list_of_links
       banner: banner
       liftup_with_image: liftup_with_image
+      events_list: events_list
       notification: notification
       subheading: subheading
     negate: 0
@@ -73,7 +75,7 @@ settings:
         enabled: false
       events_list:
         weight: 46
-        enabled: false
+        enabled: true
       from_library:
         weight: 21
         enabled: false
@@ -117,6 +119,9 @@ settings:
         weight: 60
         enabled: true
       phone_number_box:
+        weight: 63
+        enabled: false
+      quote:
         weight: 63
         enabled: false
       remote_video:
