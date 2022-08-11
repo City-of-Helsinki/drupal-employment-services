@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_sidebar
     - field.field.node.page.field_lead_in
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
@@ -28,17 +29,18 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_hide_sidebar: true
   field_lead_in: true
   field_liftup_image: true
   field_lower_content: true
