@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.list_of_links.field_background_color
     - field.field.paragraph.list_of_links.field_list_of_links_design
     - field.field.paragraph.list_of_links.field_list_of_links_links
     - field.field.paragraph.list_of_links.field_list_of_links_title
@@ -10,6 +11,7 @@ dependencies:
   module:
     - hdbt_admin_editorial
     - paragraphs
+    - select2
 _core:
   default_config_hash: LBbBIE1JvrmAnOImQR0rd-u3Nc3i-SRD2WicIGCCwqU
 id: paragraph.list_of_links.default
@@ -17,6 +19,16 @@ targetEntityType: paragraph
 bundle: list_of_links
 mode: default
 content:
+  field_background_color:
+    type: select2_entity_reference
+    weight: 2
+    region: content
+    settings:
+      width: 50%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_list_of_links_design:
     type: design_field_widget
     weight: 1
@@ -25,7 +37,7 @@ content:
     third_party_settings: {  }
   field_list_of_links_links:
     type: paragraphs
-    weight: 2
+    weight: 3
     region: content
     settings:
       title: Paragraph
