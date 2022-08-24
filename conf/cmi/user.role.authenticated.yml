@@ -10,6 +10,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - node.type.article
     - node.type.event
     - node.type.landing_page
     - node.type.page
@@ -74,6 +75,7 @@ permissions:
   - 'clone landing_page content'
   - 'clone news content'
   - 'clone page content'
+  - 'create article content'
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
@@ -124,6 +126,7 @@ permissions:
   - 'create url aliases'
   - 'create video media'
   - 'delete all revisions'
+  - 'delete any article content'
   - 'delete any audio media'
   - 'delete any document media'
   - 'delete any event content'
@@ -133,9 +136,12 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any video media'
+  - 'delete article revisions'
   - 'delete content translations'
+  - 'delete event revisions'
   - 'delete landing_page revisions'
   - 'delete media'
+  - 'delete own article content'
   - 'delete own audio media'
   - 'delete own document media'
   - 'delete own event content'
@@ -183,6 +189,7 @@ permissions:
   - 'delete paragraph content text'
   - 'delete paragraph content unit_search'
   - 'delete paragraph content video'
+  - 'edit any article content'
   - 'edit any audio media'
   - 'edit any document media'
   - 'edit any event content'
@@ -191,6 +198,7 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any video media'
+  - 'edit own article content'
   - 'edit own audio media'
   - 'edit own document media'
   - 'edit own event content'
@@ -203,12 +211,15 @@ permissions:
   - 'notify of path changes'
   - 'post comments'
   - 'revert all revisions'
+  - 'revert article revisions'
   - 'revert event revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'search content'
   - 'skip comment approval'
   - 'translate any entity'
+  - 'translate article node'
+  - 'translate event node'
   - 'translate landing_page node'
   - 'translate page node'
   - 'translate paragraph'
@@ -258,6 +269,7 @@ permissions:
   - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view article revisions'
   - 'view event revisions'
   - 'view landing_page revisions'
   - 'view media'
