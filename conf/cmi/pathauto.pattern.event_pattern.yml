@@ -8,20 +8,20 @@ dependencies:
 id: event_pattern
 label: 'Event pattern fi'
 type: 'canonical_entities:node'
-pattern: 'tapahtumat/[node:title]'
+pattern: 'ajankohtaista/tapahtumat/[node:title]'
 selection_criteria:
-  6631ea7b-056d-4f20-b408-50ccd8ebd9eb:
+  2dc3a60e-ac55-47a9-889b-a54fe0476a47:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6631ea7b-056d-4f20-b408-50ccd8ebd9eb
+    uuid: 2dc3a60e-ac55-47a9-889b-a54fe0476a47
     context_mapping:
       node: node
     bundles:
       event: event
-  49b7763b-6b20-46cd-b0cb-0e2de461f2b7:
+  6ef9f3e4-3cab-49e1-9094-827dc708bfdb:
     id: language
     negate: false
-    uuid: 49b7763b-6b20-46cd-b0cb-0e2de461f2b7
+    uuid: 6ef9f3e4-3cab-49e1-9094-827dc708bfdb
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
