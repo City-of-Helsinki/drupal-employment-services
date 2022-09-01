@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.list_of_links.field_background_color
     - field.field.paragraph.list_of_links.field_list_of_links_design
     - field.field.paragraph.list_of_links.field_list_of_links_links
     - field.field.paragraph.list_of_links.field_list_of_links_title
@@ -17,6 +18,14 @@ targetEntityType: paragraph
 bundle: list_of_links
 mode: default
 content:
+  field_background_color:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_list_of_links_design:
     type: list_key
     label: inline

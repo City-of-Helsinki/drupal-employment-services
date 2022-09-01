@@ -21,7 +21,7 @@
         "drupal/helfi_azure_fs": "^1.0",
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_linkedevents": "^1.0",
-        "drupal/helfi_platform_config": "2.9.18",
+        "drupal/helfi_platform_config": "2.9.20",
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^1.0",
         "drupal/jsonapi_extras": "^3.20",
@@ -39,6 +39,7 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^9.1",
+        "drupal/devel": "^4.1",
         "phpspec/prophecy-phpunit": "^2",
         "phpunit/phpunit": "~9.4.0"
     },
