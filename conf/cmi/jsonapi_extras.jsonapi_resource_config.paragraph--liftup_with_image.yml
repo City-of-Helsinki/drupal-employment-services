@@ -1,20 +1,18 @@
-uuid: 709636b0-fa31-4a0c-b4db-82263cc9405e
+uuid: 139407ca-7ecd-4e8d-8b8e-f0502d643efc
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.liftup_with_image
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
-    default_include:
-      - field_text
     page_limit: 50
-id: paragraph--text
+id: paragraph--liftup_with_image
 disabled: false
-path: paragraph/text
-resourceType: paragraph--text
+path: paragraph/liftup_with_image
+resourceType: paragraph--liftup_with_image
 resourceFields:
   id:
     disabled: false
@@ -118,9 +116,27 @@ resourceFields:
     publicName: content_translation_changed
     enhancer:
       id: ''
-  field_text:
+  field_liftup_with_image_desc:
     disabled: false
-    fieldName: field_text
-    publicName: field_text
+    fieldName: field_liftup_with_image_desc
+    publicName: field_liftup_with_image_desc
     enhancer:
       id: text_field_enhancer
+  field_liftup_with_image_design:
+    disabled: false
+    fieldName: field_liftup_with_image_design
+    publicName: field_liftup_with_image_design
+    enhancer:
+      id: ''
+  field_liftup_with_image_image:
+    disabled: false
+    fieldName: field_liftup_with_image_image
+    publicName: field_liftup_with_image_image
+    enhancer:
+      id: ''
+  field_liftup_with_image_title:
+    disabled: false
+    fieldName: field_liftup_with_image_title
+    publicName: field_liftup_with_image_title
+    enhancer:
+      id: ''

@@ -150,7 +150,7 @@ resourceFields:
     fieldName: field_accordion_text
     publicName: field_accordion_text
     enhancer:
-      id: ''
+      id: text_field_enhancer
   field_accordion_title:
     disabled: false
     fieldName: field_accordion_title
@@ -161,5 +161,11 @@ resourceFields:
     disabled: false
     fieldName: field_accordion_title_level
     publicName: field_accordion_title_level
+    enhancer:
+      id: ''
+  field_accordion_type:
+    disabled: false
+    fieldName: field_accordion_type
+    publicName: field_accordion_type
     enhancer:
       id: ''

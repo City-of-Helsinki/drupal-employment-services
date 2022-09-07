@@ -1,20 +1,18 @@
-uuid: 709636b0-fa31-4a0c-b4db-82263cc9405e
+uuid: 3318c118-9de4-4dbf-b75f-189bc650eca8
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.notification
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
-    default_include:
-      - field_text
     page_limit: 50
-id: paragraph--text
+id: paragraph--notification
 disabled: false
-path: paragraph/text
-resourceType: paragraph--text
+path: paragraph/notification
+resourceType: paragraph--notification
 resourceFields:
   id:
     disabled: false
@@ -118,9 +116,15 @@ resourceFields:
     publicName: content_translation_changed
     enhancer:
       id: ''
-  field_text:
+  field_notification_description:
     disabled: false
-    fieldName: field_text
-    publicName: field_text
+    fieldName: field_notification_description
+    publicName: field_notification_description
     enhancer:
       id: text_field_enhancer
+  field_notification_title:
+    disabled: false
+    fieldName: field_notification_title
+    publicName: field_notification_title
+    enhancer:
+      id: ''
