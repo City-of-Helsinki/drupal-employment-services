@@ -1,20 +1,18 @@
-uuid: 709636b0-fa31-4a0c-b4db-82263cc9405e
+uuid: 3f31df57-1aea-4aa0-9c6c-5da78a32a236
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.news_list
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
-    default_include:
-      - field_text
     page_limit: 50
-id: paragraph--text
+id: paragraph--news_list
 disabled: false
-path: paragraph/text
-resourceType: paragraph--text
+path: paragraph/news_list
+resourceType: paragraph--news_list
 resourceFields:
   id:
     disabled: false
@@ -118,9 +116,33 @@ resourceFields:
     publicName: content_translation_changed
     enhancer:
       id: ''
-  field_text:
+  field_background_color:
     disabled: false
-    fieldName: field_text
-    publicName: field_text
+    fieldName: field_background_color
+    publicName: field_background_color
+    enhancer:
+      id: ''
+  field_koro:
+    disabled: false
+    fieldName: field_koro
+    publicName: field_koro
+    enhancer:
+      id: ''
+  field_news_list_desc:
+    disabled: false
+    fieldName: field_news_list_desc
+    publicName: field_news_list_desc
     enhancer:
       id: text_field_enhancer
+  field_short_list:
+    disabled: false
+    fieldName: field_short_list
+    publicName: field_short_list
+    enhancer:
+      id: ''
+  field_title:
+    disabled: false
+    fieldName: field_title
+    publicName: field_title
+    enhancer:
+      id: ''

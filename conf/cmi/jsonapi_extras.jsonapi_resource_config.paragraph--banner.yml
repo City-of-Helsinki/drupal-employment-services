@@ -1,20 +1,18 @@
-uuid: 709636b0-fa31-4a0c-b4db-82263cc9405e
+uuid: 8f08f7fc-f6d4-4b25-830d-0540fc3b4aa2
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.banner
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
-    default_include:
-      - field_text
     page_limit: 50
-id: paragraph--text
+id: paragraph--banner
 disabled: false
-path: paragraph/text
-resourceType: paragraph--text
+path: paragraph/banner
+resourceType: paragraph--banner
 resourceFields:
   id:
     disabled: false
@@ -118,9 +116,45 @@ resourceFields:
     publicName: content_translation_changed
     enhancer:
       id: ''
-  field_text:
+  field_background_color:
     disabled: false
-    fieldName: field_text
-    publicName: field_text
+    fieldName: field_background_color
+    publicName: field_background_color
+    enhancer:
+      id: ''
+  field_banner_desc:
+    disabled: false
+    fieldName: field_banner_desc
+    publicName: field_banner_desc
     enhancer:
       id: text_field_enhancer
+  field_banner_design:
+    disabled: false
+    fieldName: field_banner_design
+    publicName: field_banner_design
+    enhancer:
+      id: ''
+  field_banner_link:
+    disabled: false
+    fieldName: field_banner_link
+    publicName: field_banner_link
+    enhancer:
+      id: ''
+  field_banner_link_design:
+    disabled: false
+    fieldName: field_banner_link_design
+    publicName: field_banner_link_design
+    enhancer:
+      id: ''
+  field_banner_title:
+    disabled: false
+    fieldName: field_banner_title
+    publicName: field_banner_title
+    enhancer:
+      id: ''
+  field_icon:
+    disabled: false
+    fieldName: field_icon
+    publicName: field_icon
+    enhancer:
+      id: ''
