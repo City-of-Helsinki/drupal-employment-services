@@ -20,6 +20,7 @@ dependencies:
     - field_ui
     - file
     - filter
+    - helfi_api_base
     - helfi_tpr
     - language
     - media
@@ -48,10 +49,12 @@ permissions:
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
+  - 'access remote entities overview'
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access tpr_unit overview'
   - 'access user profiles'
   - 'administer content translation'
   - 'administer display modes'
@@ -224,6 +227,7 @@ permissions:
   - 'translate page node'
   - 'translate paragraph'
   - 'update any media'
+  - 'update any tpr_unit'
   - 'update content translations'
   - 'update media'
   - 'update paragraph content accordion'
@@ -319,3 +323,4 @@ permissions:
   - 'view tpr_service'
   - 'view tpr_unit'
   - 'view unpublished paragraphs'
+  - 'view unpublished tpr_unit'
