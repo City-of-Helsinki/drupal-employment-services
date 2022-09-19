@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_lower_content
     - node.type.page
     - paragraphs.paragraphs_type.sujo_embedded
+    - paragraphs.paragraphs_type.units_list
   module:
     - entity_reference_revisions
 _core:
@@ -25,6 +26,7 @@ settings:
   handler_settings:
     target_bundles:
       sujo_embedded: sujo_embedded
+      units_list: units_list
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -105,6 +107,9 @@ settings:
       phone_number_box:
         weight: 63
         enabled: false
+      quote:
+        weight: 64
+        enabled: false
       remote_video:
         weight: 32
         enabled: false
@@ -129,6 +134,9 @@ settings:
       unit_search:
         weight: -16
         enabled: false
+      units_list:
+        weight: 73
+        enabled: true
       video:
         weight: 72
         enabled: false
