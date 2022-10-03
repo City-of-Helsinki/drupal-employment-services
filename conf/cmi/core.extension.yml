@@ -36,6 +36,7 @@ module:
   editor: 0
   elasticsearch_connector: 0
   entity: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   entity_usage: 0
   field: 0
