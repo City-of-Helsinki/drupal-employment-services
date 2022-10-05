@@ -40,7 +40,7 @@ content:
     third_party_settings: {  }
   field_end_time:
     type: string_textfield
-    weight: 18
+    weight: 17
     region: content
     settings:
       size: 60
@@ -48,7 +48,7 @@ content:
     third_party_settings: {  }
   field_external_links:
     type: link_default
-    weight: 26
+    weight: 25
     region: content
     settings:
       placeholder_url: ''
@@ -56,7 +56,7 @@ content:
     third_party_settings: {  }
   field_id:
     type: string_textfield
-    weight: 9
+    weight: 8
     region: content
     settings:
       size: 60
@@ -64,7 +64,7 @@ content:
     third_party_settings: {  }
   field_image_alt:
     type: string_textfield
-    weight: 15
+    weight: 14
     region: content
     settings:
       size: 60
@@ -72,7 +72,7 @@ content:
     third_party_settings: {  }
   field_image_name:
     type: string_textfield
-    weight: 13
+    weight: 12
     region: content
     settings:
       size: 60
@@ -80,7 +80,7 @@ content:
     third_party_settings: {  }
   field_image_url:
     type: string_textfield
-    weight: 14
+    weight: 13
     region: content
     settings:
       size: 60
@@ -88,7 +88,7 @@ content:
     third_party_settings: {  }
   field_in_language:
     type: string_textfield
-    weight: 16
+    weight: 15
     region: content
     settings:
       size: 60
@@ -104,7 +104,7 @@ content:
     third_party_settings: {  }
   field_last_modified_time:
     type: string_textfield
-    weight: 19
+    weight: 18
     region: content
     settings:
       size: 60
@@ -112,7 +112,7 @@ content:
     third_party_settings: {  }
   field_location:
     type: string_textfield
-    weight: 20
+    weight: 19
     region: content
     settings:
       size: 60
@@ -128,7 +128,7 @@ content:
     third_party_settings: {  }
   field_location_id:
     type: number
-    weight: 51
+    weight: 20
     region: content
     settings:
       placeholder: ''
@@ -143,7 +143,7 @@ content:
     third_party_settings: {  }
   field_short_description:
     type: text_textarea
-    weight: 12
+    weight: 11
     region: content
     settings:
       rows: 5
@@ -151,7 +151,7 @@ content:
     third_party_settings: {  }
   field_start_time:
     type: string_textfield
-    weight: 17
+    weight: 16
     region: content
     settings:
       size: 60
@@ -165,7 +165,7 @@ content:
     third_party_settings: {  }
   field_text:
     type: text_textarea
-    weight: 10
+    weight: 9
     region: content
     settings:
       rows: 5
@@ -193,7 +193,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -236,12 +236,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
