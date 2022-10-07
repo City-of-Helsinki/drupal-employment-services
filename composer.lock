@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0721c0a708ff3736da1bacb49e41763f",
+    "content-hash": "0752bf98379a04e8af86f5e0dd0d212f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5674,17 +5674,17 @@
         },
         {
             "name": "drupal/next",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/next.git",
-                "reference": "1.2.0"
+                "reference": "1.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/next-1.2.0.zip",
-                "reference": "1.2.0",
-                "shasum": "12214e50e41d0cc486d14a5a90681acf6d04785c"
+                "url": "https://ftp.drupal.org/files/projects/next-1.3.0.zip",
+                "reference": "1.3.0",
+                "shasum": "696e94311d45aad7a27915930741368c64e2182b"
             },
             "require": {
                 "cweagans/composer-patches": "~1.0",
@@ -5696,14 +5696,16 @@
             },
             "require-dev": {
                 "drupal/decoupled_router": "*",
+                "drupal/jwt": "*",
+                "drupal/jwt_auth_consumer": "*",
                 "drupal/subrequests": "*",
                 "phpunit/phpunit": "^6.0 || ^7.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.0",
-                    "datestamp": "1651741391",
+                    "version": "1.3.0",
+                    "datestamp": "1662572080",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5718,6 +5720,14 @@
                 {
                     "name": "shadcn",
                     "homepage": "https://shadcn.com"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 }
             ],
             "description": "Next.js + Drupal for Incremental Static Regeneration and Preview mode.",
@@ -18114,5 +18124,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
