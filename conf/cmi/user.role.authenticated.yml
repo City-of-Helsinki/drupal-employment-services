@@ -17,6 +17,7 @@ dependencies:
   module:
     - comment
     - content_translation
+    - entity_browser
     - field_ui
     - file
     - filter
@@ -48,6 +49,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access files overview'
+  - 'access image entity browser pages'
   - 'access media overview'
   - 'access remote entities overview'
   - 'access shortcuts'
