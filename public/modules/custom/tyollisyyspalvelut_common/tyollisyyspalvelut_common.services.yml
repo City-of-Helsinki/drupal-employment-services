@@ -1,0 +1,3 @@
+parameters:
+  helfi_api_base.internal_domains:
+    - 'tyollisyyspalvelut.hel.fi'
