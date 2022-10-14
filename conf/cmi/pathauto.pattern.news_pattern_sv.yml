@@ -10,20 +10,20 @@ _core:
 id: news_pattern_sv
 label: 'News pattern sv'
 type: 'canonical_entities:node'
-pattern: 'nyheter/[node:title]'
+pattern: 'aktuellt/nyheter/[node:title]'
 selection_criteria:
-  a51902dd-11fe-47b1-b78f-26db85be33fa:
+  321fca59-3443-4b26-a652-d34e96998477:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a51902dd-11fe-47b1-b78f-26db85be33fa
+    uuid: 321fca59-3443-4b26-a652-d34e96998477
     context_mapping:
       node: node
     bundles:
       article: article
-  9941ee16-690b-4d12-a62b-3ea088bbb695:
+  90adaadb-6300-4d87-80e6-fe1873e13aa4:
     id: language
     negate: false
-    uuid: 9941ee16-690b-4d12-a62b-3ea088bbb695
+    uuid: 90adaadb-6300-4d87-80e6-fe1873e13aa4
     context_mapping:
       language: 'node:langcode:language'
     langcodes:

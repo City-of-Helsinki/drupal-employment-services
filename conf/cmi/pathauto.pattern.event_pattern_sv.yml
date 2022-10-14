@@ -8,20 +8,20 @@ dependencies:
 id: event_pattern_sv
 label: 'Event pattern sv'
 type: 'canonical_entities:node'
-pattern: 'evenemang/[node:title]'
+pattern: 'aktuellt/evenemang/[node:title]'
 selection_criteria:
-  f094ff8b-1d1c-49a5-b504-4244374b7f1b:
+  44a207be-25b7-4746-8daa-dba08b762156:
     id: 'entity_bundle:node'
     negate: false
-    uuid: f094ff8b-1d1c-49a5-b504-4244374b7f1b
+    uuid: 44a207be-25b7-4746-8daa-dba08b762156
     context_mapping:
       node: node
     bundles:
       event: event
-  a7646b03-ab82-4c08-ab42-d91d4fd6d9ec:
+  e01a651e-69e9-4598-baf6-8d5ceb0b5685:
     id: language
     negate: false
-    uuid: a7646b03-ab82-4c08-ab42-d91d4fd6d9ec
+    uuid: e01a651e-69e9-4598-baf6-8d5ceb0b5685
     context_mapping:
       language: 'node:langcode:language'
     langcodes:

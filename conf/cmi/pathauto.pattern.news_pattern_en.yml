@@ -10,20 +10,20 @@ _core:
 id: news_pattern_en
 label: 'News pattern en'
 type: 'canonical_entities:node'
-pattern: 'news/[node:title]'
+pattern: 'current-matters/news/[node:title]'
 selection_criteria:
-  7e575731-bbe5-4b3b-aae9-22471141cb0f:
+  df0c4f45-4d17-4890-942c-9db1ffd7354e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 7e575731-bbe5-4b3b-aae9-22471141cb0f
+    uuid: df0c4f45-4d17-4890-942c-9db1ffd7354e
     context_mapping:
       node: node
     bundles:
       article: article
-  173df51a-78b7-4873-96eb-25dc87e48d26:
+  d9be55f4-f613-47cc-b136-2e3e949c0051:
     id: language
     negate: false
-    uuid: 173df51a-78b7-4873-96eb-25dc87e48d26
+    uuid: d9be55f4-f613-47cc-b136-2e3e949c0051
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
