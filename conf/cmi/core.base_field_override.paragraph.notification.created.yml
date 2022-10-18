@@ -1,0 +1,18 @@
+uuid: 63e42b3e-1291-467b-8b48-59fc898967af
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.notification
+id: paragraph.notification.created
+field_name: created
+entity_type: paragraph
+bundle: notification
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

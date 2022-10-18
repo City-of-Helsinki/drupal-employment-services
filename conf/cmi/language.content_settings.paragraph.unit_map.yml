@@ -1,9 +1,9 @@
-uuid: 4a491b00-4621-4626-a473-324cd572277c
+uuid: 5afa132f-6596-458e-8cdf-2653f1581fac
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.sujo_embedded
+    - paragraphs.paragraphs_type.unit_map
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.sujo_embedded
+id: paragraph.unit_map
 target_entity_type_id: paragraph
-target_bundle: sujo_embedded
+target_bundle: unit_map
 default_langcode: site_default
 language_alterable: true

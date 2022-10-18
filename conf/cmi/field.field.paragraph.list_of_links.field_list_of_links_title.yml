@@ -14,7 +14,7 @@ bundle: list_of_links
 label: Title
 description: 'The title of the list of links paragraph.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
