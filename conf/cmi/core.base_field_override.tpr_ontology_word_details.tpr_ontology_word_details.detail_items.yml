@@ -1,0 +1,18 @@
+uuid: bfc275c8-e5cc-4414-9398-4198764fa43e
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_ontology_word_details.tpr_ontology_word_details.detail_items
+field_name: detail_items
+entity_type: tpr_ontology_word_details
+bundle: tpr_ontology_word_details
+label: Details
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: tpr_ontology_word_detail_item

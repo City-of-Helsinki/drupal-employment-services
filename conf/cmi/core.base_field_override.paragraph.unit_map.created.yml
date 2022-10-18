@@ -1,0 +1,18 @@
+uuid: b64fcfda-0834-45b1-9343-b1ab3c54868f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.unit_map
+id: paragraph.unit_map.created
+field_name: created
+entity_type: paragraph
+bundle: unit_map
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
