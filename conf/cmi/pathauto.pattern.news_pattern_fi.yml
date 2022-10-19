@@ -10,20 +10,20 @@ _core:
 id: news_pattern_fi
 label: 'News pattern fi'
 type: 'canonical_entities:node'
-pattern: 'uutiset/[node:title]'
+pattern: 'ajankohtaista/uutiset/[node:title]'
 selection_criteria:
-  2c9853f6-0c27-4d50-8079-fb04fa3e07f2:
+  04e34b0d-deac-48a0-85b5-dc23bb1499a7:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 2c9853f6-0c27-4d50-8079-fb04fa3e07f2
+    uuid: 04e34b0d-deac-48a0-85b5-dc23bb1499a7
     context_mapping:
       node: node
     bundles:
       article: article
-  095ba453-e733-4251-8272-ebe120a0382b:
+  862f3ec1-457c-43f8-88d4-a59f95a3c639:
     id: language
     negate: false
-    uuid: 095ba453-e733-4251-8272-ebe120a0382b
+    uuid: 862f3ec1-457c-43f8-88d4-a59f95a3c639
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
