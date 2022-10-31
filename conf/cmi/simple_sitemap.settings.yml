@@ -3,7 +3,7 @@ _core:
 langcode: fi
 max_links: 2000
 cron_generate: true
-cron_generate_interval: 1
+cron_generate_interval: 3
 generate_duration: 10000
 entities_per_queue_item: 50
 remove_duplicates: true
@@ -17,3 +17,4 @@ hide_branding: true
 excluded_languages: {  }
 enabled_entity_types:
   - node
+  - tpr_unit
