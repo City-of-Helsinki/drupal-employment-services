@@ -87,6 +87,7 @@ module:
   migrate_tools: 0
   mysql: 0
   next: 0
+  next_extras: 0
   next_jsonapi: 0
   node: 0
   oembed_providers: 0
