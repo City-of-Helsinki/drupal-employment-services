@@ -7,7 +7,7 @@ dependencies:
 third_party_settings:
   next_extras:
     revalidate: true
-    revalidate_paths: /
+    revalidate_paths: "/\r\n/en\r\n/sv"
 id: node.landing_page
 site_resolver: site_selector
 configuration:
