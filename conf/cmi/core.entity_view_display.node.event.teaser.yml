@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
+    - field.field.node.event.field_street_address
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
     - node.type.event
@@ -50,6 +51,7 @@ hidden:
   field_publisher: true
   field_short_description: true
   field_start_time: true
+  field_street_address: true
   field_tags: true
   field_text: true
   langcode: true
