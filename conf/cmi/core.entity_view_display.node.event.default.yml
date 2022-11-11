@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
+    - field.field.node.event.field_location_id
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
+    - field.field.node.event.field_street_address
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
     - node.type.event
@@ -38,7 +40,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_location_extra_info:
     type: string
@@ -46,7 +48,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   links:
     settings: {  }
@@ -63,10 +65,13 @@ hidden:
   field_info_url: true
   field_last_modified_time: true
   field_location: true
+  field_location_id: true
   field_publisher: true
   field_short_description: true
   field_start_time: true
+  field_street_address: true
   field_tags: true
   field_text: true
   langcode: true
   search_api_excerpt: true
+  toc_enabled: true

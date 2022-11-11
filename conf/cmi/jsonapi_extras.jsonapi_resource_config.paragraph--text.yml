@@ -123,10 +123,4 @@ resourceFields:
     fieldName: field_text
     publicName: field_text
     enhancer:
-      id: ''
-  field_text_demo:
-    disabled: false
-    fieldName: field_text_demo
-    publicName: field_text_demo
-    enhancer:
-      id: ''
+      id: text_field_enhancer

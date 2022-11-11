@@ -6,19 +6,15 @@ dependencies:
     - field.storage.paragraph.field_background_color
     - paragraphs.paragraphs_type.events_list
     - taxonomy.vocabulary.colors
-  content:
-    - 'taxonomy_term:colors:5e897c72-e176-4f56-8ce0-c24eda8b310b'
 id: paragraph.events_list.field_background_color
 field_name: field_background_color
 entity_type: paragraph
 bundle: events_list
 label: 'Background color'
-description: ''
+description: 'Should only be used on Landing page.'
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: 5e897c72-e176-4f56-8ce0-c24eda8b310b
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

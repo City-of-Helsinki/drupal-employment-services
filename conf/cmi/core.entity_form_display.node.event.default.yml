@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.event.field_last_modified_time
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
+    - field.field.node.event.field_location_id
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
+    - field.field.node.event.field_street_address
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
     - node.type.event
@@ -47,7 +49,7 @@ content:
     third_party_settings: {  }
   field_external_links:
     type: link_default
-    weight: 26
+    weight: 27
     region: content
     settings:
       placeholder_url: ''
@@ -55,7 +57,7 @@ content:
     third_party_settings: {  }
   field_id:
     type: string_textfield
-    weight: 9
+    weight: 8
     region: content
     settings:
       size: 60
@@ -95,7 +97,7 @@ content:
     third_party_settings: {  }
   field_info_url:
     type: string_textfield
-    weight: 24
+    weight: 26
     region: content
     settings:
       size: 60
@@ -119,15 +121,22 @@ content:
     third_party_settings: {  }
   field_location_extra_info:
     type: string_textfield
-    weight: 21
+    weight: 23
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_location_id:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_publisher:
     type: string_textfield
-    weight: 22
+    weight: 24
     region: content
     settings:
       size: 60
@@ -149,15 +158,23 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_street_address:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_tags:
     type: options_select
-    weight: 23
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_text:
     type: text_textarea
-    weight: 10
+    weight: 9
     region: content
     settings:
       rows: 5
@@ -185,7 +202,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -212,7 +234,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -228,13 +250,14 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  hide_sidebar_navigation: true

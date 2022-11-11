@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image
     - field.field.paragraph.image.field_caption
     - field.field.paragraph.image.field_image
     - field.field.paragraph.image.field_image_caption
@@ -11,7 +12,7 @@ dependencies:
     - field.field.paragraph.image.field_original_aspect_ratio
     - paragraphs.paragraphs_type.image
   module:
-    - media_library
+    - entity_browser
 _core:
   default_config_hash: O8iGrVUXLpTDbk7UIkhPgVIPzm04oWVf3vbj83CIISc
 id: paragraph.image.default
@@ -20,11 +21,19 @@ bundle: image
 mode: default
 content:
   field_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 0
     region: content
     settings:
-      media_types: {  }
+      entity_browser: image
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: media_library
+      selection_mode: selection_append
     third_party_settings: {  }
   field_image_caption:
     type: string_textarea

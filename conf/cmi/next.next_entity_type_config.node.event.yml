@@ -1,7 +1,13 @@
 uuid: 16aa5dcc-9064-4161-9ab4-73af03782401
 langcode: fi
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - next_extras
+third_party_settings:
+  next_extras:
+    revalidate: true
+    revalidate_paths: ''
 id: node.event
 site_resolver: site_selector
 configuration:

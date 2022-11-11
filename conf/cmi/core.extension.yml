@@ -36,6 +36,7 @@ module:
   editor: 0
   elasticsearch_connector: 0
   entity: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   entity_usage: 0
   field: 0
@@ -84,7 +85,9 @@ module:
   migrate: 0
   migrate_plus: 0
   migrate_tools: 0
+  mysql: 0
   next: 0
+  next_extras: 0
   next_jsonapi: 0
   node: 0
   oembed_providers: 0
@@ -110,6 +113,7 @@ module:
   serialization: 0
   shortcut: 0
   simple_oauth: 0
+  simple_sitemap: 0
   social_media: 0
   subrequests: 0
   system: 0

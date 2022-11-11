@@ -37,7 +37,11 @@ function run_migrate {
 
 # Populate variables for the first run after deploy and
 # default migrate interval to 6 hours.
-populate_variables 21600
+# populate_variables 21600
+
+# Populate variables for the first run after deploy and
+# default migrate interval to 15 minutes.
+populate_variables 900
 
 while true
 do
@@ -62,9 +66,17 @@ do
   # fi
   # Reset migrate status if migrate has been running for more
   # than 12 hours.
-  populate_variables 43200
+  # populate_variables 43200
+
+  # Reset migrate status if migrate has been running for more
+  # than 30 minutes.
+  populate_variables 1800
+
   # Never skip migrate after first time.
   SKIP_MIGRATE=
   # Sleep for 6 hours.
-  sleep 21600
+  # sleep 21600
+
+  # Sleep for 15 minutes.
+  sleep 900
 done

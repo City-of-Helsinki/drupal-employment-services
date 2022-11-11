@@ -10,15 +10,26 @@ dependencies:
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
   module:
+    - select2
     - text
 id: paragraph.events_list.default
 targetEntityType: paragraph
 bundle: events_list
 mode: default
 content:
+  field_background_color:
+    type: select2_entity_reference
+    weight: 3
+    region: content
+    settings:
+      width: 50%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_event_tag_filter:
     type: options_select
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,5 +58,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_background_color: true
   status: true

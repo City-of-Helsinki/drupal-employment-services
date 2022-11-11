@@ -10,15 +10,18 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - node.type.article
     - node.type.event
     - node.type.landing_page
     - node.type.page
   module:
     - comment
     - content_translation
+    - entity_browser
     - field_ui
     - file
     - filter
+    - helfi_api_base
     - helfi_tpr
     - language
     - media
@@ -46,11 +49,14 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access files overview'
+  - 'access image entity browser pages'
   - 'access media overview'
+  - 'access remote entities overview'
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access tpr_unit overview'
   - 'access user profiles'
   - 'administer content translation'
   - 'administer display modes'
@@ -74,6 +80,7 @@ permissions:
   - 'clone landing_page content'
   - 'clone news content'
   - 'clone page content'
+  - 'create article content'
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
@@ -118,12 +125,15 @@ permissions:
   - 'create paragraph content subheading'
   - 'create paragraph content sujo_embedded'
   - 'create paragraph content text'
+  - 'create paragraph content unit_map'
   - 'create paragraph content unit_search'
+  - 'create paragraph content units_list'
   - 'create paragraph content video'
   - 'create remote_video media'
   - 'create url aliases'
   - 'create video media'
   - 'delete all revisions'
+  - 'delete any article content'
   - 'delete any audio media'
   - 'delete any document media'
   - 'delete any event content'
@@ -133,9 +143,12 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any video media'
+  - 'delete article revisions'
   - 'delete content translations'
+  - 'delete event revisions'
   - 'delete landing_page revisions'
   - 'delete media'
+  - 'delete own article content'
   - 'delete own audio media'
   - 'delete own document media'
   - 'delete own event content'
@@ -181,8 +194,11 @@ permissions:
   - 'delete paragraph content subheading'
   - 'delete paragraph content sujo_embedded'
   - 'delete paragraph content text'
+  - 'delete paragraph content unit_map'
   - 'delete paragraph content unit_search'
+  - 'delete paragraph content units_list'
   - 'delete paragraph content video'
+  - 'edit any article content'
   - 'edit any audio media'
   - 'edit any document media'
   - 'edit any event content'
@@ -191,6 +207,7 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any video media'
+  - 'edit own article content'
   - 'edit own audio media'
   - 'edit own document media'
   - 'edit own event content'
@@ -203,16 +220,20 @@ permissions:
   - 'notify of path changes'
   - 'post comments'
   - 'revert all revisions'
+  - 'revert article revisions'
   - 'revert event revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'search content'
   - 'skip comment approval'
   - 'translate any entity'
+  - 'translate article node'
+  - 'translate event node'
   - 'translate landing_page node'
   - 'translate page node'
   - 'translate paragraph'
   - 'update any media'
+  - 'update any tpr_unit'
   - 'update content translations'
   - 'update media'
   - 'update paragraph content accordion'
@@ -251,13 +272,16 @@ permissions:
   - 'update paragraph content subheading'
   - 'update paragraph content sujo_embedded'
   - 'update paragraph content text'
+  - 'update paragraph content unit_map'
   - 'update paragraph content unit_search'
+  - 'update paragraph content units_list'
   - 'update paragraph content video'
   - 'use advanced search'
   - 'use text format basic_html'
   - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view article revisions'
   - 'view event revisions'
   - 'view landing_page revisions'
   - 'view media'
@@ -301,9 +325,12 @@ permissions:
   - 'view paragraph content subheading'
   - 'view paragraph content sujo_embedded'
   - 'view paragraph content text'
+  - 'view paragraph content unit_map'
   - 'view paragraph content unit_search'
+  - 'view paragraph content units_list'
   - 'view paragraph content video'
   - 'view the administration theme'
   - 'view tpr_service'
   - 'view tpr_unit'
   - 'view unpublished paragraphs'
+  - 'view unpublished tpr_unit'

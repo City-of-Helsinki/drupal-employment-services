@@ -1,7 +1,13 @@
 uuid: ebd26705-2757-46e1-b336-e2a2a537b3d6
 langcode: fi
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - next_extras
+third_party_settings:
+  next_extras:
+    revalidate: true
+    revalidate_paths: "/\r\n/en\r\n/sv"
 id: node.landing_page
 site_resolver: site_selector
 configuration:
