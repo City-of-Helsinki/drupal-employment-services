@@ -4,38 +4,40 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
-    - field.field.node.page.field_page_content
-    - field.field.node.page.field_page_width
+    - field.field.node.page.field_content
+    - field.field.node.page.field_has_hero
+    - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_sidebar
+    - field.field.node.page.field_lead_in
+    - field.field.node.page.field_liftup_image
+    - field.field.node.page.field_lower_content
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_notification
+    - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
-    - entity_reference_revisions
     - user
 id: node.page.search_index
 targetEntityType: node
 bundle: page
 mode: search_index
 content:
-  field_page_content:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_page_width:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_content: true
+  field_has_hero: true
+  field_hero: true
+  field_hide_sidebar: true
+  field_lead_in: true
+  field_liftup_image: true
+  field_lower_content: true
+  field_metatags: true
+  field_notification: true
+  field_sidebar_content: true
   langcode: true
+  search_api_excerpt: true
+  toc_enabled: true

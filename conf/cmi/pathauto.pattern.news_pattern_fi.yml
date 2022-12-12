@@ -1,0 +1,35 @@
+uuid: b5daff5e-9ec3-4d49-814c-a01eb4da0ec3
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+_core:
+  default_config_hash: IP6tY_oyAgqf78ul9Ny5OjEzmcww8TspHzCjhdKEFYM
+id: news_pattern_fi
+label: 'News pattern fi'
+type: 'canonical_entities:node'
+pattern: 'ajankohtaista/uutiset/[node:title]'
+selection_criteria:
+  04e34b0d-deac-48a0-85b5-dc23bb1499a7:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 04e34b0d-deac-48a0-85b5-dc23bb1499a7
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+  862f3ec1-457c-43f8-88d4-a59f95a3c639:
+    id: language
+    negate: false
+    uuid: 862f3ec1-457c-43f8-88d4-a59f95a3c639
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

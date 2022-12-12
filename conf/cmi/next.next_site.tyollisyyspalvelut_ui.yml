@@ -1,0 +1,9 @@
+uuid: a9664cf6-d5aa-43f4-8e52-d30e7b3f8299
+langcode: fi
+status: true
+dependencies: {  }
+id: tyollisyyspalvelut_ui
+label: 'Tyollisyyspalvelut UI'
+base_url: 'http://localhost:3000'
+preview_url: 'http://localhost:3000/api/preview'
+preview_secret: 'Fk*RTBs6Pnk6nk*keft2zWEVrkWw_Yrm'

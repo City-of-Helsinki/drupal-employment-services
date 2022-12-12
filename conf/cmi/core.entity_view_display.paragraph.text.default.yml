@@ -1,20 +1,22 @@
-uuid: 41ddadbd-f4fc-4eb5-bc05-154521df2a49
+uuid: eb783a1f-b8bb-4d20-a899-8fb07a1d68c5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text.field_text_demo
+    - field.field.paragraph.text.field_text
     - paragraphs.paragraphs_type.text
   module:
     - text
+_core:
+  default_config_hash: fj13Z_YNey-Xk4cQvzV8epMGaoflcnmP0u4KX-VXnyU
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_text_demo:
+  field_text:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0

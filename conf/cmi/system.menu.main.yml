@@ -1,10 +1,10 @@
 uuid: 287ae7b8-fe5d-4c2a-ba36-022bd275f926
-langcode: en
+langcode: zxx
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
-label: 'Päämenu - OLD'
+label: Main
 description: ''
 locked: true

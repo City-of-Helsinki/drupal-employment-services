@@ -1,31 +1,79 @@
-uuid: 8df39b28-57b3-4e40-b382-22c256596795
+uuid: d08b08c1-478a-4dc1-8d34-95a5772bb048
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.field_accordion_description
+    - field.field.paragraph.accordion.field_accordion_design
+    - field.field.paragraph.accordion.field_accordion_heading_level
+    - field.field.paragraph.accordion.field_accordion_items
     - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
+    - field.field.paragraph.accordion.field_accordion_title_level
+    - field.field.paragraph.accordion.field_accordion_type
     - paragraphs.paragraphs_type.accordion
   module:
+    - entity_reference_revisions
+    - options
     - text
+_core:
+  default_config_hash: HWdmIhepMk1UHQ1iK7mD_eMSQVDvXDUJJoB04cne0kg
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
-  field_accordion_text:
+  field_accordion_description:
     type: text_default
-    label: above
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_accordion_design:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_accordion_heading_level:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_accordion_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_accordion_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_accordion_title_level:
+    type: list_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
-  field_accordion_title:
-    type: string
+  field_accordion_type:
+    type: list_default
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 6
     region: content
-hidden: {  }
+hidden:
+  field_accordion_text: true

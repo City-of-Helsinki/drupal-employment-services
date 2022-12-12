@@ -1,0 +1,25 @@
+uuid: b541051c-0909-472c-ab23-2f48ca2510a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_list_desc
+    - paragraphs.paragraphs_type.news_list
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.news_list.field_news_list_desc
+field_name: field_news_list_desc
+entity_type: paragraph
+bundle: news_list
+label: 'News list desc'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

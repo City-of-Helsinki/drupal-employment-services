@@ -7,7 +7,7 @@ dependencies:
 id: primaryadminactions
 theme: hdbt_admin
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:

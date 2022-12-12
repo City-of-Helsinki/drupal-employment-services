@@ -1,0 +1,21 @@
+uuid: 73c7b3bb-0938-4a70-9abe-d1cb86fb37e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_in
+    - node.type.page
+_core:
+  default_config_hash: 6ZtehWQxYInXbd5jF5BanSvmjWk_hfHTwJDRDfyJrPA
+id: node.page.field_lead_in
+field_name: field_lead_in
+entity_type: node
+bundle: page
+label: Lead-in
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

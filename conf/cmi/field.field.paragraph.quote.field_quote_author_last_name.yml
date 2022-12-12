@@ -1,0 +1,19 @@
+uuid: a6324ac1-b8eb-467e-af4e-96813d6b92e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_author_last_name
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_quote_author_last_name
+field_name: field_quote_author_last_name
+entity_type: paragraph
+bundle: quote
+label: 'Quote author last name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

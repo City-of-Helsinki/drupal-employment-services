@@ -1,0 +1,27 @@
+uuid: 0dab8b61-665e-4463-9faf-dbfcd65921c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_list_services
+    - paragraphs.paragraphs_type.service_list
+_core:
+  default_config_hash: XwZrOmb0A1YNyW05mKirfMztU2UQan3_Pcrs8VmooR0
+id: paragraph.service_list.field_service_list_services
+field_name: field_service_list_services
+entity_type: paragraph
+bundle: service_list
+label: Services
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: service_list
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

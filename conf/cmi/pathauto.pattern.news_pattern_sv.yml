@@ -1,0 +1,35 @@
+uuid: c2503ec9-e91a-41fd-9678-80fba4b524d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+_core:
+  default_config_hash: IP6tY_oyAgqf78ul9Ny5OjEzmcww8TspHzCjhdKEFYM
+id: news_pattern_sv
+label: 'News pattern sv'
+type: 'canonical_entities:node'
+pattern: 'aktuellt/nyheter/[node:title]'
+selection_criteria:
+  321fca59-3443-4b26-a652-d34e96998477:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 321fca59-3443-4b26-a652-d34e96998477
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+  90adaadb-6300-4d87-80e6-fe1873e13aa4:
+    id: language
+    negate: false
+    uuid: 90adaadb-6300-4d87-80e6-fe1873e13aa4
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      sv: sv
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

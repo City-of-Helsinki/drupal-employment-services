@@ -11,8 +11,8 @@ id: node.event.field_tags
 field_name: field_tags
 entity_type: node
 bundle: event
-label: Tags
-description: "\r\n\r\n\r\n\r\n"
+label: tags
+description: ''
 required: false
 translatable: false
 default_value: {  }

@@ -1,0 +1,115 @@
+uuid: 7797f60c-3f9d-45b1-8129-4f874504523d
+langcode: fi
+status: true
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+_core:
+  default_config_hash: L37Rq-RmIqTR11E1ChoB85BiInCEEQGVHL05fZI-zcA
+id: import_files
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: tyollisyyspalvelut
+label: 'Import files'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  constants:
+    source_base_path: 'https://edit.tyollisyyspalvelut.hel.fi/'
+  urls:
+    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/file/file?page%5Boffset%5D=0&page%5Blimit%5D=50'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/file/file?page%5Boffset%5D=50&page%5Blimit%5D=50'
+    - 'https://edit.tyollisyyspalvelut.hel.fi/apijson/file/file?page%5Boffset%5D=100&page%5Blimit%5D=50'
+  item_selector: data/
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: fid
+      label: fid
+      selector: /attributes/drupal_internal__fid
+    -
+      name: langcode
+      label: Langcode
+      selector: /attributes/langcode
+    -
+      name: filename
+      label: Filename
+      selector: /attributes/filename
+    -
+      name: filemime
+      label: Filemime
+      selector: /attributes/filemime
+    -
+      name: filesize
+      label: Filesize
+      selector: /attributes/filesize
+    -
+      name: status
+      label: Status
+      selector: /attributes/status
+    -
+      name: created
+      label: Created
+      selector: /attributes/created
+    -
+      name: changed
+      label: Changed
+      selector: /attributes/changed
+    -
+      name: uid
+      label: uid
+      selector: /relationships/uid
+    -
+      name: uri
+      label: Uri
+      selector: /attributes/uri
+  ids:
+    fid:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: image
+  fid: fid
+  uuid: id
+  filename: filename
+  filemime: filemime
+  filesize: filesize
+  langcode: langcode
+  status: status
+  created:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: created
+  changed:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: changed
+  uid:
+    plugin: default_value
+    default_value: 1
+  source_full_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/source_base_path
+      - uri/url
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - uri/value
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

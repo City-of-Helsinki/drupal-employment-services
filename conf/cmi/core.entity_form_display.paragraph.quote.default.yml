@@ -1,0 +1,50 @@
+uuid: 028a3c9d-5fc9-4d6d-816f-3aab2407fb82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote.field_quote_author_first_name
+    - field.field.paragraph.quote.field_quote_author_last_name
+    - field.field.paragraph.quote.field_quote_author_title
+    - field.field.paragraph.quote.field_quote_content
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.default
+targetEntityType: paragraph
+bundle: quote
+mode: default
+content:
+  field_quote_author_first_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_quote_author_last_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_quote_author_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_quote_content:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

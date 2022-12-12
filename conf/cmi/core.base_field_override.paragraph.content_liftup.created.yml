@@ -1,0 +1,18 @@
+uuid: 8bb5fe26-4900-41d5-ae4a-cc0ee9841b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.content_liftup
+id: paragraph.content_liftup.created
+field_name: created
+entity_type: paragraph
+bundle: content_liftup
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

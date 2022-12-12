@@ -1,0 +1,34 @@
+uuid: d3de95d5-e8f6-4e03-af8a-d7c847455c77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.notification.field_notification_description
+    - field.field.paragraph.notification.field_notification_title
+    - paragraphs.paragraphs_type.notification
+  module:
+    - text
+id: paragraph.notification.default
+targetEntityType: paragraph
+bundle: notification
+mode: default
+content:
+  field_notification_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_notification_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

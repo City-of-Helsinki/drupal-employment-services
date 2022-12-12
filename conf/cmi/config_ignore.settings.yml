@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+langcode: fi
+ignored_config_entities:
+  - 'eu_cookie_compliance.cookie_category*'
+  - next.next_site.tyollisyyspalvelut_ui
+  - simple_oauth.settings

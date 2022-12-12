@@ -1,0 +1,25 @@
+uuid: 8c2f5b9b-f4e1-40bd-b461-73549375fb5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_liftup.field_content_liftup_unit
+    - paragraphs.paragraphs_type.content_liftup
+_core:
+  default_config_hash: ye6NcMF3kU9sj6VD5kRrFG_o9h2rbjfrVAWCO9MAFUE
+id: paragraph.content_liftup.default
+targetEntityType: paragraph
+bundle: content_liftup
+mode: default
+content:
+  field_content_liftup_unit:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: wide_teaser
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_content_liftup_unit: true

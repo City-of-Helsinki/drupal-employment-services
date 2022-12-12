@@ -1,0 +1,22 @@
+uuid: 53e3af21-1eac-4fb5-8cf9-60dee3b10f7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+id: tpr_ontology_word_details.tpr_ontology_word_details.content_translation_status
+field_name: content_translation_status
+entity_type: tpr_ontology_word_details
+bundle: tpr_ontology_word_details
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

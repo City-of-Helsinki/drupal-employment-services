@@ -1,46 +1,63 @@
-uuid: 99813bc5-0409-469d-8d03-e84d53516351
-langcode: sv
+uuid: 864cbaea-acbd-40d2-b765-c9b613e9d49e
+langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image
     - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_image_caption
     - field.field.paragraph.image.field_image_heigth
     - field.field.paragraph.image.field_image_image
+    - field.field.paragraph.image.field_original_aspect_ratio
     - paragraphs.paragraphs_type.image
   module:
-    - media_library
+    - entity_browser
+_core:
+  default_config_hash: O8iGrVUXLpTDbk7UIkhPgVIPzm04oWVf3vbj83CIISc
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_caption:
-    type: string_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_image_heigth:
-    type: number
+  field_image:
+    type: entity_browser_entity_reference
     weight: 0
     region: content
     settings:
-      placeholder: ''
+      entity_browser: image
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: media_library
+      selection_mode: selection_append
     third_party_settings: {  }
-  field_image_image:
-    type: media_library_widget
+  field_image_caption:
+    type: string_textarea
     weight: 1
     region: content
     settings:
-      media_types: {  }
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_original_aspect_ratio:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
+  field_caption: true
+  field_image_heigth: true
+  field_image_image: true
   status: true

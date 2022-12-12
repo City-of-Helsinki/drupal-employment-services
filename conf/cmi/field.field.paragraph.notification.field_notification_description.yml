@@ -1,0 +1,25 @@
+uuid: e5bb73c3-766a-4834-9d18-5cd657cc69ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_notification_description
+    - paragraphs.paragraphs_type.notification
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.notification.field_notification_description
+field_name: field_notification_description
+entity_type: paragraph
+bundle: notification
+label: 'Notification description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

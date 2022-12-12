@@ -1,41 +1,49 @@
-uuid: 7c5f15ee-903e-496a-9a7b-b516f2af46ce
-langcode: sv
+uuid: 63757446-588b-46b4-bb81-5357cb5c1a6e
+langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_image_caption
     - field.field.paragraph.image.field_image_heigth
     - field.field.paragraph.image.field_image_image
+    - field.field.paragraph.image.field_original_aspect_ratio
     - paragraphs.paragraphs_type.image
+_core:
+  default_config_hash: WOIjdvfdwRn0wIU-TyaRDV4PKTm77QLskpKljuLGk5Q
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_caption:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_image_heigth:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_image_image:
+  field_image:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: image
       link: false
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+  field_image_caption:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_original_aspect_ratio:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_caption: true
+  field_image_heigth: true
+  field_image_image: true
