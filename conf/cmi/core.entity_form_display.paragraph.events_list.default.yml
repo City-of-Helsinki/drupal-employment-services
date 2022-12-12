@@ -4,26 +4,53 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.events_list.field_background_color
+    - field.field.paragraph.events_list.field_event_tag_filter
+    - field.field.paragraph.events_list.field_events_list_desc
+    - field.field.paragraph.events_list.field_events_list_short
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
+  module:
+    - select2
+    - text
 id: paragraph.events_list.default
 targetEntityType: paragraph
 bundle: events_list
 mode: default
 content:
   field_background_color:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: select2_entity_reference
+    weight: 3
     region: content
     settings:
+      width: 50%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
+    third_party_settings: {  }
+  field_event_tag_filter:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_events_list_desc:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_events_list_short:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60

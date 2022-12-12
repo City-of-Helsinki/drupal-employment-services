@@ -1,0 +1,20 @@
+uuid: 2e244928-85a7-4e6c-9924-250eeff4ef2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: UrEWFwFHhJNNrHsT2CbI-8FK7KIgmDq0xV6ahjaavBM
+id: node.landing_page
+target_entity_type_id: node
+target_bundle: landing_page
+default_langcode: fi
+language_alterable: false

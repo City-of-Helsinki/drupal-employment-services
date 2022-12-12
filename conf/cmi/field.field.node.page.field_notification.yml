@@ -1,0 +1,133 @@
+uuid: bbb7c924-9121-4219-92f8-73bf44ed4edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification
+    - node.type.page
+    - paragraphs.paragraphs_type.notification
+  module:
+    - entity_reference_revisions
+id: node.page.field_notification
+field_name: field_notification
+entity_type: node
+bundle: page
+label: Notification
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      notification: notification
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 36
+        enabled: false
+      accordion_item:
+        weight: 37
+        enabled: false
+      banner:
+        weight: 38
+        enabled: false
+      blog_list:
+        weight: 39
+        enabled: false
+      card:
+        weight: 40
+        enabled: false
+      card_list:
+        weight: 41
+        enabled: false
+      columns:
+        weight: 42
+        enabled: false
+      content_cards:
+        weight: 43
+        enabled: false
+      content_liftup:
+        weight: 44
+        enabled: false
+      events_list:
+        weight: 45
+        enabled: false
+      from_library:
+        weight: 46
+        enabled: false
+      gallery:
+        weight: 47
+        enabled: false
+      gallery_slide:
+        weight: 48
+        enabled: false
+      hero:
+        weight: 49
+        enabled: false
+      highlighted_text:
+        weight: 50
+        enabled: false
+      image:
+        weight: 51
+        enabled: false
+      image_and_card:
+        weight: 52
+        enabled: false
+      info:
+        weight: 53
+        enabled: false
+      liftup_with_image:
+        weight: 54
+        enabled: false
+      link:
+        weight: 55
+        enabled: false
+      link_internal:
+        weight: 56
+        enabled: false
+      list_of_links:
+        weight: 57
+        enabled: false
+      list_of_links_item:
+        weight: 58
+        enabled: false
+      news_list:
+        weight: 59
+        enabled: false
+      notification:
+        weight: 60
+        enabled: true
+      phone_number_box:
+        weight: 61
+        enabled: false
+      remote_video:
+        weight: 62
+        enabled: false
+      search:
+        weight: 63
+        enabled: false
+      service_list:
+        weight: 64
+        enabled: false
+      sidebar_text:
+        weight: 65
+        enabled: false
+      subheading:
+        weight: 66
+        enabled: false
+      sujo_embedded:
+        weight: 67
+        enabled: false
+      text:
+        weight: 68
+        enabled: false
+      unit_search:
+        weight: 69
+        enabled: false
+      video:
+        weight: 70
+        enabled: false
+field_type: entity_reference_revisions

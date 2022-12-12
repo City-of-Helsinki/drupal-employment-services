@@ -1,0 +1,144 @@
+uuid: 49f613f1-47a7-4bad-b549-5426c81e102d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tpr_unit.field_lower_content
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+    - helfi_tpr
+_core:
+  default_config_hash: UgER-DxnJXWiAr1tv7O83zUt5JOGP-UNG_5WMNYKdB0
+id: tpr_unit.tpr_unit.field_lower_content
+field_name: field_lower_content
+entity_type: tpr_unit
+bundle: tpr_unit
+label: 'Lower content region'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -27
+        enabled: false
+      accordion_item:
+        weight: -22
+        enabled: false
+      banner:
+        weight: -21
+        enabled: false
+      blog_list:
+        weight: 41
+        enabled: false
+      card:
+        weight: 42
+        enabled: false
+      card_list:
+        weight: 43
+        enabled: false
+      columns:
+        weight: -28
+        enabled: false
+      content_cards:
+        weight: -23
+        enabled: false
+      content_liftup:
+        weight: 46
+        enabled: false
+      event_list:
+        weight: 47
+        enabled: false
+      events_list:
+        weight: 48
+        enabled: false
+      from_library:
+        weight: 21
+        enabled: false
+      gallery:
+        weight: -25
+        enabled: false
+      gallery_slide:
+        weight: -20
+        enabled: false
+      hero:
+        weight: -19
+        enabled: false
+      highlighted_text:
+        weight: 53
+        enabled: false
+      image:
+        weight: -26
+        enabled: false
+      info:
+        weight: 55
+        enabled: false
+      liftup_with_image:
+        weight: -18
+        enabled: false
+      link:
+        weight: 57
+        enabled: false
+      link_internal:
+        weight: 58
+        enabled: false
+      list_of_links:
+        weight: -24
+        enabled: false
+      list_of_links_item:
+        weight: -17
+        enabled: false
+      news_list:
+        weight: 61
+        enabled: false
+      notification:
+        weight: 62
+        enabled: false
+      phone_number_box:
+        weight: 63
+        enabled: false
+      quote:
+        weight: 64
+        enabled: false
+      remote_video:
+        weight: 32
+        enabled: false
+      search:
+        weight: 66
+        enabled: false
+      service_list:
+        weight: 67
+        enabled: false
+      sidebar_text:
+        weight: 68
+        enabled: false
+      subheading:
+        weight: 69
+        enabled: false
+      sujo_embedded:
+        weight: 70
+        enabled: false
+      text:
+        weight: -29
+        enabled: true
+      unit_map:
+        weight: 73
+        enabled: false
+      unit_search:
+        weight: -16
+        enabled: false
+      units_list:
+        weight: 73
+        enabled: false
+      video:
+        weight: 74
+        enabled: false
+field_type: entity_reference_revisions

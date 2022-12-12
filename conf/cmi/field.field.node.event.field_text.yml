@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_text
     - node.type.event
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
 id: node.event.field_text
 field_name: field_text
 entity_type: node

@@ -1,12 +1,12 @@
 features:
-  node_user_picture: 1
-  comment_user_picture: 1
-  comment_user_verification: 1
+  node_user_picture: 0
+  comment_user_picture: 0
+  comment_user_verification: 0
   favicon: 1
 favicon:
   use_default: 1
-enable_darkmode: 0
-preset_accent_color: null
+enable_darkmode: '0'
+preset_accent_color: light_blue
 accent_color: ''
 preset_focus_color: gin
 focus_color: ''
@@ -15,3 +15,8 @@ show_user_theme_settings: 0
 classic_toolbar: horizontal
 icon_default: 1
 icon_upload: ''
+logo:
+  use_default: 1
+secondary_toolbar_frontend: 0
+show_description_toggle: 0
+langcode: fi

@@ -1,9 +1,11 @@
-uuid: 6a702a88-b71a-4230-a670-f74d131901d8
+uuid: 634f6f0d-c9ab-4905-914d-0358cde7440b
 langcode: en
 status: true
 dependencies:
   module:
     - menu_link_content
+_core:
+  default_config_hash: v6llNeddbJ6cmQt3R529LRDDTIzgLEJYYyZOQnzMH4I
 id: menu_link_content.menu_link_content.changed
 field_name: changed
 entity_type: menu_link_content
@@ -11,7 +13,7 @@ bundle: menu_link_content
 label: Changed
 description: 'The time that the menu link was last edited.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,16 +1,20 @@
-uuid: 8fc3c592-5f49-4592-ba28-01d7602f91e6
-langcode: en
+uuid: d3f6a15e-5710-44e0-b666-3c84a4aebb33
+langcode: fi
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 _core:
-  default_config_hash: 6Qope5wG7HUpV0tPOBMtDI_GZkHFcF1Xj4hgD9Cu_hM
+  default_config_hash: Hn0ivZE8RL9Lnq_9mVi3F3QWBLhYN8SsJQrRznRIC54
 id: image
 label: Image
-description: 'Use local images for reusable media.'
+description: 'Use local image for reusable media.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: true
 source_configuration:
   source_field: field_media_image
-field_map:
-  name: name
+field_map: {  }

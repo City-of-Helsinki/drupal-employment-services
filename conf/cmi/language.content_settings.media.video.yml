@@ -14,5 +14,5 @@ third_party_settings:
 id: media.video
 target_entity_type_id: media
 target_bundle: video
-default_langcode: site_default
+default_langcode: fi
 language_alterable: false

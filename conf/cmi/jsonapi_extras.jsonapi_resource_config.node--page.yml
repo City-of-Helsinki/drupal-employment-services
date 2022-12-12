@@ -9,8 +9,9 @@ dependencies:
 third_party_settings:
   jsonapi_defaults:
     default_include:
+      - field_content
       - field_page_content
-      - field_page_content.field_ic_card
+      - field_sidebar_content
       - field_page_width
     page_limit: 50
 id: node--page
@@ -126,10 +127,46 @@ resourceFields:
     publicName: revision_translation_affected
     enhancer:
       id: ''
+  color_palette:
+    disabled: false
+    fieldName: color_palette
+    publicName: color_palette
+    enhancer:
+      id: ''
+  toc_enabled:
+    disabled: false
+    fieldName: toc_enabled
+    publicName: toc_enabled
+    enhancer:
+      id: ''
+  toc_title:
+    disabled: false
+    fieldName: toc_title
+    publicName: toc_title
+    enhancer:
+      id: ''
+  metatag:
+    disabled: false
+    fieldName: metatag
+    publicName: metatag
+    enhancer:
+      id: ''
   path:
     disabled: false
     fieldName: path
     publicName: path
+    enhancer:
+      id: ''
+  publish_on:
+    disabled: false
+    fieldName: publish_on
+    publicName: publish_on
+    enhancer:
+      id: ''
+  unpublish_on:
+    disabled: false
+    fieldName: unpublish_on
+    publicName: unpublish_on
     enhancer:
       id: ''
   menu_link:
@@ -150,6 +187,48 @@ resourceFields:
     publicName: content_translation_outdated
     enhancer:
       id: ''
+  field_content:
+    disabled: false
+    fieldName: field_content
+    publicName: field_content
+    enhancer:
+      id: ''
+  field_has_hero:
+    disabled: false
+    fieldName: field_has_hero
+    publicName: field_has_hero
+    enhancer:
+      id: ''
+  field_hero:
+    disabled: false
+    fieldName: field_hero
+    publicName: field_hero
+    enhancer:
+      id: ''
+  field_lead_in:
+    disabled: false
+    fieldName: field_lead_in
+    publicName: field_lead_in
+    enhancer:
+      id: ''
+  field_liftup_image:
+    disabled: false
+    fieldName: field_liftup_image
+    publicName: field_liftup_image
+    enhancer:
+      id: ''
+  field_lower_content:
+    disabled: false
+    fieldName: field_lower_content
+    publicName: field_lower_content
+    enhancer:
+      id: ''
+  field_metatags:
+    disabled: false
+    fieldName: field_metatags
+    publicName: field_metatags
+    enhancer:
+      id: ''
   field_page_content:
     disabled: false
     fieldName: field_page_content
@@ -160,5 +239,11 @@ resourceFields:
     disabled: false
     fieldName: field_page_width
     publicName: field_page_width
+    enhancer:
+      id: ''
+  field_sidebar_content:
+    disabled: false
+    fieldName: field_sidebar_content
+    publicName: field_sidebar_content
     enhancer:
       id: ''

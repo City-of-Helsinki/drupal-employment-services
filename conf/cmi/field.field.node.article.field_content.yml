@@ -1,0 +1,156 @@
+uuid: f7be46e2-5f1c-4fd6-b743-a1038d2b42f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_search
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: gATHkNTACua6eFh6GKtSR2EMJKI4dF0YuGFMpmk9n80
+id: node.article.field_content
+field_name: field_content
+entity_type: node
+bundle: article
+label: 'Content region'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+      columns: columns
+      image: image
+      gallery: gallery
+      list_of_links: list_of_links
+      content_cards: content_cards
+      from_library: from_library
+      remote_video: remote_video
+      unit_search: unit_search
+      quote: quote
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -21
+        enabled: false
+      accordion_item:
+        weight: -20
+        enabled: false
+      banner:
+        weight: -16
+        enabled: false
+      blog_list:
+        weight: 40
+        enabled: false
+      card:
+        weight: 41
+        enabled: false
+      card_list:
+        weight: 42
+        enabled: false
+      columns:
+        weight: -26
+        enabled: true
+      content_cards:
+        weight: -22
+        enabled: true
+      content_liftup:
+        weight: 45
+        enabled: false
+      event_list:
+        weight: 46
+        enabled: false
+      events_list:
+        weight: 47
+        enabled: false
+      from_library:
+        weight: 21
+        enabled: true
+      gallery:
+        weight: -24
+        enabled: true
+      gallery_slide:
+        weight: -19
+        enabled: false
+      hero:
+        weight: -18
+        enabled: false
+      highlighted_text:
+        weight: 52
+        enabled: false
+      image:
+        weight: -25
+        enabled: true
+      info:
+        weight: 54
+        enabled: false
+      liftup_with_image:
+        weight: -15
+        enabled: false
+      link:
+        weight: 56
+        enabled: false
+      link_internal:
+        weight: 57
+        enabled: false
+      list_of_links:
+        weight: -23
+        enabled: true
+      list_of_links_item:
+        weight: -17
+        enabled: false
+      news_list:
+        weight: 60
+        enabled: false
+      notification:
+        weight: 61
+        enabled: false
+      phone_number_box:
+        weight: 62
+        enabled: false
+      quote:
+        weight: 63
+        enabled: true
+      remote_video:
+        weight: 27
+        enabled: true
+      search:
+        weight: 65
+        enabled: false
+      service_list:
+        weight: 66
+        enabled: false
+      sidebar_text:
+        weight: 67
+        enabled: false
+      subheading:
+        weight: 68
+        enabled: false
+      sujo_embedded:
+        weight: 69
+        enabled: false
+      text:
+        weight: -27
+        enabled: true
+      unit_search:
+        weight: 28
+        enabled: true
+      video:
+        weight: 72
+        enabled: false
+field_type: entity_reference_revisions

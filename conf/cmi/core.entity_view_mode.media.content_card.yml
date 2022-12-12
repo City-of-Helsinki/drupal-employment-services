@@ -1,0 +1,12 @@
+uuid: 73681652-1f33-4229-9f7f-92678c44d4ed
+langcode: fi
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: ZkAUzH7gBMP0I7VgZKkEsPYaKWHNjny_nb49e8n1HAE
+id: media.content_card
+label: 'Content card'
+targetEntityType: media
+cache: true

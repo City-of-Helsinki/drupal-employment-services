@@ -1,0 +1,15 @@
+uuid: 5446516c-9da3-4e98-93ad-304ecb31af6a
+langcode: fi
+status: true
+dependencies:
+  module:
+    - next_extras
+third_party_settings:
+  next_extras:
+    revalidate: true
+    revalidate_paths: ''
+id: node.page
+site_resolver: site_selector
+configuration:
+  sites:
+    tyollisyyspalvelut_ui: tyollisyyspalvelut_ui

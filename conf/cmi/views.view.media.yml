@@ -1,5 +1,5 @@
 uuid: 36365b55-6855-45c3-86b1-f9e19f9cecc5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -135,6 +135,8 @@ display:
           settings:
             image_link: ''
             image_style: thumbnail
+            image_loading:
+              attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true

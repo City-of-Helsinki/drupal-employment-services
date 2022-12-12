@@ -1,0 +1,29 @@
+uuid: d69ea0df-28ed-43da-b99f-e642b661181d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - hdbt_subtheme
+id: tabs_3
+theme: hdbt_subtheme
+region: tools
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

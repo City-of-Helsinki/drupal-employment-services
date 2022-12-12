@@ -1,0 +1,15 @@
+uuid: abe272bb-fd61-47d2-82a8-e531b1c8c017
+langcode: en
+status: true
+dependencies:
+  module:
+    - next_extras
+third_party_settings:
+  next_extras:
+    revalidate: true
+    revalidate_paths: ''
+id: tpr_unit.tpr_unit
+site_resolver: site_selector
+configuration:
+  sites:
+    tyollisyyspalvelut_ui: tyollisyyspalvelut_ui

@@ -1,0 +1,122 @@
+uuid: b9e5b050-4c54-4c74-a53b-6704c8923f9d
+langcode: fi
+status: true
+dependencies:
+  enforced:
+    module:
+      - tyollisyyspalvelut_migrate
+_core:
+  default_config_hash: _UBrOpnHTrQFnrU4GRZCANIE2L412tHtRmYfnFsJpqU
+id: import_media_image
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: tyollisyyspalvelut
+label: 'Import media images'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'https://edit.tyollisyyspalvelut.hel.fi/apijson/media/image'
+  item_selector: data/
+  fields:
+    -
+      name: id
+      label: id
+      selector: id
+    -
+      name: mid
+      label: mid
+      selector: /attributes/drupal_internal__mid
+    -
+      name: langcode
+      label: Langcode
+      selector: /attributes/langcode
+    -
+      name: name
+      label: Name
+      selector: /attributes/name
+    -
+      name: status
+      label: status
+      selector: /attributes/status
+    -
+      name: created
+      label: Created
+      selector: /attributes/created
+    -
+      name: changed
+      label: Changed
+      selector: /attributes/changed
+    -
+      name: default_langcode
+      label: 'Default Langcode'
+      selector: /attributes/default_langcode
+    -
+      name: uid
+      label: uid
+      selector: /relationships/uid
+    -
+      name: field_media_image
+      label: 'Field image'
+      selector: /relationships/field_media_image
+    -
+      name: thumbnail
+      label: Thumbnail
+      selector: /relationships/thumbnail
+  ids:
+    mid:
+      type: integer
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  mid: mid
+  uuid: id
+  name: name
+  created:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: created
+  changed:
+    -
+      plugin: format_date
+      from_format: 'Y-m-d\TH:i:sP'
+      to_format: U
+      source: changed
+  status: status
+  langcode: langcode
+  default_langcode: default_langcode
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_media_image/target_id:
+    plugin: entity_lookup
+    source: field_media_image/data/id
+    value_key: uuid
+    bundle: image/jpeg
+    bundle_key: filemime
+    entity_type: file
+    ignore_case: true
+  field_media_image/alt: field_media_image/data/meta/alt
+  field_media_image/title: field_media_image/data/meta/title
+  field_media_image/width: field_media_image/data/meta/width
+  field_media_image/height: field_media_image/data/meta/height
+  thumbnail/target_id:
+    plugin: entity_lookup
+    source: thumbnail/data/id
+    value_key: uuid
+    bundle: image/jpeg
+    bundle_key: filemime
+    entity_type: file
+    ignore_case: true
+  thumbnail/alt: thumbnail/data/meta/alt
+  thumbnail/title: thumbnail/data/meta/title
+  thumbnail/width: thumbnail/data/meta/width
+  thumbnail/height: thumbnail/data/meta/height
+destination:
+  plugin: 'entity:media'
+migration_dependencies: {  }

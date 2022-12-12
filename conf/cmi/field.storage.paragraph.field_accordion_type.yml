@@ -1,0 +1,27 @@
+uuid: 1c644f44-701b-487d-b84c-98cb7c5009cb
+langcode: fi
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_accordion_type
+field_name: field_accordion_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: basic
+      label: Basic
+    -
+      value: numbered
+      label: Numbered
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

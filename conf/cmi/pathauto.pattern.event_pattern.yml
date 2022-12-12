@@ -3,20 +3,31 @@ langcode: fi
 status: true
 dependencies:
   module:
+    - language
     - node
 id: event_pattern
-label: 'Event pattern'
+label: 'Event pattern fi'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'ajankohtaista/tapahtumat/[node:title]'
 selection_criteria:
-  111c0db9-f904-495c-bf57-48d8b59bc517:
-    id: node_type
+  2dc3a60e-ac55-47a9-889b-a54fe0476a47:
+    id: 'entity_bundle:node'
     negate: false
-    uuid: 111c0db9-f904-495c-bf57-48d8b59bc517
+    uuid: 2dc3a60e-ac55-47a9-889b-a54fe0476a47
     context_mapping:
       node: node
     bundles:
       event: event
+  6ef9f3e4-3cab-49e1-9094-827dc708bfdb:
+    id: language
+    negate: false
+    uuid: 6ef9f3e4-3cab-49e1-9094-827dc708bfdb
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fi: fi
 selection_logic: and
-weight: -5
-relationships: {  }
+weight: -7
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -12,7 +12,7 @@ bundle: card_list
 label: 'Is koro present'
 description: 'Add koro waves at the beginning'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

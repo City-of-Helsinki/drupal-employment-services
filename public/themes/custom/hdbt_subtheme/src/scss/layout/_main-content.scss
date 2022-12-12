@@ -1,0 +1,7 @@
+.main-content {
+  margin-top: 0;
+
+  @include breakpoint($breakpoint-l) {
+    margin-top: 0;
+  }
+}

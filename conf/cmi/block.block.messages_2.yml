@@ -1,0 +1,28 @@
+uuid: ed2536d6-ed6e-4cd5-abec-84b9fb13fa30
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - hdbt_subtheme
+id: messages_2
+theme: hdbt_subtheme
+region: messages
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
