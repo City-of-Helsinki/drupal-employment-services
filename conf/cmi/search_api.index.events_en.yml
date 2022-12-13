@@ -1,4 +1,4 @@
-uuid: 478afea0-c901-4a92-9f2c-27d829220708
+uuid: 6a8c0383-6ee5-4102-89e1-175b6251ab5e
 langcode: en
 status: true
 dependencies:
@@ -18,8 +18,8 @@ dependencies:
   module:
     - node
     - search_api
-id: events_fi
-name: 'Events FI'
+id: events_en
+name: 'Events EN'
 description: ''
 read_only: false
 field_settings:
@@ -154,7 +154,7 @@ datasource_settings:
     languages:
       default: false
       selected:
-        - fi
+        - en
 processor_settings:
   add_url: {  }
   aggregated_field: {  }

@@ -1,0 +1,143 @@
+uuid: 795fe6df-0ebd-4092-8bfd-9df67a3180ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_text
+    - field.storage.tpr_unit.field_content
+    - field.storage.paragraph.field_card_text
+    - field.storage.paragraph.field_info_text
+    - field.storage.paragraph.field_pb_text
+    - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_accordion_title
+    - search_api.server.elastic
+  module:
+    - helfi_tpr
+    - paragraphs
+    - search_api
+id: units_fi
+name: 'Units FI'
+description: ''
+read_only: false
+field_settings:
+  entity_type:
+    label: 'Entity type'
+    property_path: search_api_entity_type
+    type: string
+  field_accordion_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_accordion_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_text
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  field_accordion_title:
+    label: 'Upper content region » Paragraph » Title'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_accordion_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_title
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  field_card_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_card_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_card_text
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  field_description:
+    label: 'Description » Processed text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'description:processed'
+    type: text
+    dependencies:
+      module:
+        - helfi_tpr
+  field_info_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_info_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_info_text
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  field_pb_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_pb_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_pb_text
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  field_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:tpr_unit'
+    property_path: 'field_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_text
+        - field.storage.tpr_unit.field_content
+      module:
+        - paragraphs
+  name:
+    label: Name
+    datasource_id: 'entity:tpr_unit'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - helfi_tpr
+  title:
+    label: 'Override: Name'
+    datasource_id: 'entity:tpr_unit'
+    property_path: name_override
+    type: text
+    dependencies:
+      module:
+        - helfi_tpr
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:tpr_unit':
+    languages:
+      default: false
+      selected:
+        - fi
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: elastic

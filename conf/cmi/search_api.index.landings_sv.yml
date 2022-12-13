@@ -1,0 +1,100 @@
+uuid: d513541b-d906-4789-ba64-af4cbd5a6c29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - field.storage.paragraph.field_hero_desc
+    - search_api.server.elastic
+  module:
+    - node
+    - paragraphs
+    - search_api
+id: landings_sv
+name: 'Landings SV'
+description: ''
+read_only: false
+field_settings:
+  entity_type:
+    label: 'Entity type'
+    property_path: search_api_entity_type
+    type: string
+  field_lead_in:
+    label: 'Hero » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_hero:entity:field_hero_desc'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_hero
+        - field.storage.paragraph.field_hero_desc
+      module:
+        - paragraphs
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - landing_page
+    languages:
+      default: false
+      selected:
+        - sv
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  entity_type: {  }
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: false
+    fields:
+      - entity_type
+      - field_lead_in
+      - title
+      - type
+      - url
+    title: true
+    alt: true
+    tags:
+      b: 2
+      em: 1
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      u: 1
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: elastic
