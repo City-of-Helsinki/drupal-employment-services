@@ -1,0 +1,162 @@
+uuid: 5f9ceaa3-4c4e-4886-89ea-901fc74d85bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_in
+    - field.storage.node.field_content
+    - field.storage.paragraph.field_banner_desc
+    - field.storage.paragraph.field_accordion_text
+    - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_accordion_title
+    - field.storage.paragraph.field_banner_title
+    - search_api.server.elastic
+  module:
+    - node
+    - paragraphs
+    - search_api
+id: pages_en
+name: 'Pages EN'
+description: ''
+read_only: false
+field_settings:
+  entity_type:
+    label: 'Entity type'
+    property_path: search_api_entity_type
+    type: string
+  field_accordion_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_text
+      module:
+        - paragraphs
+  field_accordion_title:
+    label: 'Upper content region » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_title
+      module:
+        - paragraphs
+  field_banner_text:
+    label: 'Upper content region » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_banner_desc'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_banner_desc
+      module:
+        - paragraphs
+  field_banner_title:
+    label: 'Upper content region » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_banner_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_banner_title
+      module:
+        - paragraphs
+  field_lead_in:
+    label: Lead-in
+    datasource_id: 'entity:node'
+    property_path: field_lead_in
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lead_in
+  field_text:
+    label: 'Upper content region » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - page
+    languages:
+      default: false
+      selected:
+        - en
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  entity_type: {  }
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: false
+    fields:
+      - field_accordion_text
+      - field_accordion_title
+      - field_lead_in
+      - field_text
+      - title
+      - url
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+  language_with_fallback: {  }
+  rendered_item: {  }
+  type_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 2
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: elastic
