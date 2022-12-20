@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_lead_in
     - field.storage.node.field_content
-    - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_accordion_text
-    - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_title
+    - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_banner_title
+    - field.storage.node.field_lead_in
+    - field.storage.paragraph.field_text
     - search_api.server.elastic
   module:
-    - node
     - paragraphs
+    - node
     - search_api
 id: pages_fi
 name: 'Pages FI'
@@ -128,13 +128,17 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
-    all_fields: false
+    all_fields: true
     fields:
+      - entity_type
       - field_accordion_text
       - field_accordion_title
+      - field_banner_text
+      - field_banner_title
       - field_lead_in
       - field_text
       - title
+      - type
       - url
     title: true
     alt: true
