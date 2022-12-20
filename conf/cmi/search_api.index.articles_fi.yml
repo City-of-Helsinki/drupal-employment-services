@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_content
     - field.storage.paragraph.field_accordion_text
-    - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_title
     - field.storage.node.field_lead
+    - field.storage.paragraph.field_text
     - search_api.server.elastic
   module:
     - paragraphs
@@ -106,7 +106,7 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
-    all_fields: false
+    all_fields: true
     fields:
       - entity_type
       - field_accordion_text
@@ -120,12 +120,10 @@ processor_settings:
     alt: true
     tags:
       b: 2
-      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
-      u: 1
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
