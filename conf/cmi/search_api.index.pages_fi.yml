@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_lead_in
     - field.storage.node.field_content
+    - field.storage.paragraph.field_banner_desc
+    - field.storage.paragraph.field_accordion_item_content
+    - field.storage.paragraph.field_accordion_item_heading
+    - field.storage.paragraph.field_accordion_items
+    - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_accordion_title
-    - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_banner_title
-    - field.storage.node.field_lead_in
-    - field.storage.paragraph.field_text
     - search_api.server.elastic
   module:
-    - paragraphs
     - node
+    - paragraphs
     - search_api
 id: pages_fi
 name: 'Pages FI'
@@ -24,6 +27,32 @@ field_settings:
     label: 'Entity type'
     property_path: search_api_entity_type
     type: string
+  field_accordion_item_heading:
+    label: 'Upper content region » Paragraph » Items » Paragraph » Content » Paragraph » Heading'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_items:entity:field_accordion_item_content:entity:field_accordion_item_heading'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_item_content
+        - field.storage.paragraph.field_accordion_item_heading
+        - field.storage.paragraph.field_accordion_items
+      module:
+        - paragraphs
+  field_accordion_item_text:
+    label: 'Upper content region » Paragraph » Items » Paragraph » Content » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_items:entity:field_accordion_item_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_item_content
+        - field.storage.paragraph.field_accordion_items
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
   field_accordion_text:
     label: 'Upper content region » Paragraph » Text'
     datasource_id: 'entity:node'
@@ -131,6 +160,8 @@ processor_settings:
     all_fields: true
     fields:
       - entity_type
+      - field_accordion_item_heading
+      - field_accordion_item_text
       - field_accordion_text
       - field_accordion_title
       - field_banner_text
