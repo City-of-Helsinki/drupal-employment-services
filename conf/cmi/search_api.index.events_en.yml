@@ -7,9 +7,9 @@ dependencies:
     - field.storage.node.field_id
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
+    - field.storage.node.field_short_description
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
-    - field.storage.node.field_short_description
     - field.storage.node.field_start_time
     - field.storage.node.field_street_address
     - field.storage.node.field_tags
@@ -164,14 +164,21 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
-    all_fields: false
+    all_fields: true
     fields:
+      - entity_type
+      - field_id
       - field_image_alt
+      - field_image_url
+      - field_lead_in
       - field_location
       - field_location_extra_info
+      - field_street_address
       - field_tags
       - field_text
       - title
+      - type
+      - url
     title: true
     alt: true
     tags:

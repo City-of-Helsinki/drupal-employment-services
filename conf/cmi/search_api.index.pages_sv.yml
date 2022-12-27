@@ -6,8 +6,11 @@ dependencies:
     - field.storage.node.field_lead_in
     - field.storage.node.field_content
     - field.storage.paragraph.field_banner_desc
-    - field.storage.paragraph.field_accordion_text
+    - field.storage.paragraph.field_accordion_item_content
+    - field.storage.paragraph.field_accordion_item_heading
+    - field.storage.paragraph.field_accordion_items
     - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_accordion_title
     - field.storage.paragraph.field_banner_title
     - search_api.server.elastic
@@ -24,6 +27,32 @@ field_settings:
     label: 'Entity type'
     property_path: search_api_entity_type
     type: string
+  field_accordion_item_heading:
+    label: 'Upper content region » Paragraph » Items » Paragraph » Content » Paragraph » Heading'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_items:entity:field_accordion_item_content:entity:field_accordion_item_heading'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_item_content
+        - field.storage.paragraph.field_accordion_item_heading
+        - field.storage.paragraph.field_accordion_items
+      module:
+        - paragraphs
+  field_accordion_item_text:
+    label: 'Upper content region » Paragraph » Items » Paragraph » Content » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_items:entity:field_accordion_item_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_item_content
+        - field.storage.paragraph.field_accordion_items
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
   field_accordion_text:
     label: 'Upper content region » Paragraph » Text'
     datasource_id: 'entity:node'
@@ -128,13 +157,19 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
-    all_fields: false
+    all_fields: true
     fields:
+      - entity_type
+      - field_accordion_item_heading
+      - field_accordion_item_text
       - field_accordion_text
       - field_accordion_title
+      - field_banner_text
+      - field_banner_title
       - field_lead_in
       - field_text
       - title
+      - type
       - url
     title: true
     alt: true
