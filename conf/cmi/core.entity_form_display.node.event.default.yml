@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_status
     - field.field.node.event.field_external_links
     - field.field.node.event.field_id
     - field.field.node.event.field_image_alt
@@ -41,7 +42,15 @@ content:
     third_party_settings: {  }
   field_end_time:
     type: string_textfield
-    weight: 18
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_event_status:
+    type: string_textfield
+    weight: 17
     region: content
     settings:
       size: 60
@@ -49,7 +58,7 @@ content:
     third_party_settings: {  }
   field_external_links:
     type: link_default
-    weight: 27
+    weight: 28
     region: content
     settings:
       placeholder_url: ''
@@ -97,7 +106,7 @@ content:
     third_party_settings: {  }
   field_info_url:
     type: string_textfield
-    weight: 26
+    weight: 27
     region: content
     settings:
       size: 60
@@ -105,7 +114,7 @@ content:
     third_party_settings: {  }
   field_last_modified_time:
     type: string_textfield
-    weight: 19
+    weight: 20
     region: content
     settings:
       size: 60
@@ -113,7 +122,7 @@ content:
     third_party_settings: {  }
   field_location:
     type: string_textfield
-    weight: 20
+    weight: 21
     region: content
     settings:
       size: 60
@@ -121,7 +130,7 @@ content:
     third_party_settings: {  }
   field_location_extra_info:
     type: string_textfield
-    weight: 23
+    weight: 24
     region: content
     settings:
       size: 60
@@ -129,14 +138,14 @@ content:
     third_party_settings: {  }
   field_location_id:
     type: number
-    weight: 22
+    weight: 23
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_publisher:
     type: string_textfield
-    weight: 24
+    weight: 25
     region: content
     settings:
       size: 60
@@ -152,7 +161,7 @@ content:
     third_party_settings: {  }
   field_start_time:
     type: string_textfield
-    weight: 17
+    weight: 18
     region: content
     settings:
       size: 60
@@ -160,7 +169,7 @@ content:
     third_party_settings: {  }
   field_street_address:
     type: string_textfield
-    weight: 21
+    weight: 22
     region: content
     settings:
       size: 60
@@ -168,7 +177,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: options_select
-    weight: 25
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -202,7 +211,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 28
+    weight: 29
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -250,12 +259,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 29
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 30
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
