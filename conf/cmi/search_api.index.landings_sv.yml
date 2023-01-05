@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.storage.node.field_hero
     - field.storage.paragraph.field_hero_desc
+    - field.storage.node.field_search_keywords
     - search_api.server.elastic
   module:
-    - paragraphs
     - node
+    - paragraphs
+    - taxonomy
     - search_api
 id: landings_sv
 name: 'Landings SV'
@@ -30,6 +32,16 @@ field_settings:
         - field.storage.paragraph.field_hero_desc
       module:
         - paragraphs
+  field_search_keywords:
+    label: 'Search keywords » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_search_keywords:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_search_keywords
+      module:
+        - taxonomy
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -75,6 +87,7 @@ processor_settings:
     fields:
       - entity_type
       - field_lead_in
+      - field_search_keywords
       - title
       - type
       - url

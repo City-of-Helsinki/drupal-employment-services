@@ -1,0 +1,29 @@
+uuid: dc609f1e-403f-4c59-930e-762a75be3480
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_keywords
+    - node.type.landing_page
+    - taxonomy.vocabulary.search_keywords
+id: node.landing_page.field_search_keywords
+field_name: field_search_keywords
+entity_type: node
+bundle: landing_page
+label: 'Search keywords'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      search_keywords: search_keywords
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
