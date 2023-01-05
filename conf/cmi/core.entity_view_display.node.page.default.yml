@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
     - field.field.node.page.field_notification
+    - field.field.node.page.field_search_keywords
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
@@ -45,6 +46,7 @@ hidden:
   field_liftup_image: true
   field_lower_content: true
   field_metatags: true
+  field_search_keywords: true
   field_sidebar_content: true
   langcode: true
   search_api_excerpt: true

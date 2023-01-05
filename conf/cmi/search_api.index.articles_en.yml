@@ -5,13 +5,15 @@ dependencies:
   config:
     - field.storage.node.field_content
     - field.storage.paragraph.field_accordion_text
+    - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_title
     - field.storage.node.field_lead
-    - field.storage.paragraph.field_text
+    - field.storage.node.field_search_keywords
     - search_api.server.elastic
   module:
     - paragraphs
     - node
+    - taxonomy
     - search_api
 id: articles_en
 name: 'Articles EN'
@@ -53,6 +55,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lead
+  field_search_keywords:
+    label: 'Search keywords » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_search_keywords:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_search_keywords
+      module:
+        - taxonomy
   field_text:
     label: 'Content region » Paragraph » Text'
     datasource_id: 'entity:node'
@@ -112,6 +124,7 @@ processor_settings:
       - field_accordion_text
       - field_accordion_title
       - field_lead_in
+      - field_search_keywords
       - field_text
       - title
       - type

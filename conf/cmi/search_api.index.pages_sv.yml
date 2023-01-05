@@ -3,20 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_lead_in
     - field.storage.node.field_content
-    - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_accordion_item_content
     - field.storage.paragraph.field_accordion_item_heading
     - field.storage.paragraph.field_accordion_items
     - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_accordion_title
+    - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_banner_title
+    - field.storage.node.field_lead_in
+    - field.storage.node.field_search_keywords
     - search_api.server.elastic
   module:
-    - node
     - paragraphs
+    - taxonomy
+    - node
     - search_api
 id: pages_sv
 name: 'Pages SV'
@@ -31,7 +33,7 @@ field_settings:
     label: 'Upper content region » Paragraph » Items » Paragraph » Content » Paragraph » Heading'
     datasource_id: 'entity:node'
     property_path: 'field_content:entity:field_accordion_items:entity:field_accordion_item_content:entity:field_accordion_item_heading'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_content
@@ -105,6 +107,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lead_in
+  field_search_keywords:
+    label: 'Search keywords » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_search_keywords:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_search_keywords
+      module:
+        - taxonomy        
   field_text:
     label: 'Upper content region » Paragraph » Text'
     datasource_id: 'entity:node'
@@ -167,6 +179,7 @@ processor_settings:
       - field_banner_text
       - field_banner_title
       - field_lead_in
+      - field_search_keywords
       - field_text
       - title
       - type
@@ -181,12 +194,6 @@ processor_settings:
       strong: 2
   language_with_fallback: {  }
   rendered_item: {  }
-  type_boost:
-    weights:
-      preprocess_index: 0
-    boosts:
-      'entity:node':
-        datasource_boost: !!float 2
 tracker_settings:
   default:
     indexing_order: fifo
