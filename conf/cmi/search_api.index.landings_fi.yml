@@ -36,7 +36,7 @@ field_settings:
     label: 'Search keywords » Taxonomy term » Name'
     datasource_id: 'entity:node'
     property_path: 'field_search_keywords:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_search_keywords
