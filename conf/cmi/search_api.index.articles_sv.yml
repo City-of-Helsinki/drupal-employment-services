@@ -11,8 +11,8 @@ dependencies:
     - field.storage.node.field_search_keywords
     - search_api.server.elastic
   module:
-    - paragraphs
     - node
+    - paragraphs
     - taxonomy
     - search_api
 id: articles_sv
@@ -20,6 +20,14 @@ name: 'Articles SV'
 description: ''
 read_only: false
 field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
   entity_type:
     label: 'Entity type'
     property_path: search_api_entity_type
