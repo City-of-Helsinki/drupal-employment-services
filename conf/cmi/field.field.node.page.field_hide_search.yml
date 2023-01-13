@@ -1,0 +1,23 @@
+uuid: 2fb069bb-1c89-46d1-b0cf-f0ea9203ca29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_search
+    - node.type.page
+id: node.page.field_hide_search
+field_name: field_hide_search
+entity_type: node
+bundle: page
+label: 'Hide search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

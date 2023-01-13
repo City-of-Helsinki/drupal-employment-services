@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_search
     - field.field.node.page.field_hide_sidebar
     - field.field.node.page.field_lead_in
     - field.field.node.page.field_liftup_image
@@ -41,6 +42,7 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_hide_search: true
   field_hide_sidebar: true
   field_lead_in: true
   field_liftup_image: true
