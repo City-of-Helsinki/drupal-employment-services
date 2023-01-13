@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_hide_search
     - field.storage.node.field_lead_in
     - field.storage.node.field_search_keywords
     - field.storage.node.field_content
@@ -99,6 +100,14 @@ field_settings:
         - field.storage.paragraph.field_banner_title
       module:
         - paragraphs
+  field_hide_search:
+    label: 'Hide search'
+    datasource_id: 'entity:node'
+    property_path: field_hide_search
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_hide_search
   field_lead_in:
     label: Lead-in
     datasource_id: 'entity:node'
