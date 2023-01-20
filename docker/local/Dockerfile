@@ -1,4 +1,4 @@
-FROM druidfi/drupal:8.0-web
+FROM druidfi/drupal:php-8.1
 
 # Configure nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
