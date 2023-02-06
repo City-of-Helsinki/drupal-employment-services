@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_notification
+    - field.field.node.landing_page.field_search_keywords
     - node.type.landing_page
   module:
     - entity_reference_revisions
@@ -25,12 +26,20 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 1
+    region: content
+  field_search_keywords:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   field_content: true

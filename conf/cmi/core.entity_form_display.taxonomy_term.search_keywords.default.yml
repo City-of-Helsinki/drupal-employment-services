@@ -1,0 +1,35 @@
+uuid: 73877a21-4145-4932-b925-4c440b0c31a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.search_keywords
+id: taxonomy_term.search_keywords.default
+targetEntityType: taxonomy_term
+bundle: search_keywords
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

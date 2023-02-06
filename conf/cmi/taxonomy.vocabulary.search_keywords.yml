@@ -1,0 +1,8 @@
+uuid: d181f2b7-401e-469b-8b2e-02e24e1f5420
+langcode: und
+status: true
+dependencies: {  }
+name: 'Search keywords'
+vid: search_keywords
+description: 'Keywords used to target on site wide search'
+weight: 0

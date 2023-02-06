@@ -1,0 +1,10 @@
+services:
+  prepare_index:
+    class: '\Drupal\tyollisyyspalvelut_elasticsearch\EventSubscriber\PrepareIndexSubscriber'
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: 'event_subscriber' }
+  prepare_index_mapping:
+    class: '\Drupal\tyollisyyspalvelut_elasticsearch\EventSubscriber\PrepareIndexMappingSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

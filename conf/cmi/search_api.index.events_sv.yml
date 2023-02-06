@@ -1,10 +1,9 @@
-uuid: 478afea0-c901-4a92-9f2c-27d829220708
+uuid: 86cca4cf-b767-409a-8d81-eca015014b12
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_end_time
-    - field.storage.node.field_event_status
     - field.storage.node.field_id
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
@@ -19,8 +18,8 @@ dependencies:
   module:
     - node
     - search_api
-id: events_fi
-name: 'Events FI'
+id: events_sv
+name: 'Events SV'
 description: ''
 read_only: false
 field_settings:
@@ -36,14 +35,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_end_time
-  field_event_status:
-    label: 'Event status'
-    datasource_id: 'entity:node'
-    property_path: field_event_status
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_event_status
   field_id:
     label: Id
     datasource_id: 'entity:node'
@@ -163,7 +154,7 @@ datasource_settings:
     languages:
       default: false
       selected:
-        - fi
+        - sv
 processor_settings:
   add_url: {  }
   aggregated_field: {  }

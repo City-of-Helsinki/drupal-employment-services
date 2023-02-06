@@ -29,8 +29,6 @@ display:
             group_items:
               1:
                 title: Published
-              2:
-                title: Unpublished
         name:
           expose:
             label: Name
