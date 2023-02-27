@@ -1,0 +1,6 @@
+services:
+  tyollisyyspalvelut_linkedevents.commands:
+    class: \Drupal\tyollisyyspalvelut_linkedevents\Commands\SyncContent
+    arguments: ['@entity_type.manager', '@http_client', '@logger.factory']
+    tags:
+      - { name: drush.command }
