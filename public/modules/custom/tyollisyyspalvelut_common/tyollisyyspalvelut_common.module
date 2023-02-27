@@ -110,7 +110,7 @@ function tyollisyyspalvelut_common_pathauto_pattern_alter(\Drupal\pathauto\Patha
     $node = $context['data']['node'];
 
     // Continue if Node doesn't have menu enabled.
-    if ($node->menu['enabled']) {
+    if ($node->menu && $node->menu['enabled']) {
       return;
     }
 
