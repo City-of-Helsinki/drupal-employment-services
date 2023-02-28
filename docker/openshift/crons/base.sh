@@ -23,6 +23,8 @@ exec "/crons/migrate-tpr.sh" &
 # Uncomment this to enable automatic translation updates.
 # exec "/crons/update-translations.sh" &
 
+exec "/crons/linkedevents-sync.sh" &
+
 while true
 do
   echo "Running cron: $(date)\n"
