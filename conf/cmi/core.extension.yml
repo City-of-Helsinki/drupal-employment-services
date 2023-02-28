@@ -130,7 +130,6 @@ module:
   tyollisyyspalvelut_common: 0
   tyollisyyspalvelut_elasticsearch: 0
   tyollisyyspalvelut_linkedevents: 0
-  tyollisyyspalvelut_migrate: 0
   update: 0
   update_helper: 0
   user: 0
