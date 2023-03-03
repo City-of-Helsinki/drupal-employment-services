@@ -291,6 +291,7 @@ class SyncContent extends DrushCommands {
    * @throws \GuzzleHttp\Exception\GuzzleException
    */
   private function nodeAddTranslation($node, $source, $langcode) {
+    $node->setTitle($source->name->$langcode ?? $source->name->fi);
     $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
     $node->field_short_description = $source->short_description->$langcode ?? $source->short_description->fi ?? '';
     $node->field_text = [
