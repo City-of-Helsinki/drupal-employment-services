@@ -32,18 +32,21 @@ h6 {
 }
 
 a[data-is-external="true"],
-a[data-entity-type="node"] {
+a[data-entity-type="node"],
+a[data-entity-type="tpr_unit"]::after {
   display: inline-flex;
 }
 
 a[data-is-external="true"]::after,
-a[data-entity-type="node"]::after {
+a[data-entity-type="node"]::after,
+a[data-entity-type="tpr_unit"]::after {
   content: '';
   margin-left: 4px;
   width: 1.25rem;
 }
 
-a[data-entity-type="node"]::after {
+a[data-entity-type="node"]::after,
+a[data-entity-type="tpr_unit"]::after {
   margin-right: 8px;
   background: url('../assets/arrow-right.svg') no-repeat center center;
 }
