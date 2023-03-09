@@ -139,6 +139,7 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
+  publication_date: 99
   minimal: 1000
 theme:
   stable9: 0
