@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
     - field.field.node.event.field_location_id
+    - field.field.node.event.field_offers_info_url
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
@@ -141,6 +142,14 @@ content:
     weight: 23
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_offers_info_url:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_publisher:
