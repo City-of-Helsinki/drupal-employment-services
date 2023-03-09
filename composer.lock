@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9f06b8f968a2bb17c0c0d20fb6fbb66",
+    "content-hash": "e411172bbc7773a92575364d51c511ac",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2987,6 +2987,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "lhangea",
+                    "homepage": "https://www.drupal.org/user/2743803"
+                },
+                {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
                 },
@@ -3524,7 +3528,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.0-beta8",
-                    "datestamp": "1674236921",
+                    "datestamp": "1675691312",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -5161,12 +5165,12 @@
             ],
             "authors": [
                 {
-                    "name": "Deciphered",
-                    "homepage": "https://www.drupal.org/user/103796"
-                },
-                {
                     "name": "acbramley",
                     "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
                 },
                 {
                     "name": "larowlan",
@@ -5340,6 +5344,10 @@
                 {
                     "name": "johnwebdev",
                     "homepage": "https://www.drupal.org/user/3331569"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
                 }
             ],
             "description": "Linkit - Enriched linking experience",
@@ -6032,14 +6040,6 @@
             ],
             "authors": [
                 {
-                    "name": "Mario Steinitz",
-                    "homepage": "https://www.drupal.org/user/2536014"
-                },
-                {
-                    "name": "balintk",
-                    "homepage": "https://www.drupal.org/user/613760"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
                 },
@@ -6054,10 +6054,6 @@
                 {
                     "name": "pjcdawkins",
                     "homepage": "https://www.drupal.org/user/1025236"
-                },
-                {
-                    "name": "robertDouglass",
-                    "homepage": "https://www.drupal.org/user/5449"
                 },
                 {
                     "name": "sanduhrs",
@@ -7215,8 +7211,8 @@
                     "email": "mateu.aguilo.bosch@gmail.com"
                 },
                 {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
                 }
             ],
             "description": "Add a front controller that you can use to make subrequests.",
@@ -15544,8 +15540,14 @@
             "version": "8.3.16",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
+                "url": "https://github.com/pfrenssen/coder.git",
                 "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -18552,7 +18554,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/publication_date": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
