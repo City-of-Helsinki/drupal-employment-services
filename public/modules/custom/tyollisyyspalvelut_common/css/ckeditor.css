@@ -33,7 +33,7 @@ h6 {
 
 a[data-is-external="true"],
 a[data-entity-type="node"],
-a[data-entity-type="tpr_unit"]::after {
+a[data-entity-type="tpr_unit"] {
   display: inline-flex;
 }
 
