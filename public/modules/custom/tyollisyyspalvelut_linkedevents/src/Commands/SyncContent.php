@@ -291,6 +291,7 @@ class SyncContent extends DrushCommands {
    * @throws \GuzzleHttp\Exception\GuzzleException
    */
   private function nodeAddTranslation($node, $source, $langcode) {
+    /** @var \Drupal\node\Entity\Node $node */
     $node->setTitle($source->name->$langcode ?? $source->name->fi);
     $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
     $node->field_short_description = $source->short_description->$langcode ?? $source->short_description->fi ?? '';
@@ -304,7 +305,12 @@ class SyncContent extends DrushCommands {
     $node->field_tags = $this->getTags($source->keywords, $langcode);
 
     if ($source->location->name->fi === 'Internet') {
-      $node->field_tags = array_push($node->get('field_tags')->value, 'etätapahtuma');
+      $tags = [];
+      foreach ($node->get('field_tags') as $field) {
+        $tags[] = $field->value;
+      }
+      $tags[] = 'etätapahtuma';
+      $node->set('field_tags', $tags);
     }
 
     return $node;
