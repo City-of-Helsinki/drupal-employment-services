@@ -305,7 +305,11 @@ class SyncContent extends DrushCommands {
     $node->field_tags = $this->getTags($source->keywords, $langcode);
 
     foreach ($source->offers as $offer) {
-      $node->field_offers_info_url = isset($offer->info_url->$langcode) && strlen($offer->info_url->$langcode) <= 255 ? $offer->info_url->$langcode : '';
+      // Check the URL is not empty or too long.
+      if (empty($offer->info_url->$langcode) || strlen($offer->info_url->$langcode) > 255) {
+        continue;
+      }
+      $node->field_offers_info_url = $offer->info_url->$langcode;
     }
 
     if ($source->location->name->fi === 'Internet') {

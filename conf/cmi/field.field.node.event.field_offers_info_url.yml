@@ -9,7 +9,7 @@ id: node.event.field_offers_info_url
 field_name: field_offers_info_url
 entity_type: node
 bundle: event
-label: offers_info_url
+label: 'Offers info url'
 description: ''
 required: false
 translatable: false
