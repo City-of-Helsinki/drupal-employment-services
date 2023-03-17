@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
     - field.field.node.event.field_location_id
+    - field.field.node.event.field_offers_info_url
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
@@ -50,6 +51,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_offers_info_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }
