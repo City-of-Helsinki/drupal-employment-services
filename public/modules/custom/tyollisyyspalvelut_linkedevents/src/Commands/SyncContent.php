@@ -300,10 +300,13 @@ class SyncContent extends DrushCommands {
       'format' => 'basic_html',
     ];
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
-    $node->field_offers_info_url = isset($source->offers->info_url->$langcode) && strlen($source->offers->info_url->$langcode) <= 255 ? $source->offers->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
     $node->field_tags = $this->getTags($source->keywords, $langcode);
+
+    foreach ($source->offers as $offer) {
+      $node->field_offers_info_url = isset($offer->info_url->$langcode) && strlen($offer->info_url->$langcode) <= 255 ? $offer->info_url->$langcode : '';
+    }
 
     if ($source->location->name->fi === 'Internet') {
       $tags = [];
