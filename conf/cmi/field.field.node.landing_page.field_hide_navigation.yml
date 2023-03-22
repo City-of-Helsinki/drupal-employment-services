@@ -1,0 +1,23 @@
+uuid: 02fc7b08-029f-4e68-bffb-7ddea48ae43d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_navigation
+    - node.type.landing_page
+id: node.landing_page.field_hide_navigation
+field_name: field_hide_navigation
+entity_type: node
+bundle: landing_page
+label: 'Hide navigation'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

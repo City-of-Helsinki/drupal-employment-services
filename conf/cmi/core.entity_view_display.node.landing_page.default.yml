@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_hide_navigation
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
     - field.field.node.landing_page.field_notification
@@ -45,8 +46,10 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_hide_navigation: true
   field_liftup_image: true
   field_metatags: true
   langcode: true
+  published_at: true
   search_api_excerpt: true
   toc_enabled: true
