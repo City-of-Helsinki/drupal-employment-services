@@ -230,7 +230,7 @@ class SyncContent extends DrushCommands {
         continue;
       };
 
-      // Init new or existing node object
+      // Init new or existing node object with finnish translation as default.
       $node = $this->nodeInit($item);
 
       // Current item hasn't changed since last save
@@ -238,23 +238,32 @@ class SyncContent extends DrushCommands {
         continue;
       };
 
-      // Create original node with default fields and default language
+      // Create original node with default fields and default language.
       $node = $this->nodeAddDefaults($node, $item);
       $node = $this->nodeAddTranslation($node, $item, 'fi');
-      // Updated process log.
+      // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
       // Save the node.
       $node->save();
 
-      // @TODO Create translations
-/*      foreach ($this->languages as $langcode => $language) {
-        if ($langcode === 'fi') continue;
+      /** @var \Drupal\node\Entity\Node $node */
+      foreach ($this->languages as $langcode => $language) {
+        if ($langcode === 'fi') {
+          continue;
+        }
 
-        $translation = $node->getTranslation($langcode);
+        if ($node->HasTranslation($langcode)) {
+          $translation = $node->getTranslation($langcode);
+          $this->processLog['updated']++;
+        }
+        else {
+          $translation = $node->addTranslation($langcode);
+          $this->processLog['new']++;
+        }
+
         $translation = $this->nodeAddTranslation($translation, $item, $langcode);
-        var_dump($translation->get('field_location')->value);
         $translation->save();
-      }*/
+      }
     }
   }
 
@@ -302,7 +311,9 @@ class SyncContent extends DrushCommands {
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
-    $node->field_tags = $this->getTags($source->keywords, $langcode);
+
+    // Hardcode tags to finnish for now.
+    $node->field_tags = $this->getTags($source->keywords, 'fi');
 
     foreach ($source->offers as $offer) {
       // Check the URL is not empty or too long.
@@ -337,6 +348,7 @@ class SyncContent extends DrushCommands {
     $query->condition('field_id', $source->id);
     $query->condition('langcode', 'fi');
     $exists = $query->execute();
+
 
     if ($exists) {
       // Use existing node
