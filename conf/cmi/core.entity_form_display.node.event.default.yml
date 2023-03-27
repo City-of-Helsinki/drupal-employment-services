@@ -224,6 +224,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  published_at:
+    type: publication_date_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   simple_sitemap:
     weight: 10
     region: content
