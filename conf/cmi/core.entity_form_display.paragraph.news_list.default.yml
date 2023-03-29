@@ -10,15 +10,26 @@ dependencies:
     - field.field.paragraph.news_list.field_title
     - paragraphs.paragraphs_type.news_list
   module:
+    - select2
     - text
 id: paragraph.news_list.default
 targetEntityType: paragraph
 bundle: news_list
 mode: default
 content:
+  field_background_color:
+    type: select2_entity_reference
+    weight: 1
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_news_list_desc:
     type: text_textarea
-    weight: 2
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -26,7 +37,7 @@ content:
     third_party_settings: {  }
   field_short_list:
     type: boolean_checkbox
-    weight: 1
+    weight: 3
     region: content
     settings:
       display_label: true
@@ -39,8 +50,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
-  field_background_color: true
   field_koro: true
   status: true
