@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.field_end_time
     - field.field.node.event.field_event_status
+    - field.field.node.event.field_event_tags
     - field.field.node.event.field_external_links
     - field.field.node.event.field_id
     - field.field.node.event.field_image_alt
@@ -68,6 +69,7 @@ content:
 hidden:
   field_end_time: true
   field_event_status: true
+  field_event_tags: true
   field_id: true
   field_image_alt: true
   field_image_name: true
