@@ -4,12 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_end_time
+    - field.storage.node.field_event_tags
     - field.storage.node.field_id
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
-    - field.storage.node.field_short_description
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
+    - field.storage.node.field_short_description
     - field.storage.node.field_start_time
     - field.storage.node.field_street_address
     - field.storage.node.field_tags
@@ -17,6 +18,7 @@ dependencies:
     - search_api.server.elastic
   module:
     - node
+    - taxonomy
     - search_api
 id: events_sv
 name: 'Events SV'
@@ -35,6 +37,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_end_time
+  field_event_tags:
+    label: 'Event tags » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_tags:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_tags
+      module:
+        - taxonomy
   field_id:
     label: Id
     datasource_id: 'entity:node'
@@ -167,6 +179,7 @@ processor_settings:
     all_fields: true
     fields:
       - entity_type
+      - field_event_tags
       - field_id
       - field_image_alt
       - field_image_url
