@@ -10,6 +10,9 @@ use Drush\Commands\DrushCommands;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
 use Drupal\Core\Utility\Error;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
+use stdClass;
 
 /**
  * SyncContent drush commands.
@@ -52,6 +55,13 @@ class SyncContent extends DrushCommands {
    * @var string
    */
   private string $contentType;
+
+  /**
+   * Term vocabulary.
+   *
+   * @var string
+   */
+  private string $termVocabulary;
 
   /**
    * Used ID to use as content author.
@@ -120,8 +130,22 @@ class SyncContent extends DrushCommands {
     $this->dataChunkSize = 50;
     $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
     $this->contentType = 'event';
+    $this->termVocabulary = 'event_tags';
     $this->userId = 2; // LinkedEvent user
-    $this->allowedTags = ["maahanmuuttajat", "nuoret", "info", "koulutus", "messut", "neuvonta", "rekrytointi", "työpajat", "digitaidot", "etätapahtuma", "palkkatuki", "työnhaku"];
+    $this->allowedTags = [
+      "maahanmuuttajat",
+      "nuoret",
+      "info",
+      "koulutus",
+      "messut",
+      "neuvonta",
+      "rekrytointi",
+      "työpajat",
+      "digitaidot",
+      "etätapahtuma",
+      "palkkatuki",
+      "työnhaku"
+    ];
     $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
     $this->languages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
@@ -230,7 +254,7 @@ class SyncContent extends DrushCommands {
         continue;
       };
 
-      // Init new or existing node object
+      // Init new or existing node object with finnish translation as default.
       $node = $this->nodeInit($item);
 
       // Current item hasn't changed since last save
@@ -238,23 +262,35 @@ class SyncContent extends DrushCommands {
         continue;
       };
 
-      // Create original node with default fields and default language
+      // Create original node with default fields and default language.
       $node = $this->nodeAddDefaults($node, $item);
       $node = $this->nodeAddTranslation($node, $item, 'fi');
-      // Updated process log.
+
+      // Add keywords as taxonomy terms, along with translations.
+      $node = $this->nodeAddTaxonomyTerms($node, $item);
+
+      // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
       // Save the node.
       $node->save();
 
-      // @TODO Create translations
-/*      foreach ($this->languages as $langcode => $language) {
-        if ($langcode === 'fi') continue;
+      foreach ($this->languages as $langcode => $language) {
+        if ($langcode === 'fi') {
+          continue;
+        }
 
-        $translation = $node->getTranslation($langcode);
+        if ($node->HasTranslation($langcode)) {
+          $translation = $node->getTranslation($langcode);
+          $this->processLog['updated']++;
+        }
+        else {
+          $translation = $node->addTranslation($langcode);
+          $this->processLog['new']++;
+        }
+
         $translation = $this->nodeAddTranslation($translation, $item, $langcode);
-        var_dump($translation->get('field_location')->value);
         $translation->save();
-      }*/
+      }
     }
   }
 
@@ -264,9 +300,9 @@ class SyncContent extends DrushCommands {
    * @param $node
    * @param $source
    *
-   * @return \Drupal\Core\Entity\EntityInterface
+   * @return \Drupal\node\NodeInterface
    */
-  private function nodeAddDefaults($node, $source): EntityInterface {
+  private function nodeAddDefaults(NodeInterface $node, $source): NodeInterface {
     $node->field_image_name = count($source->images) > 0 ? $source->images[0]->name : '';
     $node->field_image_url = count($source->images) > 0 ? $source->images[0]->url : '';
     $node->field_image_alt = count($source->images) > 0 ? $source->images[0]->alt_text : '';
@@ -281,16 +317,63 @@ class SyncContent extends DrushCommands {
   }
 
   /**
-   * Populate translatable fields with values.
+   * Add keywords and their translations to node as taxonomy terms.
    *
-   * @param $node
-   * @param $source
-   * @param $langcode
+   * @param \Drupal\node\NodeInterface $node
+   *   Node to edit.
+   * @param \stdClass $source
+   *   Entity source from API.
    *
-   * @return mixed
-   * @throws \GuzzleHttp\Exception\GuzzleException
+   * @return \Drupal\node\NodeInterface
+   *   Node with taxonomy terms added.
    */
-  private function nodeAddTranslation($node, $source, $langcode) {
+  private function nodeAddTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
+    $tids = [];
+    foreach ($source->keywords as $keyword) {
+      $data = $this->fetch($keyword->{'@id'});
+      if (!in_array($data->name->fi, $this->allowedTags)) {
+        continue;
+      }
+
+      $term = $this->termInit($data);
+      $term->save();
+
+      foreach ($this->languages as $langcode => $language) {
+        if ($langcode === 'fi') {
+          continue;
+        }
+        $this->addTermTranslation($term, $data, $langcode);
+      }
+
+      $tids[] = $term->id();
+    }
+
+    if ($source->location->name->fi === 'Internet') {
+      $internet_tag = new stdClass();
+      $internet_tag->name->fi = 'Internet';
+      $internet_tag->id = 'internet';
+      $internet_term = $this->termInit($internet_tag);
+      $tids[] = $internet_term->id();
+    }
+
+    $node->set('field_event_tags', $tids);
+    return $node;
+  }
+
+  /**
+   * Add translation for node.
+   *
+   * @param \Drupal\node\NodeInterface $node
+   *   Node to add translation for.
+   * @param \stdClass $source
+   *   Entity data from API.
+   * @param string $langcode
+   *   Language code for translation.
+   *
+   * @return \Drupal\node\NodeInterface
+   *   Translated version of node.
+   */
+  private function nodeAddTranslation(NodeInterface $node, \stdClass $source, string $langcode): NodeInterface {
     /** @var \Drupal\node\Entity\Node $node */
     $node->setTitle($source->name->$langcode ?? $source->name->fi);
     $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
@@ -302,7 +385,9 @@ class SyncContent extends DrushCommands {
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
-    $node->field_tags = $this->getTags($source->keywords, $langcode);
+
+    // Hardcode tags to finnish for now.
+    $node->field_tags = $this->getTags($source->keywords, 'fi');
 
     foreach ($source->offers as $offer) {
       // Check the URL is not empty or too long.
@@ -312,6 +397,8 @@ class SyncContent extends DrushCommands {
       $node->field_offers_info_url = $offer->info_url->$langcode;
     }
 
+    // @todo Legacy version of tag implementation.
+    // this should be removed when new version is approved.
     if ($source->location->name->fi === 'Internet') {
       $tags = [];
       foreach ($node->get('field_tags') as $field) {
@@ -327,16 +414,20 @@ class SyncContent extends DrushCommands {
   /**
    * Node object initializer.
    *
-   * @return \Drupal\Core\Entity\EntityInterface
+   * @param \stdClass $source
+   *   Entity data from API.
+   *
+   * @return \Drupal\node\NodeInterface
    *   Returns node object.
    */
-  private function nodeInit(\stdClass $source): EntityInterface {
+  private function nodeInit(\stdClass $source): NodeInterface {
     // Build query to fetch existing nodes.
     $query = $this->nodeStorage->getQuery();
     $query->condition('type', $this->contentType);
     $query->condition('field_id', $source->id);
     $query->condition('langcode', 'fi');
     $exists = $query->execute();
+
 
     if ($exists) {
       // Use existing node
@@ -353,6 +444,81 @@ class SyncContent extends DrushCommands {
         'field_id' => $source->id,
       ]
     );
+  }
+
+  /**
+   * Taxonomy term object initializer.
+   *
+   * @param \stdClass $source
+   *   Source entity from API.
+   *
+   * @return \Drupal\taxonomy\TermInterface
+   *   Returns taxonomy term object.
+   */
+  private function termInit(\stdClass $source): TermInterface {
+    // Build query to fetch existing nodes.
+    $query = $this->termStorage->getQuery();
+    $query->condition('vid', $this->termVocabulary);
+    $query->condition('field_id', $source->id);
+    $query->condition('langcode', 'fi');
+    $exists = $query->execute();
+
+    if ($source->name->fi === 'maahanmuuttajat') {
+      $name = 'maahan muuttaneet';
+    }
+    else {
+      $name = $source->name->fi;
+    }
+
+    if ($exists) {
+      // Use existing term
+      $term = $this->termStorage->load(current($exists));
+      /** @var \Drupal\taxonomy\Entity\Term $term */
+      $term->set('name', $name);
+      return $term;
+    }
+
+    // Create a new term object.
+    return $this->termStorage->create(
+      [
+        'vid' => $this->termVocabulary,
+        'uid' => $this->userId,
+        'name' => $name,
+        'langcode' => 'fi',
+        'field_id' => $source->id,
+      ]
+    );
+  }
+
+  /**
+   * Add translation to term.
+   *
+   * @param \Drupal\taxonomy\TermInterface $term
+   *   Term to add translation to.
+   * @param \stdClass $source
+   *   Source entity from API.
+   * @param string $langcode
+   *   Langcode to add translation to.
+   *
+   * @return \Drupal\taxonomy\TermInterface
+   */
+  private function addTermTranslation(TermInterface $term, \stdClass $source, string $langcode): TermInterface {
+    if (isset($source->name->$langcode)) {
+      $name = $source->name->$langcode;
+    }
+    else {
+      $name = $source->name->fi;
+    }
+    if ($term->hasTranslation($langcode)) {
+      $translated_term = $term->getTranslation($langcode);
+    }
+    else {
+      $translated_term = $term->addTranslation($langcode);
+    }
+
+    $translated_term->set('name', $name);
+    $translated_term->save();
+    return $translated_term;
   }
 
   /**

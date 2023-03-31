@@ -1,0 +1,8 @@
+uuid: c0acc20d-39a1-4627-a62f-364578895954
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event tags'
+vid: event_tags
+description: ''
+weight: 0
