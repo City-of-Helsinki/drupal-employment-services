@@ -55,9 +55,9 @@ module:
   health_check: 0
   helfi_api_base: 0
   helfi_azure_fs: 0
-  helfi_events: 0
   helfi_media: 0
   helfi_platform_config: 0
+  helfi_react_search: 0
   helfi_toc: 0
   helfi_tpr: 0
   image: 0
@@ -76,7 +76,6 @@ module:
   linkit: 0
   locale: 0
   media: 0
-  media_entity_soundcloud: 0
   media_library: 0
   menu_block_current_language: 0
   menu_link_content: 0
