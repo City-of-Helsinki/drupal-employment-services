@@ -1,6 +1,8 @@
 ARG DRUPAL_DOCKER_TAG=8.1
 FROM ghcr.io/city-of-helsinki/drupal-docker-base:${DRUPAL_DOCKER_TAG}
 
+RUN apk add --no-cache php81-sodium
+
 COPY / /var/www/html/
 WORKDIR /var/www/html
 RUN composer install --no-progress --profile --prefer-dist --no-interaction --no-dev --optimize-autoloader
