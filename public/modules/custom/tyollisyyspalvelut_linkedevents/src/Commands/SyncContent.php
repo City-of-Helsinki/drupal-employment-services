@@ -350,6 +350,7 @@ class SyncContent extends DrushCommands {
 
     if ($source->location->name->fi === 'Internet') {
       $internet_tag = new stdClass();
+      $internet_tag->name = new stdClass();
       $internet_tag->name->fi = 'Internet';
       $internet_tag->id = 'internet';
       $internet_term = $this->termInit($internet_tag);
