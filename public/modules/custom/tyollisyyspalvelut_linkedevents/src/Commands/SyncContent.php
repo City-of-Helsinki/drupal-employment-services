@@ -160,6 +160,8 @@ class SyncContent extends DrushCommands {
    *
    * @param int $limit
    *   Number of items to import.
+   * @param string $method
+   *   If set to "update", force updates all nodes.
    *
    * @command tyollisyyspalvelut_linkedevents:sync
    * @usage tyollisyyspalvelut_linkedevents:sync
@@ -167,8 +169,15 @@ class SyncContent extends DrushCommands {
    * @throws \GuzzleHttp\Exception\GuzzleException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public function sync(int $limit = 0): void {
+  public function sync(int $limit = 0, string $method = ''): void {
     $this->loggerFactory->get('tyollisyyspalvelut_linkedevents')->info('Events sync started.');
+
+    if ($method === 'update') {
+      $update_all = TRUE;
+    }
+    else {
+      $update_all = FALSE;
+    }
 
     // Fetch first chunk of the data
     $data = $this->fetch($this->dataUrl);
@@ -185,7 +194,7 @@ class SyncContent extends DrushCommands {
       }
 
       // Process fetched data
-      $this->nodeUpdate($data->data);
+      $this->nodeUpdate($data->data, $update_all);
       // Read next chunk of data, or get NULL to stop the loop
       $data = $this->fetch($data->meta->next);
     }
@@ -243,11 +252,13 @@ class SyncContent extends DrushCommands {
    *
    * @param array $data
    *   Fetched data to process.
+   * @param bool $update_all
+   *   Force update all nodes.
    *
    * @throws \Drupal\Core\Entity\EntityStorageException
    * @throws \GuzzleHttp\Exception\GuzzleException
    */
-  private function nodeUpdate(array $data): void {
+  private function nodeUpdate(array $data, bool $update_all): void {
     foreach ($data as $item) {
       // Skip expired items
       if (strtotime($item->end_time) < (\Drupal::time()->getRequestTime())) {
@@ -258,7 +269,7 @@ class SyncContent extends DrushCommands {
       $node = $this->nodeInit($item);
 
       // Current item hasn't changed since last save
-      if ($node->get('field_last_modified_time')->value === $item->last_modified_time) {
+      if (!$update_all && $node->get('field_last_modified_time')->value === $item->last_modified_time) {
         continue;
       };
 
@@ -349,11 +360,14 @@ class SyncContent extends DrushCommands {
     }
 
     if ($source->location->name->fi === 'Internet') {
-      $internet_tag = new stdClass();
-      $internet_tag->name = new stdClass();
-      $internet_tag->name->fi = 'Internet';
-      $internet_tag->id = 'internet';
-      $internet_term = $this->termInit($internet_tag);
+      $internet_term = $this->termInit($source->location);
+      $internet_term->save();
+      foreach ($this->languages as $langcode => $language) {
+        if ($langcode === 'fi') {
+          continue;
+        }
+        $this->addTermTranslation($internet_term, $source->location, $langcode);
+      }
       $tids[] = $internet_term->id();
     }
 
