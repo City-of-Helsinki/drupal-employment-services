@@ -360,6 +360,10 @@ class SyncContent extends DrushCommands {
     }
 
     if ($source->location->name->fi === 'Internet') {
+      $source->location->name->fi = 'etätapahtuma';
+      $source->location->name->en = 'remote event';
+      $source->location->name->sv = 'distansevenemang';
+
       $internet_term = $this->termInit($source->location);
       $internet_term->save();
       foreach ($this->languages as $langcode => $language) {
@@ -524,6 +528,7 @@ class SyncContent extends DrushCommands {
     else {
       $name = $source->name->fi;
     }
+
     if ($term->hasTranslation($langcode)) {
       $translated_term = $term->getTranslation($langcode);
     }
