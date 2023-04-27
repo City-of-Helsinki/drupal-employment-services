@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.field_end_time
     - field.field.node.event.field_event_status
+    - field.field.node.event.field_event_tags
     - field.field.node.event.field_external_links
     - field.field.node.event.field_id
     - field.field.node.event.field_image_alt
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.event.field_location
     - field.field.node.event.field_location_extra_info
     - field.field.node.event.field_location_id
+    - field.field.node.event.field_offers_info_url
     - field.field.node.event.field_publisher
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
@@ -51,6 +53,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_offers_info_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -59,6 +69,7 @@ content:
 hidden:
   field_end_time: true
   field_event_status: true
+  field_event_tags: true
   field_id: true
   field_image_alt: true
   field_image_name: true
@@ -75,5 +86,6 @@ hidden:
   field_tags: true
   field_text: true
   langcode: true
+  published_at: true
   search_api_excerpt: true
   toc_enabled: true

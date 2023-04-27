@@ -13,3 +13,7 @@ site_resolver: site_selector
 configuration:
   sites:
     tyollisyyspalvelut_ui: tyollisyyspalvelut_ui
+revalidator: path
+revalidator_configuration:
+  revalidate_page: true
+  additional_paths: null

@@ -1,0 +1,6 @@
+---
+name: Työllisyyspalvelut Linked Events
+type: module
+description: Sync Linked Events data to Drupal.
+core_version_requirement: ^9 || ^10
+package: Custom

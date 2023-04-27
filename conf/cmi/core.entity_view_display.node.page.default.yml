@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_navigation
     - field.field.node.page.field_hide_search
     - field.field.node.page.field_hide_sidebar
     - field.field.node.page.field_lead_in
@@ -24,6 +25,16 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  field_hide_navigation:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_notification:
     type: entity_reference_revisions_entity_view
     label: above
@@ -51,5 +62,6 @@ hidden:
   field_search_keywords: true
   field_sidebar_content: true
   langcode: true
+  published_at: true
   search_api_excerpt: true
   toc_enabled: true

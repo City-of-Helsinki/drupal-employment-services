@@ -1,0 +1,19 @@
+uuid: 3e865dd4-3844-4eba-b300-be2dc38b943a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offers_info_url
+    - node.type.event
+id: node.event.field_offers_info_url
+field_name: field_offers_info_url
+entity_type: node
+bundle: event
+label: 'Offers info url'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
