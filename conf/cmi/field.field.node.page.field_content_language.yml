@@ -1,0 +1,23 @@
+uuid: 2152b09d-1ecf-4d0f-9fdd-03f2c8c92b93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_language
+    - node.type.page
+id: node.page.field_content_language
+field_name: field_content_language
+entity_type: node
+bundle: page
+label: 'Content language'
+description: 'Content language, if different from page language. Translated instructions for languages without landing pages, for example.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:configurable_language'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

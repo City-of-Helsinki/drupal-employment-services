@@ -99,7 +99,7 @@ content:
     third_party_settings: {  }
   field_hide_navigation:
     type: boolean_checkbox
-    weight: 1
+    weight: 2
     region: content
     settings:
       display_label: true
@@ -149,7 +149,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
