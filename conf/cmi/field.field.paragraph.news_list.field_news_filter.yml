@@ -1,0 +1,23 @@
+uuid: 9082c2a0-9334-4cdd-b452-f6e4920f3c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_filter
+    - paragraphs.paragraphs_type.news_list
+  module:
+    - options
+id: paragraph.news_list.field_news_filter
+field_name: field_news_filter
+entity_type: paragraph
+bundle: news_list
+label: Filter
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: news
+default_value_callback: ''
+settings: {  }
+field_type: list_string

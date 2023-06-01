@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_article_category
     - field.storage.node.field_content
     - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_text
@@ -54,6 +55,14 @@ field_settings:
         - field.storage.paragraph.field_accordion_title
       module:
         - paragraphs
+  field_article_category:
+    label: 'Article category'
+    datasource_id: 'entity:node'
+    property_path: field_article_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_article_category
   field_lead_in:
     label: Lead
     datasource_id: 'entity:node'
@@ -131,6 +140,7 @@ processor_settings:
       - entity_type
       - field_accordion_text
       - field_accordion_title
+      - field_article_category
       - field_lead_in
       - field_search_keywords
       - field_text

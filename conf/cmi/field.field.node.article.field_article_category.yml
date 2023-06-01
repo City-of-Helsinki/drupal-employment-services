@@ -1,0 +1,23 @@
+uuid: 44148405-33af-40ac-adee-24fffd94c919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_category
+    - node.type.article
+  module:
+    - options
+id: node.article.field_article_category
+field_name: field_article_category
+entity_type: node
+bundle: article
+label: 'Article category'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: news
+default_value_callback: ''
+settings: {  }
+field_type: list_string
