@@ -10,8 +10,14 @@ url:
     fi: ''
     sv: sv
     '': null
+    uk: uk
+    ru: ru
+    so: so
   domains:
     en: ''
     fi: ''
     sv: ''
+    uk: ''
+    ru: ''
+    so: ''
 selected_langcode: site_default
