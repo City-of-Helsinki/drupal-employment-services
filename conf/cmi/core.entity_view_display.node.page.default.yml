@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_content
-    - field.field.node.page.field_content_language
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
     - field.field.node.page.field_hide_navigation
@@ -26,14 +25,6 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  field_content_language:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_hide_navigation:
     type: boolean
     label: above
