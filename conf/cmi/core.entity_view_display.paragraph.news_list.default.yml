@@ -5,17 +5,26 @@ dependencies:
   config:
     - field.field.paragraph.news_list.field_background_color
     - field.field.paragraph.news_list.field_koro
+    - field.field.paragraph.news_list.field_news_filter
     - field.field.paragraph.news_list.field_news_list_desc
     - field.field.paragraph.news_list.field_short_list
     - field.field.paragraph.news_list.field_title
     - paragraphs.paragraphs_type.news_list
   module:
+    - options
     - text
 id: paragraph.news_list.default
 targetEntityType: paragraph
 bundle: news_list
 mode: default
 content:
+  field_news_filter:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_news_list_desc:
     type: text_default
     label: above

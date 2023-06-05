@@ -93,5 +93,20 @@ function tyollisyyspalvelut_common_pathauto_pattern_alter(\Drupal\pathauto\Patha
       // Use Node title as last pattern for no-menu cases.
       $pattern->setPattern('[node:menu-link:parents:join-path]/[node:title]');
     }
+
+    // Swap news patterns to newsletter patterns.
+    $news_patterns = [
+      'ajankohtaista/uutiset/[node:title]' => 'ajankohtaista/uutiskirjeet/[node:title]',
+      'aktuellt/nyheter/[node:title]' => 'aktuellt/nyhetsbrev/[node:title]',
+      'current-matters/news/[node:title]' => 'current-matters/newsletters/[node:title]',
+    ];
+
+    if (in_array($pattern->getPattern(), array_keys($news_patterns))) {
+      if ($node->hasField('field_article_category')
+        && !$node->get('field_article_category')->isEmpty()
+        && $node->get('field_article_category')->value === 'newsletter') {
+        $pattern->setPattern($news_patterns[$pattern->getPattern()]);
+      }
+    }
   }
 }
