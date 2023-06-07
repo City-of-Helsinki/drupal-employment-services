@@ -1,0 +1,8 @@
+uuid: 921bde4f-37e9-4b0d-a0aa-8f85adbe9b6a
+langcode: zxx
+status: true
+dependencies: {  }
+id: menu-other-languages
+label: 'Menu (other languages)'
+description: ''
+locked: false
