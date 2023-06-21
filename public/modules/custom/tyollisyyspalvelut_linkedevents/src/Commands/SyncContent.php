@@ -147,7 +147,7 @@ class SyncContent extends DrushCommands {
       "työnhaku"
     ];
     $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
-    $this->languages = \Drupal::languageManager()->getLanguages();
+    $this->languages = ['fi', 'sv', 'en'];
     $this->entityTypeManager = $entityTypeManager;
     $this->httpClient = $http_client;
     $this->termStorage = $entityTypeManager->getStorage('taxonomy_term'); // @TODO Can be used for translated tags.
