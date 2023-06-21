@@ -9,6 +9,7 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
+      - menu-other-languages
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
