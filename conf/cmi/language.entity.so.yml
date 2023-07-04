@@ -1,0 +1,9 @@
+uuid: a1899e21-9874-495e-aeec-5977d014168c
+langcode: en
+status: true
+dependencies: {  }
+id: so
+label: Somali
+direction: ltr
+weight: 5
+locked: false

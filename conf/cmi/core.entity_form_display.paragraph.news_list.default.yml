@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.news_list.field_background_color
     - field.field.paragraph.news_list.field_koro
+    - field.field.paragraph.news_list.field_news_filter
     - field.field.paragraph.news_list.field_news_list_desc
     - field.field.paragraph.news_list.field_short_list
     - field.field.paragraph.news_list.field_title
@@ -27,6 +28,12 @@ content:
       match_operator: CONTAINS
       match_limit: 10
     third_party_settings: {  }
+  field_news_filter:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_news_list_desc:
     type: text_textarea
     weight: 4
@@ -37,7 +44,7 @@ content:
     third_party_settings: {  }
   field_short_list:
     type: boolean_checkbox
-    weight: 3
+    weight: 2
     region: content
     settings:
       display_label: true
@@ -57,6 +64,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_background_color: true
   field_koro: true
   status: true

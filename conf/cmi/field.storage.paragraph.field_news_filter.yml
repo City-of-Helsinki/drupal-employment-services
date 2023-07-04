@@ -1,0 +1,30 @@
+uuid: 2640e401-feb0-4749-b9bf-908445fd1d6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_news_filter
+field_name: field_news_filter
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: news
+      label: News
+    -
+      value: newsletter
+      label: Newsletters
+    -
+      value: all
+      label: 'All articles'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
