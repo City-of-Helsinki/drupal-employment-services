@@ -1,33 +1,35 @@
-uuid: d1e23ab2-d1d5-4301-8db8-7c6672d191cf
-langcode: fi
+uuid: 7178d26d-9e8d-4463-a1db-b7f7f78df955
+langcode: en
 status: true
 dependencies:
   module:
     - language
     - node
-id: event_pattern_en
-label: 'Event pattern en'
+id: event_pattern_other_languages
+label: 'Event pattern, other languages'
 type: 'canonical_entities:node'
-pattern: 'current-matters/events/[node:title]'
+pattern: 'frontpage/[node:title]'
 selection_criteria:
-  2e678efd-69ec-44db-8d15-29e0f6cea63c:
+  0d8a97d4-27d0-45d6-90b9-7a65630b3380:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 2e678efd-69ec-44db-8d15-29e0f6cea63c
+    uuid: 0d8a97d4-27d0-45d6-90b9-7a65630b3380
     context_mapping:
       node: node
     bundles:
       event: event
-  c4d2dd5a-e097-4feb-9d3e-b368ed41b4ff:
+  79314c52-a95e-4a5b-a4dc-fc5c09e08339:
     id: language
     negate: false
-    uuid: c4d2dd5a-e097-4feb-9d3e-b368ed41b4ff
+    uuid: 79314c52-a95e-4a5b-a4dc-fc5c09e08339
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
-      en: en
+      uk: uk
+      ru: ru
+      so: so
 selection_logic: and
-weight: -3
+weight: -1
 relationships:
   'node:langcode:language':
     label: Language

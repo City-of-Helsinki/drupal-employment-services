@@ -29,7 +29,7 @@ selection_criteria:
     langcodes:
       en: en
 selection_logic: and
-weight: -10
+weight: -8
 relationships:
   'node:langcode:language':
     label: Language

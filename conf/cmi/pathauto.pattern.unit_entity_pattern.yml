@@ -12,5 +12,5 @@ type: 'canonical_entities:tpr_unit'
 pattern: '[tpr_unit:menu-link-parents]/[tpr_unit:label]'
 selection_criteria: {  }
 selection_logic: and
-weight: -3
+weight: 2
 relationships: {  }
