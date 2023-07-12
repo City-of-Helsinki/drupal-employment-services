@@ -82,6 +82,13 @@ class SyncContent extends DrushCommands {
    *
    * @var \Drupal\Core\Language\LanguageInterface[]
    */
+  private array $allLanguages;
+
+  /**
+   * Enabled languages.
+   *
+   * @var string[]
+   */
   private array $languages;
 
   /**
@@ -148,6 +155,7 @@ class SyncContent extends DrushCommands {
     ];
     $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
     $this->languages = ['fi', 'sv', 'en'];
+    $this->allLanguages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
     $this->httpClient = $http_client;
     $this->termStorage = $entityTypeManager->getStorage('taxonomy_term'); // @TODO Can be used for translated tags.
@@ -267,6 +275,9 @@ class SyncContent extends DrushCommands {
 
       // Init new or existing node object with finnish translation as default.
       $node = $this->nodeInit($item);
+      if (!$node instanceof NodeInterface) {
+        continue;
+      }
 
       // Current item hasn't changed since last save
       if (!$update_all && $node->get('field_last_modified_time')->value === $item->last_modified_time) {
@@ -285,7 +296,7 @@ class SyncContent extends DrushCommands {
       // Save the node.
       $node->save();
 
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -349,7 +360,7 @@ class SyncContent extends DrushCommands {
       $term = $this->termInit($data);
       $term->save();
 
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -366,7 +377,7 @@ class SyncContent extends DrushCommands {
 
       $internet_term = $this->termInit($source->location);
       $internet_term->save();
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -394,7 +405,8 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddTranslation(NodeInterface $node, \stdClass $source, string $langcode): NodeInterface {
     /** @var \Drupal\node\Entity\Node $node */
-    $node->setTitle($source->name->$langcode ?? $source->name->fi);
+    $default_translation = $node->getTranslation('fi');
+    $node->setTitle($source->name->$langcode ?? $default_translation->title->value);
     $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
     $node->field_short_description = $source->short_description->$langcode ?? $source->short_description->fi ?? '';
     $node->field_text = [
@@ -436,10 +448,10 @@ class SyncContent extends DrushCommands {
    * @param \stdClass $source
    *   Entity data from API.
    *
-   * @return \Drupal\node\NodeInterface
-   *   Returns node object.
+   * @return \Drupal\node\NodeInterface|null
+   *   Returns node object or NULL if one can't be created.
    */
-  private function nodeInit(\stdClass $source): NodeInterface {
+  private function nodeInit(\stdClass $source): ?NodeInterface {
     // Build query to fetch existing nodes.
     $query = $this->nodeStorage->getQuery();
     $query->condition('type', $this->contentType);
@@ -453,12 +465,30 @@ class SyncContent extends DrushCommands {
       return $this->nodeStorage->load(current($exists));
     }
 
+
+    // Get default title from fi, sv or en.
+    if (!empty($source->name->fi)) {
+      $title = $source->name->fi;
+    }
+    elseif (!empty($source->name->sv))
+    {
+      $title = $source->name->sv;
+    }
+    elseif (!empty($source->name->en))
+    {
+      $title = $source->name->en;
+    }
+    else {
+      return NULL;
+    }
+
+
     // Create a new node object.
     return $this->nodeStorage->create(
       [
         'type' => $this->contentType,
         'uid' => $this->userId,
-        'title' => $source->name->fi,
+        'title' => $title,
         'langcode' => 'fi',
         'field_id' => $source->id,
       ]
