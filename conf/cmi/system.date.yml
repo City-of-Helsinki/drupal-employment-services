@@ -7,6 +7,6 @@ country:
 timezone:
   default: Europe/Helsinki
   user:
-    configurable: true
+    configurable: false
     default: 0
     warn: false

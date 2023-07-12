@@ -30,6 +30,7 @@ dependencies:
     - paragraphs_type_permissions
     - path
     - pathauto
+    - publication_date
     - quick_node_clone
     - search
     - shortcut
@@ -225,6 +226,7 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'search content'
+  - 'set article published on date'
   - 'skip comment approval'
   - 'translate any entity'
   - 'translate article node'
