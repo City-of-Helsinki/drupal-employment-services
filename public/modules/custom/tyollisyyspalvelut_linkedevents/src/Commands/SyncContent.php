@@ -407,12 +407,41 @@ class SyncContent extends DrushCommands {
     /** @var \Drupal\node\Entity\Node $node */
     $default_translation = $node->getTranslation('fi');
     $node->setTitle($source->name->$langcode ?? $default_translation->title->value);
-    $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
-    $node->field_short_description = $source->short_description->$langcode ?? $source->short_description->fi ?? '';
+
+    // If short description isn't set, try to get value from other languages.
+    $short_description = NULL;
+    if (!empty($source->short_description->$langcode)) {
+      $short_description = $source->short_description->$langcode;
+    }
+    else {
+      foreach ($this->languages as $fallback_lang) {
+        if (!empty($source->short_description->$fallback_lang)) {
+          $short_description = $source->short_description->$fallback_lang;
+          break;
+        }
+      }
+    }
+
+    // If description isn't set, try to get value from other languages.
+    $description = NULL;
+    if (!empty($source->description->$langcode)) {
+      $description = $source->description->$langcode;
+    }
+    else {
+      foreach ($this->languages as $fallback_lang) {
+        if (!empty($source->description->$fallback_lang)) {
+          $description = $source->description->$fallback_lang;
+          break;
+        }
+      }
+    }
+
+    $node->field_short_description = $short_description;
     $node->field_text = [
-      'value' => $source->description->$langcode ?? $source->description->fi ?? '',
+      'value' => $description,
       'format' => 'basic_html',
     ];
+    $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
