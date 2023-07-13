@@ -27,6 +27,7 @@ dependencies:
     - pathauto
     - publication_date
     - quick_node_clone
+    - scheduler
     - system
     - taxonomy
 id: editor
@@ -45,6 +46,7 @@ permissions:
   - 'administer paragraphs settings'
   - 'administer paragraphs types'
   - 'administer pathauto'
+  - 'administer scheduler'
   - 'administer taxonomy'
   - 'administer url aliases'
   - 'cancel account'
@@ -189,6 +191,7 @@ permissions:
   - 'revert event revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
+  - 'schedule publishing of nodes'
   - 'set article published on date'
   - 'translate any entity'
   - 'translate article node'
@@ -245,3 +248,4 @@ permissions:
   - 'view event revisions'
   - 'view landing_page revisions'
   - 'view page revisions'
+  - 'view scheduled content'
