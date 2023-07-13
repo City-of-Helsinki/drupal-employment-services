@@ -1,5 +1,5 @@
-uuid: 70245321-c0df-43c6-9c67-b079f2af49a9
-langcode: fi
+uuid: 873a3827-3f6a-493e-b8fe-ad4eb93c8465
+langcode: en
 status: true
 dependencies:
   config:
@@ -27,12 +27,11 @@ dependencies:
     - pathauto
     - publication_date
     - quick_node_clone
-    - subrequests
     - system
     - taxonomy
-id: nextjs
-label: Nextjs
-weight: 4
+id: editor
+label: Editor
+weight: 5
 is_admin: null
 permissions:
   - 'access content overview'
@@ -48,7 +47,6 @@ permissions:
   - 'administer pathauto'
   - 'administer taxonomy'
   - 'administer url aliases'
-  - 'bypass node access'
   - 'cancel account'
   - 'clone article content'
   - 'clone event content'
@@ -184,7 +182,6 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own video media'
-  - 'issue subrequests'
   - 'link to any page'
   - 'notify of path changes'
   - 'revert all revisions'
@@ -248,39 +245,3 @@ permissions:
   - 'view event revisions'
   - 'view landing_page revisions'
   - 'view page revisions'
-  - 'view paragraph content accordion'
-  - 'view paragraph content accordion_item'
-  - 'view paragraph content banner'
-  - 'view paragraph content blog_list'
-  - 'view paragraph content card'
-  - 'view paragraph content card_list'
-  - 'view paragraph content columns'
-  - 'view paragraph content content_cards'
-  - 'view paragraph content content_liftup'
-  - 'view paragraph content events_list'
-  - 'view paragraph content from_library'
-  - 'view paragraph content gallery'
-  - 'view paragraph content gallery_slide'
-  - 'view paragraph content hero'
-  - 'view paragraph content highlighted_text'
-  - 'view paragraph content image'
-  - 'view paragraph content image_and_card'
-  - 'view paragraph content info'
-  - 'view paragraph content lead'
-  - 'view paragraph content liftup_with_image'
-  - 'view paragraph content link'
-  - 'view paragraph content link_internal'
-  - 'view paragraph content list_of_links'
-  - 'view paragraph content list_of_links_item'
-  - 'view paragraph content mainheading'
-  - 'view paragraph content news_list'
-  - 'view paragraph content phone_number_box'
-  - 'view paragraph content remote_video'
-  - 'view paragraph content search'
-  - 'view paragraph content service_list'
-  - 'view paragraph content sidebar_text'
-  - 'view paragraph content subheading'
-  - 'view paragraph content sujo_embedded'
-  - 'view paragraph content text'
-  - 'view paragraph content unit_search'
-  - 'view paragraph content video'
