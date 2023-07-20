@@ -18,7 +18,7 @@
         "drupal/gin": "3.0.0-beta5",
         "drupal/gin_toolbar": "1.0-beta22",
         "drupal/hdbt": "2.3.23",
-        "drupal/hdbt_admin": "1.8.5",
+        "drupal/hdbt_admin": "1.8.6",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_azure_fs": "^1.0",
         "drupal/helfi_hauki": "^1.0",
@@ -93,6 +93,9 @@
             },
             "drupal/content_lock": {
                 "3243486 - array_filter() expects parameter 1 to be array, null given content_lock.module": "https://www.drupal.org/files/issues/2021-10-15/array_filter_issue-3243486-a.patch"
+            },
+            "drupal/linkit": {
+                "[#UHF-1872] Linkit support for link field (https://www.drupal.org/i/2712951)": "https://www.drupal.org/files/issues/2023-03-07/2712951_329.6.x.diff"
             }
         },
         "installer-paths": {
