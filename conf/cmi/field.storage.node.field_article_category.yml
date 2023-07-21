@@ -17,6 +17,9 @@ settings:
     -
       value: newsletter
       label: Newsletter
+    -
+      value: partner_jobs
+      label: 'Jobs offered by partners'
   allowed_values_function: ''
 module: options
 locked: false
