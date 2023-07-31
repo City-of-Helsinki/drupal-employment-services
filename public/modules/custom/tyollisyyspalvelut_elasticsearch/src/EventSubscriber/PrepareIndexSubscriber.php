@@ -104,7 +104,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
           "analyzer" => [
             "index_analyzer" => [
               "tokenizer" => "standard",
-              "filter" => [ "lowercase", "synonym_filter", "finnish_stop", "raudikkoFilter"  ]
+              "filter" => [ "lowercase", "synonym_filter", "finnish_stop", "my_snow"  ]
             ],
           ],
           "filter" => [
