@@ -71,18 +71,34 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
       $indexConfig["body"]["settings"]["index"] = [
         "analysis" => [
           "analyzer" => [
-            "default" => [
-              "type" => "custom",
-              "filter" => [
-                "lowercase",
-                "raudikkoFilter",
-              ],
-              "tokenizer" => "finnish",
+            "index_analyzer" => [
+              "tokenizer" => "standard",
+              "filter" => [ "lowercase", "synonym_filter", "finnish_stop", "raudikkoFilter", "snowball"  ]
             ],
           ],
           "filter" => [
+            "synonym_filter" => [
+              "type" => "synonym_graph",
+              "synonyms" => [
+                "PS, PlayStation, Play Station",
+                "universe, cosmos",
+                "te-palvelut, oma asiointi",
+                "i-pod, ipod",
+                "velvoite, Velvoitetyöllistäminen",
+                "oleskelu lupa, Oleskelulupa",
+              ]
+            ],
+            "finnish_stop" => [
+              "type" => "stop",
+              "stopwords" => '_finnish_',
+            ],
             "raudikkoFilter" => [
               "type" => "raudikko",
+              "splitCompoundWords" => TRUE,
+            ],
+            "my_snow" => [
+              "type" => "snowball",
+              "language" => "Finnish"
             ],
           ],
         ],
@@ -92,7 +108,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
       $indexConfig["body"]["settings"]["index"] = [
         "analysis" => [
           "analyzer" => [
-            "default" => [
+            "index_analyzer" => [
               "type" => "custom",
               "filter" => [
                 "lowercase",
