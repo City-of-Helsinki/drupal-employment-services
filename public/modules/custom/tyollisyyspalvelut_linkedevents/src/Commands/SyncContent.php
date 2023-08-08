@@ -480,6 +480,18 @@ class SyncContent extends DrushCommands {
     return $node;
   }
 
+  /**
+   * Language object initializer.
+   *
+   * @param \stdClass $source
+   *   Entity data from API.
+   *
+   * @param string $langcode
+   *   Language code for translation.
+   *
+   * @return string
+   *   Returns string with languages available for the event.
+   */
   private function getLanguages(\stdClass $source, string $langcode): string {
     $in_language = '';
     foreach ($source->in_language as $lang) {
