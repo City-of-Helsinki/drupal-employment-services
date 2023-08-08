@@ -205,6 +205,9 @@ class SyncContent extends DrushCommands {
       $data = $this->fetch($data->meta->next);
     }
 
+    // Output info
+    $this->output()->writeln('Removing expired..');
+
     // Remove expired nodes
     $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
@@ -449,6 +452,7 @@ class SyncContent extends DrushCommands {
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
+    $node->field_in_language = $this->getLanguages($source, $langcode);
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
 
     // Hardcode tags to finnish for now.
@@ -474,6 +478,20 @@ class SyncContent extends DrushCommands {
     }
 
     return $node;
+  }
+
+  private function getLanguages(\stdClass $source, string $langcode): string {
+    $in_language = '';
+    foreach ($source->in_language as $lang) {
+      $data = $this->fetch($lang->{'@id'});
+      if ($lang === end($source->in_language)) {
+        $in_language .=  ucfirst($data->name->$langcode ?? $data->name->fi ?? '');
+      }
+      else {
+        $in_language .= ucfirst($data->name->$langcode ?? $data->name->fi ?? '') . ', ';
+      }
+    }
+    return $in_language;
   }
 
   /**
