@@ -7,7 +7,6 @@ use Drupal\Core\Language\LanguageManager;
 use Drupal\elasticsearch_connector\ElasticSearch\Parameters\Factory\IndexFactory;
 use Drupal\elasticsearch_connector\Event\PrepareIndexEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\Component\EventDispatcher\Event;
 use Drupal\search_api\IndexInterface;
 
 /**

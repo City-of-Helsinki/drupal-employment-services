@@ -37,7 +37,7 @@ class PrepareIndexMappingSubscriber implements EventSubscriberInterface {
       $indexKey = $mappingParams['type'];
       foreach ($mappingParams['body'][$indexKey]['properties'] as $key => $property) {
         if ($property['type'] == 'text') {
-          $mappingParams['body'][$indexKey]['properties'][$key]['analyzer'] = $mappingParams['body'][$indexKey]['properties'][$key]['analyzer'] ?? 'standard';
+          $mappingParams['body'][$indexKey]['properties'][$key]['analyzer'] = $mappingParams['body'][$indexKey]['properties'][$key]['analyzer'] ?? 'index_analyzer';
         }
       }
     }
