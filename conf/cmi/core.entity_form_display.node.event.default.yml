@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
     - field.field.node.event.field_street_address
+    - field.field.node.event.field_super_event
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
     - node.type.event
@@ -193,6 +194,14 @@ content:
   field_street_address:
     type: string_textfield
     weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_super_event:
+    type: string_textfield
+    weight: 35
     region: content
     settings:
       size: 60

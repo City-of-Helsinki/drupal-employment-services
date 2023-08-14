@@ -1,0 +1,21 @@
+uuid: 5b10c33a-b4e5-47b1-88ed-06954dbfa654
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_super_event
+field_name: field_super_event
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
