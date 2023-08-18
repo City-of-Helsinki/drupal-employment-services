@@ -7,6 +7,7 @@ use Drupal\Core\Language\LanguageManager;
 use Drupal\elasticsearch_connector\ElasticSearch\Parameters\Factory\IndexFactory;
 use Drupal\elasticsearch_connector\Event\PrepareIndexEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Drupal\Component\EventDispatcher\Event;
 use Drupal\search_api\IndexInterface;
 
 /**
@@ -57,7 +58,6 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $standard_languages = LanguageManager::getStandardLanguageList();
     if (!empty($config) && isset($config['languages']['selected'])) {
       $langcode = $config['languages']['selected'][0];
-      //var_dump('$config--->'. $config);
 
       if (isset($standard_languages[$langcode])) {
         $stemmer_language = strtolower($standard_languages[$langcode][0]);
@@ -67,69 +67,32 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $filter_name = $stemmer_language . '_stop';
     $filter_language = '_' . $stemmer_language . '_';
 
-
-
-    if (($stemmer_language === 'english' ||  $stemmer_language === 'swedish')
-      && !str_contains($event->getIndexName(), 'units_fi')) {
-      $indexConfig["body"]["settings"]["index"] = [
-        "analysis" => [
-          "analyzer" => [
-            "default" => [
-              "type" => "custom",
-              "filter" => [
-                "lowercase",
-                "stop",
-                "filter_stemmer",
-                $filter_name,
-              ],
-              "tokenizer" => "standard",
+    $indexConfig["body"]["settings"]["index"] = [
+      "analysis" => [
+        "analyzer" => [
+          "default" => [
+            "type" => "custom",
+            "filter" => [
+              "lowercase",
+              "stop",
+              "filter_stemmer",
+              $filter_name,
             ],
-          ],
-          "filter" => [
-            "filter_stemmer" => [
-              "type" => "stemmer",
-              "language" => $stemmer_language,
-            ],
-            $filter_name => [
-              "type" => "stop",
-              "stopwords" => $filter_language,
-            ],
+            "tokenizer" => "standard",
           ],
         ],
-      ];
-    }
-    else {
-      $indexConfig["body"]["settings"]["index"] = [
-        "analysis" => [
-          "analyzer" => [
-            "index_analyzer" => [
-              "tokenizer" => "standard",
-              "filter" => [ "lowercase", "synonym_filter", "finnish_stop", "my_snow"  ]
-            ],
+        "filter" => [
+          "filter_stemmer" => [
+            "type" => "stemmer",
+            "language" => $stemmer_language,
           ],
-          "filter" => [
-            "synonym_filter" => [
-              "type" => "synonym_graph",
-              "synonyms" => [
-                "PS, PlayStation, Play Station",
-                "universe, cosmos",
-                "te-palvelut, oma asiointi",
-                "i-pod, ipod"
-              ]
-            ],
-            "finnish_stop" => [
-              "type" => "stop",
-              "stopwords" => '_finnish_',
-            ],
-            "my_snow" => [
-              "type" => "snowball",
-              "language" => "Finnish"
-            ],
+          $filter_name => [
+            "type" => "stop",
+            "stopwords" => $filter_language,
           ],
         ],
-      ];
-    }
-
+      ],
+    ];
 
     $event->setIndexConfig($indexConfig);
   }
