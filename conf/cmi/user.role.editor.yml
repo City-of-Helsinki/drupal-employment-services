@@ -28,6 +28,7 @@ dependencies:
     - publication_date
     - quick_node_clone
     - scheduler
+    - shortcut
     - system
     - taxonomy
 id: editor
@@ -46,7 +47,9 @@ permissions:
   - 'administer paragraphs settings'
   - 'administer paragraphs types'
   - 'administer pathauto'
+  - 'administer publication date'
   - 'administer scheduler'
+  - 'administer shortcuts'
   - 'administer taxonomy'
   - 'administer url aliases'
   - 'cancel account'
@@ -103,6 +106,7 @@ permissions:
   - 'create remote_video media'
   - 'create url aliases'
   - 'create video media'
+  - 'customize shortcut links'
   - 'delete all revisions'
   - 'delete any article content'
   - 'delete any audio media'
@@ -192,7 +196,12 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'set any published on date'
   - 'set article published on date'
+  - 'set event published on date'
+  - 'set landing_page published on date'
+  - 'set page published on date'
+  - 'switch shortcut sets'
   - 'translate any entity'
   - 'translate article node'
   - 'translate event node'
