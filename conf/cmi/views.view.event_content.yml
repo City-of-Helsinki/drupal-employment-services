@@ -1,18 +1,16 @@
-uuid: 8584522e-49b8-424a-837b-222731a04eae
+uuid: 98cd5b51-37ae-4dab-8539-d473144983ed
 langcode: fi
 status: true
 dependencies:
   config:
-    - node.type.article
-    - node.type.landing_page
-    - node.type.page
+    - node.type.event
   module:
     - node
     - user
 _core:
   default_config_hash: P7F4DFe8BL31DRVqsvS-ix9KZZqvvaPjZ7zEvGo9yNM
-id: content
-label: Content
+id: event_content
+label: 'Event Content'
 module: node
 description: 'Find and manage content.'
 tag: default
@@ -25,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Content
+      title: 'Event Content'
       fields:
         node_bulk_form:
           id: node_bulk_form
@@ -397,11 +395,9 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            article: article
-            page: page
-            landing_page: landing_page
+            event: event
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: type_op
             label: 'Content type'
@@ -537,50 +533,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        type_1:
-          id: type_1
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            article: article
-            page: page
-            landing_page: landing_page
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -685,27 +637,29 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
+  page_event:
+    id: page_event
+    display_title: Events
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
-      path: admin/content/node
+      path: admin/content/event
       menu:
-        type: 'default tab'
-        title: Content
-        description: ''
-        weight: -10
+        type: tab
+        title: Events
+        description: 'Linkend events content'
+        weight: -9
+        expanded: false
         menu_name: admin
-        context: ''
+        parent: system.admin
+        context: '0'
       tab_options:
         type: normal
-        title: Content
-        description: 'Find and manage content'
+        title: 'Event Content'
+        description: 'Find and manage events'
         weight: -10
-        menu_name: admin
     cache_metadata:
       max-age: 0
       contexts:

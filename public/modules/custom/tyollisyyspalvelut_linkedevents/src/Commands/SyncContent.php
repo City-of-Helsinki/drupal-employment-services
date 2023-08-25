@@ -330,11 +330,14 @@ class SyncContent extends DrushCommands {
     $node->field_image_alt = count($source->images) > 0 ? $source->images[0]->alt_text : '';
 
     $node->field_location_id = (int) preg_replace('/[^0-9]/', '', $source->location->id);
-    $node->field_publisher = $source->publisher;
     $node->field_start_time = strtotime($source->start_time) * 1000;
     $node->field_end_time = strtotime($source->end_time) * 1000;
     $node->set('field_last_modified_time', $source->last_modified_time);
     $node->field_event_status = $source->event_status;
+
+    $data = $this->fetch("https://api.hel.fi/linkedevents/v1/organization/" . $source->publisher  );
+    $node->field_publisher = $data->name;
+
     return $node;
   }
 
@@ -445,6 +448,7 @@ class SyncContent extends DrushCommands {
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
+    $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
 
     // Hardcode tags to finnish for now.
     $node->field_tags = $this->getTags($source->keywords, 'fi');
