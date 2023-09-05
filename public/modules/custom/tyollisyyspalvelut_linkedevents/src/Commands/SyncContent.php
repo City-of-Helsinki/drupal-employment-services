@@ -449,6 +449,7 @@ class SyncContent extends DrushCommands {
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
+    $node->field_super_event = $source->super_event->{'@id'} ?? '' ;
 
     // Hardcode tags to finnish for now.
     $node->field_tags = $this->getTags($source->keywords, 'fi');
