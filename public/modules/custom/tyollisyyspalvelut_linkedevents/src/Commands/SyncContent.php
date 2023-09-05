@@ -153,7 +153,7 @@ class SyncContent extends DrushCommands {
       "palkkatuki",
       "työnhaku"
     ];
-    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
+    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0, 'unpublished' => 0];
     $this->languages = ['fi', 'sv', 'en'];
     $this->allLanguages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
@@ -187,13 +187,11 @@ class SyncContent extends DrushCommands {
       $update_all = FALSE;
     }
 
-    // Fetch first chunk of the data
+    $this->output()->writeln('Checking deleted events..');
+    $this->checkDeletedEvents();
+
     $data = $this->fetch($this->dataUrl);
-
-    // Output info
     $this->output()->writeln('Updating nodes..');
-
-    // Loop while we have fetched data
     while ($data) {
       // For debugging data can be limited
       if ($limit > 0) {
@@ -207,10 +205,8 @@ class SyncContent extends DrushCommands {
       $data = $this->fetch($data->meta->next);
     }
 
-    // Output info
-    $this->output()->writeln('Removing expired..');
-
     // Remove expired nodes
+    $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
     // Form message for the event
@@ -218,6 +214,7 @@ class SyncContent extends DrushCommands {
       .'Added ('. $this->processLog['new'] .'). '
       .'Updated ('. $this->processLog['updated'] .'). '
       .'Deleted ('. $this->processLog['deleted'] .'). '
+      .'Unpublished ('. $this->processLog['unpublished'] .'). '
       .'Took '.  \Drupal::time()->getCurrentTime() - \Drupal::time()->getRequestTime() .'s.';
 
     // Log event.
@@ -246,8 +243,7 @@ class SyncContent extends DrushCommands {
       $response = $this->httpClient->request('GET', $url);
     }
     catch (ClientException $exception) {
-      $variables = Error::decodeException($exception);
-      $this->logger->error('%type: @message in %function (line %line of %file).', $variables);
+      $this->logger->error($exception->getMessage());
       return NULL;
     }
 
@@ -268,6 +264,11 @@ class SyncContent extends DrushCommands {
    */
   private function nodeUpdate(array $data, bool $update_all): void {
     foreach ($data as $item) {
+      // Skip collection items
+      if (!empty($item->sub_events)) {
+        continue;
+      }
+
       // Skip expired items
       if (strtotime($item->end_time) < (\Drupal::time()->getRequestTime())) {
         continue;
@@ -620,6 +621,34 @@ class SyncContent extends DrushCommands {
       $node = $this->nodeStorage->load($id);
       $node->delete();
       $this->processLog['deleted']++;
+    }
+  }
+
+  /**
+   * Check non expired nodes to see if they are removed from the API.
+   *
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  private function checkDeletedEvents(): void {
+    $ids = $this->nodeStorage->getQuery()
+      ->condition('status', 1)
+      ->condition('type', $this->contentType)
+      ->condition('field_end_time', \Drupal::time()->getRequestTime(), '>=')
+      ->execute();
+
+    foreach ($ids as $id) {
+      /** @var \Drupal\node\NodeInterface $node */
+      $node = $this->nodeStorage->load($id);
+      if (!$node->hasField('field_id') || $node->get('field_id')->isEmpty()) {
+        continue;
+      }
+
+      $url = 'https://api.hel.fi/linkedevents/v1/event/' . $node->get('field_id')->value;
+      if ($this->fetch($url) === NULL) {
+        $node->set('status', 0);
+        $node->save();
+        $this->processLog['unpublished']++;
+      }
     }
   }
 
