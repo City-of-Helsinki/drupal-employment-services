@@ -303,6 +303,8 @@ class SyncContent extends DrushCommands {
       // Add keywords as taxonomy terms, along with translations.
       $node = $this->nodeAddTaxonomyTerms($node, $item);
 
+      $node = $this->nodeAddLanguageTaxonomyTerms($node, $item);
+
       // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
       // Save the node.
@@ -420,17 +422,8 @@ class SyncContent extends DrushCommands {
     $tids = [];
     foreach ($source->in_language as $lang) {
       $data = $this->fetch($lang->{'@id'});
-
       $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
       $term->save();
-
-      foreach ($this->languages as $langcode) {
-        if ($langcode === 'fi') {
-          continue;
-        }
-        $this->addTermTranslation($term, $data, $langcode);
-      }
-
       $tids[] = $term->id();
     }
 
@@ -493,7 +486,6 @@ class SyncContent extends DrushCommands {
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
-    $node->field_in_language = $this->getLanguages($source, $langcode);
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
 
     // Hardcode tags to finnish for now.
