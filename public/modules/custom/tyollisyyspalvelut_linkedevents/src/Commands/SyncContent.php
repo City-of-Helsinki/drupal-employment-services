@@ -213,7 +213,7 @@ class SyncContent extends DrushCommands {
       $data = $this->fetch($data->meta->next);
     }
 
-    // Output info
+    // Remove expired nodes
     $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
