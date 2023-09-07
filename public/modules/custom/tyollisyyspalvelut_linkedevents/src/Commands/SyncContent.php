@@ -215,9 +215,6 @@ class SyncContent extends DrushCommands {
 
     // Output info
     $this->output()->writeln('Removing expired..');
-
-    // Remove expired nodes
-    $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
     // Form message for the event
