@@ -57,11 +57,18 @@ class SyncContent extends DrushCommands {
   private string $contentType;
 
   /**
-   * Term vocabulary.
+   * Term vocabulary keywords.
    *
    * @var string
    */
   private string $termVocabulary;
+
+  /**
+   * Term vocabulary languages.
+   *
+   * @var string
+   */
+  private string $termLanguageVocabulary;
 
   /**
    * Used ID to use as content author.
@@ -138,6 +145,7 @@ class SyncContent extends DrushCommands {
     $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
     $this->contentType = 'event';
     $this->termVocabulary = 'event_tags';
+    $this->termLanguageVocabulary = 'event_languages';
     $this->userId = 2; // LinkedEvent user
     $this->allowedTags = [
       "maahanmuuttajat",
@@ -204,8 +212,7 @@ class SyncContent extends DrushCommands {
       // Read next chunk of data, or get NULL to stop the loop
       $data = $this->fetch($data->meta->next);
     }
-
-    // Remove expired nodes
+    
     $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
@@ -292,6 +299,8 @@ class SyncContent extends DrushCommands {
       // Add keywords as taxonomy terms, along with translations.
       $node = $this->nodeAddTaxonomyTerms($node, $item);
 
+      $node = $this->nodeAddLanguageTaxonomyTerms($node, $item);
+
       // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
       // Save the node.
@@ -361,7 +370,7 @@ class SyncContent extends DrushCommands {
         continue;
       }
 
-      $term = $this->termInit($data);
+      $term = $this->termInit($data, $this->termVocabulary, 'field_id');
       $term->save();
 
       foreach ($this->languages as $langcode) {
@@ -379,7 +388,7 @@ class SyncContent extends DrushCommands {
       $source->location->name->en = 'remote event';
       $source->location->name->sv = 'distansevenemang';
 
-      $internet_term = $this->termInit($source->location);
+      $internet_term = $this->termInit($source->location,  $this->termVocabulary, 'field_id');
       $internet_term->save();
       foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
@@ -391,6 +400,30 @@ class SyncContent extends DrushCommands {
     }
 
     $node->set('field_event_tags', $tids);
+    return $node;
+  }
+
+  /**
+   * Add languages and their translations to node as taxonomy terms.
+   *
+   * @param \Drupal\node\NodeInterface $node
+   *   Node to edit.
+   * @param \stdClass $source
+   *   Entity source from API.
+   *
+   * @return \Drupal\node\NodeInterface
+   *   Node with taxonomy terms added.
+   */
+  private function nodeAddLanguageTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
+    $tids = [];
+    foreach ($source->in_language as $lang) {
+      $data = $this->fetch($lang->{'@id'});
+      $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
+      $term->save();
+      $tids[] = $term->id();
+    }
+
+    $node->set('field_in_language', $tids);
     return $node;
   }
 
@@ -536,23 +569,29 @@ class SyncContent extends DrushCommands {
    * @param \stdClass $source
    *   Source entity from API.
    *
+   * @param string $taxonomyTerm
+   *   Taxonomy term name.
+   *
+   * @param string $fieldID
+   *   Taxonomy term ID field.
+   *
    * @return \Drupal\taxonomy\TermInterface
    *   Returns taxonomy term object.
    */
-  private function termInit(\stdClass $source): TermInterface {
+  private function termInit(\stdClass $source, string $taxonomyTerm, string $fieldID): TermInterface {
     // Build query to fetch existing nodes.
     $query = $this->termStorage->getQuery();
-    $query->condition('vid', $this->termVocabulary);
-    $query->condition('field_id', $source->id);
+    $query->condition('vid', $taxonomyTerm);
+    $query->condition($fieldID, $source->id);
     $query->condition('langcode', 'fi');
     $exists = $query->execute();
 
-    if ($source->name->fi === 'maahanmuuttajat') {
-      $name = 'maahan muuttaneet';
-    }
-    else {
-      $name = $source->name->fi;
-    }
+      if ($taxonomyTerm === $this->termVocabulary && $source->name->fi === 'maahanmuuttajat') {
+        $name = 'maahan muuttaneet';
+      }
+      else {
+        $name = $source->name->fi;
+      }
 
     if ($exists) {
       // Use existing term
@@ -565,11 +604,11 @@ class SyncContent extends DrushCommands {
     // Create a new term object.
     return $this->termStorage->create(
       [
-        'vid' => $this->termVocabulary,
+        'vid' => $taxonomyTerm,
         'uid' => $this->userId,
         'name' => $name,
         'langcode' => 'fi',
-        'field_id' => $source->id,
+        $fieldID => $source->id,
       ]
     );
   }
