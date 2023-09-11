@@ -1,0 +1,8 @@
+uuid: dbefcf47-ff9a-4389-9d62-837e90844835
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Languages'
+vid: event_languages
+description: ''
+weight: 0

@@ -57,11 +57,18 @@ class SyncContent extends DrushCommands {
   private string $contentType;
 
   /**
-   * Term vocabulary.
+   * Term vocabulary keywords.
    *
    * @var string
    */
   private string $termVocabulary;
+
+  /**
+   * Term vocabulary languages.
+   *
+   * @var string
+   */
+  private string $termLanguageVocabulary;
 
   /**
    * Used ID to use as content author.
@@ -138,6 +145,7 @@ class SyncContent extends DrushCommands {
     $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
     $this->contentType = 'event';
     $this->termVocabulary = 'event_tags';
+    $this->termLanguageVocabulary = 'event_languages';
     $this->userId = 2; // LinkedEvent user
     $this->allowedTags = [
       "maahanmuuttajat",
@@ -153,7 +161,7 @@ class SyncContent extends DrushCommands {
       "palkkatuki",
       "työnhaku"
     ];
-    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
+    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0, 'unpublished' => 0];
     $this->languages = ['fi', 'sv', 'en'];
     $this->allLanguages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
@@ -187,13 +195,11 @@ class SyncContent extends DrushCommands {
       $update_all = FALSE;
     }
 
-    // Fetch first chunk of the data
+    $this->output()->writeln('Checking deleted events..');
+    $this->checkDeletedEvents();
+
     $data = $this->fetch($this->dataUrl);
-
-    // Output info
     $this->output()->writeln('Updating nodes..');
-
-    // Loop while we have fetched data
     while ($data) {
       // For debugging data can be limited
       if ($limit > 0) {
@@ -206,11 +212,8 @@ class SyncContent extends DrushCommands {
       // Read next chunk of data, or get NULL to stop the loop
       $data = $this->fetch($data->meta->next);
     }
-
-    // Output info
+    
     $this->output()->writeln('Removing expired..');
-
-    // Remove expired nodes
     $this->removeExpiredNodes();
 
     // Form message for the event
@@ -218,6 +221,7 @@ class SyncContent extends DrushCommands {
       .'Added ('. $this->processLog['new'] .'). '
       .'Updated ('. $this->processLog['updated'] .'). '
       .'Deleted ('. $this->processLog['deleted'] .'). '
+      .'Unpublished ('. $this->processLog['unpublished'] .'). '
       .'Took '.  \Drupal::time()->getCurrentTime() - \Drupal::time()->getRequestTime() .'s.';
 
     // Log event.
@@ -246,8 +250,7 @@ class SyncContent extends DrushCommands {
       $response = $this->httpClient->request('GET', $url);
     }
     catch (ClientException $exception) {
-      $variables = Error::decodeException($exception);
-      $this->logger->error('%type: @message in %function (line %line of %file).', $variables);
+      $this->logger->error($exception->getMessage());
       return NULL;
     }
 
@@ -268,6 +271,11 @@ class SyncContent extends DrushCommands {
    */
   private function nodeUpdate(array $data, bool $update_all): void {
     foreach ($data as $item) {
+      // Skip collection items
+      if (!empty($item->sub_events)) {
+        continue;
+      }
+
       // Skip expired items
       if (strtotime($item->end_time) < (\Drupal::time()->getRequestTime())) {
         continue;
@@ -290,6 +298,8 @@ class SyncContent extends DrushCommands {
 
       // Add keywords as taxonomy terms, along with translations.
       $node = $this->nodeAddTaxonomyTerms($node, $item);
+
+      $node = $this->nodeAddLanguageTaxonomyTerms($node, $item);
 
       // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
@@ -360,7 +370,7 @@ class SyncContent extends DrushCommands {
         continue;
       }
 
-      $term = $this->termInit($data);
+      $term = $this->termInit($data, $this->termVocabulary, 'field_id');
       $term->save();
 
       foreach ($this->languages as $langcode) {
@@ -378,7 +388,7 @@ class SyncContent extends DrushCommands {
       $source->location->name->en = 'remote event';
       $source->location->name->sv = 'distansevenemang';
 
-      $internet_term = $this->termInit($source->location);
+      $internet_term = $this->termInit($source->location,  $this->termVocabulary, 'field_id');
       $internet_term->save();
       foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
@@ -390,6 +400,30 @@ class SyncContent extends DrushCommands {
     }
 
     $node->set('field_event_tags', $tids);
+    return $node;
+  }
+
+  /**
+   * Add languages and their translations to node as taxonomy terms.
+   *
+   * @param \Drupal\node\NodeInterface $node
+   *   Node to edit.
+   * @param \stdClass $source
+   *   Entity source from API.
+   *
+   * @return \Drupal\node\NodeInterface
+   *   Node with taxonomy terms added.
+   */
+  private function nodeAddLanguageTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
+    $tids = [];
+    foreach ($source->in_language as $lang) {
+      $data = $this->fetch($lang->{'@id'});
+      $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
+      $term->save();
+      $tids[] = $term->id();
+    }
+
+    $node->set('field_in_language', $tids);
     return $node;
   }
 
@@ -449,6 +483,7 @@ class SyncContent extends DrushCommands {
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
+    $node->field_super_event = $source->super_event->{'@id'} ?? '' ;
 
     // Hardcode tags to finnish for now.
     $node->field_tags = $this->getTags($source->keywords, 'fi');
@@ -534,23 +569,29 @@ class SyncContent extends DrushCommands {
    * @param \stdClass $source
    *   Source entity from API.
    *
+   * @param string $taxonomyTerm
+   *   Taxonomy term name.
+   *
+   * @param string $fieldID
+   *   Taxonomy term ID field.
+   *
    * @return \Drupal\taxonomy\TermInterface
    *   Returns taxonomy term object.
    */
-  private function termInit(\stdClass $source): TermInterface {
+  private function termInit(\stdClass $source, string $taxonomyTerm, string $fieldID): TermInterface {
     // Build query to fetch existing nodes.
     $query = $this->termStorage->getQuery();
-    $query->condition('vid', $this->termVocabulary);
-    $query->condition('field_id', $source->id);
+    $query->condition('vid', $taxonomyTerm);
+    $query->condition($fieldID, $source->id);
     $query->condition('langcode', 'fi');
     $exists = $query->execute();
 
-    if ($source->name->fi === 'maahanmuuttajat') {
-      $name = 'maahan muuttaneet';
-    }
-    else {
-      $name = $source->name->fi;
-    }
+      if ($taxonomyTerm === $this->termVocabulary && $source->name->fi === 'maahanmuuttajat') {
+        $name = 'maahan muuttaneet';
+      }
+      else {
+        $name = $source->name->fi;
+      }
 
     if ($exists) {
       // Use existing term
@@ -563,11 +604,11 @@ class SyncContent extends DrushCommands {
     // Create a new term object.
     return $this->termStorage->create(
       [
-        'vid' => $this->termVocabulary,
+        'vid' => $taxonomyTerm,
         'uid' => $this->userId,
         'name' => $name,
         'langcode' => 'fi',
-        'field_id' => $source->id,
+        $fieldID => $source->id,
       ]
     );
   }
@@ -620,6 +661,34 @@ class SyncContent extends DrushCommands {
       $node = $this->nodeStorage->load($id);
       $node->delete();
       $this->processLog['deleted']++;
+    }
+  }
+
+  /**
+   * Check non expired nodes to see if they are removed from the API.
+   *
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  private function checkDeletedEvents(): void {
+    $ids = $this->nodeStorage->getQuery()
+      ->condition('status', 1)
+      ->condition('type', $this->contentType)
+      ->condition('field_end_time', \Drupal::time()->getRequestTime(), '>=')
+      ->execute();
+
+    foreach ($ids as $id) {
+      /** @var \Drupal\node\NodeInterface $node */
+      $node = $this->nodeStorage->load($id);
+      if (!$node->hasField('field_id') || $node->get('field_id')->isEmpty()) {
+        continue;
+      }
+
+      $url = 'https://api.hel.fi/linkedevents/v1/event/' . $node->get('field_id')->value;
+      if ($this->fetch($url) === NULL) {
+        $node->set('status', 0);
+        $node->save();
+        $this->processLog['unpublished']++;
+      }
     }
   }
 

@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.event.field_short_description
     - field.field.node.event.field_start_time
     - field.field.node.event.field_street_address
+    - field.field.node.event.field_super_event
     - field.field.node.event.field_tags
     - field.field.node.event.field_text
     - node.type.event
@@ -47,7 +48,7 @@ content:
     third_party_settings: {  }
   field_end_time:
     type: string_textfield
-    weight: 20
+    weight: 19
     region: content
     settings:
       size: 60
@@ -55,7 +56,7 @@ content:
     third_party_settings: {  }
   field_event_status:
     type: string_textfield
-    weight: 18
+    weight: 17
     region: content
     settings:
       size: 60
@@ -111,6 +112,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_in_language:
+    type: select2_entity_reference
+    weight: 26
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_info_url:
     type: string_textfield
     weight: 29
@@ -121,7 +132,7 @@ content:
     third_party_settings: {  }
   field_last_modified_time:
     type: string_textfield
-    weight: 21
+    weight: 20
     region: content
     settings:
       size: 60
@@ -129,7 +140,7 @@ content:
     third_party_settings: {  }
   field_location:
     type: string_textfield
-    weight: 22
+    weight: 21
     region: content
     settings:
       size: 60
@@ -137,7 +148,7 @@ content:
     third_party_settings: {  }
   field_location_extra_info:
     type: string_textfield
-    weight: 25
+    weight: 24
     region: content
     settings:
       size: 60
@@ -145,7 +156,7 @@ content:
     third_party_settings: {  }
   field_location_id:
     type: number
-    weight: 24
+    weight: 23
     region: content
     settings:
       placeholder: ''
@@ -168,7 +179,7 @@ content:
     third_party_settings: {  }
   field_publisher:
     type: string_textfield
-    weight: 26
+    weight: 25
     region: content
     settings:
       size: 60
@@ -184,7 +195,7 @@ content:
     third_party_settings: {  }
   field_start_time:
     type: string_textfield
-    weight: 19
+    weight: 18
     region: content
     settings:
       size: 60
@@ -192,7 +203,15 @@ content:
     third_party_settings: {  }
   field_street_address:
     type: string_textfield
-    weight: 23
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_super_event:
+    type: string_textfield
+    weight: 35
     region: content
     settings:
       size: 60
