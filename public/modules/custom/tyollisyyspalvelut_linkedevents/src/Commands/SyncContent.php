@@ -212,7 +212,7 @@ class SyncContent extends DrushCommands {
       // Read next chunk of data, or get NULL to stop the loop
       $data = $this->fetch($data->meta->next);
     }
-    
+
     $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
@@ -364,7 +364,19 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
     $tids = [];
-    foreach ($source->keywords as $keyword) {
+
+    // Combine audience tags with keywords.
+    // Uses same allowed tag checks for both.
+    // Tags also have same ids on both so duplicates should not be possible.
+    $keywords = [];
+    foreach ($source->keywords as $value) {
+      $keywords[] = $value;
+    }
+    foreach ($source->audience as $value) {
+      $keywords[] = $value;
+    }
+
+    foreach ($keywords as $keyword) {
       $data = $this->fetch($keyword->{'@id'});
       if (!in_array($data->name->fi, $this->allowedTags)) {
         continue;

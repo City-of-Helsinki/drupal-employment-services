@@ -64,7 +64,7 @@ content:
     third_party_settings: {  }
   field_event_tags:
     type: select2_entity_reference
-    weight: 28
+    weight: 27
     region: content
     settings:
       width: 100%
@@ -74,7 +74,7 @@ content:
     third_party_settings: {  }
   field_external_links:
     type: link_default
-    weight: 30
+    weight: 29
     region: content
     settings:
       placeholder_url: ''
@@ -124,7 +124,7 @@ content:
     third_party_settings: {  }
   field_info_url:
     type: string_textfield
-    weight: 29
+    weight: 28
     region: content
     settings:
       size: 60
@@ -163,7 +163,7 @@ content:
     third_party_settings: {  }
   field_offers_info_url:
     type: string_textfield
-    weight: 34
+    weight: 33
     region: content
     settings:
       size: 60
@@ -171,7 +171,7 @@ content:
     third_party_settings: {  }
   field_provider:
     type: string_textfield
-    weight: 35
+    weight: 34
     region: content
     settings:
       size: 60
@@ -217,12 +217,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_tags:
-    type: options_select
-    weight: 27
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_text:
     type: text_textarea
     weight: 9
@@ -253,7 +247,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 31
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -307,15 +301,15 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 32
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 33
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_in_language: true
+  field_tags: true
   hide_sidebar_navigation: true
