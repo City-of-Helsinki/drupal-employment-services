@@ -497,8 +497,10 @@ class SyncContent extends DrushCommands {
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
     $node->field_super_event = $source->super_event->{'@id'} ?? '' ;
 
-    // Hardcode tags to finnish for now.
-    $node->field_tags = $this->getTags($source->keywords, 'fi');
+    // Hardcode tags (keywords and audiences) to finnish for now.
+    $tag_keywords = $this->getTags($source->keywords, 'fi');
+    $tag_audience = $this->getTags($source->audience, 'fi');
+    $node->field_tags = array_merge($tag_keywords, $tag_audience);
 
     foreach ($source->offers as $offer) {
       // Check the URL is not empty or too long.
