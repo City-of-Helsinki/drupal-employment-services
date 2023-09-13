@@ -212,7 +212,7 @@ class SyncContent extends DrushCommands {
       // Read next chunk of data, or get NULL to stop the loop
       $data = $this->fetch($data->meta->next);
     }
-    
+
     $this->output()->writeln('Removing expired..');
     $this->removeExpiredNodes();
 
@@ -364,7 +364,19 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
     $tids = [];
-    foreach ($source->keywords as $keyword) {
+
+    // Combine audience tags with keywords.
+    // Uses same allowed tag checks for both.
+    // Tags also have same ids on both so duplicates should not be possible.
+    $keywords = [];
+    foreach ($source->keywords as $value) {
+      $keywords[] = $value;
+    }
+    foreach ($source->audience as $value) {
+      $keywords[] = $value;
+    }
+
+    foreach ($keywords as $keyword) {
       $data = $this->fetch($keyword->{'@id'});
       if (!in_array($data->name->fi, $this->allowedTags)) {
         continue;
@@ -485,8 +497,10 @@ class SyncContent extends DrushCommands {
     $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
     $node->field_super_event = $source->super_event->{'@id'} ?? '' ;
 
-    // Hardcode tags to finnish for now.
-    $node->field_tags = $this->getTags($source->keywords, 'fi');
+    // Hardcode tags (keywords and audiences) to finnish for now.
+    $tag_keywords = $this->getTags($source->keywords, 'fi');
+    $tag_audience = $this->getTags($source->audience, 'fi');
+    $node->field_tags = array_merge($tag_keywords, $tag_audience);
 
     foreach ($source->offers as $offer) {
       // Check the URL is not empty or too long.

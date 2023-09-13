@@ -64,7 +64,7 @@ content:
     third_party_settings: {  }
   field_event_tags:
     type: select2_entity_reference
-    weight: 28
+    weight: 27
     region: content
     settings:
       width: 100%
@@ -211,7 +211,7 @@ content:
     third_party_settings: {  }
   field_super_event:
     type: string_textfield
-    weight: 35
+    weight: 36
     region: content
     settings:
       size: 60
@@ -219,7 +219,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: options_select
-    weight: 27
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -317,5 +317,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_in_language: true
   hide_sidebar_navigation: true
