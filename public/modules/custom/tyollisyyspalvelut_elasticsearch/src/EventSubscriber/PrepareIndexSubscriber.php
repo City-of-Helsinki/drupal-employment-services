@@ -72,7 +72,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
           "analyzer" => [
             "index_analyzer" => [
               "tokenizer" => "standard",
-              "filter" => [ "lowercase", "finnish_stop", "snowball"  ]
+              "filter" => [ "lowercase", "finnish_stop", "snowball_filter" ]
             ],
           ],
           "filter" => [
@@ -80,7 +80,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
               "type" => "stop",
               "stopwords" => '_finnish_',
             ],
-            "snowball-filter" => [
+            "snowball_filter" => [
               "type" => "snowball",
               "language" => "Finnish"
             ],
@@ -116,8 +116,6 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
         ],
       ];
     }
-
-
     $event->setIndexConfig($indexConfig);
   }
 
