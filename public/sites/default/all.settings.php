@@ -17,3 +17,6 @@ if (getenv('ELASTIC_URL')) {
     $config['elasticsearch_connector.cluster.tyollisyyspalvelut']['options']['password'] = getenv('ELASTIC_PASSWORD');
   }
 }
+
+$settings['http_client_config']['timeout'] = 240;
+ini_set('default_socket_timeout', 240);
