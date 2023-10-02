@@ -1,18 +1,18 @@
-uuid: 18e2a1a4-9900-4d70-ae85-acf73814ede2
+uuid: 3f7acc65-e602-4680-b979-0354cea35796
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_publisher
+    - field.storage.node.field_super_event
     - node.type.event
-id: node.event.field_publisher
-field_name: field_publisher
+id: node.event.field_super_event
+field_name: field_super_event
 entity_type: node
 bundle: event
-label: Publisher
+label: 'Super event'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

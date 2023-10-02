@@ -1,0 +1,32 @@
+uuid: 025578f1-fb52-4e15-a85e-e272180f5b51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.event_languages.field_language_id
+    - taxonomy.vocabulary.event_languages
+  module:
+    - text
+id: taxonomy_term.event_languages.default
+targetEntityType: taxonomy_term
+bundle: event_languages
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_language_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

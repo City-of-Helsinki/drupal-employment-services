@@ -57,11 +57,18 @@ class SyncContent extends DrushCommands {
   private string $contentType;
 
   /**
-   * Term vocabulary.
+   * Term vocabulary keywords.
    *
    * @var string
    */
   private string $termVocabulary;
+
+  /**
+   * Term vocabulary languages.
+   *
+   * @var string
+   */
+  private string $termLanguageVocabulary;
 
   /**
    * Used ID to use as content author.
@@ -81,6 +88,13 @@ class SyncContent extends DrushCommands {
    * Configured site languages.
    *
    * @var \Drupal\Core\Language\LanguageInterface[]
+   */
+  private array $allLanguages;
+
+  /**
+   * Enabled languages.
+   *
+   * @var string[]
    */
   private array $languages;
 
@@ -131,6 +145,7 @@ class SyncContent extends DrushCommands {
     $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
     $this->contentType = 'event';
     $this->termVocabulary = 'event_tags';
+    $this->termLanguageVocabulary = 'event_languages';
     $this->userId = 2; // LinkedEvent user
     $this->allowedTags = [
       "maahanmuuttajat",
@@ -146,8 +161,9 @@ class SyncContent extends DrushCommands {
       "palkkatuki",
       "työnhaku"
     ];
-    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0];
+    $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0, 'unpublished' => 0];
     $this->languages = ['fi', 'sv', 'en'];
+    $this->allLanguages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
     $this->httpClient = $http_client;
     $this->termStorage = $entityTypeManager->getStorage('taxonomy_term'); // @TODO Can be used for translated tags.
@@ -179,13 +195,11 @@ class SyncContent extends DrushCommands {
       $update_all = FALSE;
     }
 
-    // Fetch first chunk of the data
+    $this->output()->writeln('Checking deleted events..');
+    $this->checkDeletedEvents();
+
     $data = $this->fetch($this->dataUrl);
-
-    // Output info
     $this->output()->writeln('Updating nodes..');
-
-    // Loop while we have fetched data
     while ($data) {
       // For debugging data can be limited
       if ($limit > 0) {
@@ -199,10 +213,7 @@ class SyncContent extends DrushCommands {
       $data = $this->fetch($data->meta->next);
     }
 
-    // Output info
     $this->output()->writeln('Removing expired..');
-
-    // Remove expired nodes
     $this->removeExpiredNodes();
 
     // Form message for the event
@@ -210,6 +221,7 @@ class SyncContent extends DrushCommands {
       .'Added ('. $this->processLog['new'] .'). '
       .'Updated ('. $this->processLog['updated'] .'). '
       .'Deleted ('. $this->processLog['deleted'] .'). '
+      .'Unpublished ('. $this->processLog['unpublished'] .'). '
       .'Took '.  \Drupal::time()->getCurrentTime() - \Drupal::time()->getRequestTime() .'s.';
 
     // Log event.
@@ -238,8 +250,7 @@ class SyncContent extends DrushCommands {
       $response = $this->httpClient->request('GET', $url);
     }
     catch (ClientException $exception) {
-      $variables = Error::decodeException($exception);
-      $this->logger->error('%type: @message in %function (line %line of %file).', $variables);
+      $this->logger->error($exception->getMessage());
       return NULL;
     }
 
@@ -260,6 +271,11 @@ class SyncContent extends DrushCommands {
    */
   private function nodeUpdate(array $data, bool $update_all): void {
     foreach ($data as $item) {
+      // Skip collection items
+      if (!empty($item->sub_events)) {
+        continue;
+      }
+
       // Skip expired items
       if (strtotime($item->end_time) < (\Drupal::time()->getRequestTime())) {
         continue;
@@ -267,6 +283,9 @@ class SyncContent extends DrushCommands {
 
       // Init new or existing node object with finnish translation as default.
       $node = $this->nodeInit($item);
+      if (!$node instanceof NodeInterface) {
+        continue;
+      }
 
       // Current item hasn't changed since last save
       if (!$update_all && $node->get('field_last_modified_time')->value === $item->last_modified_time) {
@@ -280,12 +299,14 @@ class SyncContent extends DrushCommands {
       // Add keywords as taxonomy terms, along with translations.
       $node = $this->nodeAddTaxonomyTerms($node, $item);
 
+      $node = $this->nodeAddLanguageTaxonomyTerms($node, $item);
+
       // Update process log.
       $node->isNew() ? $this->processLog['new']++ : $this->processLog['updated']++;
       // Save the node.
       $node->save();
 
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -319,11 +340,14 @@ class SyncContent extends DrushCommands {
     $node->field_image_alt = count($source->images) > 0 ? $source->images[0]->alt_text : '';
 
     $node->field_location_id = (int) preg_replace('/[^0-9]/', '', $source->location->id);
-    $node->field_publisher = $source->publisher;
     $node->field_start_time = strtotime($source->start_time) * 1000;
     $node->field_end_time = strtotime($source->end_time) * 1000;
     $node->set('field_last_modified_time', $source->last_modified_time);
     $node->field_event_status = $source->event_status;
+
+    $data = $this->fetch("https://api.hel.fi/linkedevents/v1/organization/" . $source->publisher  );
+    $node->field_publisher = $data->name;
+
     return $node;
   }
 
@@ -340,16 +364,28 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
     $tids = [];
-    foreach ($source->keywords as $keyword) {
+
+    // Combine audience tags with keywords.
+    // Uses same allowed tag checks for both.
+    // Tags also have same ids on both so duplicates should not be possible.
+    $keywords = [];
+    foreach ($source->keywords as $value) {
+      $keywords[] = $value;
+    }
+    foreach ($source->audience as $value) {
+      $keywords[] = $value;
+    }
+
+    foreach ($keywords as $keyword) {
       $data = $this->fetch($keyword->{'@id'});
       if (!in_array($data->name->fi, $this->allowedTags)) {
         continue;
       }
 
-      $term = $this->termInit($data);
+      $term = $this->termInit($data, $this->termVocabulary, 'field_id');
       $term->save();
 
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -364,9 +400,9 @@ class SyncContent extends DrushCommands {
       $source->location->name->en = 'remote event';
       $source->location->name->sv = 'distansevenemang';
 
-      $internet_term = $this->termInit($source->location);
+      $internet_term = $this->termInit($source->location,  $this->termVocabulary, 'field_id');
       $internet_term->save();
-      foreach ($this->languages as $langcode => $language) {
+      foreach ($this->languages as $langcode) {
         if ($langcode === 'fi') {
           continue;
         }
@@ -376,6 +412,30 @@ class SyncContent extends DrushCommands {
     }
 
     $node->set('field_event_tags', $tids);
+    return $node;
+  }
+
+  /**
+   * Add languages and their translations to node as taxonomy terms.
+   *
+   * @param \Drupal\node\NodeInterface $node
+   *   Node to edit.
+   * @param \stdClass $source
+   *   Entity source from API.
+   *
+   * @return \Drupal\node\NodeInterface
+   *   Node with taxonomy terms added.
+   */
+  private function nodeAddLanguageTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
+    $tids = [];
+    foreach ($source->in_language as $lang) {
+      $data = $this->fetch($lang->{'@id'});
+      $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
+      $term->save();
+      $tids[] = $term->id();
+    }
+
+    $node->set('field_in_language', $tids);
     return $node;
   }
 
@@ -394,19 +454,53 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddTranslation(NodeInterface $node, \stdClass $source, string $langcode): NodeInterface {
     /** @var \Drupal\node\Entity\Node $node */
-    $node->setTitle($source->name->$langcode ?? $source->name->fi);
-    $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
-    $node->field_short_description = $source->short_description->$langcode ?? $source->short_description->fi ?? '';
+    $default_translation = $node->getTranslation('fi');
+    $node->setTitle($source->name->$langcode ?? $default_translation->title->value);
+
+    // If short description isn't set, try to get value from other languages.
+    $short_description = NULL;
+    if (!empty($source->short_description->$langcode)) {
+      $short_description = $source->short_description->$langcode;
+    }
+    else {
+      foreach ($this->languages as $fallback_lang) {
+        if (!empty($source->short_description->$fallback_lang)) {
+          $short_description = $source->short_description->$fallback_lang;
+          break;
+        }
+      }
+    }
+
+    // If description isn't set, try to get value from other languages.
+    $description = NULL;
+    if (!empty($source->description->$langcode)) {
+      $description = $source->description->$langcode;
+    }
+    else {
+      foreach ($this->languages as $fallback_lang) {
+        if (!empty($source->description->$fallback_lang)) {
+          $description = $source->description->$fallback_lang;
+          break;
+        }
+      }
+    }
+
+    $node->field_short_description = $short_description;
     $node->field_text = [
-      'value' => $source->description->$langcode ?? $source->description->fi ?? '',
+      'value' => $description,
       'format' => 'basic_html',
     ];
+    $node->field_location = $source->location->name->$langcode ?? $source->location->name->fi ?? '';
     $node->field_info_url = isset($source->info_url->$langcode) && strlen($source->info_url->$langcode) <= 255 ? $source->info_url->$langcode : '';
     $node->field_location_extra_info = $source->location_extra_info->$langcode ?? $source->location_extra_info->fi ?? '';
     $node->field_street_address = $source->location->street_address->$langcode ?? $source->location->street_address->fi ?? '';
+    $node->field_provider = $source->provider->$langcode ?? $source->provider->fi ?? '';
+    $node->field_super_event = $source->super_event->{'@id'} ?? '' ;
 
-    // Hardcode tags to finnish for now.
-    $node->field_tags = $this->getTags($source->keywords, 'fi');
+    // Hardcode tags (keywords and audiences) to finnish for now.
+    $tag_keywords = $this->getTags($source->keywords, 'fi');
+    $tag_audience = $this->getTags($source->audience, 'fi');
+    $node->field_tags = array_merge($tag_keywords, $tag_audience);
 
     foreach ($source->offers as $offer) {
       // Check the URL is not empty or too long.
@@ -436,10 +530,10 @@ class SyncContent extends DrushCommands {
    * @param \stdClass $source
    *   Entity data from API.
    *
-   * @return \Drupal\node\NodeInterface
-   *   Returns node object.
+   * @return \Drupal\node\NodeInterface|null
+   *   Returns node object or NULL if one can't be created.
    */
-  private function nodeInit(\stdClass $source): NodeInterface {
+  private function nodeInit(\stdClass $source): ?NodeInterface {
     // Build query to fetch existing nodes.
     $query = $this->nodeStorage->getQuery();
     $query->condition('type', $this->contentType);
@@ -453,12 +547,30 @@ class SyncContent extends DrushCommands {
       return $this->nodeStorage->load(current($exists));
     }
 
+
+    // Get default title from fi, sv or en.
+    if (!empty($source->name->fi)) {
+      $title = $source->name->fi;
+    }
+    elseif (!empty($source->name->sv))
+    {
+      $title = $source->name->sv;
+    }
+    elseif (!empty($source->name->en))
+    {
+      $title = $source->name->en;
+    }
+    else {
+      return NULL;
+    }
+
+
     // Create a new node object.
     return $this->nodeStorage->create(
       [
         'type' => $this->contentType,
         'uid' => $this->userId,
-        'title' => $source->name->fi,
+        'title' => $title,
         'langcode' => 'fi',
         'field_id' => $source->id,
       ]
@@ -471,23 +583,29 @@ class SyncContent extends DrushCommands {
    * @param \stdClass $source
    *   Source entity from API.
    *
+   * @param string $taxonomyTerm
+   *   Taxonomy term name.
+   *
+   * @param string $fieldID
+   *   Taxonomy term ID field.
+   *
    * @return \Drupal\taxonomy\TermInterface
    *   Returns taxonomy term object.
    */
-  private function termInit(\stdClass $source): TermInterface {
+  private function termInit(\stdClass $source, string $taxonomyTerm, string $fieldID): TermInterface {
     // Build query to fetch existing nodes.
     $query = $this->termStorage->getQuery();
-    $query->condition('vid', $this->termVocabulary);
-    $query->condition('field_id', $source->id);
+    $query->condition('vid', $taxonomyTerm);
+    $query->condition($fieldID, $source->id);
     $query->condition('langcode', 'fi');
     $exists = $query->execute();
 
-    if ($source->name->fi === 'maahanmuuttajat') {
-      $name = 'maahan muuttaneet';
-    }
-    else {
-      $name = $source->name->fi;
-    }
+      if ($taxonomyTerm === $this->termVocabulary && $source->name->fi === 'maahanmuuttajat') {
+        $name = 'maahan muuttaneet';
+      }
+      else {
+        $name = $source->name->fi;
+      }
 
     if ($exists) {
       // Use existing term
@@ -500,11 +618,11 @@ class SyncContent extends DrushCommands {
     // Create a new term object.
     return $this->termStorage->create(
       [
-        'vid' => $this->termVocabulary,
+        'vid' => $taxonomyTerm,
         'uid' => $this->userId,
         'name' => $name,
         'langcode' => 'fi',
-        'field_id' => $source->id,
+        $fieldID => $source->id,
       ]
     );
   }
@@ -557,6 +675,34 @@ class SyncContent extends DrushCommands {
       $node = $this->nodeStorage->load($id);
       $node->delete();
       $this->processLog['deleted']++;
+    }
+  }
+
+  /**
+   * Check non expired nodes to see if they are removed from the API.
+   *
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  private function checkDeletedEvents(): void {
+    $ids = $this->nodeStorage->getQuery()
+      ->condition('status', 1)
+      ->condition('type', $this->contentType)
+      ->condition('field_end_time', \Drupal::time()->getRequestTime(), '>=')
+      ->execute();
+
+    foreach ($ids as $id) {
+      /** @var \Drupal\node\NodeInterface $node */
+      $node = $this->nodeStorage->load($id);
+      if (!$node->hasField('field_id') || $node->get('field_id')->isEmpty()) {
+        continue;
+      }
+
+      $url = 'https://api.hel.fi/linkedevents/v1/event/' . $node->get('field_id')->value;
+      if ($this->fetch($url) === NULL) {
+        $node->set('status', 0);
+        $node->save();
+        $this->processLog['unpublished']++;
+      }
     }
   }
 

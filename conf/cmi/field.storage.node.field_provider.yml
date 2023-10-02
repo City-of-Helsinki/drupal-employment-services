@@ -1,19 +1,20 @@
-uuid: 059ae4ec-c965-4a9e-8743-bd7f68b90cdc
+uuid: c217b342-10e5-49a2-b0dc-a041c9279bfa
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_in_language
-field_name: field_in_language
+id: node.field_provider
+field_name: field_provider
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

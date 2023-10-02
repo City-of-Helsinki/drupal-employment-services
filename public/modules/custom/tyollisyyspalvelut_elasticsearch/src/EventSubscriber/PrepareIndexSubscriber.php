@@ -7,7 +7,6 @@ use Drupal\Core\Language\LanguageManager;
 use Drupal\elasticsearch_connector\ElasticSearch\Parameters\Factory\IndexFactory;
 use Drupal\elasticsearch_connector\Event\PrepareIndexEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\Component\EventDispatcher\Event;
 use Drupal\search_api\IndexInterface;
 
 /**
@@ -67,33 +66,56 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $filter_name = $stemmer_language . '_stop';
     $filter_language = '_' . $stemmer_language . '_';
 
-    $indexConfig["body"]["settings"]["index"] = [
-      "analysis" => [
-        "analyzer" => [
-          "default" => [
-            "type" => "custom",
-            "filter" => [
-              "lowercase",
-              "stop",
-              "filter_stemmer",
-              $filter_name,
+    if ($langcode === 'fi') {
+      $indexConfig["body"]["settings"]["index"] = [
+        "analysis" => [
+          "analyzer" => [
+            "index_analyzer" => [
+              "tokenizer" => "standard",
+              "filter" => [ "lowercase", "finnish_stop", "snowball_filter" ]
             ],
-            "tokenizer" => "standard",
+          ],
+          "filter" => [
+            "finnish_stop" => [
+              "type" => "stop",
+              "stopwords" => '_finnish_',
+            ],
+            "snowball_filter" => [
+              "type" => "snowball",
+              "language" => "Finnish"
+            ],
           ],
         ],
-        "filter" => [
-          "filter_stemmer" => [
-            "type" => "stemmer",
-            "language" => $stemmer_language,
+      ];
+    }
+    else {
+      $indexConfig["body"]["settings"]["index"] = [
+        "analysis" => [
+          "analyzer" => [
+            "index_analyzer" => [
+              "type" => "custom",
+              "filter" => [
+                "lowercase",
+                "stop",
+                "filter_stemmer",
+                $filter_name,
+              ],
+              "tokenizer" => "standard",
+            ],
           ],
-          $filter_name => [
-            "type" => "stop",
-            "stopwords" => $filter_language,
+          "filter" => [
+            "filter_stemmer" => [
+              "type" => "stemmer",
+              "language" => $stemmer_language,
+            ],
+            $filter_name => [
+              "type" => "stop",
+              "stopwords" => $filter_language,
+            ],
           ],
         ],
-      ],
-    ];
-
+      ];
+    }
     $event->setIndexConfig($indexConfig);
   }
 
