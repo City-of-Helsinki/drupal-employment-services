@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: uk
-label: Ukrainian
+label: 'Ukrainian (uk)'
 direction: ltr
 weight: 3
 locked: false
