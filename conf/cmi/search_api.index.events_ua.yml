@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_id
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
+    - field.storage.node.field_in_language
     - field.storage.node.field_short_description
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
@@ -71,6 +72,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_image_url
+  field_in_language:
+    label: 'In Language » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_in_language:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_in_language
+      module:
+        - taxonomy
   field_lead_in:
     label: 'short description » Processed text'
     datasource_id: 'entity:node'
@@ -183,6 +194,7 @@ processor_settings:
       - field_id
       - field_image_alt
       - field_image_url
+      - field_in_language
       - field_lead_in
       - field_location
       - field_location_extra_info
@@ -201,12 +213,26 @@ processor_settings:
       h3: 2
       strong: 2
   ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
     all_fields: false
     fields:
       - field_tags
       - field_text
   language_with_fallback: {  }
   rendered_item: {  }
+  tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    all_fields: false
+    fields:
+      - field_text
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
 tracker_settings:
   default:
     indexing_order: fifo
