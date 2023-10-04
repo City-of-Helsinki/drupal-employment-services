@@ -373,7 +373,12 @@ class SyncContent extends DrushCommands {
       $keywords[] = $value;
     }
     foreach ($source->audience as $value) {
-      $keywords[] = $value;
+     if (in_array($value, $keywords)) {
+       continue;
+     }
+     else {
+       $keywords[] = $value;
+     }
     }
 
     foreach ($keywords as $keyword) {
@@ -693,7 +698,7 @@ class SyncContent extends DrushCommands {
     foreach ($ids as $id) {
       /** @var \Drupal\node\NodeInterface $node */
       $node = $this->nodeStorage->load($id);
-      if (!$node->hasField('field_id') || $node->get('field_id')->isEmpty()) {
+      if (!$node instanceof \Drupal\node\NodeInterface || !$node->hasField('field_id') || $node->get('field_id')->isEmpty()) {
         continue;
       }
 
