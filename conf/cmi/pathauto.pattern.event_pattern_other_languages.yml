@@ -25,7 +25,7 @@ selection_criteria:
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
-      uk: uk
+      ua: ua
       ru: ru
       so: so
 selection_logic: and

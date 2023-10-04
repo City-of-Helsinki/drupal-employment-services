@@ -20,8 +20,8 @@ dependencies:
     - taxonomy
     - node
     - search_api
-id: events_uk
-name: 'Events UK'
+id: events_ua
+name: 'Events UA'
 description: ''
 read_only: false
 field_settings:
@@ -166,7 +166,7 @@ datasource_settings:
     languages:
       default: false
       selected:
-        - uk
+        - ua
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
