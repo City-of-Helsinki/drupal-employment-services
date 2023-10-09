@@ -20,5 +20,5 @@ selection_criteria:
     bundles:
       article: article
 selection_logic: and
-weight: -8
+weight: 0
 relationships: {  }

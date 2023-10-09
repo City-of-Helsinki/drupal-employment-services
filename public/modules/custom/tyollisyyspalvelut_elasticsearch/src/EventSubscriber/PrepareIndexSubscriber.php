@@ -55,6 +55,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $stemmer_language = 'english';
     $config = $this->getDatasourceConfig($index);
     $standard_languages = LanguageManager::getStandardLanguageList();
+    $langcode = NULL;
     if (!empty($config) && isset($config['languages']['selected'])) {
       $langcode = $config['languages']['selected'][0];
 

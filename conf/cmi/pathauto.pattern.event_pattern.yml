@@ -27,7 +27,7 @@ selection_criteria:
     langcodes:
       fi: fi
 selection_logic: and
-weight: -7
+weight: -4
 relationships:
   'node:langcode:language':
     label: Language
