@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
     - field.field.node.page.field_notification
+    - field.field.node.page.field_search_keyword_text
     - field.field.node.page.field_search_keywords
     - field.field.node.page.field_sidebar_content
     - node.type.page
@@ -43,6 +44,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_search_keyword_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }

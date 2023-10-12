@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_hide_search
     - field.storage.node.field_lead_in
     - field.storage.node.field_search_keywords
+    - field.storage.node.field_search_keyword_text
     - field.storage.node.field_content
     - field.storage.paragraph.field_banner_desc
     - field.storage.paragraph.field_accordion_item_content
@@ -116,6 +117,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lead_in
+  field_search_keyword_text:
+    label: 'Search keyword text'
+    datasource_id: 'entity:node'
+    property_path: field_search_keyword_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_search_keyword_text
   field_search_keywords:
     label: 'Search keywords » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -188,6 +197,7 @@ processor_settings:
       - field_banner_text
       - field_banner_title
       - field_lead_in
+      - field_search_keyword_text
       - field_search_keywords
       - field_text
       - title
