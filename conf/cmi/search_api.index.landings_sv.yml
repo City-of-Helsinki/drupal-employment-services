@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_hero
     - field.storage.paragraph.field_hero_desc
     - field.storage.node.field_search_keywords
+    - field.storage.node.field_search_keyword_text
     - search_api.server.elastic
   module:
     - node
@@ -32,6 +33,14 @@ field_settings:
         - field.storage.paragraph.field_hero_desc
       module:
         - paragraphs
+  field_search_keyword_text:
+    label: 'Search keyword text'
+    datasource_id: 'entity:node'
+    property_path: field_search_keyword_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_search_keyword_text
   field_search_keywords:
     label: 'Search keywords » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -87,6 +96,7 @@ processor_settings:
     fields:
       - entity_type
       - field_lead_in
+      - field_search_keyword_text
       - field_search_keywords
       - title
       - type
