@@ -1,0 +1,19 @@
+uuid: 95669a46-3628-4f7d-8d9e-5309b830237e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.link_with_icon
+id: paragraph.link_with_icon.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: link_with_icon
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

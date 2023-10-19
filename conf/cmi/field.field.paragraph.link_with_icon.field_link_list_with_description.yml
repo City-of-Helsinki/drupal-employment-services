@@ -1,0 +1,148 @@
+uuid: 2e782b4f-bf86-4f92-a5b0-c04fd5e22205
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_list_with_description
+    - paragraphs.paragraphs_type.link_are
+    - paragraphs.paragraphs_type.link_with_icon
+  module:
+    - entity_reference_revisions
+id: paragraph.link_with_icon.field_link_list_with_description
+field_name: field_link_list_with_description
+entity_type: paragraph
+bundle: link_with_icon
+label: 'Link list with description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link_are: link_are
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 41
+        enabled: false
+      accordion_item:
+        weight: 42
+        enabled: false
+      banner:
+        weight: 43
+        enabled: false
+      blog_list:
+        weight: 44
+        enabled: false
+      card:
+        weight: 45
+        enabled: false
+      card_list:
+        weight: 46
+        enabled: false
+      columns:
+        weight: 47
+        enabled: false
+      content_cards:
+        weight: 48
+        enabled: false
+      content_liftup:
+        weight: 49
+        enabled: false
+      event_list:
+        weight: 50
+        enabled: false
+      events_list:
+        weight: 51
+        enabled: false
+      from_library:
+        weight: 52
+        enabled: false
+      gallery:
+        weight: 53
+        enabled: false
+      gallery_slide:
+        weight: 54
+        enabled: false
+      hero:
+        weight: 55
+        enabled: false
+      highlighted_text:
+        weight: 56
+        enabled: false
+      image:
+        weight: 57
+        enabled: false
+      info:
+        weight: 58
+        enabled: false
+      liftup_with_image:
+        weight: 59
+        enabled: false
+      link:
+        weight: 60
+        enabled: false
+      link_are:
+        weight: 61
+        enabled: true
+      link_internal:
+        weight: 62
+        enabled: false
+      link_with_icon:
+        weight: 63
+        enabled: false
+      list_of_links:
+        weight: 64
+        enabled: false
+      list_of_links_item:
+        weight: 65
+        enabled: false
+      news_list:
+        weight: 66
+        enabled: false
+      notification:
+        weight: 67
+        enabled: false
+      phone_number_box:
+        weight: 68
+        enabled: false
+      quote:
+        weight: 69
+        enabled: false
+      remote_video:
+        weight: 70
+        enabled: false
+      search:
+        weight: 71
+        enabled: false
+      service_list:
+        weight: 72
+        enabled: false
+      sidebar_text:
+        weight: 73
+        enabled: false
+      subheading:
+        weight: 74
+        enabled: false
+      sujo_embedded:
+        weight: 75
+        enabled: false
+      text:
+        weight: 76
+        enabled: false
+      unit_map:
+        weight: 77
+        enabled: false
+      unit_search:
+        weight: 78
+        enabled: false
+      units_list:
+        weight: 79
+        enabled: false
+      video:
+        weight: 80
+        enabled: false
+field_type: entity_reference_revisions
