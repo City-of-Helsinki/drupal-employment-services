@@ -1,0 +1,27 @@
+uuid: 5866ef6f-174c-47fc-a94b-fc0cccdc2729
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_positioning
+field_name: field_icon_positioning
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Before
+      label: Before
+    -
+      value: After
+      label: After
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
