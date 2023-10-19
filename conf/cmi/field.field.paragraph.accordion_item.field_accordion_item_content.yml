@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_accordion_item_content
     - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.link_with_icon
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
@@ -25,6 +26,7 @@ settings:
   handler_settings:
     target_bundles:
       text: text
+      link_with_icon: link_with_icon
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -54,6 +56,9 @@ settings:
       content_liftup:
         weight: 26
         enabled: false
+      event_list:
+        weight: 50
+        enabled: false
       events_list:
         weight: 45
         enabled: false
@@ -75,14 +80,8 @@ settings:
       image:
         weight: 18
         enabled: false
-      image_and_card:
-        weight: 52
-        enabled: false
       info:
         weight: 53
-        enabled: false
-      lead:
-        weight: 54
         enabled: false
       liftup_with_image:
         weight: 32
@@ -90,9 +89,15 @@ settings:
       link:
         weight: 56
         enabled: false
+      link_are:
+        weight: 61
+        enabled: false
       link_internal:
         weight: 57
         enabled: false
+      link_with_icon:
+        weight: 63
+        enabled: true
       list_of_links:
         weight: 20
         enabled: false
@@ -102,8 +107,14 @@ settings:
       news_list:
         weight: 60
         enabled: false
+      notification:
+        weight: 67
+        enabled: false
       phone_number_box:
         weight: 61
+        enabled: false
+      quote:
+        weight: 69
         enabled: false
       remote_video:
         weight: 36
@@ -126,8 +137,14 @@ settings:
       text:
         weight: 22
         enabled: true
+      unit_map:
+        weight: 77
+        enabled: false
       unit_search:
         weight: 40
+        enabled: false
+      units_list:
+        weight: 79
         enabled: false
       video:
         weight: 70

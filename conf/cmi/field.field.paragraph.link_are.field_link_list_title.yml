@@ -1,14 +1,14 @@
-uuid: e45cbf1a-1686-48dd-aa2a-38ee54a08e89
+uuid: af323e4a-2973-4e6f-bdf0-ef72db32e7ed
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_link_list_title
-    - paragraphs.paragraphs_type.link_with_icon
-id: paragraph.link_with_icon.field_link_list_title
+    - paragraphs.paragraphs_type.link_are
+id: paragraph.link_are.field_link_list_title
 field_name: field_link_list_title
 entity_type: paragraph
-bundle: link_with_icon
+bundle: link_are
 label: 'Link list title'
 description: ''
 required: false

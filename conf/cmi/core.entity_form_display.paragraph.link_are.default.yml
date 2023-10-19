@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.link_are.field_description
+    - field.field.paragraph.link_are.field_link_list_title
     - field.field.paragraph.link_are.field_links
     - paragraphs.paragraphs_type.link_are
   module:
@@ -15,15 +16,23 @@ mode: default
 content:
   field_description:
     type: string_textarea
-    weight: 0
+    weight: 1
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_link_list_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_links:
     type: link_default
-    weight: 1
+    weight: 2
     region: content
     settings:
       placeholder_url: ''

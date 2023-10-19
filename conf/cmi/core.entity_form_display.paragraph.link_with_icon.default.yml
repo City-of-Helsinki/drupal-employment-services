@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.link_with_icon.field_header
     - field.field.paragraph.link_with_icon.field_icon
     - field.field.paragraph.link_with_icon.field_icon_positioning
-    - field.field.paragraph.link_with_icon.field_link_list_title
     - field.field.paragraph.link_with_icon.field_link_list_with_description
     - paragraphs.paragraphs_type.link_with_icon
   module:
@@ -19,14 +17,6 @@ targetEntityType: paragraph
 bundle: link_with_icon
 mode: default
 content:
-  field_header:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_icon:
     type: select2_icon_widget
     weight: 2
@@ -39,14 +29,6 @@ content:
     region: content
     settings:
       width: 100%
-    third_party_settings: {  }
-  field_link_list_title:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_link_list_with_description:
     type: paragraphs
