@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_search_keyword_text
     - field.field.node.article.field_search_keywords
     - node.type.article
   module:
@@ -19,6 +20,13 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  field_search_keyword_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

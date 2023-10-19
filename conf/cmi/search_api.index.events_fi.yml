@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.field_id
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
+    - field.storage.node.field_in_language
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
     - field.storage.node.field_short_description
@@ -80,6 +81,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_image_url
+  field_in_language:
+    label: 'In Language » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_in_language:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_in_language
+      module:
+        - taxonomy
   field_lead_in:
     label: 'short description » Processed text'
     datasource_id: 'entity:node'
@@ -193,6 +204,7 @@ processor_settings:
       - field_id
       - field_image_alt
       - field_image_url
+      - field_in_language
       - field_lead_in
       - field_location
       - field_location_extra_info

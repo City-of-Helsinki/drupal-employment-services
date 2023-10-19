@@ -433,8 +433,16 @@ class SyncContent extends DrushCommands {
    */
   private function nodeAddLanguageTaxonomyTerms(NodeInterface $node, \stdClass $source): NodeInterface {
     $tids = [];
-    foreach ($source->in_language as $lang) {
-      $data = $this->fetch($lang->{'@id'});
+    if (!empty($source->in_language)) {
+      foreach ($source->in_language as $lang) {
+        $data = $this->fetch($lang->{'@id'});
+        $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
+        $term->save();
+        $tids[] = $term->id();
+      }
+    }
+    else {
+      $data = $this->fetch('https://api.hel.fi/linkedevents/v1/language/fi/');
       $term = $this->termInit($data, $this->termLanguageVocabulary, 'field_language_id');
       $term->save();
       $tids[] = $term->id();
