@@ -11,6 +11,7 @@ dependencies:
     - field.storage.node.field_in_language
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
+    - field.storage.node.field_location_id
     - field.storage.node.field_short_description
     - field.storage.node.field_start_time
     - field.storage.node.field_street_address
@@ -106,6 +107,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location_extra_info
+  field_location_id:
+    label: 'Location ID'
+    datasource_id: 'entity:node'
+    property_path: field_location_id
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location_id
   field_start_time:
     label: 'Start time'
     datasource_id: 'entity:node'
