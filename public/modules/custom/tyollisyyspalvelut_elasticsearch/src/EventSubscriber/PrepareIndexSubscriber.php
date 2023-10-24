@@ -67,7 +67,7 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $filter_name = $stemmer_language . '_stop';
     $filter_language = '_' . $stemmer_language . '_';
 
-    if ($langcode === 'fi') {
+    if (isset($langcode) && $langcode === 'fi') {
       $indexConfig["body"]["settings"]["index"] = [
         "analysis" => [
           "analyzer" => [
