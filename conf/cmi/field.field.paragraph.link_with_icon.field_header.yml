@@ -1,0 +1,19 @@
+uuid: 10539510-f574-465a-9cb0-88a157d7ce5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.link_with_icon
+id: paragraph.link_with_icon.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: link_with_icon
+label: Header
+description: 'This field generates an H2 header for the icon with a link component.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

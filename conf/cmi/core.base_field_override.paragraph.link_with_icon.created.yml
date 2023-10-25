@@ -1,21 +1,18 @@
-uuid: 15b303e2-ece5-4666-b095-a6517d3faaaf
+uuid: 1419ee37-5544-4b4b-9127-7e530f537627
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_icon
     - paragraphs.paragraphs_type.link_with_icon
-  module:
-    - select2_icon
-id: paragraph.link_with_icon.field_icon
-field_name: field_icon
+id: paragraph.link_with_icon.created
+field_name: created
 entity_type: paragraph
 bundle: link_with_icon
-label: Icon
-description: ''
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: select2_icon
+field_type: created
