@@ -16,14 +16,14 @@ mode: default
 content:
   field_description:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
   field_link_list_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -31,7 +31,7 @@ content:
     region: content
   field_links:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false

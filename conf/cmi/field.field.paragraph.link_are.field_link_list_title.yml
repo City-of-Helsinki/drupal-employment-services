@@ -10,9 +10,9 @@ field_name: field_link_list_title
 entity_type: paragraph
 bundle: link_are
 label: 'Link list title'
-description: ''
+description: 'This field generates an H3 header for the icon with a link component.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
