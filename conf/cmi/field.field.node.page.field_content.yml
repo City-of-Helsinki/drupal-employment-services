@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.events_list
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.link_with_icon
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.notification
@@ -41,6 +42,7 @@ settings:
       liftup_with_image: liftup_with_image
       events_list: events_list
       notification: notification
+      link_with_icon: link_with_icon
       news_list: news_list
       subheading: subheading
     negate: 0
@@ -105,7 +107,7 @@ settings:
       link:
         weight: 57
         enabled: false
-      link_are:
+      link_area:
         weight: 61
         enabled: false
       link_internal:
@@ -113,7 +115,7 @@ settings:
         enabled: false
       link_with_icon:
         weight: 61
-        enabled: false
+        enabled: true
       list_of_links:
         weight: -22
         enabled: true

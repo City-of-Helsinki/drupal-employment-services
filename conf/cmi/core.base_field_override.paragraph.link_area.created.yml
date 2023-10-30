@@ -1,13 +1,13 @@
-uuid: 06011da2-61c8-4a52-9992-3ac7991a7bc1
+uuid: f88ba4b5-8002-4f83-9677-3338f038caa6
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.link_are
-id: paragraph.link_are.created
+    - paragraphs.paragraphs_type.link_area
+id: paragraph.link_area.created
 field_name: created
 entity_type: paragraph
-bundle: link_are
+bundle: link_area
 label: 'Authored on'
 description: 'The time that the Paragraph was created.'
 required: false

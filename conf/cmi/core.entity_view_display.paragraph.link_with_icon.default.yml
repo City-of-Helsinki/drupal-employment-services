@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.link_with_icon.field_header
     - field.field.paragraph.link_with_icon.field_icon
-    - field.field.paragraph.link_with_icon.field_icon_positioning
     - field.field.paragraph.link_with_icon.field_link_list_with_description
     - paragraphs.paragraphs_type.link_with_icon
   module:
     - entity_reference_revisions
-    - options
     - select2_icon
 id: paragraph.link_with_icon.default
 targetEntityType: paragraph
@@ -31,13 +29,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
-    region: content
-  field_icon_positioning:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_link_list_with_description:
     type: entity_reference_revisions_entity_view

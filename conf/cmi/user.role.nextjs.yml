@@ -84,6 +84,7 @@ permissions:
   - 'create paragraph content info'
   - 'create paragraph content liftup_with_image'
   - 'create paragraph content link'
+  - 'create paragraph content link_area'
   - 'create paragraph content link_internal'
   - 'create paragraph content link_with_description'
   - 'create paragraph content link_with_icon'
