@@ -1,17 +1,17 @@
-uuid: 4eead6fc-b424-4088-8a0e-78dbf509bf0b
+uuid: a8d88856-85ce-495b-a4a0-a3b750f3badd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.link_are.field_description
-    - field.field.paragraph.link_are.field_link_list_title
-    - field.field.paragraph.link_are.field_links
-    - paragraphs.paragraphs_type.link_are
+    - field.field.paragraph.link_area.field_description
+    - field.field.paragraph.link_area.field_link_list_title
+    - field.field.paragraph.link_area.field_links
+    - paragraphs.paragraphs_type.link_area
   module:
     - link
-id: paragraph.link_are.default
+id: paragraph.link_area.default
 targetEntityType: paragraph
-bundle: link_are
+bundle: link_area
 mode: default
 content:
   field_description:
@@ -37,6 +37,11 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

@@ -1,9 +1,9 @@
-uuid: 31d6d86c-ff5f-4ab4-a85f-aa93182aef01
+uuid: 3e88da93-4183-4db3-907c-734ffc4fd2e9
 langcode: en
 status: true
 dependencies: {  }
-id: link_are
-label: 'Link are'
+id: link_area
+label: 'Link area'
 icon_uuid: null
 icon_default: null
 description: 'You can add multiple links along with descriptions.'

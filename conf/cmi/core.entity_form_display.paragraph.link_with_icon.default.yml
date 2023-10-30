@@ -5,13 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.link_with_icon.field_header
     - field.field.paragraph.link_with_icon.field_icon
-    - field.field.paragraph.link_with_icon.field_icon_positioning
     - field.field.paragraph.link_with_icon.field_link_list_with_description
     - paragraphs.paragraphs_type.link_with_icon
   module:
     - paragraphs
     - paragraphs_features
-    - select2
     - select2_icon
 id: paragraph.link_with_icon.default
 targetEntityType: paragraph
@@ -31,13 +29,6 @@ content:
     weight: 1
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_icon_positioning:
-    type: select2
-    weight: 2
-    region: content
-    settings:
-      width: 100%
     third_party_settings: {  }
   field_link_list_with_description:
     type: paragraphs
@@ -64,6 +55,11 @@ content:
         delete_confirmation: false
         split_text: false
         show_drag_and_drop: true
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

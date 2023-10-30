@@ -1,14 +1,14 @@
-uuid: af323e4a-2973-4e6f-bdf0-ef72db32e7ed
+uuid: 08bcf964-d0b8-43b2-8dde-fd5dc57717a2
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_link_list_title
-    - paragraphs.paragraphs_type.link_are
-id: paragraph.link_are.field_link_list_title
+    - paragraphs.paragraphs_type.link_area
+id: paragraph.link_area.field_link_list_title
 field_name: field_link_list_title
 entity_type: paragraph
-bundle: link_are
+bundle: link_area
 label: 'Link list title'
 description: 'This field generates an H3 header for the icon with a link component.'
 required: false

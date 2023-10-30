@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_link_list_with_description
-    - paragraphs.paragraphs_type.link_are
+    - paragraphs.paragraphs_type.link_area
     - paragraphs.paragraphs_type.link_with_icon
   module:
     - entity_reference_revisions
@@ -22,7 +22,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      link_are: link_are
+      link_area: link_area
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -85,7 +85,7 @@ settings:
       link:
         weight: 60
         enabled: false
-      link_are:
+      link_area:
         weight: 61
         enabled: true
       link_internal:

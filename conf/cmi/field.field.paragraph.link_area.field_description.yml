@@ -1,14 +1,14 @@
-uuid: 651746b0-b7a7-46e6-87ac-af130eaae1e3
+uuid: cd435fea-8c13-489f-9552-122148802a29
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_description
-    - paragraphs.paragraphs_type.link_are
-id: paragraph.link_are.field_description
+    - paragraphs.paragraphs_type.link_area
+id: paragraph.link_area.field_description
 field_name: field_description
 entity_type: paragraph
-bundle: link_are
+bundle: link_area
 label: Description
 description: ''
 required: false
