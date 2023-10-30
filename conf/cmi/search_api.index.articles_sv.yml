@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_article_category
     - field.storage.node.field_content
+    - field.storage.paragraph.field_accordion_description
     - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_title
@@ -15,6 +16,7 @@ dependencies:
   module:
     - node
     - paragraphs
+    - publication_date
     - taxonomy
     - search_api
 id: articles_sv
@@ -30,10 +32,29 @@ field_settings:
     dependencies:
       module:
         - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
   entity_type:
     label: 'Entity type'
     property_path: search_api_entity_type
     type: string
+  field_accordion_description:
+    label: 'Content region » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_accordion_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_accordion_description
+      module:
+        - paragraphs
   field_accordion_text:
     label: 'Content region » Paragraph » Text'
     datasource_id: 'entity:node'
@@ -102,6 +123,14 @@ field_settings:
         - field.storage.paragraph.field_text
       module:
         - paragraphs
+  published_at:
+    label: 'Published on'
+    datasource_id: 'entity:node'
+    property_path: published_at
+    type: date
+    dependencies:
+      module:
+        - publication_date
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -147,6 +176,7 @@ processor_settings:
     all_fields: true
     fields:
       - entity_type
+      - field_accordion_description
       - field_accordion_text
       - field_accordion_title
       - field_article_category

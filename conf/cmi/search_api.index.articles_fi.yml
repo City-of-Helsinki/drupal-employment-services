@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_article_category
     - field.storage.node.field_content
+    - field.storage.paragraph.field_events_list_desc
     - field.storage.paragraph.field_accordion_text
     - field.storage.paragraph.field_text
     - field.storage.paragraph.field_accordion_title
@@ -15,6 +16,7 @@ dependencies:
   module:
     - node
     - paragraphs
+    - publication_date
     - taxonomy
     - search_api
 id: articles_fi
@@ -26,6 +28,14 @@ field_settings:
     label: Changed
     datasource_id: 'entity:node'
     property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
     type: date
     dependencies:
       module:
@@ -64,6 +74,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_article_category
+  field_events_list_desc:
+    label: 'Content region » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_events_list_desc'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_events_list_desc
+      module:
+        - paragraphs
   field_lead_in:
     label: Lead
     datasource_id: 'entity:node'
@@ -102,20 +123,20 @@ field_settings:
         - field.storage.paragraph.field_text
       module:
         - paragraphs
+  published_at:
+    label: 'Published on'
+    datasource_id: 'entity:node'
+    property_path: published_at
+    type: date
+    dependencies:
+      module:
+        - publication_date
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
     type: text
     boost: !!float 2
-    dependencies:
-      module:
-        - node
-  type:
-    label: 'Content type'
-    datasource_id: 'entity:node'
-    property_path: type
-    type: string
     dependencies:
       module:
         - node
@@ -150,12 +171,12 @@ processor_settings:
       - field_accordion_text
       - field_accordion_title
       - field_article_category
+      - field_events_list_desc
       - field_lead_in
       - field_search_keyword_text
       - field_search_keywords
       - field_text
       - title
-      - type
       - url
     title: true
     alt: true
