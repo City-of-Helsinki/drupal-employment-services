@@ -56,26 +56,41 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
     $stemmer_language = 'english';
     $config = $this->getDatasourceConfig($index);
     $standard_languages = LanguageManager::getStandardLanguageList();
+
+    $filter_name = $stemmer_language . '_stop';
+    $filter_language = '_' . $stemmer_language . '_';
     if (!empty($config) && isset($config['languages']['selected'])) {
       $langcode = $config['languages']['selected'][0];
 
       if (isset($standard_languages[$langcode])) {
         $stemmer_language = strtolower($standard_languages[$langcode][0]);
       }
+      $languages = $config['languages']['selected'];
+
+      $array = [];
+
+      foreach ($languages as $language) {
+        $analyzerConfig = [
+          "tokenizer" => "standard",
+          "filter" => ["lowercase"]
+        ];
+
+        if ($language === 'fi') {
+          $analyzerConfig['filter'][] = "finnish_stop";
+          $analyzerConfig['filter'][] = "snowball_filter";
+          $analyzerConfig['filter'][] = "synonym_filter";
+        } else {
+          $analyzerConfig['filter'][] = $filter_name;
+        }
+
+        $array[$language . "_analyzer"] = $analyzerConfig;
+      }
     }
 
-    $filter_name = $stemmer_language . '_stop';
-    $filter_language = '_' . $stemmer_language . '_';
-
-    if (isset($langcode) && $langcode === 'fi') {
+    if (isset($langcode) && isset($array) ) {
       $indexConfig["body"]["settings"]["index"] = [
         "analysis" => [
-          "analyzer" => [
-            "index_analyzer" => [
-              "tokenizer" => "standard",
-              "filter" => [ "lowercase", "finnish_stop", "snowball_filter", "synonym_filter" ]
-            ],
-          ],
+          "analyzer" => $array,
           "filter" => [
             "finnish_stop" => [
               "type" => "stop",
@@ -87,7 +102,15 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
             ],
             "synonym_filter" => [
               "type" => "synonym_graph",
-              "synonyms" => $this->getSynonyms()
+              "synonyms" =>  $this->getSynonyms()
+            ],
+            "filter_stemmer" => [
+              "type" => "stemmer",
+              "language" => $stemmer_language,
+            ],
+            $filter_name => [
+              "type" => "stop",
+              "stopwords" => $filter_language,
             ],
           ],
         ],
