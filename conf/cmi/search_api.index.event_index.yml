@@ -9,18 +9,18 @@ dependencies:
     - field.storage.node.field_image_alt
     - field.storage.node.field_image_url
     - field.storage.node.field_in_language
+    - field.storage.node.field_short_description
     - field.storage.node.field_location
     - field.storage.node.field_location_extra_info
     - field.storage.node.field_location_id
-    - field.storage.node.field_short_description
     - field.storage.node.field_start_time
     - field.storage.node.field_street_address
     - field.storage.node.field_tags
     - field.storage.node.field_text
     - search_api.server.elastic
   module:
-    - node
     - taxonomy
+    - node
     - search_api
 id: event_index
 name: 'Event index'
