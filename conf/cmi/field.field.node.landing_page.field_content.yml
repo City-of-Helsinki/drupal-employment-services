@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.events_list
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.link_with_icon
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.subheading
@@ -41,6 +42,7 @@ settings:
       events_list: events_list
       news_list: news_list
       subheading: subheading
+      link_with_icon: link_with_icon
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -103,9 +105,15 @@ settings:
       link:
         weight: -44
         enabled: false
+      link_area:
+        weight: 61
+        enabled: false
       link_internal:
         weight: -43
         enabled: false
+      link_with_icon:
+        weight: 63
+        enabled: true
       list_of_links:
         weight: -64
         enabled: true
@@ -145,8 +153,14 @@ settings:
       text:
         weight: -66
         enabled: true
+      unit_map:
+        weight: 77
+        enabled: false
       unit_search:
         weight: -53
+        enabled: false
+      units_list:
+        weight: 79
         enabled: false
       video:
         weight: -36
