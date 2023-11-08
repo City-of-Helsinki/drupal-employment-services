@@ -1,32 +1,32 @@
 ARTIFACT_INCLUDE_EXISTS := $(shell test -f conf/artifact/include && echo yes || echo no)
 ARTIFACT_EXCLUDE_EXISTS := $(shell test -f conf/artifact/exclude && echo yes || echo no)
 ARTIFACT_CMD := tar -hczf artifact.tar.gz
-DUMP_SQL_FILENAME := dump.sql
+DUMP_SQL_FILENAME ?= dump.sql
 DUMP_SQL_EXISTS := $(shell test -f $(DUMP_SQL_FILENAME) && echo yes || echo no)
 SSH_OPTS ?= -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+CLEAN_EXCLUDE := .idea $(DUMP_SQL_FILENAME) .env.local
 
 ifeq ($(ARTIFACT_EXCLUDE_EXISTS),yes)
-	ARTIFACT_CMD := ${ARTIFACT_CMD} --exclude-from=conf/artifact/exclude
+	ARTIFACT_CMD := $(ARTIFACT_CMD) --exclude-from=conf/artifact/exclude
 endif
 
 ifeq ($(ARTIFACT_INCLUDE_EXISTS),yes)
-	ARTIFACT_CMD := ${ARTIFACT_CMD} --files-from=conf/artifact/include
+	ARTIFACT_CMD := $(ARTIFACT_CMD) --files-from=conf/artifact/include
 else
-	ARTIFACT_CMD := ${ARTIFACT_CMD} *
+	ARTIFACT_CMD := $(ARTIFACT_CMD) *
 endif
 
 PHONY += artifact
 # This command can always be run on host
 artifact: RUN_ON := host
 artifact: ## Make tar.gz package from the current build
-	$(call step,Create artifact...)
-	@${ARTIFACT_CMD}
+	$(call step,Create artifact...\n)
+	@$(ARTIFACT_CMD)
 
 PHONY += build
-build: $(BUILD_TARGETS) ## Build codebase(s)
-	$(call step,Start build for env: $(ENV)\n- Following targets will be run: $(BUILD_TARGETS))
+build: ## Build codebase(s)
+	$(call group_step,Build ($(ENV)):${NO_COLOR} $(BUILD_TARGETS))
 	@$(MAKE) $(BUILD_TARGETS) ENV=$(ENV)
-	$(call step,Build completed.)
 
 PHONY += build-dev
 build-dev: build
@@ -40,14 +40,15 @@ build-production:
 	@$(MAKE) build ENV=production
 
 PHONY += clean
-clean: ## Clean folders
-	$(call step,Clean folders:\n- Following folders will be removed: ${CLEAN_FOLDERS})
-	@rm -rf ${CLEAN_FOLDERS}
+clean: ## Cleanup
+	$(call step,Cleanup loaded files...\n)
+	@rm -rf vendor
+	@git clean -fdx $(foreach item,$(CLEAN_EXCLUDE),-e $(item))
 
 PHONY += self-update
 self-update: ## Self-update makefiles from druidfi/tools
-	$(call step,Update makefiles from druidfi/tools)
-	@bash -c "$$(curl -fsSL ${UPDATE_SCRIPT_URL})"
+	$(call step,Update makefiles from druidfi/tools\n)
+	@bash -c "$$(curl -fsSL $(UPDATE_SCRIPT_URL))"
 
 PHONY += shell-%
 shell-%: OPTS = $(INSTANCE_$*_OPTS)
@@ -59,6 +60,16 @@ shell-%: ## Login to remote instance
 
 PHONY += sync
 sync: ## Sync data from other environments
-	$(call step,Start sync:\n- Following targets will be run: $(SYNC_TARGETS))
+	$(call group_step,Sync:$(NO_COLOR) $(SYNC_TARGETS))
 	@$(MAKE) $(SYNC_TARGETS) ENV=$(ENV)
-	$(call step,Sync completed.)
+
+PHONY += gh-download-dump
+gh-download-dump: GH_FLAGS += $(if $(GH_ARTIFACT),-n $(GH_ARTIFACT),-n latest-dump)
+gh-download-dump: GH_FLAGS += $(if $(GH_REPO),-R $(GH_REPO),)
+gh-download-dump: ## Download database dump from repository artifacts
+	$(call step,Download database dump from repository artifacts\n)
+ifeq ($(DUMP_SQL_EXISTS),no)
+	$(call run,gh run download $(strip $(GH_FLAGS)),Downloaded $(DUMP_SQL_FILENAME),Failed)
+else
+	@echo "There is already $(DUMP_SQL_FILENAME)"
+endif
