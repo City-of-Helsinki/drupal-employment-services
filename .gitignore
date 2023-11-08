@@ -1,13 +1,14 @@
 # Ignore project files that should not be in version control
 drush/sites/
+drush/Commands/*
 node_modules
 public/core
 public/libraries
 public/modules/contrib
+public/modules/custom/paatokset_search/assets
 public/themes/contrib
 public/sites/default/files
 vendor
-helfi-test-automation-python/
 
 # Ignore the folder created by PhpStorm
 .idea/*
@@ -28,6 +29,12 @@ public/modules/custom/helfi_*
 
 # Ignore local db dump
 dump*
+*.sql
 
+# Ignore test related files
+.phpunit.*
+helfi-test-automation-python/
+public/sites/simpletest/
+
+# Ignore SSH keys
 keys/*
-
