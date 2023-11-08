@@ -1,88 +1,84 @@
-CLI_SERVICE := cli
+CLI_SERVICE := app
 CLI_SHELL := sh
-CLI_USER := root
-DOCKER_COMPOSE := docker-compose
-DOCKER_COMPOSE_EXEC ?= $(DOCKER_COMPOSE) exec -T
+DOCKER_COMPOSE_YML_PATH ?= docker-compose.yml
+DOCKER_COMPOSE_YML_EXISTS := $(shell test -f $(DOCKER_COMPOSE_YML_PATH) && echo yes || echo no)
 DOCKER_PROJECT_ROOT ?= /app
 DOCKER_WARNING_INSIDE := You are inside the Docker container!
 
+# If docker-compose.yml exists
+ifeq ($(DOCKER_COMPOSE_YML_EXISTS),yes)
+	RUN_ON := docker
+endif
+
 PHONY += config
 config: ## Show docker-compose config
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
-else
-	$(call step,Show docker-compose config...)
-	@$(DOCKER_COMPOSE) config
-endif
+	$(call step,Show Docker Compose config...\n)
+	$(call docker_compose,config)
+
+PHONY += pull
+pull: ## Pull docker images
+	$(call step,Pull the latest docker images...\n)
+	$(call docker_compose,pull)
 
 PHONY += down
 down: ## Tear down the environment
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
-else
-	$(call step,Tear down the environment...)
-	@$(DOCKER_COMPOSE) down -v --remove-orphans
-endif
+	$(call step,Tear down the environment...\n)
+	$(call docker_compose,down -v --remove-orphans --rmi local)
 
 PHONY += ps
-ps: ## Show docker-compose ps
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
-else
-	$(call step,Show docker-compose ps...)
-	@$(DOCKER_COMPOSE) ps
-endif
+ps: ## List containers
+	$(call step,List container(s)...\n)
+	$(call docker_compose,ps)
 
 PHONY += stop
 stop: ## Stop the environment
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
-else
-	$(call step,Stop the container(s)...)
-	@$(DOCKER_COMPOSE) stop
-endif
+	$(call step,Stop the container(s)...\n)
+	$(call docker_compose,stop)
 
 PHONY += up
 up: ## Launch the environment
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
-else
-	$(call step,Start up the container(s)...)
-	@$(DOCKER_COMPOSE) up -d --remove-orphans
-endif
-
-PHONY += docker-test
-docker-test: ## Run docker targets on Docker and host
-	$(call step,Test docker_run_cmd on $(RUN_ON))
-	$(call docker_run_cmd,pwd && echo \$$PATH)
+	$(call step,Start up the container(s)...\n)
+	$(call docker_compose,up --wait --remove-orphans)
 
 PHONY += shell
 shell: ## Login to CLI container
-ifeq ($(RUN_ON),host)
-	$(call warn,$(DOCKER_WARNING_INSIDE))
+ifeq ($(RUN_ON),docker)
+	$(call docker_compose,exec $(CLI_SERVICE) $(CLI_SHELL))
 else
-	@$(DOCKER_COMPOSE) exec -u ${CLI_USER} ${CLI_SERVICE} ${CLI_SHELL}
+	$(call warn,$(DOCKER_WARNING_INSIDE))
 endif
 
 PHONY += ssh-check
 ssh-check: ## Check SSH keys on CLI container
-	$(call docker_run_cmd,ssh-add -L)
-
-PHONY += versions
-versions: ## Show software versions inside the Drupal container
-	$(call step,Software versions on ${RUN_ON}:)
-	$(call docker_run_cmd,php -v && echo " ")
-	$(call composer_on_${RUN_ON}, --version && echo " ")
-	$(call drush_on_${RUN_ON},--version)
-	$(call docker_run_cmd,echo 'NPM version: '|tr '\n' ' ' && npm --version)
-	$(call docker_run_cmd,echo 'Yarn version: '|tr '\n' ' ' && yarn --version)
+	$(call docker_compose_exec,ssh-add -L)
 
 ifeq ($(RUN_ON),docker)
-define docker_run_cmd
-	@${DOCKER_COMPOSE_EXEC} -u ${CLI_USER} ${CLI_SERVICE} ${CLI_SHELL} -c "$(1)"
+define docker
+	@docker $(1) > /dev/null 2>&1 && $(if $(2),echo "$(2)",)
 endef
 else
-define docker_run_cmd
-	@$(1)
+define docker
+	$(call sub_step,$(DOCKER_WARNING_INSIDE))
+endef
+endif
+
+ifeq ($(RUN_ON),docker)
+define docker_compose_exec
+	$(call docker_compose,exec$(if $(CLI_USER), -u $(CLI_USER),) $(CLI_SERVICE) $(CLI_SHELL) -c "$(1)")
+	$(if $(2),@echo "$(2)",)
+endef
+else
+define docker_compose_exec
+	@$(1) && echo $(2)
+endef
+endif
+
+ifeq ($(RUN_ON),docker)
+define docker_compose
+	@docker compose$(if $(filter docker-compose.yml,$(DOCKER_COMPOSE_YML_PATH)),, -f $(DOCKER_COMPOSE_YML_PATH)) $(1)
+endef
+else
+define docker_compose
+	$(call sub_step,$(DOCKER_WARNING_INSIDE))
 endef
 endif
