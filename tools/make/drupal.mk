@@ -1,103 +1,106 @@
+BUILD_TARGETS += drupal-create-folders
 DRUPAL_CONF_EXISTS := $(shell test -f conf/cmi/core.extension.yml && echo yes || echo no)
 DRUPAL_FRESH_TARGETS := up build sync post-install
 DRUPAL_NEW_TARGETS := up build drush-si drush-uli
-ifeq ($(DRUPAL_VERSION),7)
-DRUPAL_POST_INSTALL_TARGETS := drush-updb drush-cr drush-uli
-else
-DRUPAL_POST_INSTALL_TARGETS := drush-updb drush-cim drush-uli
-CLEAN_FOLDERS += ${WEBROOT}/core
-CLEAN_FOLDERS += ${WEBROOT}/libraries
-CLEAN_FOLDERS += ${WEBROOT}/modules/contrib
-CLEAN_FOLDERS += ${WEBROOT}/profiles
-CLEAN_FOLDERS += ${WEBROOT}/themes/contrib
-endif
+DRUPAL_POST_INSTALL_TARGETS := drush-deploy
+CLEAN_EXCLUDE += $(WEBROOT)/sites/default/files
+DRUPAL_DISABLE_MODULES ?= no
+DRUPAL_ENABLE_MODULES ?= no
 DRUPAL_PROFILE ?= minimal
 DRUPAL_SYNC_FILES ?= yes
-DRUPAL_SYNC_SOURCE ?= production
-DRUPAL_VERSION ?= 8
+DRUPAL_SYNC_SOURCE ?= main
 DRUSH_RSYNC_MODE ?= Pakzu
 DRUSH_RSYNC_OPTS ?=  -- --omit-dir-times --no-perms --no-group --no-owner --chmod=ugo=rwX
 DRUSH_RSYNC_EXCLUDE ?= css:ctools:js:php:tmp:tmp_php
 SYNC_TARGETS += drush-sync
+CS_EXTS := inc,php,module,install,profile,theme
+CS_STANDARD_PATHS := vendor/drupal/coder/coder_sniffer,vendor/slevomat/coding-standard
+CS_STANDARDS := Drupal,DrupalPractice
 LINT_PATHS_JS += ./$(WEBROOT)/modules/custom/*/js
 LINT_PATHS_JS += ./$(WEBROOT)/themes/custom/*/js
-LINT_PATHS_PHP += -v $(CURDIR)/drush:/app/drush:rw,consistent
-LINT_PATHS_PHP += -v $(CURDIR)/$(WEBROOT)/modules/custom:/app/$(WEBROOT)/modules/custom:rw,consistent
-LINT_PATHS_PHP += -v $(CURDIR)/$(WEBROOT)/themes/custom:/app/$(WEBROOT)/themes/custom:rw,consistent
+LINT_PATHS_PHP += drush
+LINT_PATHS_PHP += $(WEBROOT)/modules/custom
+LINT_PATHS_PHP += $(WEBROOT)/themes/custom
 LINT_PHP_TARGETS += lint-drupal
 FIX_TARGETS += fix-drupal
+DRUPAL_CREATE_FOLDERS := $(WEBROOT)/sites/default/files/private
+DRUPAL_CREATE_FOLDERS += $(WEBROOT)/sites/default/files/translations
 
-# TODO Remove this when DRUPAL_WEBROOT vars are removed from projects
-ifdef DRUPAL_WEBROOT
-	WEBROOT := $(DRUPAL_WEBROOT)
+ifeq ($(GH_DUMP_ARTIFACT),yes)
+	DRUPAL_FRESH_TARGETS := gh-download-dump $(DRUPAL_FRESH_TARGETS)
 endif
+
+ifneq ($(DRUPAL_DISABLE_MODULES),no)
+	SYNC_TARGETS += drush-disable-modules
+endif
+
+ifneq ($(DRUPAL_ENABLE_MODULES),no)
+	DRUPAL_POST_INSTALL_TARGETS += drush-enable-modules
+endif
+
+PHONY += drupal-create-folders
+drupal-create-folders:
+	$(call step,Create folders for Drupal...\n)
+	$(call docker_compose_exec,mkdir -v -p $(DRUPAL_CREATE_FOLDERS))
 
 PHONY += drupal-update
 drupal-update: ## Update Drupal core with Composer
-	$(call step,Update Drupal core with Composer...)
-	@composer update -W "drupal/core-*"
+	$(call step,Update Drupal core with Composer...\n)
+	$(call composer,update -W "drupal/core-*")
 
 PHONY += drush-cex
 drush-cex: ## Export configuration
-ifeq ($(DRUPAL_VERSION),7)
-	$(call warn,\"drush cex\" is not Drupal 7 command\n)
-else
-	$(call step,Export configuration...)
-	$(call drush_on_${RUN_ON},cex -y)
-endif
+	$(call step,Export configuration...\n)
+	$(call drush,cex -y)
 
 PHONY += drush-cim
 drush-cim: ## Import configuration
-ifeq ($(DRUPAL_VERSION),7)
-	$(call warn,\"drush cim\" is not Drupal 7 command\n)
-else
-	$(call step,Import configuration...)
-	$(call drush_on_${RUN_ON},cim -y)
-endif
-
-PHONY += drush-cc
-drush-cc: drush-cr
+	$(call step,Import configuration...\n)
+	$(call drush,cim -y)
 
 PHONY += drush-cr
 drush-cr: ## Clear caches
-	$(call step,Clearing caches...)
-ifeq ($(DRUPAL_VERSION),7)
-	$(call drush_on_${RUN_ON},cc all)
-else
-	$(call drush_on_${RUN_ON},cr)
-endif
+	$(call step,Clearing caches...\n)
+	$(call drush,cr)
 
 PHONY += drush-status
 drush-status: ## Show Drupal status information
-	$(call drush_on_${RUN_ON},status)
+	$(call drush,status)
 
 PHONY += drush-uli
+drush-uli: DRUPAL_UID ?=
+drush-uli: DRUPAL_DESTINATION ?= admin/reports/status
 drush-uli: ## Get login link
-	$(call step,Login to your site with:)
-ifeq ($(DRUPAL_VERSION),7)
-	$(call drush_on_${RUN_ON},uli)
-else
-	$(call drush_on_${RUN_ON},uli admin/reports/status)
-endif
+	$(call step,Login to your site with:\n)
+	$(call drush,uli$(if $(DRUPAL_UID), --uid=$(DRUPAL_UID),) $(DRUPAL_DESTINATION))
 
 PHONY += drush-si
-ifeq ($(DRUPAL_CONF_EXISTS)$(DRUPAL_VERSION),yes8)
+ifeq ($(DRUPAL_CONF_EXISTS),yes)
     drush-si: DRUSH_SI := -y --existing-config
 else
     drush-si: DRUSH_SI := -y $(DRUPAL_PROFILE)
 endif
 drush-si: ## Site install
-	$(call drush_on_${RUN_ON},si ${DRUSH_SI})
+	$(call step,Do Drush site:install...\n)
+	$(call drush,si ${DRUSH_SI})
 
 PHONY += drush-deploy
 drush-deploy: ## Run Drush deploy
-	$(call step,Run Drush deploy...)
-	$(call drush_on_${RUN_ON},deploy)
+	$(call step,Run Drush deploy...\n)
+	$(call drush,deploy)
 
 PHONY += drush-updb
 drush-updb: ## Run database updates
-	$(call step,Run database updates...)
-	$(call drush_on_${RUN_ON},updb -y)
+	$(call step,Run database updates...\n)
+	$(call drush,updb -y)
+
+PHONY += drush-reset-local
+drush-reset-local: ## Reset local configuration (cim, cr, updb, cr)
+	$(call step,Reset local configuration...\n)
+	$(call drush,cim -y)
+	$(call drush,cr)
+	$(call drush,updb -y --no-cache-clear)
+	$(call drush,cr)
 
 PHONY += fresh
 fresh: ## Build fresh development environment and sync
@@ -109,77 +112,88 @@ new: ## Create a new empty Drupal installation from configuration
 
 PHONY += post-install
 post-install: ## Run post-install Drush actions
-	@$(MAKE) $(DRUPAL_POST_INSTALL_TARGETS)
+	@$(MAKE) $(DRUPAL_POST_INSTALL_TARGETS) drush-uli
+
+PHONY += drush-disable-modules
+drush-disable-modules: ## Disable Drupal modules
+	$(call step,Disable Drupal modules...\n)
+ifneq ($(DRUPAL_DISABLE_MODULES),no)
+	$(call drush,pmu -y $(subst ",,$(DRUPAL_DISABLE_MODULES)))
+else
+	$(call sub_step,No modules to disable)
+endif
+
+PHONY += drush-enable-modules
+drush-enable-modules: ## Enable Drupal modules
+	$(call step,Enable Drupal modules...\n)
+ifneq ($(DRUPAL_ENABLE_MODULES),no)
+	$(call drush,en -y $(subst ",,$(DRUPAL_ENABLE_MODULES)))
+else
+	$(call sub_step,No modules to enable)
+endif
 
 PHONY += drush-sync
 drush-sync: drush-sync-db drush-sync-files ## Sync database and files
 
 PHONY += drush-sync-db
 drush-sync-db: ## Sync database
+	$(call drush,sql-drop --quiet -y)
 ifeq ($(DUMP_SQL_EXISTS),yes)
 	$(call step,Import local SQL dump...)
-	$(call drush_on_${RUN_ON},sql-query --file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
+	$(call drush,sql-query --file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME) && echo 'SQL dump imported')
 else
 	$(call step,Sync database from @$(DRUPAL_SYNC_SOURCE)...)
-ifeq ($(DRUPAL_VERSION),7)
-	$(call drush_on_${RUN_ON},sql-drop -y)
-endif
-	$(call drush_on_${RUN_ON},sql-sync -y --structure-tables-key=common @$(DRUPAL_SYNC_SOURCE) @self)
+	$(call drush,sql-sync -y --structure-tables-key=common @$(DRUPAL_SYNC_SOURCE) @self)
 endif
 
 PHONY += drush-sync-files
 drush-sync-files: ## Sync files
 ifeq ($(DRUPAL_SYNC_FILES),yes)
 	$(call step,Sync files from @$(DRUPAL_SYNC_SOURCE)...)
-ifeq ($(DRUPAL_VERSION),7)
-	@chmod 0755 ${WEBROOT}/sites/default
-	@mkdir -p ${WEBROOT}/sites/default/files
-	@chmod 0777 ${WEBROOT}/sites/default/files
-	$(call drush_on_${RUN_ON},-y rsync --exclude-paths=$(DRUSH_RSYNC_EXCLUDE) --mode=$(DRUSH_RSYNC_MODE) @$(DRUPAL_SYNC_SOURCE):%files @self:%files)
-else
-	$(call drush_on_${RUN_ON},-y rsync --exclude-paths=$(DRUSH_RSYNC_EXCLUDE) --mode=$(DRUSH_RSYNC_MODE) @$(DRUPAL_SYNC_SOURCE):%files @self:%files $(DRUSH_RSYNC_OPTS))
-endif
+	$(call drush,-y rsync --exclude-paths=$(DRUSH_RSYNC_EXCLUDE) --mode=$(DRUSH_RSYNC_MODE) @$(DRUPAL_SYNC_SOURCE):%files @self:%files $(DRUSH_RSYNC_OPTS))
 endif
 
 PHONY += drush-create-dump
 drush-create-dump: FLAGS := --structure-tables-key=common --extra-dump=--no-tablespaces
 drush-create-dump: ## Create database dump to dump.sql
-	$(call drush_on_${RUN_ON},sql-dump $(FLAGS) --result-file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
+	$(call drush,sql-dump $(FLAGS) --result-file=${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
 
 PHONY += drush-download-dump
-drush-download-dump: DOCKER_COMPOSE_EXEC := docker-compose exec
 drush-download-dump: ## Download database dump to dump.sql
-	$(call drush_on_${RUN_ON},-Dssh.tty=0 @$(DRUPAL_SYNC_SOURCE) sql-dump > ${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
+	$(call drush,@$(DRUPAL_SYNC_SOURCE) sql-dump --structure-tables-key=common > ${DOCKER_PROJECT_ROOT}/$(DUMP_SQL_FILENAME))
+
+PHONY += open-db-gui
+open-db-gui: ## Open database with GUI tool
+	$(eval DB_SERVICE ?= db)
+	$(eval DB_NAME ?= drupal)
+	$(eval DB_USER ?= drupal)
+	$(eval DB_PASS ?= drupal)
+	@open mysql://$(DB_USER):$(DB_PASS)@$(shell docker compose port $(DB_SERVICE) 3306 | grep -v ::)/$(DB_NAME)
 
 PHONY += fix-drupal
-fix-drupal: VOLUMES := $(subst $(space),,$(LINT_PATHS_PHP))
+fix-drupal: PATHS := $(subst $(space),,$(LINT_PATHS_PHP))
 fix-drupal: ## Fix Drupal code style
-	$(eval PHP_VERSION := $(shell docker run --rm -it $(DRUPAL_IMAGE) bash -c "php -v | grep ^PHP | cut -d' ' -f2 | cut -c0-3"))
-	$(eval IMG := druidfi/qa:php-$(PHP_VERSION))
-	$(call step,Fix Drupal code style...)
-	@docker run --rm -it $(VOLUMES) $(IMG) bash -c "phpcbf --runtime-set drupal_core_version $(DRUPAL_VERSION) ."
+	$(call step,Fix Drupal code style with phpcbf...\n)
+	$(call cs,phpcbf,$(PATHS))
 
 PHONY += lint-drupal
-lint-drupal: VOLUMES := $(subst $(space),,$(LINT_PATHS_PHP))
+lint-drupal: PATHS := $(subst $(space),,$(LINT_PATHS_PHP))
 lint-drupal: ## Lint Drupal code style
-	$(eval PHP_VERSION := $(shell docker run --rm -it $(DRUPAL_IMAGE) bash -c "php -v | grep ^PHP | cut -d' ' -f2 | cut -c0-3"))
-	$(eval IMG := druidfi/qa:php-$(PHP_VERSION))
-	$(call step,Lint Drupal code style with $(PHP_VERSION)...)
-	@docker run --rm -it $(VOLUMES) $(IMG) bash -c "phpcs --runtime-set drupal_core_version $(DRUPAL_VERSION) ."
+	$(call step,Lint Drupal code style with phpcs...\n)
+	$(call cs,phpcs,$(PATHS))
 
+PHONY += mmfix
 mmfix: MODULE := MISSING_MODULE
 mmfix:
-	$(call step,Remove missing module '$(MODULE)')
-ifeq ($(DRUPAL_VERSION),7)
-	$(call drush_on_${RUN_ON},sql-query \"DELETE from system where type = 'module' AND name = '$(MODULE)';\")
+	$(call step,Remove missing module '$(MODULE)'\n)
+	$(call drush,sql-query \"DELETE FROM key_value WHERE collection='system.schema' AND name='$(MODULE)';\",Module was removed)
+
+ifeq ($(RUN_ON),docker)
+define drush
+	$(call docker_compose_exec,drush $(1),$(2))
+endef
 else
-	$(call drush_on_${RUN_ON},sql-query \"DELETE FROM key_value WHERE collection='system.schema' AND name='module_name';\")
+define drush
+	@drush $(1)
+endef
 endif
-
-define drush_on_docker
-	$(call docker_run_cmd,cd ${DOCKER_PROJECT_ROOT}/${WEBROOT} && drush --ansi --strict=0 $(1))
-endef
-
-define drush_on_host
-	@drush -r ${DOCKER_PROJECT_ROOT}/${WEBROOT} --ansi --strict=0 $(1)
-endef
