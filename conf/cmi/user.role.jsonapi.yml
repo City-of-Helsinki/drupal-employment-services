@@ -151,6 +151,7 @@ permissions:
   - 'delete paragraph content liftup_with_image'
   - 'delete paragraph content link'
   - 'delete paragraph content link_internal'
+  - 'delete paragraph content link_with_icon'
   - 'delete paragraph content list_of_links'
   - 'delete paragraph content list_of_links_item'
   - 'delete paragraph content news_list'
