@@ -90,6 +90,14 @@ class PrepareIndexSubscriber implements EventSubscriberInterface {
               "type" => "synonym_graph",
               "synonyms" => $this->getSynonyms()
             ],
+            "filter_stemmer" => [
+              "type" => "stemmer",
+              "language" => $stemmer_language,
+            ],
+            $filter_name => [
+              "type" => "stop",
+              "stopwords" => $filter_language,
+            ],
           ],
         ],
       ];
