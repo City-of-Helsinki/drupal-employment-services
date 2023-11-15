@@ -1,0 +1,19 @@
+uuid: 73031318-0238-4ea3-b49c-eb01be831882
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_name
+    - taxonomy.vocabulary.event_languages
+id: taxonomy_term.event_languages.field_display_name
+field_name: field_display_name
+entity_type: taxonomy_term
+bundle: event_languages
+label: 'Display name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

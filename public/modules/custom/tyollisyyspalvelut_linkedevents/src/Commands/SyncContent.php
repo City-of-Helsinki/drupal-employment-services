@@ -162,7 +162,7 @@ class SyncContent extends DrushCommands {
       "työnhaku"
     ];
     $this->processLog = ['new' => 0, 'updated' => 0, 'deleted' => 0, 'unpublished' => 0];
-    $this->languages = ['fi', 'sv', 'en'];
+    $this->languages = ['fi', 'en', 'sv', 'ua', 'ru', 'so'];
     $this->allLanguages = \Drupal::languageManager()->getLanguages();
     $this->entityTypeManager = $entityTypeManager;
     $this->httpClient = $http_client;
