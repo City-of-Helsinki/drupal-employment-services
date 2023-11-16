@@ -30,7 +30,7 @@
     "css-declaration-sorter": "^6.0.2",
     "css-loader": "^1.0.0",
     "es6-promise": "^4.1.1",
-    "eslint": "5.7.0",
+    "eslint": "5.16.0",
     "eslint-config-drupal-bundle": "^1.0.2",
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-import": "^2.22.1",
