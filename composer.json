@@ -21,8 +21,9 @@
         "drupal/hdbt_admin": "1.8.6",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_azure_fs": "^1.0",
+        "drupal/helfi_drupal_tools": "dev-main",
         "drupal/helfi_linkedevents": "^1.0",
-        "drupal/helfi_platform_config": "^2.16.7",
+        "drupal/helfi_platform_config": "2.18.7",
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^1.0",
         "drupal/jsonapi_extras": "3.23.0",
@@ -119,7 +120,7 @@
             "public/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "drush/{$name}": [
+            "drush/Commands/{$name}": [
                 "type:drupal-drush"
             ]
         }

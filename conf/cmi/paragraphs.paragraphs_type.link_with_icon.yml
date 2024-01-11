@@ -1,0 +1,10 @@
+uuid: 5e7ad748-b0aa-4611-973b-10574fad6cf7
+langcode: en
+status: true
+dependencies: {  }
+id: link_with_icon
+label: 'Link with icon'
+icon_uuid: null
+icon_default: null
+description: 'You can create links with icons positioned either before or after the link.'
+behavior_plugins: {  }
