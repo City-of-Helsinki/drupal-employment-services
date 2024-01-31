@@ -2,9 +2,6 @@ uuid: cefca48e-e727-48ea-bf8a-9abab14b4bf6
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - hdbt_admin_tools
   config:
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
@@ -16,6 +13,9 @@ dependencies:
   module:
     - hdbt_admin_tools
     - text
+  enforced:
+    module:
+      - hdbt_admin_tools
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
@@ -40,8 +40,8 @@ content:
     weight: 4
     region: content
     settings:
-      linkit_auto_link_text: false
       linkit_profile: helfi
+      linkit_auto_link_text: false
     third_party_settings: {  }
   field_banner_link_design:
     type: design_field_widget
@@ -63,6 +63,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_background_color: true
   status: true

@@ -19,7 +19,5 @@ default_value:
   -
     value: 3
 default_value_callback: ''
-settings:
-  allowed_values: {  }
-  allowed_values_function: helfi_react_search_event_list_allowed_values_function
+settings: {  }
 field_type: list_integer

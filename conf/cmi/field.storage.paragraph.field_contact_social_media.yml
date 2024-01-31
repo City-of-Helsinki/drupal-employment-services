@@ -1,12 +1,13 @@
+uuid: 6de74075-26e8-4c3f-9330-dcd7c2ef37d8
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.contact_card
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.contact_card
 id: paragraph.field_contact_social_media
 field_name: field_contact_social_media
 entity_type: paragraph

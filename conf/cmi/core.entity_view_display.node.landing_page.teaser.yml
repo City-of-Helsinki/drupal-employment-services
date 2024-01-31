@@ -1,3 +1,4 @@
+uuid: 195c3617-1633-4840-9812-31468c0139eb
 langcode: en
 status: true
 dependencies:
@@ -29,7 +30,11 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_hide_navigation: true
   field_metatags: true
+  field_notification: true
+  field_search_keyword_text: true
+  field_search_keywords: true
   langcode: true
   links: true
   published_at: true

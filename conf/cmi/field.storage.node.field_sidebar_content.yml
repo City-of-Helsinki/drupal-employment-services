@@ -2,13 +2,13 @@ uuid: 50f92cfa-358e-4ee2-bc71-fdebb04cb486
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - entity_reference_revisions
     - node
     - paragraphs
+  enforced:
+    module:
+      - helfi_base_content
 id: node.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node

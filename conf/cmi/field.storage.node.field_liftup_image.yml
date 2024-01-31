@@ -2,12 +2,12 @@ uuid: 3c37e0df-42f4-40d3-8d8b-6a219bd399b7
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - media
     - node
+  enforced:
+    module:
+      - helfi_base_content
 id: node.field_liftup_image
 field_name: field_liftup_image
 entity_type: node

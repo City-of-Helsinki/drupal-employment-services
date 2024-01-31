@@ -9,7 +9,8 @@ id: paragraph.field_description
 field_name: field_description
 entity_type: paragraph
 type: string_long
-settings: {  }
+settings:
+  case_sensitive: false
 module: text
 locked: false
 cardinality: 1

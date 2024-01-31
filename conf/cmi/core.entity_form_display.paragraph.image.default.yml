@@ -36,6 +36,14 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_caption: true
+  field_image_heigth: true
+  field_image_image: true
   status: true

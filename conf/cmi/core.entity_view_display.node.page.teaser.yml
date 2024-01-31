@@ -1,3 +1,4 @@
+uuid: 476ee196-a0d1-4c59-a474-f373da9c9e18
 langcode: en
 status: true
 dependencies:
@@ -32,9 +33,15 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_hide_navigation: true
+  field_hide_search: true
+  field_hide_sidebar: true
   field_lead_in: true
   field_lower_content: true
   field_metatags: true
+  field_notification: true
+  field_search_keyword_text: true
+  field_search_keywords: true
   field_sidebar_content: true
   langcode: true
   links: true

@@ -1,3 +1,4 @@
+uuid: 36167418-91fd-4657-8402-4c4617424412
 langcode: en
 status: true
 dependencies:
@@ -54,3 +55,4 @@ settings:
     drupallink:
       linkit_enabled: true
       linkit_profile: helfi
+image_upload: {  }

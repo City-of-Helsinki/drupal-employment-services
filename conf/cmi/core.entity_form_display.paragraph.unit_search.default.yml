@@ -89,4 +89,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_unit_search_meta_load_more: true
   status: true

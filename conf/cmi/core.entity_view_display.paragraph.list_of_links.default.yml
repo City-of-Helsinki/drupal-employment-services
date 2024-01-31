@@ -39,4 +39,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_background_color: true
+  search_api_excerpt: true

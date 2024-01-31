@@ -1,12 +1,13 @@
+uuid: 78590510-45cb-4019-b26f-692dbaccafa6
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.social_media_link
   module:
     - link
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.social_media_link
 id: paragraph.field_social_media_link
 field_name: field_social_media_link
 entity_type: paragraph

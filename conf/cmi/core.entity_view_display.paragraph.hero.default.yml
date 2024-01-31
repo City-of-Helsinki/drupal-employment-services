@@ -70,4 +70,6 @@ content:
     weight: 1
     region: content
 hidden:
+  field_custom_hero_image: true
+  field_hero_bg_color: true
   search_api_excerpt: true

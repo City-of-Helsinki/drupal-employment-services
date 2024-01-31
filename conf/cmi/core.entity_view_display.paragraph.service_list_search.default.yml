@@ -1,3 +1,4 @@
+uuid: 563fb829-a94b-444b-a9e1-9f041daa562a
 langcode: en
 status: true
 dependencies:
@@ -32,3 +33,4 @@ content:
 hidden:
   field_service_list_service_ids: true
   field_service_list_services: true
+  search_api_excerpt: true

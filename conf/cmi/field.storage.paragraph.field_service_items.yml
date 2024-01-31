@@ -1,12 +1,13 @@
+uuid: 673371a5-835a-4a50-be07-78122bf9e27c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.popular_services
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.popular_services
 id: paragraph.field_service_items
 field_name: field_service_items
 entity_type: paragraph

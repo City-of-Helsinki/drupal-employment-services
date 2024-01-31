@@ -62,6 +62,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_custom_hero_image: true
+  field_hero_bg_color: true
   status: true

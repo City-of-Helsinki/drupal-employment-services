@@ -42,7 +42,11 @@ content:
 hidden:
   field_has_hero: true
   field_hero: true
+  field_hide_navigation: true
   field_liftup_image: true
+  field_notification: true
+  field_search_keyword_text: true
+  field_search_keywords: true
   langcode: true
   published_at: true
   search_api_excerpt: true

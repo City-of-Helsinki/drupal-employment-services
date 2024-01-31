@@ -31,13 +31,17 @@ module:
   datetime: 0
   dblog: 0
   decoupled_router: 0
+  diff: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
   elasticsearch_connector: 0
   entity: 0
   entity_browser: 0
   entity_reference_revisions: 0
   entity_usage: 0
+  eu_cookie_compliance: 0
+  external_entities: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -51,11 +55,43 @@ module:
   health_check: 0
   helfi_api_base: 0
   helfi_azure_fs: 0
+  helfi_base_content: 0
+  helfi_ckeditor: 0
+  helfi_eu_cookie_compliance: 0
+  helfi_image_styles: 0
   helfi_media: 0
+  helfi_media_chart: 0
+  helfi_media_map: 0
+  helfi_media_remote_video: 0
+  helfi_node_announcement: 0
+  helfi_node_landing_page: 0
+  helfi_node_page: 0
+  helfi_paragraphs_accordion: 0
+  helfi_paragraphs_banner: 0
+  helfi_paragraphs_chart: 0
+  helfi_paragraphs_columns: 0
+  helfi_paragraphs_contact_card_listing: 0
+  helfi_paragraphs_content_cards: 0
+  helfi_paragraphs_content_liftup: 0
+  helfi_paragraphs_hearings: 0
+  helfi_paragraphs_hero: 0
+  helfi_paragraphs_image: 0
+  helfi_paragraphs_liftup_with_image: 0
+  helfi_paragraphs_list_of_links: 0
+  helfi_paragraphs_map: 0
+  helfi_paragraphs_phasing: 0
+  helfi_paragraphs_popular_services: 0
+  helfi_paragraphs_remote_video: 0
+  helfi_paragraphs_sidebar_text: 0
+  helfi_paragraphs_target_group_links: 0
+  helfi_paragraphs_text: 0
   helfi_platform_config: 0
+  helfi_platform_config_base: 0
   helfi_react_search: 0
   helfi_toc: 0
   helfi_tpr: 0
+  helfi_tpr_config: 0
+  helfi_user_roles: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -74,6 +110,7 @@ module:
   media: 0
   media_library: 0
   menu_block_current_language: 0
+  menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -92,9 +129,11 @@ module:
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
   paragraphs_features: 0
+  paragraphs_library: 0
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  publication_date: 0
   quick_node_clone: 0
   rdf: 0
   readonly_field_widget: 0
@@ -112,6 +151,7 @@ module:
   simple_sitemap: 0
   social_media: 0
   sophron: 0
+  stomp: 0
   subrequests: 0
   system: 0
   taxonomy: 0
@@ -125,56 +165,16 @@ module:
   tyollisyyspalvelut_linkedevents: 0
   update: 0
   user: 0
+  view_unpublished: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
   views_infinite_scroll: 0
   views_ui: 0
   pathauto: 1
   content_translation: 10
   views: 10
   paragraphs: 11
-  publication_date: 0
   minimal: 1000
-  stomp: 0
-  helfi_tpr_config: 0
-  helfi_platform_config_base: 0
-  helfi_base_content: 0
-  helfi_ckeditor: 0
-  helfi_eu_cookie_compliance: 0
-  helfi_image_styles: 0
-  helfi_media_chart: 0
-  helfi_media_map: 0
-  helfi_media_remote_video: 0
-  helfi_node_announcement: 0
-  helfi_node_landing_page: 0
-  helfi_node_page: 0
-  helfi_paragraphs_accordion: 0
-  helfi_paragraphs_banner: 0
-  helfi_paragraphs_chart: 0
-  helfi_paragraphs_columns: 0
-  helfi_paragraphs_contact_card_listing: 0
-  helfi_paragraphs_content_cards: 0
-  helfi_paragraphs_hearings: 0
-  helfi_paragraphs_hero: 0
-  helfi_paragraphs_image: 0
-  helfi_paragraphs_liftup_with_image: 0
-  helfi_paragraphs_list_of_links: 0
-  helfi_paragraphs_map: 0
-  helfi_paragraphs_phasing: 0
-  helfi_paragraphs_popular_services: 0
-  helfi_paragraphs_remote_video: 0
-  helfi_paragraphs_sidebar_text: 0
-  helfi_paragraphs_target_group_links: 0
-  helfi_paragraphs_text: 0
-  helfi_user_roles: 0
-  helfi_paragraphs_content_liftup: 0
-  diff: 0
-  views_bulk_edit: 0
-  views_bulk_operations: 0
-  eu_cookie_compliance: 0
-  easy_breadcrumb: 0
-  view_unpublished: 0
-  paragraphs_library: 0
-  menu_link_attributes: 0
-  external_entities: 0
 theme:
   stable9: 0
   claro: 0

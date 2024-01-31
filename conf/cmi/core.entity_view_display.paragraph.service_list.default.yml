@@ -37,4 +37,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_service_list_meta_load_mor: true
   search_api_excerpt: true

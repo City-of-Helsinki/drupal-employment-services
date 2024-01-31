@@ -1,3 +1,4 @@
+uuid: 5fd5295c-3a5c-46d5-8ae9-bbd632457f6b
 langcode: en
 status: true
 dependencies:
@@ -34,6 +35,8 @@ content:
     settings:
       image_link: ''
       image_style: 1_1_l
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
@@ -85,4 +88,5 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

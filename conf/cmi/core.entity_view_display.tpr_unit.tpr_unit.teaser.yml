@@ -66,6 +66,7 @@ hidden:
   accessibility_www: true
   address_postal: true
   call_charge_info: true
+  contacts: true
   created: true
   description: true
   email: true
@@ -77,15 +78,20 @@ hidden:
   highlights: true
   langcode: true
   latitude: true
+  links: true
   longitude: true
   opening_hours: true
+  other_info: true
   phone: true
+  price_info: true
   provided_languages: true
+  search_api_excerpt: true
   service_map_embed: true
   services: true
   show_www: true
   streetview_entrance_url: true
   subgroup: true
   toc_enabled: true
+  topical: true
   unit_picture_caption: true
   www: true

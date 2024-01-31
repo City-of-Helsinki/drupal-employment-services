@@ -43,4 +43,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_service_list_meta_load_mor: true
   status: true

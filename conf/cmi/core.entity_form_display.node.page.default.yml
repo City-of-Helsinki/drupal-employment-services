@@ -234,4 +234,10 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_hide_navigation: true
+  field_hide_search: true
+  field_hide_sidebar: true
+  field_notification: true
+  field_search_keyword_text: true
+  field_search_keywords: true

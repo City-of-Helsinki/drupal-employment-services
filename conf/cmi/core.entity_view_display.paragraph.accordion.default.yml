@@ -65,5 +65,8 @@ content:
     region: content
 hidden:
   field_accordion_description: true
+  field_accordion_text: true
   field_accordion_title: true
   field_accordion_title_level: true
+  field_accordion_type: true
+  search_api_excerpt: true

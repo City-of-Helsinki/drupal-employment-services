@@ -1,3 +1,4 @@
+uuid: b87eff8e-542c-42cd-b7eb-fde715fbe36f
 langcode: en
 status: true
 dependencies:
@@ -95,5 +96,6 @@ hidden:
   links: true
   name_override: true
   name_synonyms: true
+  search_api_excerpt: true
   service_id: true
   toc_enabled: true
