@@ -1,5 +1,5 @@
 uuid: a8a40adc-eba1-4759-9197-d5121ef85eea
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -14,6 +14,8 @@ dependencies:
     - helfi_tpr
     - imagecache_external
     - telephone
+_core:
+  default_config_hash: gOlhIa1n9jTIJdBPN_Kjp-jn3YnsvZb7HELaoqa8KGQ
 id: tpr_unit.tpr_unit.teaser_with_image
 targetEntityType: tpr_unit
 bundle: tpr_unit

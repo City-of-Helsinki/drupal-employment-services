@@ -1,5 +1,5 @@
 uuid: 8524b40a-7c3e-46d3-aeb3-438f7bad6506
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -15,6 +15,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: LQ9K_wCbd758UCcNEORQvFUQ7gNJddkukiwwYHrZv4c
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement

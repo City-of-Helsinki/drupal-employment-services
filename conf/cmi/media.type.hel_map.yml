@@ -1,9 +1,11 @@
 uuid: aed2944a-6d46-490a-b003-9e3e84191d89
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - helfi_media_map
+_core:
+  default_config_hash: vci0wVeb2hEACGUrti9YuoaMLG5rf64W2aw1B0WAaLs
 id: hel_map
 label: 'Map (kartta.hel.fi, palvelukartta.hel.fi)'
 description: null

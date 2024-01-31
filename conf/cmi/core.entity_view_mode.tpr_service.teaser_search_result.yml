@@ -1,9 +1,11 @@
 uuid: 579e4b36-a0fa-482f-9b0c-030a15f7b7f9
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - helfi_tpr
+_core:
+  default_config_hash: YJXddqfHzgzWlN_oVmr77-vQmOPw1kMx9ZaqJQntc08
 id: tpr_service.teaser_search_result
 label: 'Teaser search result'
 targetEntityType: tpr_service

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner.field_background_color
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
     - field.field.paragraph.banner.field_banner_link
@@ -11,10 +12,12 @@ dependencies:
     - field.field.paragraph.banner.field_icon
     - paragraphs.paragraphs_type.banner
   module:
+    - hdbt_admin_tools
     - link
     - options
-    - hdbt_admin_tools
     - text
+_core:
+  default_config_hash: 81G-zzBxYIt-u9L4g2zVuH0NP_i72wAOboZ0Fy7mA70
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner

@@ -1,10 +1,12 @@
 uuid: 48259004-9aa1-40a9-b2ca-d4865a06d839
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - helfi_tpr
     - user
+_core:
+  default_config_hash: 5_K8ODgHHlRW1KkmKxFiGOyt4Y7I6iexOtl2_g2s2G4
 id: er_tpr_unit
 label: 'Entity reference - TPR Unit'
 module: views

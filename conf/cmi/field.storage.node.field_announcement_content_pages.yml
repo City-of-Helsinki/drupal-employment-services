@@ -1,9 +1,11 @@
 uuid: 67b2f9c5-9dd5-43e1-90aa-88276b1d60db
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: chOATecdXJp6o82FA-yfX0VBi9VOMEvQnOeZkA4wKXU
 id: node.field_announcement_content_pages
 field_name: field_announcement_content_pages
 entity_type: node

@@ -1,11 +1,13 @@
 uuid: e4ecd0dd-063f-48fb-b83d-a63a402bbb20
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - filter.format.minimal
   module:
     - ckeditor
+_core:
+  default_config_hash: UYVamJgeMVQeM3VYumbShc-tGJoYe4RhrXqiL_tJw4c
 format: minimal
 editor: ckeditor
 settings:

@@ -1,5 +1,5 @@
 uuid: 2f5b9e05-3cb1-4204-a969-41b5bd42fbd6
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -11,6 +11,8 @@ dependencies:
   module:
     - address
     - helfi_tpr
+_core:
+  default_config_hash: wvPWnthIC7o8oa1gJ6jI0ex6xi12GVsZEN5zyrlCLoU
 id: tpr_unit.tpr_unit.minimal
 targetEntityType: tpr_unit
 bundle: tpr_unit

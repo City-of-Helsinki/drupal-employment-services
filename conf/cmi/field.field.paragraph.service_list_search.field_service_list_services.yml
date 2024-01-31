@@ -1,10 +1,12 @@
 uuid: b934a579-28ed-44ce-9163-7a42d816aac7
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_service_list_services
     - paragraphs.paragraphs_type.service_list_search
+_core:
+  default_config_hash: RscGeFdyxsYK1PVhK3dBNHlSyub_bE8t096GS-8eEhU
 id: paragraph.service_list_search.field_service_list_services
 field_name: field_service_list_services
 entity_type: paragraph

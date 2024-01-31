@@ -1,18 +1,24 @@
 uuid: ba5aa6c7-4ad8-41c6-a1e8-c6234c7da9c4
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_hide_navigation
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_notification
+    - field.field.node.landing_page.field_search_keyword_text
+    - field.field.node.landing_page.field_search_keywords
     - node.type.landing_page
   module:
     - entity_reference_revisions
     - metatag
     - user
+_core:
+  default_config_hash: k0yB8d9jdIQ1SPK3C2TVyKEfwT05muqbE9tTkdV9fdQ
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

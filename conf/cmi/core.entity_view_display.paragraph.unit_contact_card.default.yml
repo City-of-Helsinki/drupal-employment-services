@@ -1,5 +1,5 @@
 uuid: f082f541-fdb5-49fd-b7c9-c90e87ef4885
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -14,6 +14,8 @@ dependencies:
     - field.field.paragraph.unit_contact_card.field_unit_contact_use_picture
     - field.field.paragraph.unit_contact_card.field_unit_contact_use_postal
     - paragraphs.paragraphs_type.unit_contact_card
+_core:
+  default_config_hash: EU0zJOIFt1tmZeUsDpYl1d3uFvYxMy7dPm6tX4qhGC0
 id: paragraph.unit_contact_card.default
 targetEntityType: paragraph
 bundle: unit_contact_card

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_contact_name
     - paragraphs.paragraphs_type.contact_card
+_core:
+  default_config_hash: cb1qwxln15g87pS1D3_rYPlIJ7isdRe566VLCe78-tc
 id: paragraph.contact_card.field_contact_name
 field_name: field_contact_name
 entity_type: paragraph

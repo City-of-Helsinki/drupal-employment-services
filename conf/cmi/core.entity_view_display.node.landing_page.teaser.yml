@@ -1,5 +1,5 @@
 uuid: 195c3617-1633-4840-9812-31468c0139eb
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,11 +7,17 @@ dependencies:
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_hide_navigation
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_notification
+    - field.field.node.landing_page.field_search_keyword_text
+    - field.field.node.landing_page.field_search_keywords
     - node.type.landing_page
   module:
     - user
+_core:
+  default_config_hash: '-w2hz1ajYKPav1NspjgUWRkxu9iE-8eHNZ1Ix1LKx_M'
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page

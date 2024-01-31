@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner.field_background_color
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
     - field.field.paragraph.banner.field_banner_link
@@ -16,6 +17,8 @@ dependencies:
   enforced:
     module:
       - hdbt_admin_tools
+_core:
+  default_config_hash: dW34Ba__f5zlIB6OaYxFRW0itQBA98RdooSTUnqW2RE
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
@@ -40,8 +43,8 @@ content:
     weight: 4
     region: content
     settings:
-      linkit_profile: helfi
       linkit_auto_link_text: false
+      linkit_profile: helfi
     third_party_settings: {  }
   field_banner_link_design:
     type: design_field_widget
@@ -65,9 +68,9 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field_background_color: true

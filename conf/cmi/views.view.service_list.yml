@@ -1,5 +1,5 @@
 uuid: 1c079574-d4d8-4623-8e24-d7e15303e744
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
     - helfi_tpr
     - text
     - user
+_core:
+  default_config_hash: MvCiaSrdVcljMT3wLlt5V47it0_DgXogcHidiHT4sug
 id: service_list
 label: 'Service list'
 module: views

@@ -1,13 +1,17 @@
 uuid: 9e8a73f9-5f98-4fd9-8ad1-bf3e091f4a9a
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_hide_navigation
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_notification
+    - field.field.node.landing_page.field_search_keyword_text
+    - field.field.node.landing_page.field_search_keywords
     - node.type.landing_page
   module:
     - hdbt_admin_tools
@@ -17,6 +21,8 @@ dependencies:
     - path
     - publication_date
     - scheduler
+_core:
+  default_config_hash: hhHaoVWPiqGGQ2qDbN-7sawAmvK_BCGWA2vwgIevwq4
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

@@ -1,7 +1,9 @@
 uuid: 0b5fe7d3-7ac5-448d-8c00-dacdfcb6cefb
-langcode: en
+langcode: fi
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: WJDpNshFBVU0YZ20yZTKw2ZicqN9PwA0xVKU0CQTOak
 id: chat
 label: 'Functional chat cookies'
 description:

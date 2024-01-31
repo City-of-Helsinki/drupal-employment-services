@@ -1,9 +1,11 @@
 uuid: 8e7f4899-6b83-4e6d-8e4a-4db4d886f3ec
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: ebhLGKENBj0OvwcFl3T_-TjLL8-Q61br0tFAE6fzPeA
 id: paragraph.field_show_phase_numbers
 field_name: field_show_phase_numbers
 entity_type: paragraph

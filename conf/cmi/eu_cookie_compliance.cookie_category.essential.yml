@@ -1,7 +1,9 @@
 uuid: fcb2eb9e-c9eb-45d6-a73d-8f37b2bc1c89
-langcode: en
+langcode: fi
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: _t7KlporqDL3DArj6oSOO8nYsti4sn1kbsjV_-srYzM
 id: essential
 label: 'Essential cookies'
 description:

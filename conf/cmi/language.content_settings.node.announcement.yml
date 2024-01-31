@@ -1,5 +1,5 @@
 uuid: ee58d03f-3e81-4b25-93cb-1e6947f814c6
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: xzUi5sokV_KKyy_tkejxorDJN2VUjQzCtCKgXepWWxM
 id: node.announcement
 target_entity_type_id: node
 target_bundle: announcement

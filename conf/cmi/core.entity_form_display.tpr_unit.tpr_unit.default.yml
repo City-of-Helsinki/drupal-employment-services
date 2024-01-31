@@ -1,5 +1,5 @@
 uuid: f8c84228-2b94-41e6-8d86-71c928fad450
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -13,9 +13,9 @@ dependencies:
     - media_library
     - metatag
     - paragraphs
-    - path
     - readonly_field_widget
-    - select2
+_core:
+  default_config_hash: iGJgv-B14-RUdc8dyC_MKfM3icDg5Cae4kFwC0MjyGQ
 id: tpr_unit.tpr_unit.default
 targetEntityType: tpr_unit
 bundle: tpr_unit

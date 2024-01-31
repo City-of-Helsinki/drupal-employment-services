@@ -15,7 +15,6 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
-  config_filter: 0
   config_ignore: 0
   config_rewrite: 0
   config_translation: 0
@@ -40,8 +39,8 @@ module:
   entity_browser: 0
   entity_reference_revisions: 0
   entity_usage: 0
-  eu_cookie_compliance: 0
   external_entities: 0
+  external_entities_pathauto: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -58,6 +57,7 @@ module:
   helfi_base_content: 0
   helfi_ckeditor: 0
   helfi_eu_cookie_compliance: 0
+  helfi_global_announcement: 0
   helfi_image_styles: 0
   helfi_media: 0
   helfi_media_chart: 0
@@ -96,6 +96,8 @@ module:
   image_style_quality: 0
   imagecache_external: 0
   imagemagick: 0
+  jquery_ui: 0
+  jquery_ui_draggable: 0
   jsonapi: 0
   jsonapi_defaults: 0
   jsonapi_extras: 0
@@ -175,6 +177,7 @@ module:
   views: 10
   paragraphs: 11
   minimal: 1000
+  eu_cookie_compliance: 1001
 theme:
   stable9: 0
   claro: 0

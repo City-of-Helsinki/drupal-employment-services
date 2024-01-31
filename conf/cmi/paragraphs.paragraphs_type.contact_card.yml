@@ -2,6 +2,8 @@ uuid: 66192c6f-6d26-4b1e-9b86-aa0923c84741
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 0Ng7ejlufHeGq2qBB2CGx6ppTc7Jvp17xuSTYck4Kg4
 id: contact_card
 label: 'Contact card'
 icon_uuid: null

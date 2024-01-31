@@ -1,5 +1,5 @@
 uuid: 59edfff5-f7f4-4fb2-8d25-e8da05b7d2e1
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -13,6 +13,8 @@ dependencies:
     - address
     - helfi_tpr
     - imagecache_external
+_core:
+  default_config_hash: 8hru5uh55ouZ9y4kV_EEJ6PEjb2rGY_tFUc_3Sn12M0
 id: tpr_unit.tpr_unit.teaser
 targetEntityType: tpr_unit
 bundle: tpr_unit

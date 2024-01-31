@@ -1,5 +1,5 @@
 uuid: e2729f48-cefc-4fce-84b1-b1f0f5bcece8
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -11,6 +11,8 @@ dependencies:
   module:
     - helfi_tpr
     - text
+_core:
+  default_config_hash: _3hhx9CkvItBW_aQmvGwqAsj65Tat3XlacXqHwECJgo
 id: tpr_service.tpr_service.teaser
 targetEntityType: tpr_service
 bundle: tpr_service

@@ -1,10 +1,12 @@
 uuid: 3cf1138d-4450-41bf-bbb8-cd1371bcdae0
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_unit_contact_use_link
     - paragraphs.paragraphs_type.unit_contact_card
+_core:
+  default_config_hash: 3C8lV79YWtodb_RzX5bcS31hANW92D4ic6XUUsSP5DA
 id: paragraph.unit_contact_card.field_unit_contact_use_link
 field_name: field_unit_contact_use_link
 entity_type: paragraph

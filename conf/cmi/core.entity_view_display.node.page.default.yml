@@ -1,21 +1,30 @@
 uuid: 3bbf1547-472c-48bc-bb64-cd8ce3e1374a
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_navigation
+    - field.field.node.page.field_hide_search
+    - field.field.node.page.field_hide_sidebar
     - field.field.node.page.field_lead_in
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
+    - field.field.node.page.field_notification
+    - field.field.node.page.field_search_keyword_text
+    - field.field.node.page.field_search_keywords
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
     - entity_reference_revisions
+    - helfi_platform_config
     - metatag
     - user
+_core:
+  default_config_hash: piTzY36HSFy5WyKCdZ6BvAOj3JzxAy5Jt6J1KyU4h64
 id: node.page.default
 targetEntityType: node
 bundle: page

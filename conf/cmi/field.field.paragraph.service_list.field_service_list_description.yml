@@ -1,5 +1,5 @@
 uuid: 36e6b2e8-8d48-4d2f-9cd6-ebfd03b7fdfb
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.service_list
   module:
     - text
+_core:
+  default_config_hash: F7V4AQx0zWAdd6NyulXLp4K2s6PBezGsl_ecYU16FNI
 id: paragraph.service_list.field_service_list_description
 field_name: field_service_list_description
 entity_type: paragraph

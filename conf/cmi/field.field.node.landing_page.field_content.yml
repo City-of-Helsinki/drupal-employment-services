@@ -1,17 +1,38 @@
 uuid: 5c9fbf64-2b91-413c-a88d-4e276b87b326
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
     - node.type.landing_page
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.chart
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.hearings
+    - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.popular_services
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.service_list_search
+    - paragraphs.paragraphs_type.target_group_links
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: zEXoDFJnyArUOiL2ZrtDuq4YDWKyn6ung9JndPk_Ntg
 id: node.landing_page.field_content
 field_name: field_content
 entity_type: node
 bundle: landing_page
-label: 'Content region'
+label: Sisältöalue
 description: ''
 required: false
 translatable: true
@@ -20,7 +41,83 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      columns: columns
+      list_of_links: list_of_links
+      content_cards: content_cards
+      content_liftup: content_liftup
+      banner: banner
+      liftup_with_image: liftup_with_image
+      from_library: from_library
+      chart: chart
+      remote_video: remote_video
+      map: map
+      news_list: news_list
+      event_list: event_list
+      phasing: phasing
+      popular_services: popular_services
+      target_group_links: target_group_links
+      hearings: hearings
+      unit_search: unit_search
+      service_list: service_list
+      service_list_search: service_list_search
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      banner:
+        weight: 0
+        enabled: true
+      chart:
+        weight: 0
+        enabled: true
+      columns:
+        weight: 0
+        enabled: true
+      content_cards:
+        weight: 0
+        enabled: true
+      content_liftup:
+        weight: 0
+        enabled: true
+      event_list:
+        weight: 0
+        enabled: true
+      from_library:
+        weight: 0
+        enabled: true
+      hearings:
+        weight: 0
+        enabled: true
+      liftup_with_image:
+        weight: 0
+        enabled: true
+      list_of_links:
+        weight: 0
+        enabled: true
+      map:
+        weight: 0
+        enabled: true
+      news_list:
+        weight: 0
+        enabled: true
+      phasing:
+        weight: 0
+        enabled: true
+      popular_services:
+        weight: 0
+        enabled: true
+      remote_video:
+        weight: 0
+        enabled: true
+      service_list:
+        weight: 0
+        enabled: true
+      service_list_search:
+        weight: 0
+        enabled: true
+      target_group_links:
+        weight: 0
+        enabled: true
+      unit_search:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

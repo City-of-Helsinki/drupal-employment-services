@@ -1,9 +1,11 @@
 uuid: 679bc43f-a175-4fe1-a320-b6601213219d
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: sHCa_HaR8e4XzaoaxyVmg2ctETPztjDnkT2x4BaCFsI
 id: paragraph.field_unit_search_meta_button
 field_name: field_unit_search_meta_button
 entity_type: paragraph

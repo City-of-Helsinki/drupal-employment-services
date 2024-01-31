@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.social_media_link
   module:
     - link
+_core:
+  default_config_hash: DOik0FFgb6rq9pXcXg05RFp5ZOMu0igzbeinzXnN3mw
 id: paragraph.social_media_link.field_social_media_link
 field_name: field_social_media_link
 entity_type: paragraph

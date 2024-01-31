@@ -1,11 +1,13 @@
 uuid: bdb8cf41-ffd0-4385-a76d-fe1253ea93d2
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - content_lock
     - helfi_tpr
     - user
+_core:
+  default_config_hash: ttPnpXga7YMo7jK1EJ5SySavpSnXjjMpqPAVZdX0mZI
 id: locked_units
 label: 'Locked units'
 module: views

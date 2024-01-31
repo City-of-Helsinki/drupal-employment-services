@@ -10,6 +10,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - text
+_core:
+  default_config_hash: Ji3RAEFsZwMfCcpI7yeMxRf4WgA9tgw1ZwgWajHbEUc
 id: paragraph.contact_card_listing.default
 targetEntityType: paragraph
 bundle: contact_card_listing

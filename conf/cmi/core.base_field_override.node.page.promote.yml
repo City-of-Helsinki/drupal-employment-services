@@ -1,9 +1,11 @@
 uuid: 737fc2ac-edad-4480-9a07-11872de1c035
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - node.type.page
+_core:
+  default_config_hash: vdYkuvvyzCU3dFiOu7LULd-uZyENb_byNYidQVIZtXk
 id: node.page.promote
 field_name: promote
 entity_type: node

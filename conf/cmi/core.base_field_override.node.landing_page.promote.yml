@@ -1,9 +1,11 @@
 uuid: b47aeaba-6809-4d0a-9fac-7b162855882d
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - node.type.landing_page
+_core:
+  default_config_hash: KZ4pDrGhkRiIo7Ee-E4HGZp7YPXKS_FLR0nLeUQ3P2U
 id: node.landing_page.promote
 field_name: promote
 entity_type: node

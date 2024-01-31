@@ -1,9 +1,11 @@
 uuid: acbe9a4d-838a-48a4-91d3-0ad81bd06ebd
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - node.type.announcement
+_core:
+  default_config_hash: r22i8pbP859SWpdwmCB98aKCb1vHeMgmdBWNOsS_az0
 id: node.announcement.status
 field_name: status
 entity_type: node

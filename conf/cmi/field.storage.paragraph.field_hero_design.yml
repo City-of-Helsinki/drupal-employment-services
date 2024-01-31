@@ -1,5 +1,5 @@
 uuid: a24dc524-4a4a-4d07-9a39-2f84b64cc0b9
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -13,19 +13,19 @@ settings:
   allowed_values:
     -
       value: without-image-left
-      label: 'Without image, align left'
+      label: 'Ilman kuvaa, tasattu vasemmalle'
     -
       value: without-image-center
-      label: 'Without image, align center'
+      label: 'Kuva oikealla'
     -
       value: with-image-right
-      label: 'Image on the right'
+      label: 'Kuva vasemmalla'
     -
       value: with-image-left
-      label: 'Image on the left'
+      label: 'Kuva alhaalla'
     -
       value: with-image-bottom
-      label: 'Image on the bottom'
+      label: Diagonaalinen
     -
       value: background-image
       label: 'Background image'

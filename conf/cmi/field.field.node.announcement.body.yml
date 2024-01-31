@@ -1,5 +1,5 @@
 uuid: 01babaa3-ea97-48a1-888f-7511941d0926
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -12,6 +12,8 @@ third_party_settings:
   allowed_formats:
     allowed_formats:
       - minimal
+_core:
+  default_config_hash: HSTIidPRZ7nvH0u914u-3ghCj6hqbgiKqfU-3SHZaUw
 id: node.announcement.body
 field_name: body
 entity_type: node

@@ -1,3 +1,4 @@
+langcode: fi
 all:
   - language_interface
   - language_content

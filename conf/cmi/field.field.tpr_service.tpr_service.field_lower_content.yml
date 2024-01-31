@@ -1,17 +1,36 @@
 uuid: 0606b6e5-2f5c-42de-a7a8-e2b202a272ad
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.tpr_service.field_lower_content
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.contact_card_listing
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_accessibility_information
+    - paragraphs.paragraphs_type.unit_contact_card
   module:
     - entity_reference_revisions
     - helfi_tpr
+_core:
+  default_config_hash: 0w6TAkgLk9On5XOviDXTpRRHVp8nbu2p0XIiehLioLs
 id: tpr_service.tpr_service.field_lower_content
 field_name: field_lower_content
 entity_type: tpr_service
 bundle: tpr_service
-label: 'Lower content region'
+label: 'Alempi sisältöalue'
 description: ''
 required: false
 translatable: true
@@ -20,7 +39,75 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      text: text
+      columns: columns
+      accordion: accordion
+      image: image
+      list_of_links: list_of_links
+      content_cards: content_cards
+      banner: banner
+      liftup_with_image: liftup_with_image
+      from_library: from_library
+      remote_video: remote_video
+      news_list: news_list
+      event_list: event_list
+      phasing: phasing
+      contact_card_listing: contact_card_listing
+      map: map
+      unit_accessibility_information: unit_accessibility_information
+      unit_contact_card: unit_contact_card
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      accordion:
+        weight: 0
+        enabled: true
+      banner:
+        weight: 0
+        enabled: true
+      columns:
+        weight: 0
+        enabled: true
+      contact_card_listing:
+        weight: 0
+        enabled: true
+      content_cards:
+        weight: 0
+        enabled: true
+      event_list:
+        weight: 0
+        enabled: true
+      from_library:
+        weight: 0
+        enabled: true
+      image:
+        weight: 0
+        enabled: true
+      liftup_with_image:
+        weight: 0
+        enabled: true
+      list_of_links:
+        weight: 0
+        enabled: true
+      map:
+        weight: 0
+        enabled: true
+      news_list:
+        weight: 0
+        enabled: true
+      phasing:
+        weight: 0
+        enabled: true
+      remote_video:
+        weight: 0
+        enabled: true
+      text:
+        weight: 0
+        enabled: true
+      unit_accessibility_information:
+        weight: 0
+        enabled: true
+      unit_contact_card:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

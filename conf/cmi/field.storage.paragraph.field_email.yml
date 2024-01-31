@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: wH9j0RJnfdNOEzdjEltVOVetWDDW6JTgR_cMyFcD8YY
 id: paragraph.field_email
 field_name: field_email
 entity_type: paragraph

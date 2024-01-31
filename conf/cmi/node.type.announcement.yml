@@ -1,5 +1,5 @@
 uuid: b1b656a8-7261-4cb8-8f26-811a8cb8f311
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -22,6 +22,8 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
+_core:
+  default_config_hash: P4jQ_d783n9xOHEWbuu_QH5pOhcM796VtW4DyKcTshw
 name: Announcement
 type: announcement
 description: 'Content type for announcements that can be used to show notifications, attentions and alerts on different pages.'

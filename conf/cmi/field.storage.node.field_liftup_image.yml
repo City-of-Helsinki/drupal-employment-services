@@ -8,6 +8,8 @@ dependencies:
   enforced:
     module:
       - helfi_base_content
+_core:
+  default_config_hash: aeYXO-Vy_5Lvrr1As5VR7rzx1riAwOUubi8KqPBf7_E
 id: node.field_liftup_image
 field_name: field_liftup_image
 entity_type: node

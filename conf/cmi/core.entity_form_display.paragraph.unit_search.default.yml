@@ -1,11 +1,12 @@
 uuid: 4c1114b2-4a50-493a-9887-65911581b917
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.paragraph.unit_search.field_unit_search_description
     - field.field.paragraph.unit_search.field_unit_search_meta_button
     - field.field.paragraph.unit_search.field_unit_search_meta_label
+    - field.field.paragraph.unit_search.field_unit_search_meta_load_more
     - field.field.paragraph.unit_search.field_unit_search_meta_placehold
     - field.field.paragraph.unit_search.field_unit_search_title
     - field.field.paragraph.unit_search.field_unit_search_units
@@ -32,6 +33,8 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+_core:
+  default_config_hash: z42RJh-JCLjD7_9W4B9_irn3nWHvqfSJ9foobt51Wg4
 id: paragraph.unit_search.default
 targetEntityType: paragraph
 bundle: unit_search

@@ -1,5 +1,5 @@
 uuid: 338dd7cf-1fb2-4a89-83d6-f4a132465ee5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -23,6 +23,8 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
+_core:
+  default_config_hash: A1XVcWETFW22MWUdDTxkOE331kBoYUWPQILECfHoBfk
 name: 'Standard page'
 type: page
 description: 'Content type for standard web content.'

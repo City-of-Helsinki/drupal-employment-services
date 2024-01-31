@@ -1,9 +1,11 @@
 uuid: 644ca886-a39a-4635-b518-4d9dba79b1b5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - node.type.announcement
+_core:
+  default_config_hash: Dssk6_3sRlJ0urINRbHmfK7WCXlc3hHp1hVsZlAEv1w
 id: node.announcement.promote
 field_name: promote
 entity_type: node

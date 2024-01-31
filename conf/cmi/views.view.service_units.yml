@@ -1,5 +1,5 @@
 uuid: d0087e99-472b-4c3f-adb7-8f16e3ea25aa
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
   module:
     - helfi_tpr
     - user
+_core:
+  default_config_hash: jEXjs-_EKpEmTEz_x_22isblEKlt7grcDy4HK_2PZGc
 id: service_units
 label: 'Service units'
 module: views

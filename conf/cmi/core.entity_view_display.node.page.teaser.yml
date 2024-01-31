@@ -1,5 +1,5 @@
 uuid: 476ee196-a0d1-4c59-a474-f373da9c9e18
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,14 +7,22 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
+    - field.field.node.page.field_hide_navigation
+    - field.field.node.page.field_hide_search
+    - field.field.node.page.field_hide_sidebar
     - field.field.node.page.field_lead_in
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
+    - field.field.node.page.field_notification
+    - field.field.node.page.field_search_keyword_text
+    - field.field.node.page.field_search_keywords
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
     - user
+_core:
+  default_config_hash: cNX3bx6qnz2khBmsfeNeR-4bUFPswL2Eb0w6tRAUzvc
 id: node.page.teaser
 targetEntityType: node
 bundle: page

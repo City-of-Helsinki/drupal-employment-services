@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_item
   module:
     - hdbt_admin_tools
+_core:
+  default_config_hash: lZgD3FKeuPDGSq4QSkg6k71xMrgJjXqe3eBE1AK8_Ig
 id: paragraph.accordion_item.field_icon
 field_name: field_icon
 entity_type: paragraph

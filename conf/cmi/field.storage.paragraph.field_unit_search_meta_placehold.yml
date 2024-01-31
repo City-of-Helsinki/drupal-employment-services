@@ -1,9 +1,11 @@
 uuid: 5c212ffc-1de1-49ab-b41d-c5aa6367a4e7
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: PnYL62styPa1cdIZ0tKa9_ISK89mVySuWCnWcnMN9Hk
 id: paragraph.field_unit_search_meta_placehold
 field_name: field_unit_search_meta_placehold
 entity_type: paragraph

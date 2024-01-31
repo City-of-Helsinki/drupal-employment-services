@@ -7,6 +7,8 @@ dependencies:
 third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
+_core:
+  default_config_hash: Jj7N3_BQ1xCrNmGX_ehTrhS1yeNFjcLAheUwGyjBtW8
 id: contact_card_listing
 label: 'Contact card listing'
 icon_uuid: null

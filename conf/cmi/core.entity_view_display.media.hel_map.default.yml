@@ -1,5 +1,5 @@
 uuid: 4414d74e-df8f-42ca-b8d8-468a837675f8
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - media.type.hel_map
   module:
     - helfi_media_map
+_core:
+  default_config_hash: '-iLfHSAepabVQ6yYeAq_cioOuO-5JsvriQSQENHZG80'
 id: media.hel_map.default
 targetEntityType: media
 bundle: hel_map

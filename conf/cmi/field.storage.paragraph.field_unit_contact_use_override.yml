@@ -1,9 +1,11 @@
 uuid: eed71460-af1d-4989-bc7c-276783aa391d
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: sB8QMehrRh0OCPzqZOkwLtal3-HS5HYKw5YYkyuvUyM
 id: paragraph.field_unit_contact_use_override
 field_name: field_unit_contact_use_override
 entity_type: paragraph

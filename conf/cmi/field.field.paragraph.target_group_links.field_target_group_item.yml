@@ -4,13 +4,17 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_target_group_item
+    - paragraphs.paragraphs_type.target_group_link_item
+    - paragraphs.paragraphs_type.target_group_links
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: vM9mD6xpThSLmCqhGRERNjz3XuOVTx4zmQtGUPxCS-M
 id: paragraph.target_group_links.field_target_group_item
 field_name: field_target_group_item
 entity_type: paragraph
 bundle: target_group_links
-label: 'Target group item'
+label: Kohderyhmä
 description: ''
 required: true
 translatable: false
@@ -19,7 +23,11 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      target_group_link_item: target_group_link_item
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      target_group_link_item:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

@@ -8,6 +8,8 @@ dependencies:
   enforced:
     module:
       - helfi_base_content
+_core:
+  default_config_hash: _Nbhr4JLQXcrcmDFzHXgntvTpv2ZLX_zza-h7gjrYws
 id: paragraphs_library_item.paragraphs_library_item.paragraphs
 field_name: paragraphs
 entity_type: paragraphs_library_item
@@ -21,7 +23,63 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      accordion: accordion
+      banner: banner
+      columns: columns
+      contact_card_listing: contact_card_listing
+      content_cards: content_cards
+      content_liftup: content_liftup
+      image: image
+      liftup_with_image: liftup_with_image
+      list_of_links: list_of_links
+      map: map
+      sidebar_text: sidebar_text
+      text: text
+      unit_search: unit_search
+      service_list: service_list
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      accordion:
+        weight: 0
+        enabled: true
+      banner:
+        weight: 0
+        enabled: true
+      columns:
+        weight: 0
+        enabled: true
+      contact_card_listing:
+        weight: 0
+        enabled: true
+      content_cards:
+        weight: 0
+        enabled: true
+      content_liftup:
+        weight: 0
+        enabled: true
+      image:
+        weight: 0
+        enabled: true
+      liftup_with_image:
+        weight: 0
+        enabled: true
+      list_of_links:
+        weight: 0
+        enabled: true
+      map:
+        weight: 0
+        enabled: true
+      sidebar_text:
+        weight: 0
+        enabled: true
+      text:
+        weight: 0
+        enabled: true
+      unit_search:
+        weight: 0
+        enabled: true
+      service_list:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

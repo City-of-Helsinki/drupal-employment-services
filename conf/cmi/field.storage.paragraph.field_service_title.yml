@@ -1,9 +1,11 @@
 uuid: 0e54e644-2536-4d3e-9f7d-259f0f4dbee2
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: NQ9shdlMyqhl7ATuOWIYqpQv4MscZCs-mbWOhkp379c
 id: paragraph.field_service_title
 field_name: field_service_title
 entity_type: paragraph

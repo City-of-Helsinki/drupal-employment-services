@@ -1,10 +1,12 @@
 uuid: 5e89a991-5d61-4c81-8813-0e0713db4560
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_unit_search_meta_button
     - paragraphs.paragraphs_type.unit_search
+_core:
+  default_config_hash: H1p7TFY_4QqV75OgUrXeyKb3anWpkAzSCgw8Qi2LJJo
 id: paragraph.unit_search.field_unit_search_meta_button
 field_name: field_unit_search_meta_button
 entity_type: paragraph

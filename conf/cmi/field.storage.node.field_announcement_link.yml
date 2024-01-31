@@ -1,10 +1,12 @@
 uuid: 3ee29540-aa00-49d3-9c8d-f233252acf19
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: OR0XN-SZbrNKigZ4aGPUaCTuwjX0bur0rhx0ISjGG0Q
 id: node.field_announcement_link
 field_name: field_announcement_link
 entity_type: node

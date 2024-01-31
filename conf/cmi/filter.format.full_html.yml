@@ -1,11 +1,13 @@
 uuid: 658dc143-4979-451a-9eff-f31849801390
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - editor
     - helfi_api_base
     - linkit
+_core:
+  default_config_hash: scZe8VBZbfUiJt0xnoGrHbXgRhTOLA-d3g7Byy1lZ4c
 name: HTML
 format: full_html
 weight: 0

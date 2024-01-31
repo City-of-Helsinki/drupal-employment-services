@@ -9,6 +9,8 @@ dependencies:
   enforced:
     module:
       - helfi_base_content
+_core:
+  default_config_hash: lZf_CG0kQal_p617CeuEss98LCiNSUie7YsFBDGfMQk
 id: node.field_hero
 field_name: field_hero
 entity_type: node

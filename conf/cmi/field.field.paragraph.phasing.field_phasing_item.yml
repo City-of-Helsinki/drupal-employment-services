@@ -1,16 +1,20 @@
 uuid: 90b9c092-dd8a-4bdc-9696-92c7c65757fc
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_phasing_item
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.phasing_item
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: OTsGV_59l_hoG4pPwa4NOFiR0nrv7j3iu9ErgLB1BZY
 id: paragraph.phasing.field_phasing_item
 field_name: field_phasing_item
 entity_type: paragraph
 bundle: phasing
-label: 'Phasing item'
+label: Vaihe
 description: ''
 required: true
 translatable: false
@@ -19,7 +23,11 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      phasing_item: phasing_item
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      phasing_item:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

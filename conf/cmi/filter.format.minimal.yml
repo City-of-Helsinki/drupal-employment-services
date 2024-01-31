@@ -1,11 +1,13 @@
 uuid: 59e7050e-c1cb-4a56-bb99-4555e6888604
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - editor
     - helfi_api_base
     - linkit
+_core:
+  default_config_hash: 6AGo1h4zFCH6SC4pUy99nHKNsUsd7ZNLffnFw9RiSBA
 name: Minimal
 format: minimal
 weight: 0

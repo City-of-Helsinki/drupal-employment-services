@@ -15,8 +15,11 @@ dependencies:
     - paragraphs.paragraphs_type.contact_card
   module:
     - entity_reference_revisions
+    - helfi_platform_config
     - image
     - telephone
+_core:
+  default_config_hash: X5x-5vSXj4FHXf2NNNyzzwVH7xlQUk6wGBYjejfb-iQ
 id: paragraph.contact_card.default
 targetEntityType: paragraph
 bundle: contact_card

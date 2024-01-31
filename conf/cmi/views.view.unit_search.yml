@@ -1,5 +1,5 @@
 uuid: a57e2eba-63dc-4150-af6b-c705c04dbc50
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -8,6 +8,8 @@ dependencies:
     - address
     - helfi_tpr
     - user
+_core:
+  default_config_hash: mwuTSnSRTePqNG6WFWBI9ajFxnho8CH-6sfyfJnDr0E
 id: unit_search
 label: 'Unit search'
 module: views

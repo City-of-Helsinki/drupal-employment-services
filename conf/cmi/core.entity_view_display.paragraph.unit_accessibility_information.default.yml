@@ -1,10 +1,12 @@
 uuid: 66d2db28-c059-4844-a724-43347860355f
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.paragraph.unit_accessibility_information.field_unit_accessibility_unit
     - paragraphs.paragraphs_type.unit_accessibility_information
+_core:
+  default_config_hash: fs0hvNS9lcziz7yNYs7VDWHmIs6wqeA2SZxMrkpb3KQ
 id: paragraph.unit_accessibility_information.default
 targetEntityType: paragraph
 bundle: unit_accessibility_information

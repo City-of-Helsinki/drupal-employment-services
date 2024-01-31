@@ -1,17 +1,20 @@
 uuid: 495c81ee-097d-40c4-aa64-388b6a8e77a5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.field.paragraph.unit_search.field_unit_search_description
     - field.field.paragraph.unit_search.field_unit_search_meta_button
     - field.field.paragraph.unit_search.field_unit_search_meta_label
+    - field.field.paragraph.unit_search.field_unit_search_meta_load_more
     - field.field.paragraph.unit_search.field_unit_search_meta_placehold
     - field.field.paragraph.unit_search.field_unit_search_title
     - field.field.paragraph.unit_search.field_unit_search_units
     - paragraphs.paragraphs_type.unit_search
   module:
     - text
+_core:
+  default_config_hash: eO2_M7ETTzd3irRYYwjAo3rKU54wDMxFzvHS3v6hKuQ
 id: paragraph.unit_search.default
 targetEntityType: paragraph
 bundle: unit_search

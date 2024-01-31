@@ -1,17 +1,21 @@
 uuid: 54c531ce-e3a2-43b1-8826-75887e80b882
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_sidebar_content
     - node.type.page
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.sidebar_text
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: 056k2o_OzWbDmv_9zA5BNb30RqLImUGCYN6nnYWjqoQ
 id: node.page.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node
 bundle: page
-label: 'Sidebar content'
+label: 'Sivupalkin sisältö'
 description: ''
 required: false
 translatable: true
@@ -20,7 +24,15 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      sidebar_text: sidebar_text
+      from_library: from_library
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      from_library:
+        weight: 0
+        enabled: true
+      sidebar_text:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

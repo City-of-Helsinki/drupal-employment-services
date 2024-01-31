@@ -1,17 +1,21 @@
 uuid: 07ee38b6-ec0a-4c3f-a1e8-bebe9ea40628
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.tpr_service.field_sidebar_content
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.sidebar_text
   module:
     - entity_reference_revisions
     - helfi_tpr
+_core:
+  default_config_hash: 2Cnwe0fNZpuNDGlHzy54i1Qhrc7QLtTUkRRnvfrDObo
 id: tpr_service.tpr_service.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: tpr_service
 bundle: tpr_service
-label: 'Sidebar content'
+label: 'Sivupalkin sisältö'
 description: ''
 required: false
 translatable: true
@@ -20,7 +24,15 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      sidebar_text: sidebar_text
+      from_library: from_library
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      from_library:
+        weight: 0
+        enabled: true
+      sidebar_text:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

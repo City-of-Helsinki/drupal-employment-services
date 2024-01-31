@@ -1,10 +1,12 @@
 uuid: 4b3f1fd8-a0cc-4eac-aa79-91f3d5d9cff0
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_announcement_all_pages
     - node.type.announcement
+_core:
+  default_config_hash: RtRz18gmNe_RH0gVc6OxdCOeZAtClvLVtBzN0KECLdM
 id: node.announcement.field_announcement_all_pages
 field_name: field_announcement_all_pages
 entity_type: node

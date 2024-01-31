@@ -1,5 +1,5 @@
 uuid: 7ca8dd15-dfc1-46b2-8283-f882a0bc4cbf
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -8,6 +8,8 @@ dependencies:
   enforced:
     config:
       - paragraphs.paragraphs_type.phasing_item
+_core:
+  default_config_hash: T2T4bVI9XuoIrqGDvQvJ_78hT0s2iy2wy6Lu7MQNnyc
 id: paragraph.field_phasing_item
 field_name: field_phasing_item
 entity_type: paragraph

@@ -7,12 +7,17 @@ dependencies:
     - field.field.paragraph.accordion.field_accordion_design
     - field.field.paragraph.accordion.field_accordion_heading_level
     - field.field.paragraph.accordion.field_accordion_items
+    - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
     - field.field.paragraph.accordion.field_accordion_title_level
+    - field.field.paragraph.accordion.field_accordion_type
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
     - options
+    - text
+_core:
+  default_config_hash: yJAD4ny-ijX5i6mYmUprDsh_4JqcMH8yIk6PNNRNUDQ
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion

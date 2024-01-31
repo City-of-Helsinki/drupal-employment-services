@@ -1,9 +1,11 @@
 uuid: d971bd07-b713-4eca-970c-d69b586d81be
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: BMng6GPfLZl_YBCvLZgvsH-12BXX1cuXWG5VUpvY8Ks
 id: paragraph.field_unit_contact_use_phone
 field_name: field_unit_contact_use_phone
 entity_type: paragraph

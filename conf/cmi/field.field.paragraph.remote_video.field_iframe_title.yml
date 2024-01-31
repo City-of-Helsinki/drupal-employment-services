@@ -1,10 +1,12 @@
 uuid: a38d322f-fa00-42ae-b3c8-f195502a6afb
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_iframe_title
     - paragraphs.paragraphs_type.remote_video
+_core:
+  default_config_hash: 4JZoeG_XitvgE9Tg7ZfVUwjpWcjeqktlO2tOnx_WfWU
 id: paragraph.remote_video.field_iframe_title
 field_name: field_iframe_title
 entity_type: paragraph

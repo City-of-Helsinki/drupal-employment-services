@@ -1,9 +1,11 @@
 uuid: 3108605f-c2c3-4eb5-b1ef-791af8212ac9
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: BYzeR71DrkBqeMjYVof2ZkTX2qwf9R3dHSQTmIMkrTs
 id: paragraph.field_unit_contact_use_link
 field_name: field_unit_contact_use_link
 entity_type: paragraph

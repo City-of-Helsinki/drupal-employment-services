@@ -1,9 +1,11 @@
 uuid: 969e844f-f941-49fa-a3ae-c3f153366595
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: JC4p2qHXUeY-wiNBTGDl6RCdOEYxfeMrvQe7tVcJHZY
 id: landing_page_content_pattern
 label: 'Landing page content pattern'
 type: 'canonical_entities:node'

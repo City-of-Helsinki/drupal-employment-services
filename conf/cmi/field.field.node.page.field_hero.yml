@@ -1,17 +1,20 @@
 uuid: 7bcf32db-e555-43bd-bba8-674a1139cd33
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_hero
     - node.type.page
+    - paragraphs.paragraphs_type.hero
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: _JO0VBpDGRU-ye4MgCyh72SJmF6G9ndACtwAfuQJZI8
 id: node.page.field_hero
 field_name: field_hero
 entity_type: node
 bundle: page
-label: Hero
+label: Hero-lohko
 description: ''
 required: false
 translatable: true
@@ -20,7 +23,11 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      hero: hero
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      hero:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

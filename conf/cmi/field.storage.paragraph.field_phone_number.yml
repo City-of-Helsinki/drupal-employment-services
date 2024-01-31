@@ -5,6 +5,8 @@ dependencies:
   module:
     - paragraphs
     - telephone
+_core:
+  default_config_hash: kxmWRH9TJh5fRoM_YvyuycrIfHCulYKplVTkFm9DXAM
 id: paragraph.field_phone_number
 field_name: field_phone_number
 entity_type: paragraph

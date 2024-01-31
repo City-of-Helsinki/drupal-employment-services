@@ -1,9 +1,11 @@
 uuid: e26b8419-37ce-4ee2-83a5-d6327780d215
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - node.type.page
+_core:
+  default_config_hash: 0m4p2SiQag8S_hCuiUZt-3xis3qrOuBXCwKH51hF5lo
 id: node.page.status
 field_name: status
 entity_type: node

@@ -1,5 +1,5 @@
 uuid: 15c2ea0c-e324-4e09-ad21-bfc39d55fb6e
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -16,7 +16,10 @@ dependencies:
     - path
     - publication_date
     - scheduler
+    - select2
     - text
+_core:
+  default_config_hash: 0ewsu2ZhpNhAo4t7wkUgEa9ABQAkcsF7IXtR-kFeDUg
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement

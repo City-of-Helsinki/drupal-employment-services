@@ -1,5 +1,5 @@
 uuid: 2e244928-85a7-4e6c-9924-250eeff4ef2a
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,6 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+_core:
+  default_config_hash: UrEWFwFHhJNNrHsT2CbI-8FK7KIgmDq0xV6ahjaavBM
 id: node.landing_page
 target_entity_type_id: node
 target_bundle: landing_page

@@ -4,16 +4,20 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_accordion_items
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
   enforced:
     config:
       - paragraphs.paragraphs_type.accordion_item
+_core:
+  default_config_hash: PCUbQBrVhsW-yyr2nuJTneoebeVthz457CEgW9QDdMk
 id: paragraph.accordion.field_accordion_items
 field_name: field_accordion_items
 entity_type: paragraph
 bundle: accordion
-label: Items
+label: Sisältö
 description: ''
 required: true
 translatable: false
@@ -22,7 +26,11 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      accordion_item: accordion_item
     negate: 0
-    target_bundles_drag_drop: {  }
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions
