@@ -1,5 +1,5 @@
 uuid: e103b1bf-4637-4105-a4a8-3b37a1ffb261
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.liftup_with_image
   module:
     - text
-_core:
-  default_config_hash: EXd33xroJMysIPLRAAig--Q_XT7i9vSsOyV5ebf-S5E
 id: paragraph.liftup_with_image.field_liftup_with_image_desc
 field_name: field_liftup_with_image_desc
 entity_type: paragraph
@@ -16,7 +14,7 @@ bundle: liftup_with_image
 label: Description
 description: 'Optional short description for liftup block.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

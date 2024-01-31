@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: null
-_core:
-  default_config_hash: GPjIi9MrHVi7nlw_vlwKWBVl87xGuOfiebbDTBkVRfQ
 id: remote_video
 label: 'Remote video'
 description: 'Media type for remote media from external sources.'

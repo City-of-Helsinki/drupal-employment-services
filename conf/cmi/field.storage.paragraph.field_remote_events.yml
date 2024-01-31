@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: 6cFoYiYWY2E057QJBuHDjkuiifNRl-Bqkt9Zr9c1Zvc
 id: paragraph.field_remote_events
 field_name: field_remote_events
 entity_type: paragraph

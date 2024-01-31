@@ -1,5 +1,5 @@
 uuid: a8a40adc-eba1-4759-9197-d5121ef85eea
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,13 +7,15 @@ dependencies:
     - field.field.tpr_unit.tpr_unit.field_content
     - field.field.tpr_unit.tpr_unit.field_lower_content
     - field.field.tpr_unit.tpr_unit.field_metatags
+    - field.field.tpr_unit.tpr_unit.field_unit_type
+    - responsive_image.styles.image__3_2
   module:
     - address
     - helfi_tpr
     - imagecache_external
     - telephone
 _core:
-  default_config_hash: R_XBsTvZDDewssRkRd4k76syUBu9RzxTsVwKp9CndNc
+  default_config_hash: gOlhIa1n9jTIJdBPN_Kjp-jn3YnsvZb7HELaoqa8KGQ
 id: tpr_unit.tpr_unit.teaser_with_image
 targetEntityType: tpr_unit
 bundle: tpr_unit
@@ -46,8 +48,8 @@ content:
     type: imagecache_external_responsive_image
     label: hidden
     settings:
-      imagecache_external_responsive_style: image__3_2
       imagecache_external_link: ''
+      imagecache_external_responsive_style: image__3_2
     third_party_settings: {  }
     weight: 0
     region: content
@@ -67,21 +69,32 @@ hidden:
   accessibility_www: true
   address_postal: true
   call_charge_info: true
+  contacts: true
   created: true
   description: true
   email: true
   field_content: true
   field_lower_content: true
   field_metatags: true
+  field_unit_type: true
   hide_description: true
+  highlights: true
   langcode: true
   latitude: true
+  links: true
   longitude: true
   name_override: true
   opening_hours: true
+  other_info: true
+  price_info: true
   provided_languages: true
+  search_api_excerpt: true
   service_map_embed: true
   services: true
   show_www: true
   streetview_entrance_url: true
+  subgroup: true
+  toc_enabled: true
+  topical: true
+  unit_picture_caption: true
   www: true

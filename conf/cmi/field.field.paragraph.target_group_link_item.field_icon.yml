@@ -1,0 +1,23 @@
+uuid: 0618615a-eea1-4ec9-a5f8-20d17c758fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.target_group_link_item
+  module:
+    - hdbt_admin_tools
+_core:
+  default_config_hash: Kv8AxJVy99LcqhcS5aWEOlJFXAEuJ9GCvNpvdFv35WI
+id: paragraph.target_group_link_item.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: target_group_link_item
+label: Icon
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: select2_icon

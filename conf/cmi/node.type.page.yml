@@ -1,5 +1,5 @@
 uuid: 338dd7cf-1fb2-4a89-83d6-f4a132465ee5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -9,7 +9,6 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-      - menu-other-languages
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
@@ -25,10 +24,10 @@ third_party_settings:
     unpublish_required: false
     unpublish_revision: false
 _core:
-  default_config_hash: 2wtLJzGRPIAAdAGbl6hOGq0wG3zumh1dayzTQvnwU94
-name: 'Basic page'
+  default_config_hash: A1XVcWETFW22MWUdDTxkOE331kBoYUWPQILECfHoBfk
+name: 'Standard page'
 type: page
-description: 'Content type for pages that include information that doesn''t age as quickly as for example article or news content.'
+description: 'Content type for standard web content.'
 help: ''
 new_revision: true
 preview_mode: 1

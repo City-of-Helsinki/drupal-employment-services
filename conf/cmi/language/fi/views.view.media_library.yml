@@ -1,102 +1,118 @@
+label: Mediakirjasto
+description: 'Etsi ja ylläpidä mediatiedostoja.'
 display:
   default:
-    display_title: Master
+    display_title: Oletus
     display_options:
-      exposed_form:
-        options:
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+      title: Media
       fields:
         media_bulk_form:
-          action_title: Action
-      filters:
-        status:
+          action_title: Toiminto
+      pager:
+        options:
+          tags:
+            next: 'Seuraava ›'
+            previous: '‹ Edellinen'
           expose:
-            label: 'Publishing status'
-          group_info:
-            label: Published
-            group_items:
-              1:
-                title: Published
-        name:
-          expose:
-            label: Name
-        bundle:
-          expose:
-            label: 'Media type'
-          group_info:
-            label: 'Media type'
-        langcode:
-          expose:
-            label: Language
+            items_per_page_label: 'Merkintöjä sivua kohti'
+            items_per_page_options_all_label: '- Kaikki -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: 'Suodata tuloksia'
+          reset_button_label: Palauta
+          exposed_sorts_label: Lajittele
+          sort_asc_label: Nousevasti
+          sort_desc_label: Laskevasti
+      empty:
+        area_text_custom:
+          content: 'Ei mediatiedostoja saatavilla.'
       sorts:
         created:
           expose:
-            label: 'Newest first'
-      title: Media
-      empty:
-        area_text_custom:
-          content: 'No media available.'
+            label: 'Uusin ensin'
+        name:
+          expose:
+            label: 'Nimi (A-Z)'
+        name_1:
+          expose:
+            label: 'Nimi (Z-A)'
+      filters:
+        status:
+          expose:
+            label: 'Julkaisun tila'
+          group_info:
+            label: Julkaistu
+            group_items:
+              1:
+                title: Julkaistu
+        name:
+          expose:
+            label: Nimi
+        bundle:
+          expose:
+            label: 'Median tyyppi'
+          group_info:
+            label: 'Median tyyppi'
+        langcode:
+          expose:
+            label: Kieli
   page:
-    display_title: Page
+    display_title: Sivu
     display_options:
       fields:
         media_bulk_form:
-          action_title: Action
+          action_title: Toiminto
         name:
           separator: ', '
         edit_media:
+          alter:
+            text: 'Muokkaa {{ name }}'
+            alt: 'Muokkaa {{ name }}'
           text: Muokkaa
         delete_media:
+          alter:
+            text: 'Poista {{ name }}'
+            alt: 'Poista {{ name }}'
           text: Poista
   widget:
-    display_title: Widget
+    display_title: Widgetti
     display_options:
-      filters:
-        name:
-          expose:
-            label: Name
       arguments:
         bundle:
           exception:
-            title: All
+            title: Kaikki
+      filters:
+        name:
+          expose:
+            label: Nimi
       header:
         display_link_grid:
-          label: Grid
+          label: Ruudukko
         display_link_table:
-          label: Table
+          label: Taulukko
   widget_table:
+    display_title: 'Widget (taulukko)'
     display_options:
       fields:
         thumbnail__target_id:
-          label: Thumbnail
+          label: Pienoiskuva
         name:
-          label: Name
+          label: Nimi
         uid:
-          label: Author
+          label: Kirjoittaja
         changed:
-          label: Updated
-      filters:
-        name:
-          expose:
-            label: Name
+          label: Päivitetty
       arguments:
         bundle:
           exception:
-            title: All
+            title: Kaikki
+      filters:
+        name:
+          expose:
+            label: Nimi
       header:
         display_link_grid:
-          label: Grid
+          label: Ruudukko
         display_link_table:
-          label: Table
+          label: Taulukko

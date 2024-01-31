@@ -5,8 +5,6 @@ dependencies:
   module:
     - helfi_tpr
     - user
-_core:
-  default_config_hash: rO8m-2SU4UjJoGRHWn5CfFPKwy59J2U_J0xJq6MZpjA
 id: tpr_service_list
 label: 'TPR service list'
 module: views
@@ -17,7 +15,7 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -481,7 +479,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Filter
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -586,7 +584,6 @@ display:
             fi: fi
             sv: sv
             en: en
-            ru: ru
           group: 1
           exposed: true
           expose:

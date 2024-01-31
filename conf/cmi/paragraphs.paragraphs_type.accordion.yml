@@ -1,7 +1,12 @@
 uuid: 7b845017-2c2b-4193-872e-da4094b005ea
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 _core:
   default_config_hash: d9QHZSNb78KFueRqSVFC7_maG4KBNgjsPmLJIb2TN10
 id: accordion

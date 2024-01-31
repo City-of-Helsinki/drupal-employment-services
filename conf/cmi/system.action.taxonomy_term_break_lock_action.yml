@@ -1,0 +1,13 @@
+uuid: 4eaede05-9315-4127-83a7-95bebadd5a8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock
+_core:
+  default_config_hash: Qdwi5SKrcqXnCPQ0YyJ25Mu3RwND-GXfnSpxJbKAeyw
+id: taxonomy_term_break_lock_action
+label: 'Break lock taxonomy_term'
+type: taxonomy_term
+plugin: 'entity:break_lock:taxonomy_term'
+configuration: {  }

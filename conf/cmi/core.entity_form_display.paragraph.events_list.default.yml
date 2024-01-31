@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.events_list.field_title
     - paragraphs.paragraphs_type.events_list
   module:
-    - select2
+    - hdbt_admin_tools
     - text
 id: paragraph.events_list.default
 targetEntityType: paragraph

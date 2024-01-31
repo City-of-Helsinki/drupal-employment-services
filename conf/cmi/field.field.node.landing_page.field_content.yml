@@ -1,168 +1,123 @@
 uuid: 5c9fbf64-2b91-413c-a88d-4e276b87b326
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
     - node.type.landing_page
-    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.events_list
-    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.chart
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.hearings
     - paragraphs.paragraphs_type.liftup_with_image
-    - paragraphs.paragraphs_type.link_with_icon
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.news_list
-    - paragraphs.paragraphs_type.subheading
-    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.popular_services
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list
+    - paragraphs.paragraphs_type.service_list_search
+    - paragraphs.paragraphs_type.target_group_links
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: D7s90vFMq6Tjc-ThXp4s3q8tO6lTN1lBPY3e63U8chU
+  default_config_hash: zEXoDFJnyArUOiL2ZrtDuq4YDWKyn6ung9JndPk_Ntg
 id: node.landing_page.field_content
 field_name: field_content
 entity_type: node
 bundle: landing_page
-label: 'Content region'
+label: Sisältöalue
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      text: text
-      accordion: accordion
+      columns: columns
       list_of_links: list_of_links
-      liftup_with_image: liftup_with_image
+      content_cards: content_cards
+      content_liftup: content_liftup
       banner: banner
-      image: image
-      events_list: events_list
+      liftup_with_image: liftup_with_image
+      from_library: from_library
+      chart: chart
+      remote_video: remote_video
+      map: map
       news_list: news_list
-      subheading: subheading
-      link_with_icon: link_with_icon
+      event_list: event_list
+      phasing: phasing
+      popular_services: popular_services
+      target_group_links: target_group_links
+      hearings: hearings
+      unit_search: unit_search
+      service_list: service_list
+      service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
-      accordion:
-        weight: -65
-        enabled: true
-      accordion_item:
-        weight: -61
-        enabled: false
       banner:
-        weight: -62
+        weight: 0
         enabled: true
-      blog_list:
-        weight: -51
-        enabled: false
-      card:
-        weight: -50
-        enabled: false
-      card_list:
-        weight: -49
-        enabled: false
+      chart:
+        weight: 0
+        enabled: true
       columns:
-        weight: -67
-        enabled: false
+        weight: 0
+        enabled: true
       content_cards:
-        weight: -69
-        enabled: false
+        weight: 0
+        enabled: true
       content_liftup:
-        weight: -68
-        enabled: false
+        weight: 0
+        enabled: true
       event_list:
-        weight: 30
-        enabled: false
-      events_list:
-        weight: -48
+        weight: 0
         enabled: true
       from_library:
-        weight: -55
-        enabled: false
-      gallery:
-        weight: -60
-        enabled: false
-      gallery_slide:
-        weight: -59
-        enabled: false
-      hero:
-        weight: -58
-        enabled: false
-      highlighted_text:
-        weight: -47
-        enabled: false
-      image:
-        weight: -57
+        weight: 0
         enabled: true
-      info:
-        weight: -45
-        enabled: false
+      hearings:
+        weight: 0
+        enabled: true
       liftup_with_image:
-        weight: -63
-        enabled: true
-      link:
-        weight: -44
-        enabled: false
-      link_area:
-        weight: 61
-        enabled: false
-      link_internal:
-        weight: -43
-        enabled: false
-      link_with_icon:
-        weight: 63
+        weight: 0
         enabled: true
       list_of_links:
-        weight: -64
+        weight: 0
         enabled: true
-      list_of_links_item:
-        weight: -56
-        enabled: false
+      map:
+        weight: 0
+        enabled: true
       news_list:
-        weight: -42
+        weight: 0
         enabled: true
-      notification:
-        weight: 58
-        enabled: false
-      phone_number_box:
-        weight: -41
-        enabled: false
-      quote:
-        weight: 63
-        enabled: false
+      phasing:
+        weight: 0
+        enabled: true
+      popular_services:
+        weight: 0
+        enabled: true
       remote_video:
-        weight: -54
-        enabled: false
-      search:
-        weight: -40
-        enabled: false
+        weight: 0
+        enabled: true
       service_list:
-        weight: -52
-        enabled: false
-      sidebar_text:
-        weight: -39
-        enabled: false
-      subheading:
-        weight: -38
+        weight: 0
         enabled: true
-      sujo_embedded:
-        weight: -37
-        enabled: false
-      text:
-        weight: -66
+      service_list_search:
+        weight: 0
         enabled: true
-      unit_map:
-        weight: 77
-        enabled: false
+      target_group_links:
+        weight: 0
+        enabled: true
       unit_search:
-        weight: -53
-        enabled: false
-      units_list:
-        weight: 79
-        enabled: false
-      video:
-        weight: -36
-        enabled: false
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

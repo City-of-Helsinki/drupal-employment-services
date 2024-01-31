@@ -1,5 +1,5 @@
 uuid: 81ec5fc4-989d-4588-ad22-d150d63b5858
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.list_of_links_item
   module:
     - link
-_core:
-  default_config_hash: LWLk0KxA0y2Eltz3wlXjS5oNDkUr3doJvhX6VwIw-EE
 id: paragraph.list_of_links_item.field_list_of_links_link
 field_name: field_list_of_links_link
 entity_type: paragraph

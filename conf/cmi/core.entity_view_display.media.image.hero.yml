@@ -10,8 +10,6 @@ dependencies:
     - responsive_image.styles.hero__left_right
   module:
     - responsive_image
-_core:
-  default_config_hash: yOUJJysrNA6OZUaL8EmXsFBPwpyOzsnC0fsXT9QGHU4
 id: media.image.hero
 targetEntityType: media
 bundle: image

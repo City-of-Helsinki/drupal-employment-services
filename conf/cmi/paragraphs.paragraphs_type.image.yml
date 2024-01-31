@@ -1,9 +1,7 @@
 uuid: 9dcda41e-39fc-4f3f-92c7-ad9db93f613b
-langcode: en
+langcode: fi
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: M-cucF_MywQRWs1GedbjUzT6HAIH-QUhLICxcZgEPFg
 id: image
 label: Image
 icon_uuid: null

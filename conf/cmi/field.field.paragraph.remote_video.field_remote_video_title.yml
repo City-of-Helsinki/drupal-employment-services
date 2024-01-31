@@ -1,0 +1,21 @@
+uuid: 3e3f0e6b-5116-4c11-872a-2c642c45771b
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_remote_video_title
+    - paragraphs.paragraphs_type.remote_video
+_core:
+  default_config_hash: Kn3u7ICuSPlxFZiNdYRyNxEnd-I9Yye00bz2l39BXFQ
+id: paragraph.remote_video.field_remote_video_title
+field_name: field_remote_video_title
+entity_type: paragraph
+bundle: remote_video
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

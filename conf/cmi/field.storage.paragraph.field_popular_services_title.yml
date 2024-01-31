@@ -1,0 +1,23 @@
+uuid: 49dccb0f-bdb2-49d7-bc88-9e67444d95bc
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: P7aQddzAIkHGi8TyLPWm8iglKTXXalAfv6FYbA5xERk
+id: paragraph.field_popular_services_title
+field_name: field_popular_services_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,5 +1,5 @@
 uuid: 6a003128-928d-4a8c-ae1a-152b8c450728
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -11,8 +11,6 @@ dependencies:
   module:
     - options
     - text
-_core:
-  default_config_hash: ETMahHqS5T1Wd1HpuejBnFCFdbOLXP_U9kOS0CN6SZo
 id: paragraph.liftup_with_image.default
 targetEntityType: paragraph
 bundle: liftup_with_image

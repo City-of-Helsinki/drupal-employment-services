@@ -1,0 +1,21 @@
+uuid: 10726017-9e70-422e-86cf-06fbb4ba201b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: xR5XlNQ5HDtWotW8RvVdWDqeaD_OtDi5VEUTFqTL9UE
+id: paragraph.field_target_group_item_link
+field_name: field_target_group_item_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

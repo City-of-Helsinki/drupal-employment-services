@@ -1,5 +1,5 @@
 uuid: 9b8afdf2-433f-478e-bb70-ccb65ca4caad
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -9,7 +9,7 @@ dependencies:
     - telephone
     - text
 _core:
-  default_config_hash: RNmH-teVvoDkhsySVwhXTh1KpvqXLk_xgduxgztPKF0
+  default_config_hash: i0i5Sy5UJYyKJqoc7NKFbAMaMlXpC53GoO7Z3mahaBE
 id: tpr_service_channel.tpr_service_channel.default
 targetEntityType: tpr_service_channel
 bundle: tpr_service_channel
@@ -219,4 +219,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

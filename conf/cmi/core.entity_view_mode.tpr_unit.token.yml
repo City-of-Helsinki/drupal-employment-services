@@ -1,0 +1,12 @@
+uuid: 8065e891-5f0d-4970-800d-06ed6e3537e1
+langcode: fi
+status: true
+dependencies:
+  module:
+    - helfi_tpr
+_core:
+  default_config_hash: kzVXngjEGNpJsdD08ZS2eH18frDmMTMm5-s03cB3SMU
+id: tpr_unit.token
+label: Token
+targetEntityType: tpr_unit
+cache: true

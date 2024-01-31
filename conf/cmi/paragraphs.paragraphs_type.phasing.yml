@@ -1,0 +1,12 @@
+uuid: c505ab47-3a3d-4011-a268-4f6fa3b6261b
+langcode: fi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CphXRMiR64m3hR6xe7sOLltnL1duy_jLWvRURd3cNIw
+id: phasing
+label: Phasing
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,30 +1,32 @@
 uuid: af8a31e9-b65d-47b7-bb20-9bca6413a351
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.tpr_unit.field_content
     - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.events_list
+    - paragraphs.paragraphs_type.contact_card_listing
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.notification
+    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
-    - paragraphs.paragraphs_type.unit_map
   module:
     - entity_reference_revisions
     - helfi_tpr
 _core:
-  default_config_hash: oCk1g8rIuRCjY2ok4U_c9Y15PBIaeJ6hdC8bt90A6F8
+  default_config_hash: 7mu1uOGOAtNGBSsMGRGHZ7E2-6BYzH1Giv6pIn5tgHY
 id: tpr_unit.tpr_unit.field_content
 field_name: field_content
 entity_type: tpr_unit
 bundle: tpr_unit
-label: 'Upper content region'
+label: 'Ylempi sisältöalue'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -36,123 +38,41 @@ settings:
       accordion: accordion
       image: image
       list_of_links: list_of_links
-      events_list: events_list
-      notification: notification
-      unit_map: unit_map
+      content_cards: content_cards
+      banner: banner
+      from_library: from_library
+      contact_card_listing: contact_card_listing
+      remote_video: remote_video
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -27
+        weight: 0
         enabled: true
-      accordion_item:
-        weight: -22
-        enabled: false
       banner:
-        weight: -21
-        enabled: false
-      blog_list:
-        weight: 41
-        enabled: false
-      card:
-        weight: 42
-        enabled: false
-      card_list:
-        weight: 43
-        enabled: false
+        weight: 0
+        enabled: true
       columns:
-        weight: -28
+        weight: 0
+        enabled: true
+      contact_card_listing:
+        weight: 0
         enabled: true
       content_cards:
-        weight: -23
-        enabled: false
-      content_liftup:
-        weight: 46
-        enabled: false
-      event_list:
-        weight: 47
-        enabled: false
-      events_list:
-        weight: 48
+        weight: 0
         enabled: true
       from_library:
-        weight: 21
-        enabled: false
-      gallery:
-        weight: -25
-        enabled: false
-      gallery_slide:
-        weight: -20
-        enabled: false
-      hero:
-        weight: -19
-        enabled: false
-      highlighted_text:
-        weight: 53
-        enabled: false
+        weight: 0
+        enabled: true
       image:
-        weight: -26
+        weight: 0
         enabled: true
-      info:
-        weight: 55
-        enabled: false
-      liftup_with_image:
-        weight: -18
-        enabled: false
-      link:
-        weight: 57
-        enabled: false
-      link_internal:
-        weight: 58
-        enabled: false
       list_of_links:
-        weight: -24
+        weight: 0
         enabled: true
-      list_of_links_item:
-        weight: -17
-        enabled: false
-      news_list:
-        weight: 61
-        enabled: false
-      notification:
-        weight: 62
-        enabled: true
-      phone_number_box:
-        weight: 63
-        enabled: false
-      quote:
-        weight: 64
-        enabled: false
       remote_video:
-        weight: 65
-        enabled: false
-      search:
-        weight: 66
-        enabled: false
-      service_list:
-        weight: 67
-        enabled: false
-      sidebar_text:
-        weight: 68
-        enabled: false
-      subheading:
-        weight: 69
-        enabled: false
-      sujo_embedded:
-        weight: 70
-        enabled: false
+        weight: 0
+        enabled: true
       text:
-        weight: -29
+        weight: 0
         enabled: true
-      unit_map:
-        weight: 73
-        enabled: true
-      unit_search:
-        weight: -16
-        enabled: false
-      units_list:
-        weight: 73
-        enabled: false
-      video:
-        weight: 74
-        enabled: false
 field_type: entity_reference_revisions

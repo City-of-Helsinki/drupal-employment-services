@@ -1,5 +1,5 @@
 uuid: 0f3e16a1-8858-4ee7-a418-fed7a5862097
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -8,8 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.sidebar_text
   module:
     - text
-_core:
-  default_config_hash: oEXxwKRL_SQCkrCkFWUquEfltY6ZTGpAIkfF9q1Ox9I
 id: paragraph.sidebar_text.default
 targetEntityType: paragraph
 bundle: sidebar_text
@@ -30,4 +28,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

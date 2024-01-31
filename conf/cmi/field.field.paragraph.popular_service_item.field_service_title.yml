@@ -1,0 +1,21 @@
+uuid: 228764a0-91c8-47ae-931e-727039c9ce67
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_title
+    - paragraphs.paragraphs_type.popular_service_item
+_core:
+  default_config_hash: WroYzgA7nStUiByJgJ7cjQtkuFlJhDVUXntsoNtqSUo
+id: paragraph.popular_service_item.field_service_title
+field_name: field_service_title
+entity_type: paragraph
+bundle: popular_service_item
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

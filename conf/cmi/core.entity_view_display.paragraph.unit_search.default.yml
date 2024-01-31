@@ -1,5 +1,5 @@
 uuid: 495c81ee-097d-40c4-aa64-388b6a8e77a5
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: AhvDZp4iBinv5b_7Vw8ZZ1IUnf2UjFm4wg12mvHITeU
+  default_config_hash: eO2_M7ETTzd3irRYYwjAo3rKU54wDMxFzvHS3v6hKuQ
 id: paragraph.unit_search.default
 targetEntityType: paragraph
 bundle: unit_search
@@ -43,14 +43,6 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_unit_search_meta_load_more:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
   field_unit_search_meta_placehold:
     type: string
     label: hidden
@@ -74,4 +66,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_unit_search_meta_load_more: true
+  search_api_excerpt: true

@@ -1,0 +1,25 @@
+uuid: 673371a5-835a-4a50-be07-78122bf9e27c
+langcode: fi
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.popular_services
+_core:
+  default_config_hash: 9SpOMjq9LffODLRAokBxbNqqAqYKdlidTKzys8KmBRk
+id: paragraph.field_service_items
+field_name: field_service_items
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

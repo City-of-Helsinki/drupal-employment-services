@@ -1,12 +1,13 @@
 uuid: c4041c36-3278-4af0-9566-7b59690fb6be
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: exgtCf41acr43jJqyboAVNuYusB0_kwmBj4IA_gcfzk
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.list_of_links
 id: paragraph.field_list_of_links_links
 field_name: field_list_of_links_links
 entity_type: paragraph

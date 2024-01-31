@@ -1,12 +1,10 @@
 uuid: d61c1843-94ca-46ab-9d99-30a4146f7326
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content_liftup_unit
     - paragraphs.paragraphs_type.content_liftup
-_core:
-  default_config_hash: PDfXJdsEFnyW-qrv229_Y5bkaK0ztYhLPJc6JutjBfs
 id: paragraph.content_liftup.field_content_liftup_unit
 field_name: field_content_liftup_unit
 entity_type: paragraph

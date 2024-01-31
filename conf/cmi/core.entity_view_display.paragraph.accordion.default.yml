@@ -17,7 +17,7 @@ dependencies:
     - options
     - text
 _core:
-  default_config_hash: HWdmIhepMk1UHQ1iK7mD_eMSQVDvXDUJJoB04cne0kg
+  default_config_hash: yJAD4ny-ijX5i6mYmUprDsh_4JqcMH8yIk6PNNRNUDQ
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
@@ -68,12 +68,10 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_accordion_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
 hidden:
+  field_accordion_description: true
   field_accordion_text: true
+  field_accordion_title: true
+  field_accordion_title_level: true
+  field_accordion_type: true
+  search_api_excerpt: true

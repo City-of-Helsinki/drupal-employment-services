@@ -1,0 +1,17 @@
+uuid: 4e429f65-ee80-4aab-a2c5-a4a6b6f13dd5
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: Q7vvz59nPU2U9WqokL0vgWxrbw_xGBGPAcUx2L5tMU0
+id: service_list_search
+label: 'Service List Search'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

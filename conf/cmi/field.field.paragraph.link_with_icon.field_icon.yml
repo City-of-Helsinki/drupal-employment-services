@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_icon
     - paragraphs.paragraphs_type.link_with_icon
   module:
-    - select2_icon
+    - hdbt_admin_tools
 id: paragraph.link_with_icon.field_icon
 field_name: field_icon
 entity_type: paragraph

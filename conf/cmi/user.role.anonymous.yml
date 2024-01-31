@@ -3,6 +3,7 @@ langcode: fi
 status: true
 dependencies:
   module:
+    - external_entities
     - helfi_tpr
     - media
     - paragraphs_type_permissions
@@ -17,6 +18,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'issue subrequests'
+  - 'view helfi_announcements external entity'
   - 'view media'
   - 'view media'
   - 'view paragraph content accordion'

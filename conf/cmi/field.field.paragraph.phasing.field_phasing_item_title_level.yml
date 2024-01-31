@@ -1,0 +1,25 @@
+uuid: 0aac4ecb-9c17-4f9b-b347-d4080164902a
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phasing_item_title_level
+    - paragraphs.paragraphs_type.phasing
+  module:
+    - options
+_core:
+  default_config_hash: h8Ur_-fBNlCws6rUGTifulc6V5-pSfOqrPCSSDNb_JU
+id: paragraph.phasing.field_phasing_item_title_level
+field_name: field_phasing_item_title_level
+entity_type: paragraph
+bundle: phasing
+label: 'Item title level'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

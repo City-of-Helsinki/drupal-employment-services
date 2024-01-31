@@ -1,5 +1,5 @@
 uuid: 1ae423a5-e149-4580-9e5e-1b81d059e833
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,8 +9,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: gmtmgLpPQOcKE9BA_eKfrCXtoWVO63kmcfythbJiz5Q
 id: node.page

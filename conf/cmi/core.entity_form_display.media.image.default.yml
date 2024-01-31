@@ -10,8 +10,6 @@ dependencies:
   module:
     - focal_point
     - path
-_core:
-  default_config_hash: _j-Y1d8xzIrrkE3VLGHbEks1vFdg7kMl68UaYmxSGBo
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -59,6 +57,11 @@ content:
   path:
     type: path
     weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  replace_file:
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

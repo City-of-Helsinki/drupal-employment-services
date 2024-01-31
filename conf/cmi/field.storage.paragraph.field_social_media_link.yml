@@ -1,0 +1,24 @@
+uuid: 78590510-45cb-4019-b26f-692dbaccafa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.social_media_link
+_core:
+  default_config_hash: '-njlxNwWIC8XUfPK115lFcUTt2_i0Lm6ldsKWrh6Ge8'
+id: paragraph.field_social_media_link
+field_name: field_social_media_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

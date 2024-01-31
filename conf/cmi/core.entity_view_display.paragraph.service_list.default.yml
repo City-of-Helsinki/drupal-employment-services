@@ -1,5 +1,5 @@
 uuid: 762dd9d9-9ad4-4c93-94e8-2340d3bac548
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: Q24cyt4J0px0IBaVGbxc3kVX35PurWDU32OyT9a2fCs
+  default_config_hash: kW70crB1EX1jLksh-hgRFpNJ1-PSnTUlofrFYeanHkQ
 id: paragraph.service_list.default
 targetEntityType: paragraph
 bundle: service_list
@@ -23,14 +23,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_service_list_meta_load_mor:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_service_list_services:
     type: entity_reference_entity_id
@@ -47,4 +39,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_service_list_meta_load_mor: true
+  search_api_excerpt: true

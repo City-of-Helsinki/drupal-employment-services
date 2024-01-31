@@ -1,12 +1,10 @@
 uuid: f934e43b-4862-48b1-8327-72264c460f3f
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - media
     - paragraphs
-_core:
-  default_config_hash: _UsQEVpN-k96IiYHWU1_EJ2OuPyWCv8vo95g9qeiEDQ
 id: paragraph.field_liftup_with_image_image
 field_name: field_liftup_with_image_image
 entity_type: paragraph

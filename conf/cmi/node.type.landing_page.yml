@@ -1,5 +1,5 @@
 uuid: 7be2bf5a-c0de-4ad1-8e5d-29fee0969e7c
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
@@ -9,7 +9,6 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-      - menu-other-languages
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
@@ -25,10 +24,10 @@ third_party_settings:
     unpublish_required: false
     unpublish_revision: false
 _core:
-  default_config_hash: ah3vIiRAXEYtaITIDXDkTMxz_d55Eu7rV-nNz1ZknEU
+  default_config_hash: PfTlYxtl_LoeL3LJeT4Qwnzu5MZq6Rc7R5o3NLTInHU
 name: 'Landing page'
 type: landing_page
-description: 'Content type for pages which serves as an entry point for a particular section of the site. Use landing page when you want to create a collection of links and information about a certain subject. '
+description: 'Content type for the front page of a section or theme. A landing page consists of highlight areas, content listings and links.'
 help: ''
 new_revision: true
 preview_mode: 1

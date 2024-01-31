@@ -28,12 +28,11 @@ dependencies:
     - field.field.node.event.field_text
     - node.type.event
   module:
-    - hdbt_admin_editorial
+    - hdbt_admin_tools
     - link
     - path
     - publication_date
     - scheduler
-    - select2
     - text
 id: node.event.default
 targetEntityType: node

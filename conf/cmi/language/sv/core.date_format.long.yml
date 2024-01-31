@@ -1,2 +1,2 @@
-label: 'Default long date'
-pattern: 'l, F j, Y - H:i'
+label: 'Förvalt långt datum'
+pattern: 'j.n.Y - H:i'

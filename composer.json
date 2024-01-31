@@ -9,27 +9,17 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.7",
-        "druidfi/omen": "^0.2.0",
         "drupal/core": "^9.4",
         "drupal/core-composer-scaffold": "^9.4",
-        "drupal/easy_install": "^10.5",
-        "drupal/entity_browser": "^2.8",
-        "drupal/focal_point": "^1.5",
-        "drupal/gin": "3.0.0-beta5",
-        "drupal/gin_toolbar": "1.0-beta22",
-        "drupal/hdbt": "2.3.23",
-        "drupal/hdbt_admin": "1.8.6",
-        "drupal/helfi_ahjo": "^1.0",
-        "drupal/helfi_azure_fs": "^1.0",
+        "drupal/hdbt": "^5.0",
+        "drupal/hdbt_admin": "^2.0",
+        "drupal/helfi_azure_fs": "^2.0",
         "drupal/helfi_drupal_tools": "dev-main",
-        "drupal/helfi_linkedevents": "^1.0",
-        "drupal/helfi_platform_config": "2.18.7",
-        "drupal/helfi_tpr": "^2.0",
+        "drupal/helfi_platform_config": "dev-UHF-X-tyollisyyspalvelut-v3",
         "drupal/helfi_tunnistamo": "^1.0",
         "drupal/jsonapi_extras": "3.23.0",
         "drupal/jsonapi_image_styles": "^3.0",
         "drupal/jsonapi_menu_items": "^1.2",
-        "drupal/linkit": "6.0.0-beta4",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
         "drupal/next": "^1.6",
@@ -37,7 +27,7 @@
         "drupal/publication_date": "^2.0@beta",
         "drupal/quick_node_clone": "^1.14",
         "drupal/redis": "^1.5",
-        "drush/drush": "^10.4"
+        "drush/drush": "^11"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
@@ -93,9 +83,6 @@
             },
             "drupal/content_lock": {
                 "3243486 - array_filter() expects parameter 1 to be array, null given content_lock.module": "https://www.drupal.org/files/issues/2021-10-15/array_filter_issue-3243486-a.patch"
-            },
-            "drupal/linkit": {
-                "[#UHF-1872] Linkit support for link field (https://www.drupal.org/i/2712951)": "https://www.drupal.org/files/issues/2023-03-07/2712951_329.6.x.diff"
             }
         },
         "installer-paths": {

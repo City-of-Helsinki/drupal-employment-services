@@ -10,7 +10,7 @@ dependencies:
   module:
     - paragraphs
     - paragraphs_features
-    - select2_icon
+    - hdbt_admin_tools
 id: paragraph.link_with_icon.default
 targetEntityType: paragraph
 bundle: link_with_icon
@@ -25,7 +25,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_icon:
-    type: select2_icon_widget
+    type: select_icon_widget
     weight: 1
     region: content
     settings: {  }

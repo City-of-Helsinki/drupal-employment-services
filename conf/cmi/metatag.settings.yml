@@ -1,5 +1,6 @@
 _core:
   default_config_hash: wsVBmS2iVB6unElbxVQ5TNIUtuMFOAVd6KZqzHGhuqc
+langcode: fi
 entity_type_groups:
   tpr_service:
     tpr_service:

@@ -2,8 +2,6 @@ uuid: 9ace5b76-4662-4e90-b793-556ecf8f5387
 langcode: fi
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: VPramHw6U2dwEG85TCqmDI6pOBERZP5PfQHNxiQBQZU
 name: original_s
 label: 'Original S'
 effects:

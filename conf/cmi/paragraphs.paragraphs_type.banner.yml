@@ -1,7 +1,12 @@
 uuid: 28852897-9585-472d-9acc-25fbe3d1b032
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 _core:
   default_config_hash: 5psLSGdGhJB25T2TTd44M1_ObQNb2ii3jKv5ebjaDT4
 id: banner

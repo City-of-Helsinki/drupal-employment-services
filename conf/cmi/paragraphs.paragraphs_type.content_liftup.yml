@@ -1,9 +1,7 @@
 uuid: ded494a4-ddf6-4de4-9397-40c9c10a10bc
-langcode: en
+langcode: fi
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: ONSzgYJ_Jc8pZ002ZLaFDdkbCXm0lKyjjWMpiEYA3v8
 id: content_liftup
 label: 'Content liftup'
 icon_uuid: null

@@ -2,9 +2,7 @@ uuid: d24dd45b-6e90-4818-9753-2e4a6a956ac7
 langcode: fi
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: og8sWXhBuHbLMw3CoiBEZjgqSyhFBFmcbUW_wLcfNbo
 id: long
 label: 'Default long date'
 locked: false
-pattern: 'l, F j, Y - H:i'
+pattern: 'j.n.Y - H:i'
