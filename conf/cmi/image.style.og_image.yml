@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: zirluWryC277Nzw88qPdh-e64E_qX7wBBBVNf5my1XI
 name: og_image
 label: 'OG Image'
 effects:

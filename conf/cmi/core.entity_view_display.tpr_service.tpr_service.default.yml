@@ -1,5 +1,5 @@
 uuid: 6d80a335-caa5-4cba-85bd-6e03a28655e4
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ dependencies:
     - metatag
     - text
 _core:
-  default_config_hash: SBJoYBdEsvpJaKRmqv6lb7GA4uQ59csvuevihKU_50E
+  default_config_hash: bipB-zcUXW3e12wtjBTJ42I9vKovNlR8ZW8o-73Reas
 id: tpr_service.tpr_service.default
 targetEntityType: tpr_service
 bundle: tpr_service
@@ -110,4 +110,9 @@ content:
     region: content
 hidden:
   created: true
+  has_unit: true
+  hide_service_points: true
   langcode: true
+  name_synonyms: true
+  search_api_excerpt: true
+  service_id: true

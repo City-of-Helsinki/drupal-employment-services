@@ -1,0 +1,5 @@
+name: Hyphenopoly placeholder
+description: 'Placeholder for hyphenopoly module.'
+package: 'Custom'
+type: module
+core_version_requirement: ^9 || ^10

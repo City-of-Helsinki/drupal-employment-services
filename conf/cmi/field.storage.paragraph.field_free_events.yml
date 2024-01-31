@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: hPJQzln2lCxDafr1ScV1qrmPk0VLFLWnpa3D6OE_Ic4
 id: paragraph.field_free_events
 field_name: field_free_events
 entity_type: paragraph

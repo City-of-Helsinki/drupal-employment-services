@@ -5,8 +5,6 @@ dependencies:
   module:
     - helfi_tpr
     - user
-_core:
-  default_config_hash: ZliIw3MTabPVgN2saPq0LQcrFhHsWf-Or6qd_aA7tZk
 id: tpr_service_channel_list
 label: 'TPR service channel list'
 module: views
@@ -588,7 +586,6 @@ display:
             fi: fi
             sv: sv
             en: en
-            ru: ru
           group: 1
           exposed: true
           expose:
@@ -624,7 +621,7 @@ display:
       filter_groups:
         operator: AND
         groups:
-          1: AND
+          - AND
       style:
         type: table
         options:

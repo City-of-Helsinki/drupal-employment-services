@@ -10,14 +10,11 @@ dependencies:
     - field.field.paragraph.event_list.field_event_location
     - field.field.paragraph.event_list.field_event_time
     - field.field.paragraph.event_list.field_free_events
-    - field.field.paragraph.event_list.field_load_more
     - field.field.paragraph.event_list.field_remote_events
     - paragraphs.paragraphs_type.event_list
   module:
     - options
     - text
-_core:
-  default_config_hash: dMZ_8jKpOaA7CkuxlB2baa1apQcQ_vFlXM04jq4bqQY
 id: paragraph.event_list.default
 targetEntityType: paragraph
 bundle: event_list

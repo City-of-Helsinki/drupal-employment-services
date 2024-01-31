@@ -1,0 +1,18 @@
+uuid: 951e7d12-0454-4440-b1d0-fdd7cac85195
+langcode: fi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.unit_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: hTFo4ZpzrzuHf8ywQsTlVJR1SaoFeZnkn8DKIcwbgQA
+id: taxonomy_term.unit_type
+target_entity_type_id: taxonomy_term
+target_bundle: unit_type
+default_langcode: site_default
+language_alterable: false

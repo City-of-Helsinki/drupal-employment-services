@@ -1,0 +1,21 @@
+uuid: a38d322f-fa00-42ae-b3c8-f195502a6afb
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_iframe_title
+    - paragraphs.paragraphs_type.remote_video
+_core:
+  default_config_hash: 4JZoeG_XitvgE9Tg7ZfVUwjpWcjeqktlO2tOnx_WfWU
+id: paragraph.remote_video.field_iframe_title
+field_name: field_iframe_title
+entity_type: paragraph
+bundle: remote_video
+label: 'Assistive technology title'
+description: 'Users of assistive technology need a descriptive title to know what is in the embedded content. Do not use the prefix "Video: ". It will be added automatically.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

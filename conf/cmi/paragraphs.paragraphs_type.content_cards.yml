@@ -1,9 +1,12 @@
 uuid: 48df96bf-cfb3-4256-bd83-a11af805970d
-langcode: en
+langcode: fi
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: G0XIMKXx8apK0uBqDSIJEWOXrbDnUoORLCeka-ydj4I
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: content_cards
 label: 'Content cards'
 icon_uuid: null

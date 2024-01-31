@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   module:
+    - hdbt_admin_tools
     - paragraphs
-    - select2_icon
 _core:
-  default_config_hash: FmQFOWb6K1mY_dccIuzSLACHd08uf9e5yk6MogBX1MI
+  default_config_hash: 7iZEPC0L92cS72FKcOv5gExrCL3CHSK9DaQU_5-4JPw
 id: paragraph.field_icon
 field_name: field_icon
 entity_type: paragraph
 type: select2_icon
 settings: {  }
-module: select2_icon
+module: hdbt_admin_tools
 locked: false
 cardinality: 1
 translatable: true

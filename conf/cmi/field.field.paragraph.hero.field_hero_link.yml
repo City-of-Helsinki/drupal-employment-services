@@ -1,5 +1,5 @@
 uuid: fbc278aa-533d-46a2-a7c8-74e2743a2911
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - link
-_core:
-  default_config_hash: G5WFSi0yRFsfrZnKMR4dTygTWSNswsvQ0AS-y678PMc
 id: paragraph.hero.field_hero_link
 field_name: field_hero_link
 entity_type: paragraph
@@ -16,7 +14,7 @@ bundle: hero
 label: Link
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

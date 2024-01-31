@@ -1,34 +1,20 @@
 uuid: 364d353d-ab21-43dc-8f7f-2fc1ecc8e506
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.list_of_links.field_background_color
     - field.field.paragraph.list_of_links.field_list_of_links_design
     - field.field.paragraph.list_of_links.field_list_of_links_links
     - field.field.paragraph.list_of_links.field_list_of_links_title
     - paragraphs.paragraphs_type.list_of_links
   module:
-    - hdbt_admin_editorial
+    - hdbt_admin_tools
     - paragraphs
-    - select2
-_core:
-  default_config_hash: LBbBIE1JvrmAnOImQR0rd-u3Nc3i-SRD2WicIGCCwqU
 id: paragraph.list_of_links.default
 targetEntityType: paragraph
 bundle: list_of_links
 mode: default
 content:
-  field_background_color:
-    type: select2_entity_reference
-    weight: 2
-    region: content
-    settings:
-      width: 50%
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-    third_party_settings: {  }
   field_list_of_links_design:
     type: design_field_widget
     weight: 1
@@ -37,7 +23,7 @@ content:
     third_party_settings: {  }
   field_list_of_links_links:
     type: paragraphs
-    weight: 3
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -62,6 +48,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_background_color: true
   status: true

@@ -1,5 +1,5 @@
 uuid: 191e45e8-3c4a-4a3f-8bd2-63568df1e4fb
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,17 +9,22 @@ dependencies:
     - field.field.paragraph.columns.field_columns_title
     - paragraphs.paragraphs_type.columns
   module:
+    - hdbt_admin_tools
     - paragraphs
-_core:
-  default_config_hash: UdB9StYRd1ami-k28GJOyZFqzuZGdc6LZ7CHyx4rNYg
 id: paragraph.columns.default
 targetEntityType: paragraph
 bundle: columns
 mode: default
 content:
+  field_columns_design:
+    type: design_field_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_columns_left_column:
     type: paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -38,7 +43,7 @@ content:
     third_party_settings: {  }
   field_columns_right_column:
     type: paragraphs
-    weight: 2
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -65,5 +70,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_columns_design: true
   status: true

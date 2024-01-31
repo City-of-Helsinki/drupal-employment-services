@@ -1,11 +1,11 @@
 uuid: 4743880a-aa3d-4a70-98cf-9fb6f6513c4e
-langcode: en
+langcode: fi
 status: true
 dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: J-GWO5EBcq_881yD1jMX3zsrR14hw97BvBqi6h5kknE
+  default_config_hash: eW5p1ZD6tVtX4g1sOMn82P5Ax14Y5YhWvwwa8N3XKSg
 id: paragraph.field_unit_search_title
 field_name: field_unit_search_title
 entity_type: paragraph

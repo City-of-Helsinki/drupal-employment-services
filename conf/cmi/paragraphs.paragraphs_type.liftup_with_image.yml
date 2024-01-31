@@ -1,9 +1,12 @@
 uuid: 555a0a52-a038-4257-93fd-ce2ef6b35ca3
-langcode: en
+langcode: fi
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: yLsRpgwe6vpWN8KXT927fq9GfVzAbLiI6RLF2PLNCTI
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: liftup_with_image
 label: 'Liftup with image'
 icon_uuid: null

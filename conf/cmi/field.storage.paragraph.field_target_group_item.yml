@@ -1,0 +1,25 @@
+uuid: 899e9a33-a5a6-4405-964d-9da69472d265
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.target_group_links
+_core:
+  default_config_hash: mOLywW59yQmjOl-NR3EpBJQaOxw05-GEnTMkOGx3jxg
+id: paragraph.field_target_group_item
+field_name: field_target_group_item
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

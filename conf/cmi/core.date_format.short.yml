@@ -2,9 +2,7 @@ uuid: 1e5d8863-bdc9-4c0c-9f0b-1c32c7aa75c5
 langcode: fi
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: AlzeyytA8InBgxIG9H2UDJYs3CG98Zj6yRsDKmlbZwA
 id: short
 label: 'Default short date'
 locked: false
-pattern: 'm/d/Y - H:i'
+pattern: j.n.Y

@@ -9,7 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.link_with_icon
   module:
     - entity_reference_revisions
-    - select2_icon
+    - hdbt_admin_tools
 id: paragraph.link_with_icon.default
 targetEntityType: paragraph
 bundle: link_with_icon
@@ -24,7 +24,7 @@ content:
     weight: 7
     region: content
   field_icon:
-    type: select2_icon_formatter
+    type: select_icon_formatter
     label: above
     settings: {  }
     third_party_settings: {  }

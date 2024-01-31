@@ -1,0 +1,27 @@
+uuid: 55d4f438-114c-4308-aa8c-43bad7f5cf45
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_remote_video_description
+    - paragraphs.paragraphs_type.remote_video
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+  default_config_hash: emEHEeE_yt_Z5EVGuPcPk9m--eTj8gCieN9Gzw08GLU
+id: paragraph.remote_video.field_remote_video_description
+field_name: field_remote_video_description
+entity_type: paragraph
+bundle: remote_video
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

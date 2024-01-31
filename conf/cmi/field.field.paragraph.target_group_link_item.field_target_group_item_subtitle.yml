@@ -1,0 +1,21 @@
+uuid: 8b9bc76e-9509-4509-a74c-3b2cc6efd351
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_target_group_item_subtitle
+    - paragraphs.paragraphs_type.target_group_link_item
+_core:
+  default_config_hash: ynMUZJWbjEdyrtDCGxnT1OBTg5eq46pnsHcj6Vk6Fk8
+id: paragraph.target_group_link_item.field_target_group_item_subtitle
+field_name: field_target_group_item_subtitle
+entity_type: paragraph
+bundle: target_group_link_item
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

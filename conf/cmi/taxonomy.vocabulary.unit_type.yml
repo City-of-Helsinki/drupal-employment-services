@@ -1,0 +1,10 @@
+uuid: d2ea0413-fd23-4106-89a2-7bda8a12e55d
+langcode: fi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wEkf5i2opWdEXS0s4609Q6ha1e5IYMWuR_DohY-v4-M
+name: 'Unit type'
+vid: unit_type
+description: 'You can use this vocabulary to categorise TPR-units so that they can be used in listings for example listing of daycare units.'
+weight: 0

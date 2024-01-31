@@ -1,143 +1,118 @@
 uuid: 290efc15-fe81-48ba-a784-719a32ca3a0d
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_lower_content
     - node.type.page
-    - paragraphs.paragraphs_type.sujo_embedded
-    - paragraphs.paragraphs_type.units_list
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.chart
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.contact_card_listing
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.news_list
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.service_list_search
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.unit_search
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: YD6Rdw1iEhjKEPsmTgUaoyfl5iIRhW7JsotBCZkhRv4
+  default_config_hash: AejXN443GE3b159k_6fsqDyZ_BHs68SU9wBMY24Ueog
 id: node.page.field_lower_content
 field_name: field_lower_content
 entity_type: node
 bundle: page
-label: 'Lower content region'
+label: 'Alempi sisältöalue'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      sujo_embedded: sujo_embedded
-      units_list: units_list
+      text: text
+      columns: columns
+      image: image
+      accordion: accordion
+      list_of_links: list_of_links
+      contact_card_listing: contact_card_listing
+      content_cards: content_cards
+      content_liftup: content_liftup
+      banner: banner
+      event_list: event_list
+      news_list: news_list
+      from_library: from_library
+      chart: chart
+      phasing: phasing
+      remote_video: remote_video
+      map: map
+      unit_search: unit_search
+      service_list_search: service_list_search
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -27
-        enabled: false
-      accordion_item:
-        weight: -22
-        enabled: false
+        weight: 0
+        enabled: true
       banner:
-        weight: -21
-        enabled: false
-      blog_list:
-        weight: 40
-        enabled: false
-      card:
-        weight: 41
-        enabled: false
-      card_list:
-        weight: 42
-        enabled: false
+        weight: 0
+        enabled: true
+      chart:
+        weight: 0
+        enabled: true
       columns:
-        weight: -28
-        enabled: false
+        weight: 0
+        enabled: true
+      contact_card_listing:
+        weight: 0
+        enabled: true
       content_cards:
-        weight: -23
-        enabled: false
+        weight: 0
+        enabled: true
       content_liftup:
-        weight: -22
-        enabled: false
+        weight: 0
+        enabled: true
       event_list:
-        weight: 30
-        enabled: false
-      events_list:
-        weight: 46
-        enabled: false
+        weight: 0
+        enabled: true
       from_library:
-        weight: 21
-        enabled: false
-      gallery:
-        weight: -25
-        enabled: false
-      gallery_slide:
-        weight: -20
-        enabled: false
-      hero:
-        weight: -19
-        enabled: false
-      highlighted_text:
-        weight: 51
-        enabled: false
+        weight: 0
+        enabled: true
       image:
-        weight: -26
-        enabled: false
-      info:
-        weight: 54
-        enabled: false
-      liftup_with_image:
-        weight: -18
-        enabled: false
-      link:
-        weight: 57
-        enabled: false
-      link_internal:
-        weight: 58
-        enabled: false
+        weight: 0
+        enabled: true
       list_of_links:
-        weight: -24
-        enabled: false
-      list_of_links_item:
-        weight: -17
-        enabled: false
+        weight: 0
+        enabled: true
+      map:
+        weight: 0
+        enabled: true
       news_list:
-        weight: 62
-        enabled: false
-      notification:
-        weight: 60
-        enabled: false
-      phone_number_box:
-        weight: 63
-        enabled: false
-      quote:
-        weight: 64
-        enabled: false
+        weight: 0
+        enabled: true
+      phasing:
+        weight: 0
+        enabled: true
       remote_video:
-        weight: 32
-        enabled: false
-      search:
-        weight: 65
-        enabled: false
-      service_list:
-        weight: 66
-        enabled: false
-      sidebar_text:
-        weight: 67
-        enabled: false
-      subheading:
-        weight: 68
-        enabled: false
-      sujo_embedded:
-        weight: 69
+        weight: 0
+        enabled: true
+      service_list_search:
+        weight: 0
         enabled: true
       text:
-        weight: -29
-        enabled: false
-      unit_search:
-        weight: -16
-        enabled: false
-      units_list:
-        weight: 73
+        weight: 0
         enabled: true
-      video:
-        weight: 72
-        enabled: false
+      unit_search:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

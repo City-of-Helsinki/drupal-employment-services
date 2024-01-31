@@ -1,0 +1,21 @@
+uuid: 527263fc-4cfe-4301-b3ef-1f8097726e85
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - telephone
+_core:
+  default_config_hash: kxmWRH9TJh5fRoM_YvyuycrIfHCulYKplVTkFm9DXAM
+id: paragraph.field_phone_number
+field_name: field_phone_number
+entity_type: paragraph
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

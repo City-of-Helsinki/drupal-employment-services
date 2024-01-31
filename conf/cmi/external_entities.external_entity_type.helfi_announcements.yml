@@ -1,0 +1,19 @@
+uuid: 9c351ea7-738e-41ed-b7d4-4ce75a12e1a4
+langcode: fi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: znut8SNGQRsGO4_fUxjvl_SIZqbb0T7hsv98bRKxcM8
+id: helfi_announcements
+label: 'Helfi: Announcements'
+label_plural: 'Helfi: Announcements'
+description: ''
+read_only: true
+field_mappings: {  }
+storage_client_id: helfi_announcements
+storage_client_config: {  }
+persistent_cache_max_age: -1
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
+inherits_annotation_fields: false

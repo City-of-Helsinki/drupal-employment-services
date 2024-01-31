@@ -1,0 +1,25 @@
+uuid: 53cba017-f4c1-475d-ba4b-7abb4573b17a
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_contact_use_override
+    - paragraphs.paragraphs_type.unit_contact_card
+_core:
+  default_config_hash: 8CkfaWELO_WKLOH9HtEAEjBJ4GXUTt-9nYYPvyOpT48
+id: paragraph.unit_contact_card.field_unit_contact_use_override
+field_name: field_unit_contact_use_override
+entity_type: paragraph
+bundle: unit_contact_card
+label: 'Prefer override picture'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

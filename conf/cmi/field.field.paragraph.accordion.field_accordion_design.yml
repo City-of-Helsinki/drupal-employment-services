@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: accordion
 label: Design
 description: 'Choose the paragraph design from the dropdown.'
-required: false
+required: true
 translatable: false
 default_value:
   -

@@ -1,0 +1,33 @@
+uuid: 96807486-8b64-4e4f-8462-bf6077edb57d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_card
+    - paragraphs.paragraphs_type.contact_card
+    - paragraphs.paragraphs_type.contact_card_listing
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: zR-r30I0kOV247OcU6yxNT2re2IFSq7pUjNogusJVxw
+id: paragraph.contact_card_listing.field_contact_card
+field_name: field_contact_card
+entity_type: paragraph
+bundle: contact_card_listing
+label: Yhteystietokortti
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_card: contact_card
+    negate: 0
+    target_bundles_drag_drop:
+      contact_card:
+        weight: 0
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+uuid: 2aa94701-387d-4c8c-8f55-7c68cc9a841d
+langcode: fi
+status: true
+dependencies: {  }
+id: helfi_hearings
+label: 'Helfi: Hearing'
+label_plural: 'Helfi: Hearing'
+description: 'Helfi hearings from hearing api.'
+read_only: true
+field_mappings: {  }
+storage_client_id: helfi_hearings
+storage_client_config: {  }
+persistent_cache_max_age: 3600
+annotation_entity_type_id: null
+annotation_bundle_id: null
+annotation_field_name: null
+inherits_annotation_fields: false

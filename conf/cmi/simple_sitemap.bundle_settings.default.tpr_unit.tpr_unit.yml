@@ -1,4 +1,7 @@
+_core:
+  default_config_hash: sNJC886eqZSClcuJhMgp-HCspBv4ZIDX6aouwqS7a9E
+langcode: fi
 index: true
-priority: '1.0'
-changefreq: weekly
+priority: '0.5'
+changefreq: ''
 include_images: false

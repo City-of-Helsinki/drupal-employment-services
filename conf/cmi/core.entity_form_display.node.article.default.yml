@@ -14,7 +14,7 @@ dependencies:
     - field.field.node.article.field_search_keywords
     - node.type.article
   module:
-    - hdbt_admin_editorial
+    - hdbt_admin_tools
     - metatag
     - paragraphs
     - paragraphs_features

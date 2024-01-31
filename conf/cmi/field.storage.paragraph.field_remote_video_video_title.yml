@@ -1,0 +1,23 @@
+uuid: d7821c8c-84ff-45fe-be37-fe33dc795ec7
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: NQK8C_re4avi5sgPKbEZUF-Pb5ZV05qUxasNqGulkBU
+id: paragraph.field_remote_video_video_title
+field_name: field_remote_video_video_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

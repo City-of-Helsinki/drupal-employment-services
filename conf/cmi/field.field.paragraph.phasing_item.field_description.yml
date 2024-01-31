@@ -1,0 +1,28 @@
+uuid: ac9d24a1-4426-415f-93d4-07b2b8fb7f35
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.phasing_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - minimal
+_core:
+  default_config_hash: yaQCIyGcgu2Tqe21GcXwcnBdE_hkxj_zuqFvF25JrQc
+id: paragraph.phasing_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: phasing_item
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

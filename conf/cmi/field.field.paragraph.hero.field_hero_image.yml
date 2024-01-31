@@ -1,13 +1,11 @@
 uuid: 0cc7883e-05a1-43ee-98f9-dfde55dc1539
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_hero_image
     - media.type.image
     - paragraphs.paragraphs_type.hero
-_core:
-  default_config_hash: hVWSYVdDGg5GQZWTFcTMKcVW3RkcckDBZ260kRey44w
 id: paragraph.hero.field_hero_image
 field_name: field_hero_image
 entity_type: paragraph

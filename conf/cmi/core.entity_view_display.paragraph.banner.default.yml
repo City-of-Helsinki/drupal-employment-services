@@ -12,25 +12,17 @@ dependencies:
     - field.field.paragraph.banner.field_icon
     - paragraphs.paragraphs_type.banner
   module:
+    - hdbt_admin_tools
     - link
     - options
-    - select2_icon
     - text
 _core:
-  default_config_hash: 6sXm0gwP7Lq-5wEAkZWbRYwhvZsBBQASOR_gKjINHMU
+  default_config_hash: 81G-zzBxYIt-u9L4g2zVuH0NP_i72wAOboZ0Fy7mA70
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
 mode: default
 content:
-  field_background_color:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
   field_banner_desc:
     type: text_default
     label: hidden
@@ -73,10 +65,12 @@ content:
     weight: 0
     region: content
   field_icon:
-    type: select2_icon_formatter
+    type: select_icon_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
-hidden: {  }
+hidden:
+  field_background_color: true
+  search_api_excerpt: true

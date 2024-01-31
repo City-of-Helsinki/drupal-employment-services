@@ -1,12 +1,10 @@
 uuid: 7e78f6dc-d948-4096-82bc-ed08ca864f89
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_columns_title
     - paragraphs.paragraphs_type.columns
-_core:
-  default_config_hash: j1S5XpCQ5oV-Al-nsvYuS2LwPyZ1LZ_LvdgCQb3Z6og
 id: paragraph.columns.field_columns_title
 field_name: field_columns_title
 entity_type: paragraph

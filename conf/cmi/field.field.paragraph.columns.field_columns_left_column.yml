@@ -1,5 +1,5 @@
 uuid: a40a992b-52f9-40fe-a059-5ba39084f242
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -9,13 +9,11 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: NLMGpf1VFdb-RxU3UFqmyu4hthGDUQBihq-HGvM9qj0
 id: paragraph.columns.field_columns_left_column
 field_name: field_columns_left_column
 entity_type: paragraph
 bundle: columns
-label: 'Left column'
+label: 'Vasen palsta'
 description: ''
 required: true
 translatable: false
@@ -25,44 +23,14 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      image: image
       text: text
+      image: image
     negate: 0
     target_bundles_drag_drop:
-      accordion:
-        weight: 14
-        enabled: false
-      accordion_item:
-        weight: 15
-        enabled: false
-      banner:
-        weight: 16
-        enabled: false
-      columns:
-        weight: -14
-        enabled: false
-      gallery:
-        weight: 17
-        enabled: false
-      gallery_slide:
-        weight: 18
-        enabled: false
-      hero:
-        weight: -13
-        enabled: false
       image:
-        weight: -12
+        weight: 0
         enabled: true
-      liftup_with_image:
-        weight: 21
-        enabled: false
-      list_of_links:
-        weight: -10
-        enabled: false
-      list_of_links_item:
-        weight: -8
-        enabled: false
       text:
-        weight: -11
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

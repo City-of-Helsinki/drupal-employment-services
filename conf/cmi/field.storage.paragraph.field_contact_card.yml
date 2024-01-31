@@ -1,0 +1,25 @@
+uuid: d45d3fe3-dba1-4755-9803-ed3e26181851
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.contact_card_listing
+_core:
+  default_config_hash: hrjTJNnrxG5N3Ui9q7IAhEBLr4FburA9QNAA1X0FhTo
+id: paragraph.field_contact_card
+field_name: field_contact_card
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

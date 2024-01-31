@@ -5,6 +5,7 @@ dependencies:
   module:
     - comment
     - entity_browser
+    - external_entities
     - field_ui
     - file
     - helfi_api_base
@@ -62,6 +63,7 @@ permissions:
   - 'update paragraph content link_with_icon'
   - 'update paragraph content mainheading'
   - 'use advanced search'
+  - 'view helfi_announcements external entity'
   - 'view media'
   - 'view media'
   - 'view own unpublished content'

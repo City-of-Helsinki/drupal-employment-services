@@ -1,17 +1,12 @@
 uuid: 63757446-588b-46b4-bb81-5357cb5c1a6e
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_caption
     - field.field.paragraph.image.field_image
     - field.field.paragraph.image.field_image_caption
-    - field.field.paragraph.image.field_image_heigth
-    - field.field.paragraph.image.field_image_image
     - field.field.paragraph.image.field_original_aspect_ratio
     - paragraphs.paragraphs_type.image
-_core:
-  default_config_hash: WOIjdvfdwRn0wIU-TyaRDV4PKTm77QLskpKljuLGk5Q
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
@@ -27,7 +22,7 @@ content:
     weight: 0
     region: content
   field_image_caption:
-    type: basic_string
+    type: text_span
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -47,3 +42,4 @@ hidden:
   field_caption: true
   field_image_heigth: true
   field_image_image: true
+  search_api_excerpt: true

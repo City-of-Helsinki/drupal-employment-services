@@ -1,5 +1,5 @@
 uuid: 4c1114b2-4a50-493a-9887-65911581b917
-langcode: en
+langcode: fi
 status: true
 dependencies:
   config:
@@ -22,7 +22,6 @@ third_party_settings:
         - field_unit_search_meta_label
         - field_unit_search_meta_placehold
         - field_unit_search_meta_button
-        - field_unit_search_meta_load_more
       label: 'Meta information'
       region: content
       parent_name: ''
@@ -35,7 +34,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: qf1KLGPPrP7EP5sDnNxNfe9U91dKzpemSCOGVPcbg4E
+  default_config_hash: z42RJh-JCLjD7_9W4B9_irn3nWHvqfSJ9foobt51Wg4
 id: paragraph.unit_search.default
 targetEntityType: paragraph
 bundle: unit_search
@@ -60,14 +59,6 @@ content:
   field_unit_search_meta_label:
     type: string_textfield
     weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_unit_search_meta_load_more:
-    type: string_textfield
-    weight: 7
     region: content
     settings:
       size: 60
@@ -101,4 +92,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_unit_search_meta_load_more: true
   status: true

@@ -1,0 +1,13 @@
+uuid: d0caa6bc-d8c4-4026-b011-d4096d77b691
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock
+_core:
+  default_config_hash: HeI4XOuKQfk-RNJNP-B5qBVequu6RIiDnhejYBthwKk
+id: node_break_lock_action
+label: 'Break lock node'
+type: node
+plugin: 'entity:break_lock:node'
+configuration: {  }

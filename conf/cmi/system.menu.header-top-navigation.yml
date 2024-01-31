@@ -1,0 +1,8 @@
+uuid: f7f69756-93b8-403d-8ab6-d19c9e33d44b
+langcode: und
+status: true
+dependencies: {  }
+id: header-top-navigation
+label: 'Header - Top navigation'
+description: 'Navigation that is located in the top part of header.'
+locked: false
