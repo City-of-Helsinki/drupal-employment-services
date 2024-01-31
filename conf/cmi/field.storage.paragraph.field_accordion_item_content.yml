@@ -2,11 +2,12 @@ uuid: 7b11bc0b-a654-415e-b5ff-e51379d81394
 langcode: en
 status: true
 dependencies:
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: mOG-smkX52eEQrZjVtUaqeOYVqQIIYHjfMk5GQmdYHs
 id: paragraph.field_accordion_item_content
 field_name: field_accordion_item_content
 entity_type: paragraph

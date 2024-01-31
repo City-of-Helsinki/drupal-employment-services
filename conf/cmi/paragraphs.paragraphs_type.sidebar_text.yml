@@ -1,9 +1,12 @@
 uuid: 5d2b270c-98f2-467f-b999-2f5583b2a78b
 langcode: en
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: eTaYwUTssthgegDKXXVauF-8HIAezuwWcXeKrTbt1aI
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: sidebar_text
 label: 'Sidebar text'
 icon_uuid: null

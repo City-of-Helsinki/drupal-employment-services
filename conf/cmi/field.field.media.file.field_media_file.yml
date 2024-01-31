@@ -1,5 +1,5 @@
 uuid: 4a89de90-3226-4e16-baa0-158ffe803343
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - media.type.file
   module:
     - file
-_core:
-  default_config_hash: MGPZP_ILmtxTXuDm5AM6F5LncCv2HOsZOjBWNb_1JZ0
 id: media.file.field_media_file
 field_name: field_media_file
 entity_type: media

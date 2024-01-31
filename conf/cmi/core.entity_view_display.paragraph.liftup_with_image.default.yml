@@ -11,8 +11,6 @@ dependencies:
   module:
     - options
     - text
-_core:
-  default_config_hash: ETMahHqS5T1Wd1HpuejBnFCFdbOLXP_U9kOS0CN6SZo
 id: paragraph.liftup_with_image.default
 targetEntityType: paragraph
 bundle: liftup_with_image
@@ -49,5 +47,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

@@ -1,5 +1,5 @@
 uuid: 186fec6d-212a-4f85-a78a-f21e100a0f70
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,8 +9,6 @@ dependencies:
     - media.type.file
   module:
     - image
-_core:
-  default_config_hash: yHkqxsBlN9eCZF8Nou1B9HEiZbF0JrCZWxpBMaHIj7E
 id: media.file.media_library
 targetEntityType: media
 bundle: file

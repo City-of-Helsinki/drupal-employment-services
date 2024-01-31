@@ -1,5 +1,5 @@
 uuid: 23d59201-ff65-426d-9893-0acf2a27a774
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - media.type.remote_video
   module:
     - media
-_core:
-  default_config_hash: Kaedktd6hrPpRUp1yhNgzJn3xy3CtVOlvKpJ7wXNWro
 id: media.remote_video.default
 targetEntityType: media
 bundle: remote_video

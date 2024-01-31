@@ -4,13 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_columns_left_column
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: NLMGpf1VFdb-RxU3UFqmyu4hthGDUQBihq-HGvM9qj0
 id: paragraph.columns.field_columns_left_column
 field_name: field_columns_left_column
 entity_type: paragraph
@@ -24,45 +19,7 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      image: image
-      text: text
+    target_bundles: {  }
     negate: 0
-    target_bundles_drag_drop:
-      accordion:
-        weight: 14
-        enabled: false
-      accordion_item:
-        weight: 15
-        enabled: false
-      banner:
-        weight: 16
-        enabled: false
-      columns:
-        weight: -14
-        enabled: false
-      gallery:
-        weight: 17
-        enabled: false
-      gallery_slide:
-        weight: 18
-        enabled: false
-      hero:
-        weight: -13
-        enabled: false
-      image:
-        weight: -12
-        enabled: true
-      liftup_with_image:
-        weight: 21
-        enabled: false
-      list_of_links:
-        weight: -10
-        enabled: false
-      list_of_links_item:
-        weight: -8
-        enabled: false
-      text:
-        weight: -11
-        enabled: true
+    target_bundles_drag_drop: {  }
 field_type: entity_reference_revisions

@@ -11,9 +11,7 @@ dependencies:
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - basic_html
-_core:
-  default_config_hash: wIwMdo6OAIW_0F8UPMdoBOqJIF0AGhXSa-2lmStWKWc
+      - minimal
 id: paragraph.sidebar_text.field_sidebar_text_text
 field_name: field_sidebar_text_text
 entity_type: paragraph
@@ -21,7 +19,7 @@ bundle: sidebar_text
 label: Text
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

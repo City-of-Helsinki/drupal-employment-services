@@ -1,5 +1,5 @@
 uuid: 08bb344c-db1d-42b4-a17a-9053491c3381
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,8 +14,6 @@ third_party_settings:
       alt: alt
       title: title
       file: '0'
-_core:
-  default_config_hash: fmlnh5VWRobLBxFZVcdtGoVBXeWcn_qqx7Daj0_2hI0
 id: media.image.field_media_image
 field_name: field_media_image
 entity_type: media

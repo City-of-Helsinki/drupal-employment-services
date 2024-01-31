@@ -4,21 +4,19 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: NPeIDcdnIVh4Ouubxz6NcH7ks_z8buKUD0ZmzPACvtE
 id: page_content_pattern
 label: 'Page content pattern'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:menu-link:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  b28025b2-4908-4608-ab63-f058e079981f:
+  c22ccdfa-0a1c-4d36-b456-dc0320d4351f:
     id: 'entity_bundle:node'
     negate: false
-    uuid: b28025b2-4908-4608-ab63-f058e079981f
+    uuid: c22ccdfa-0a1c-4d36-b456-dc0320d4351f
     context_mapping:
       node: node
     bundles:
       page: page
 selection_logic: and
-weight: -9
+weight: -5
 relationships: {  }

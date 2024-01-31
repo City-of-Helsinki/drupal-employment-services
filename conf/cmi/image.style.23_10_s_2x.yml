@@ -1,12 +1,10 @@
 uuid: 996b4d88-b815-429a-9914-615f9da13898
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
-_core:
-  default_config_hash: '-gFb5YyFKNnuqT75Ql8nQ59aOQDrRb1tcp1nqxvHvho'
 name: 23_10_s_2x
 label: '2.3:1 S (2x)'
 effects:

@@ -1,5 +1,5 @@
 uuid: d3f6a15e-5710-44e0-b666-3c84a4aebb33
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: _none
-_core:
-  default_config_hash: Hn0ivZE8RL9Lnq_9mVi3F3QWBLhYN8SsJQrRznRIC54
 id: image
 label: Image
 description: 'Use local image for reusable media.'

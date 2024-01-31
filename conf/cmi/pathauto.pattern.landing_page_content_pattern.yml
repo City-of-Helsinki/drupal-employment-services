@@ -4,21 +4,19 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: Ent8eD7KV9MWP8HWX49gt3gEeXFcn-y7MjVul67jUpE
 id: landing_page_content_pattern
 label: 'Landing page content pattern'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:menu-link:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  8c3de75a-4707-4eb6-8f3d-16d1783fd97c:
+  bbac8406-a5b0-41da-b72f-b79434db6b98:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 8c3de75a-4707-4eb6-8f3d-16d1783fd97c
+    uuid: bbac8406-a5b0-41da-b72f-b79434db6b98
     context_mapping:
       node: node
     bundles:
       landing_page: landing_page
 selection_logic: and
-weight: -10
+weight: -5
 relationships: {  }

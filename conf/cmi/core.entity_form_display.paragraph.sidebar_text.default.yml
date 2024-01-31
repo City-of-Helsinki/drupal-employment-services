@@ -9,8 +9,6 @@ dependencies:
   module:
     - allowed_formats
     - text
-_core:
-  default_config_hash: 214ydTgss7-NhH765h7HJ-g9pgtBtb8BZOix6L5ShSA
 id: paragraph.sidebar_text.default
 targetEntityType: paragraph
 bundle: sidebar_text

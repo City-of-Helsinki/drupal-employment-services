@@ -5,11 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_hero
     - node.type.page
-    - paragraphs.paragraphs_type.hero
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: NaOVa8WmZbEsmaM4pl6uHvFO6Tw-t9IGIQ3XZXUiamA
 id: node.page.field_hero
 field_name: field_hero
 entity_type: node
@@ -17,20 +14,13 @@ bundle: page
 label: Hero
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      hero: hero
+    target_bundles: {  }
     negate: 0
-    target_bundles_drag_drop:
-      hero:
-        weight: 4
-        enabled: true
-      text:
-        weight: 6
-        enabled: false
+    target_bundles_drag_drop: {  }
 field_type: entity_reference_revisions

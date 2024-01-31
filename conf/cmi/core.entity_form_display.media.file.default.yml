@@ -1,5 +1,5 @@
 uuid: 4a1c6db0-6078-4909-b2a4-0f17eef2b2f2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,8 +8,6 @@ dependencies:
   module:
     - file
     - path
-_core:
-  default_config_hash: gl0sXDsaNKQXVtRsPqp-E_NPZEmscOm6LSEg3kIQ40w
 id: media.file.default
 targetEntityType: media
 bundle: file
@@ -46,6 +44,11 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  replace_file:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

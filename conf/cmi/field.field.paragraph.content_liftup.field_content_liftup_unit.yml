@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_content_liftup_unit
     - paragraphs.paragraphs_type.content_liftup
-_core:
-  default_config_hash: PDfXJdsEFnyW-qrv229_Y5bkaK0ztYhLPJc6JutjBfs
 id: paragraph.content_liftup.field_content_liftup_unit
 field_name: field_content_liftup_unit
 entity_type: paragraph

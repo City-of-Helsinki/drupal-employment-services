@@ -6,8 +6,6 @@ dependencies:
     - field.storage.paragraph.field_list_of_links_image
     - media.type.image
     - paragraphs.paragraphs_type.list_of_links_item
-_core:
-  default_config_hash: 6umZK-3svYFTdzbSrh-E5Oin5Sdi9z7oT50YV-ibT0w
 id: paragraph.list_of_links_item.field_list_of_links_image
 field_name: field_list_of_links_image
 entity_type: paragraph
@@ -15,7 +13,7 @@ bundle: list_of_links_item
 label: Image
 description: 'Image to be used as thumbnail of the link.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

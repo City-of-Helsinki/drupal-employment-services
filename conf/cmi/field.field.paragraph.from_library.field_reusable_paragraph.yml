@@ -1,0 +1,31 @@
+uuid: 01ff3bbc-dd17-4911-bb29-7bc53ce78040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reusable_paragraph
+    - paragraphs.paragraphs_type.from_library
+_core:
+  default_config_hash: z_H_kCDBkuITFi-RGZRiO8Ps2UxRDucMs7Dhan7d6yw
+id: paragraph.from_library.field_reusable_paragraph
+field_name: field_reusable_paragraph
+entity_type: paragraph
+bundle: from_library
+label: 'Reusable paragraph'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: paragraphs_selection
+      display_name: entity_reference
+      arguments: {  }
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

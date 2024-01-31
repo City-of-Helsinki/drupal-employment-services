@@ -9,7 +9,6 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-      - menu-other-languages
     parent: 'main:'
   scheduler:
     expand_fieldset: when_required
@@ -24,11 +23,9 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-_core:
-  default_config_hash: 2wtLJzGRPIAAdAGbl6hOGq0wG3zumh1dayzTQvnwU94
-name: 'Basic page'
+name: 'Standard page'
 type: page
-description: 'Content type for pages that include information that doesn''t age as quickly as for example article or news content.'
+description: 'Content type for standard web content.'
 help: ''
 new_revision: true
 preview_mode: 1

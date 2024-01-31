@@ -1,20 +1,16 @@
-_core:
-  default_config_hash: MUpaAk1hn-0Ph4OFw3DD_6gUF9KbGwxja9Y0qmampzo
-langcode: fi
-max_links: 2000
+max_links: 10000
 cron_generate: true
-cron_generate_interval: 3
+cron_generate_interval: 24
 generate_duration: 10000
-entities_per_queue_item: 50
+entities_per_queue_item: 100
 remove_duplicates: true
 skip_untranslated: true
 xsl: false
-base_url: 'https://tyollisyyspalvelut.hel.fi'
+base_url: ''
 default_variant: default
 custom_links_include_images: false
 disable_language_hreflang: false
-hide_branding: true
 excluded_languages: {  }
 enabled_entity_types:
   - node
-  - tpr_unit
+  - menu_link_content

@@ -13,8 +13,6 @@ dependencies:
     - link
     - metatag
     - text
-_core:
-  default_config_hash: SBJoYBdEsvpJaKRmqv6lb7GA4uQ59csvuevihKU_50E
 id: tpr_service.tpr_service.default
 targetEntityType: tpr_service
 bundle: tpr_service
@@ -110,4 +108,8 @@ content:
     region: content
 hidden:
   created: true
+  has_unit: true
+  hide_service_points: true
   langcode: true
+  name_synonyms: true
+  service_id: true

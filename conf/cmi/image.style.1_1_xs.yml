@@ -1,11 +1,9 @@
 uuid: ec646655-ca02-4ba3-b4d7-0351e12072a1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: mHw5PNL9nTo77hoYAaS9xqhFBA2SVcMR-OEroszCeGc
 name: 1_1_xs
 label: '1:1 XS'
 effects:

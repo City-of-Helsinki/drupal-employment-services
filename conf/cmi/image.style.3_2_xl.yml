@@ -1,11 +1,9 @@
 uuid: f41c44d6-d605-48e8-ba93-add08f895484
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: HGT6-cTBGwnDja9CVm3tTxwkMzV2Y5NtnKZBTFdn5ps
 name: 3_2_xl
 label: '3:2 XL'
 effects:

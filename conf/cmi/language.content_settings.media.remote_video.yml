@@ -1,5 +1,5 @@
 uuid: e6dc49a8-1129-4b92-a5bc-7b9090ef4fd6
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,10 +9,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
-_core:
-  default_config_hash: W7YfIhAOIwvyPQmKlhuh5d94_oZSSsj83AYQaegVafs
 id: media.remote_video
 target_entity_type_id: media
 target_bundle: remote_video

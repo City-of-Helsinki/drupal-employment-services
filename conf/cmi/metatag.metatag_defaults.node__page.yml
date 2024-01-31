@@ -2,8 +2,6 @@ uuid: 4f95da9d-f5bc-464c-b83f-1511b57c3511
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Mqgf6_xfg7HLsBnW3BSP9e9EuHWJXsEMbt240DMt_5E
 id: node__page
 label: 'Content: Page'
 tags: {  }

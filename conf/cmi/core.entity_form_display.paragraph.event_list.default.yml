@@ -1,5 +1,5 @@
 uuid: 4fd9481f-51c4-4481-87d4-02cf0a25d7b8
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,14 +10,11 @@ dependencies:
     - field.field.paragraph.event_list.field_event_location
     - field.field.paragraph.event_list.field_event_time
     - field.field.paragraph.event_list.field_free_events
-    - field.field.paragraph.event_list.field_load_more
     - field.field.paragraph.event_list.field_remote_events
     - paragraphs.paragraphs_type.event_list
   module:
     - link
     - text
-_core:
-  default_config_hash: bGb0ZQ38-NxHtZ1rrdqclYHeStlwA5q3ucy5Wpnb0ng
 id: paragraph.event_list.default
 targetEntityType: paragraph
 bundle: event_list
@@ -83,5 +80,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_load_more: true
   status: true

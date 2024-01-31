@@ -1,5 +1,5 @@
 uuid: 7901b809-8675-42bc-b53e-25af87155945
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,12 +9,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
-_core:
-  default_config_hash: I3xj--oU7S2jOMuZHlT3vTfM7WPH30XtCbo2gO_Ntf0
 id: media.image
 target_entity_type_id: media
 target_bundle: image
 default_langcode: fi
-language_alterable: false
+language_alterable: true

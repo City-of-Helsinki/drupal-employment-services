@@ -1,5 +1,5 @@
 uuid: babb7802-5693-4148-8043-e3d035cfe9a1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.event_list
   module:
     - options
-_core:
-  default_config_hash: 6AMaHxUxptC9tDiCGTiCpFWXBHfR4tUUSdMY9Q5BD6Q
 id: paragraph.event_list.field_event_count
 field_name: field_event_count
 entity_type: paragraph
@@ -21,5 +19,7 @@ default_value:
   -
     value: 3
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_values: {  }
+  allowed_values_function: helfi_react_search_event_list_allowed_values_function
 field_type: list_integer

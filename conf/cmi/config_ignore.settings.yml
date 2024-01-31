@@ -1,7 +1,4 @@
-_core:
-  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
-langcode: fi
 ignored_config_entities:
-  - 'eu_cookie_compliance.cookie_category*'
-  - next.next_site.tyollisyyspalvelut_ui
-  - simple_oauth.settings
+  - 'system.site:page.front'
+  - 'hdbt_admin_tools.site_settings:site_settings'
+  - 'easy_breadcrumb.settings:home_segment_title'

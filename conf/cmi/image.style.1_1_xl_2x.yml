@@ -1,12 +1,10 @@
 uuid: 921544bd-84a1-4aa6-ae8a-5adcc72b6d9e
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - focal_point
     - image_style_quality
-_core:
-  default_config_hash: mSu_PVZ2IsbYmYWJPYRLZvE3cUo_tRZ1SG-TarGzzmU
 name: 1_1_xl_2x
 label: '1:1 XL (2x)'
 effects:

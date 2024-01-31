@@ -7,17 +7,12 @@ dependencies:
     - field.field.paragraph.accordion.field_accordion_design
     - field.field.paragraph.accordion.field_accordion_heading_level
     - field.field.paragraph.accordion.field_accordion_items
-    - field.field.paragraph.accordion.field_accordion_text
     - field.field.paragraph.accordion.field_accordion_title
     - field.field.paragraph.accordion.field_accordion_title_level
-    - field.field.paragraph.accordion.field_accordion_type
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
     - options
-    - text
-_core:
-  default_config_hash: HWdmIhepMk1UHQ1iK7mD_eMSQVDvXDUJJoB04cne0kg
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
@@ -68,12 +63,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_accordion_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
 hidden:
-  field_accordion_text: true
+  field_accordion_description: true
+  field_accordion_title: true
+  field_accordion_title_level: true

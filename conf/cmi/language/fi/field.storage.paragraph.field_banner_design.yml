@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 'Tasattu vasemmalle'
+    -
+      label: 'Tasattu vasemmalle, toissijainen väri'

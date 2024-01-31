@@ -1,117 +1,117 @@
-description: 'Find and manage media.'
+description: 'Hitta och hantera media.'
 display:
   default:
-    display_title: Master
+    display_title: Förvald
     display_options:
-      exposed_form:
-        options:
-          submit_button: 'Apply filters'
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+      title: Media
       fields:
         media_bulk_form:
-          action_title: Action
-      filters:
-        status:
+          action_title: Åtgärd
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
-            label: 'Publishing status'
-          group_info:
-            label: Published
-            group_items:
-              1:
-                title: Published
-        name:
-          expose:
-            label: Name
-        bundle:
-          expose:
-            label: 'Media type'
-          group_info:
-            label: 'Media type'
-        langcode:
-          expose:
-            label: Language
+            items_per_page_label: 'Inlägg per sida'
+            items_per_page_options_all_label: '- Alla -'
+            offset_label: Kompensera
+      exposed_form:
+        options:
+          submit_button: 'Tillämpa filter'
+          reset_button_label: Återställ
+          exposed_sorts_label: 'Sortera efter'
+          sort_asc_label: Stigande
+          sort_desc_label: Fallande
+      empty:
+        area_text_custom:
+          content: 'Ingen media tillgänglig.'
       sorts:
         created:
           expose:
-            label: 'Newest first'
+            label: 'Nyaste först'
         name:
           expose:
-            label: 'Name (A-Z)'
+            label: 'Namn (A-Z)'
         name_1:
           expose:
-            label: 'Name (Z-A)'
-      title: Media
-      empty:
-        area_text_custom:
-          content: 'No media available.'
+            label: 'Namn (Z-A)'
+      filters:
+        status:
+          expose:
+            label: 'Status för publicering'
+          group_info:
+            label: Publicerad
+            group_items:
+              1:
+                title: Publicerad
+        name:
+          expose:
+            label: Namn
+        bundle:
+          expose:
+            label: Mediatyp
+          group_info:
+            label: Mediatyp
+        langcode:
+          expose:
+            label: Språk
   page:
-    display_title: Page
+    display_title: Sida
     display_options:
       fields:
         media_bulk_form:
-          action_title: Action
+          action_title: Åtgärd
         name:
           separator: ', '
         edit_media:
           alter:
-            text: 'Edit {{ name }}'
-            alt: 'Edit {{ name }}'
+            text: 'Redigera {{ name }}'
+            alt: 'Redigera {{ name }}'
           text: Redigera
         delete_media:
           alter:
-            text: 'Delete {{ name }}'
-            alt: 'Delete {{ name }}'
+            text: 'Radera {{ name }}'
+            alt: 'Radera {{ name }}'
           text: Radera
   widget:
     display_title: Widget
     display_options:
-      filters:
-        name:
-          expose:
-            label: Name
       arguments:
         bundle:
           exception:
-            title: All
+            title: Alla
+      filters:
+        name:
+          expose:
+            label: Namn
       header:
         display_link_grid:
-          label: Grid
+          label: Rutnät
         display_link_table:
-          label: Table
+          label: Tabell
   widget_table:
-    display_title: 'Widget (table)'
+    display_title: 'Gränssnittskomponent (tabell)'
     display_options:
       fields:
         thumbnail__target_id:
-          label: Thumbnail
+          label: Miniatyr
         name:
-          label: Name
+          label: Namn
         uid:
-          label: Author
+          label: Författare
         changed:
-          label: Updated
-      filters:
-        name:
-          expose:
-            label: Name
+          label: Uppdaterad
       arguments:
         bundle:
           exception:
-            title: All
+            title: Alla
+      filters:
+        name:
+          expose:
+            label: Namn
       header:
         display_link_grid:
-          label: Grid
+          label: Rutnät
         display_link_table:
-          label: Table
+          label: Tabell

@@ -6,8 +6,6 @@ dependencies:
     - helfi_tpr
     - link
     - text
-_core:
-  default_config_hash: pOnMjC5trdPj5SmtHy4P4Fo7dGt1JC-wgpMVFi1ox-Y
 id: tpr_errand_service.tpr_errand_service.default
 targetEntityType: tpr_errand_service
 bundle: tpr_errand_service
@@ -41,7 +39,7 @@ content:
         TELEFAX:
           weight: 9
     third_party_settings: {  }
-    weight: 14
+    weight: 13
     region: content
   costs:
     type: text_default
@@ -138,5 +136,4 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }

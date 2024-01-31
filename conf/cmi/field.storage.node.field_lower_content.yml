@@ -2,12 +2,13 @@ uuid: a230dc3e-a7b3-4b01-944e-0e920e02466d
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - helfi_base_content
   module:
     - entity_reference_revisions
     - node
     - paragraphs
-_core:
-  default_config_hash: Ly3LrapAcajp0vmGO2YPqnyMPsrMHZbjfdNooH-BneY
 id: node.field_lower_content
 field_name: field_lower_content
 entity_type: node

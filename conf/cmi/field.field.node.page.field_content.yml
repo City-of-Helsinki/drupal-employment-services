@@ -5,21 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.page
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.events_list
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.liftup_with_image
-    - paragraphs.paragraphs_type.link_with_icon
-    - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.news_list
-    - paragraphs.paragraphs_type.notification
-    - paragraphs.paragraphs_type.subheading
-    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: QzPUvR7cSwVLlIv2Wkmjn6T9gEZ-WD6hRta4Y-AShcE
 id: node.page.field_content
 field_name: field_content
 entity_type: node
@@ -27,144 +14,13 @@ bundle: page
 label: 'Upper content region'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      text: text
-      accordion: accordion
-      image: image
-      list_of_links: list_of_links
-      banner: banner
-      liftup_with_image: liftup_with_image
-      events_list: events_list
-      notification: notification
-      link_with_icon: link_with_icon
-      news_list: news_list
-      subheading: subheading
+    target_bundles: {  }
     negate: 0
-    target_bundles_drag_drop:
-      accordion:
-        weight: -25
-        enabled: true
-      accordion_item:
-        weight: -20
-        enabled: false
-      banner:
-        weight: -16
-        enabled: true
-      blog_list:
-        weight: 40
-        enabled: false
-      card:
-        weight: 41
-        enabled: false
-      card_list:
-        weight: 42
-        enabled: false
-      columns:
-        weight: -26
-        enabled: false
-      content_cards:
-        weight: -21
-        enabled: false
-      content_liftup:
-        weight: -22
-        enabled: false
-      event_list:
-        weight: 30
-        enabled: false
-      events_list:
-        weight: 46
-        enabled: true
-      from_library:
-        weight: 21
-        enabled: false
-      gallery:
-        weight: -23
-        enabled: false
-      gallery_slide:
-        weight: -19
-        enabled: false
-      hero:
-        weight: -18
-        enabled: false
-      highlighted_text:
-        weight: 51
-        enabled: false
-      image:
-        weight: -24
-        enabled: true
-      info:
-        weight: 54
-        enabled: false
-      liftup_with_image:
-        weight: -15
-        enabled: true
-      link:
-        weight: 57
-        enabled: false
-      link_area:
-        weight: 61
-        enabled: false
-      link_internal:
-        weight: 58
-        enabled: false
-      link_with_icon:
-        weight: 61
-        enabled: true
-      list_of_links:
-        weight: -22
-        enabled: true
-      list_of_links_item:
-        weight: -17
-        enabled: false
-      news_list:
-        weight: 62
-        enabled: true
-      notification:
-        weight: 60
-        enabled: true
-      phone_number_box:
-        weight: 63
-        enabled: false
-      quote:
-        weight: 63
-        enabled: false
-      remote_video:
-        weight: 27
-        enabled: false
-      search:
-        weight: 65
-        enabled: false
-      service_list:
-        weight: 66
-        enabled: false
-      sidebar_text:
-        weight: 67
-        enabled: false
-      subheading:
-        weight: 68
-        enabled: true
-      sujo_embedded:
-        weight: 69
-        enabled: false
-      text:
-        weight: -27
-        enabled: true
-      unit_map:
-        weight: 73
-        enabled: false
-      unit_search:
-        weight: 28
-        enabled: false
-      units_list:
-        weight: 75
-        enabled: false
-      video:
-        weight: 72
-        enabled: false
+    target_bundles_drag_drop: {  }
 field_type: entity_reference_revisions

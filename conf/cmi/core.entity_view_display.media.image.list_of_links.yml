@@ -1,5 +1,5 @@
 uuid: 548b7bfb-2718-4394-9e24-3b8d86fba9e9
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,8 +10,6 @@ dependencies:
     - responsive_image.styles.list_of_links__thumbnail
   module:
     - responsive_image
-_core:
-  default_config_hash: oS47e6BzZSagVHrbB5CEC2KPpibkuvRFDI2I8XAe-hc
 id: media.image.list_of_links
 targetEntityType: media
 bundle: image
@@ -31,6 +29,5 @@ hidden:
   field_photographer: true
   langcode: true
   name: true
-  search_api_excerpt: true
   thumbnail: true
   uid: true

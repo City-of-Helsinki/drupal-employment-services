@@ -1,5 +1,5 @@
 uuid: ff3dcc47-1d4a-4e48-b8e1-1b9cbe21ac5f
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,8 +10,6 @@ dependencies:
     - responsive_image.styles.image__3_2
   module:
     - responsive_image
-_core:
-  default_config_hash: wdX63yVbYS8fYfKSEdSMocu8z7Qep0ykcBTiFZfJLpI
 id: media.image.image
 targetEntityType: media
 bundle: image

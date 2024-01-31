@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.hero.field_custom_hero_image
-    - field.field.paragraph.hero.field_hero_bg_color
     - field.field.paragraph.hero.field_hero_desc
     - field.field.paragraph.hero.field_hero_design
     - field.field.paragraph.hero.field_hero_image
@@ -16,29 +14,11 @@ dependencies:
     - link
     - options
     - text
-_core:
-  default_config_hash: 1S-v2cW15vF64vx-PC3OHbjsxRvtChTWcgepFJ_tKAw
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_custom_hero_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_hero_bg_color:
-    type: list_key
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
   field_hero_desc:
     type: text_default
     label: hidden
@@ -89,4 +69,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

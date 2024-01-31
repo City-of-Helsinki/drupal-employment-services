@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.banner.field_background_color
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
     - field.field.paragraph.banner.field_banner_link
@@ -14,23 +13,13 @@ dependencies:
   module:
     - link
     - options
-    - select2_icon
+    - hdbt_admin_tools
     - text
-_core:
-  default_config_hash: 6sXm0gwP7Lq-5wEAkZWbRYwhvZsBBQASOR_gKjINHMU
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
 mode: default
 content:
-  field_background_color:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 6
-    region: content
   field_banner_desc:
     type: text_default
     label: hidden
@@ -73,7 +62,7 @@ content:
     weight: 0
     region: content
   field_icon:
-    type: select2_icon_formatter
+    type: select_icon_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }

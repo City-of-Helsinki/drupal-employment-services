@@ -1,12 +1,10 @@
 uuid: 3aa6835b-5660-4224-913b-1d4e32afe5db
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - helfi_tpr
     - user
-_core:
-  default_config_hash: 0wDqZhJn8tnNhEq6QJNITXspmRbtFffjYqD82wc3myE
 id: tpr_errand_service_list
 label: 'TPR errand service list'
 module: views
@@ -588,7 +586,6 @@ display:
             fi: fi
             sv: sv
             en: en
-            ru: ru
           group: 1
           exposed: true
           expose:
@@ -624,7 +621,7 @@ display:
       filter_groups:
         operator: AND
         groups:
-          1: AND
+          - AND
       style:
         type: table
         options:

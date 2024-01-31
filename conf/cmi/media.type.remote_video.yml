@@ -1,5 +1,5 @@
 uuid: 1797474e-92b4-4d48-a9d4-912fedca3278
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: null
-_core:
-  default_config_hash: GPjIi9MrHVi7nlw_vlwKWBVl87xGuOfiebbDTBkVRfQ
 id: remote_video
 label: 'Remote video'
 description: 'Media type for remote media from external sources.'

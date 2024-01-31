@@ -4,15 +4,13 @@ status: true
 dependencies:
   module:
     - paragraphs
-    - select2_icon
-_core:
-  default_config_hash: FmQFOWb6K1mY_dccIuzSLACHd08uf9e5yk6MogBX1MI
+    - hdbt_admin_tools
 id: paragraph.field_icon
 field_name: field_icon
 entity_type: paragraph
 type: select2_icon
 settings: {  }
-module: select2_icon
+module: hdbt_admin_tools
 locked: false
 cardinality: 1
 translatable: true

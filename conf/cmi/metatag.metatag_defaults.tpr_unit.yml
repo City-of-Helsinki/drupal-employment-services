@@ -2,8 +2,6 @@ uuid: becc3a9d-9fd9-4eb2-9de8-7c4abe0c0349
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: ZFRdFVW2SEcAR8CDGaVMREVypQoQsiU36MKcOpHNcL4
 id: tpr_unit
 label: 'TPR - Unit'
 tags:
@@ -19,7 +17,6 @@ tags:
   og_latitude: '[tpr_unit:latitude]'
   og_longitude: '[tpr_unit:longitude]'
   og_phone_number: '[tpr_unit:phone]'
-  og_site_name: '[site:name]'
   og_title: '[tpr_unit:label]'
   og_updated_time: '[tpr_unit:changed:html_datetime]'
   og_url: '[current-page:url:absolute]'

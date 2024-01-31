@@ -1,16 +1,10 @@
 uuid: 8584522e-49b8-424a-837b-222731a04eae
-langcode: fi
+langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.article
-    - node.type.landing_page
-    - node.type.page
   module:
     - node
     - user
-_core:
-  default_config_hash: P7F4DFe8BL31DRVqsvS-ix9KZZqvvaPjZ7zEvGo9yNM
 id: content
 label: Content
 module: node
@@ -21,7 +15,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -147,28 +141,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           type: user_name
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: field
-          label: Status
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: boolean
-          settings:
-            format: custom
-            format_custom_false: Unpublished
-            format_custom_true: Published
         langcode:
           id: langcode
           table: node_field_data
@@ -235,6 +207,28 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: field
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: Unpublished
+            format_custom_true: Published
         changed:
           id: changed
           table: node_field_data
@@ -254,7 +248,7 @@ display:
           hide_alter_empty: true
           type: timestamp
           settings:
-            date_format: short
+            date_format: long
             custom_date_format: ''
             timezone: ''
         operations:
@@ -396,10 +390,7 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value:
-            article: article
-            page: page
-            landing_page: landing_page
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -418,10 +409,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              jsonapi: '0'
-              nextjs: '0'
-              editor: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -493,7 +481,10 @@ display:
           entity_field: langcode
           plugin_id: language
           operator: in
-          value: {  }
+          value:
+            fi: fi
+            sv: sv
+            en: en
           group: 1
           exposed: true
           expose:
@@ -511,8 +502,9 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              administrator: '0'
-            reduce: false
+              admin: '0'
+              content_producer: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -537,50 +529,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        type_1:
-          id: type_1
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            article: article
-            page: page
-            landing_page: landing_page
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -596,8 +544,8 @@ display:
             title: title
             type: type
             name: name
-            status: status
             langcode: langcode
+            status: status
             changed: changed
             operations: operations
           default: changed
@@ -622,20 +570,20 @@ display:
               empty_column: false
               responsive: ''
             name:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: priority-low
-            status:
+            langcode:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            langcode:
+            status:
               sortable: true
               default_sort_order: asc
               align: ''

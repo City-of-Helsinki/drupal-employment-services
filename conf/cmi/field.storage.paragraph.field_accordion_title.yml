@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: GbUBjFRyFiVEjtNrU13urlKhti4JiBab10eYVj-DAfU
 id: paragraph.field_accordion_title
 field_name: field_accordion_title
 entity_type: paragraph

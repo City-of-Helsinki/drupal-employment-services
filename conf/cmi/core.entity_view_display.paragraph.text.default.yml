@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - text
-_core:
-  default_config_hash: fj13Z_YNey-Xk4cQvzV8epMGaoflcnmP0u4KX-VXnyU
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
@@ -21,4 +19,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

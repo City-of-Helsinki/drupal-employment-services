@@ -1,11 +1,9 @@
 uuid: 9dbca46d-b4aa-45ed-af97-7c995be50120
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - image_style_quality
-_core:
-  default_config_hash: '-M5lzYtqIaR9JhPpIqnMfqURzup-qtAJKk1CH2JlBlE'
 name: original_xxs_2x
 label: 'Original XXS (2x)'
 effects:

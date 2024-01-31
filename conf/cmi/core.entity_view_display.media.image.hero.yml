@@ -1,5 +1,5 @@
 uuid: 4c3e351e-7e1f-4379-b3b8-4a6e8da6ea48
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,8 +10,6 @@ dependencies:
     - responsive_image.styles.hero__left_right
   module:
     - responsive_image
-_core:
-  default_config_hash: yOUJJysrNA6OZUaL8EmXsFBPwpyOzsnC0fsXT9QGHU4
 id: media.image.hero
 targetEntityType: media
 bundle: image

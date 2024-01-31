@@ -19,7 +19,6 @@ module:
   config_ignore: 0
   config_rewrite: 0
   config_translation: 0
-  config_update: 0
   consumers: 0
   content_lock: 0
   content_lock_timeout: 0
@@ -47,10 +46,7 @@ module:
   filter: 0
   focal_point: 0
   gin_toolbar: 0
-  hdbt_admin_editorial: 0
   hdbt_admin_tools: 0
-  hdbt_component_library: 0
-  hdbt_content: 0
   hdbt_hyphenopoly: 0
   health_check: 0
   helfi_api_base: 0
@@ -110,7 +106,6 @@ module:
   search: 0
   search_api: 0
   select2: 0
-  select2_icon: 0
   serialization: 0
   shortcut: 0
   simple_oauth: 0
@@ -123,14 +118,12 @@ module:
   telephone: 0
   text: 0
   token: 0
-  token_filter: 0
   toolbar: 0
   twig_tweak: 0
   tyollisyyspalvelut_common: 0
   tyollisyyspalvelut_elasticsearch: 0
   tyollisyyspalvelut_linkedevents: 0
   update: 0
-  update_helper: 0
   user: 0
   views_infinite_scroll: 0
   views_ui: 0
@@ -138,8 +131,50 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
-  publication_date: 99
+  publication_date: 0
   minimal: 1000
+  stomp: 0
+  helfi_tpr_config: 0
+  helfi_platform_config_base: 0
+  helfi_base_content: 0
+  helfi_ckeditor: 0
+  helfi_eu_cookie_compliance: 0
+  helfi_image_styles: 0
+  helfi_media_chart: 0
+  helfi_media_map: 0
+  helfi_media_remote_video: 0
+  helfi_node_announcement: 0
+  helfi_node_landing_page: 0
+  helfi_node_page: 0
+  helfi_paragraphs_accordion: 0
+  helfi_paragraphs_banner: 0
+  helfi_paragraphs_chart: 0
+  helfi_paragraphs_columns: 0
+  helfi_paragraphs_contact_card_listing: 0
+  helfi_paragraphs_content_cards: 0
+  helfi_paragraphs_hearings: 0
+  helfi_paragraphs_hero: 0
+  helfi_paragraphs_image: 0
+  helfi_paragraphs_liftup_with_image: 0
+  helfi_paragraphs_list_of_links: 0
+  helfi_paragraphs_map: 0
+  helfi_paragraphs_phasing: 0
+  helfi_paragraphs_popular_services: 0
+  helfi_paragraphs_remote_video: 0
+  helfi_paragraphs_sidebar_text: 0
+  helfi_paragraphs_target_group_links: 0
+  helfi_paragraphs_text: 0
+  helfi_user_roles: 0
+  helfi_paragraphs_content_liftup: 0
+  diff: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
+  eu_cookie_compliance: 0
+  easy_breadcrumb: 0
+  view_unpublished: 0
+  paragraphs_library: 0
+  menu_link_attributes: 0
+  external_entities: 0
 theme:
   stable9: 0
   claro: 0
