@@ -11,4 +11,6 @@ targetEntityType: paragraph
 bundle: from_library
 mode: default
 content: {  }
-hidden: {  }
+hidden:
+  field_reusable_paragraph: true
+  search_api_excerpt: true

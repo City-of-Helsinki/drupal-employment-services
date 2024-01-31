@@ -70,6 +70,9 @@ settings:
       map:
         weight: 0
         enabled: true
+      service_list:
+        weight: 0
+        enabled: true
       sidebar_text:
         weight: 0
         enabled: true
@@ -77,9 +80,6 @@ settings:
         weight: 0
         enabled: true
       unit_search:
-        weight: 0
-        enabled: true
-      service_list:
         weight: 0
         enabled: true
 field_type: entity_reference_revisions
