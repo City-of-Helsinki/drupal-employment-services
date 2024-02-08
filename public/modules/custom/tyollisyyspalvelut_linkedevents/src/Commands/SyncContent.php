@@ -142,7 +142,7 @@ class SyncContent extends DrushCommands {
   public function __construct(EntityTypeManagerInterface $entityTypeManager, ClientInterface $http_client, LoggerChannelFactoryInterface $factory) {
     parent::__construct();
     $this->dataChunkSize = 50;
-    $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
+    $this->dataUrl = 'https://api.hel.fi/linkedevents/v1/event/?include=location&publisher=ahjo:u02120030,ahjo:u021200130,ahjo:u021200&keyword=yso:p6357&sort=-end_time&page_size='.$this->dataChunkSize;
     $this->contentType = 'event';
     $this->termVocabulary = 'event_tags';
     $this->termLanguageVocabulary = 'event_languages';
