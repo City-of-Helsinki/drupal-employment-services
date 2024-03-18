@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.news_list
     - paragraphs.paragraphs_type.notification
+    - paragraphs.paragraphs_type.rss_feed
     - paragraphs.paragraphs_type.subheading
     - paragraphs.paragraphs_type.text
   module:
@@ -45,6 +46,7 @@ settings:
       link_with_icon: link_with_icon
       news_list: news_list
       subheading: subheading
+      rss_feed: rss_feed
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -137,6 +139,9 @@ settings:
       remote_video:
         weight: 27
         enabled: false
+      rss_feed:
+        weight: 72
+        enabled: true
       search:
         weight: 65
         enabled: false

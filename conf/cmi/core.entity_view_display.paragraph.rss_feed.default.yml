@@ -1,0 +1,22 @@
+uuid: 04badf4f-af53-4cf7-8d0b-3010475b5c99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rss_feed.field_rss_feed_url
+    - paragraphs.paragraphs_type.rss_feed
+id: paragraph.rss_feed.default
+targetEntityType: paragraph
+bundle: rss_feed
+mode: default
+content:
+  field_rss_feed_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
