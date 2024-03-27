@@ -1,0 +1,19 @@
+uuid: 5dc16b5a-ade5-4988-aa3b-4dfac10778db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rss_title
+    - paragraphs.paragraphs_type.rss_feed
+id: paragraph.rss_feed.field_rss_title
+field_name: field_rss_title
+entity_type: paragraph
+bundle: rss_feed
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

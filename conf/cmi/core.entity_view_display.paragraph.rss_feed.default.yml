@@ -3,13 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.rss_feed.field_background_color
     - field.field.paragraph.rss_feed.field_rss_feed_url
+    - field.field.paragraph.rss_feed.field_rss_title
     - paragraphs.paragraphs_type.rss_feed
 id: paragraph.rss_feed.default
 targetEntityType: paragraph
 bundle: rss_feed
 mode: default
 content:
+  field_background_color:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_rss_feed_url:
     type: string
     label: above
@@ -17,6 +27,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_rss_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

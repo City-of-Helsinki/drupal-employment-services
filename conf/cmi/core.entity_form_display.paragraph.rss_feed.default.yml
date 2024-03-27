@@ -3,20 +3,47 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.rss_feed.field_background_color
     - field.field.paragraph.rss_feed.field_rss_feed_url
+    - field.field.paragraph.rss_feed.field_rss_title
     - paragraphs.paragraphs_type.rss_feed
+  module:
+    - select2
 id: paragraph.rss_feed.default
 targetEntityType: paragraph
 bundle: rss_feed
 mode: default
 content:
+  field_background_color:
+    type: select2_entity_reference
+    weight: 1
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
   field_rss_feed_url:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rss_title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
