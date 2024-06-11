@@ -1,0 +1,10 @@
+uuid: 6411b817-7157-4610-bbfa-383a9492a609
+langcode: en
+status: true
+dependencies: {  }
+id: rss_feed
+label: 'RSS Feed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: 754e94c0-ef72-47c3-ab1d-6fa8a2755d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rss_feed_description
+    - paragraphs.paragraphs_type.rss_feed
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.rss_feed.field_rss_feed_description
+field_name: field_rss_feed_description
+entity_type: paragraph
+bundle: rss_feed
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
